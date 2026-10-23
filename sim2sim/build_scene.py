@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets/rbq10'
 
 
-def build_scene(contract, course='flat', height=0.10):
+def build_scene(contract, course='flat', height=0.10, difficulty=.5, terrain_seed=42):
     source = ET.parse(ASSETS / 'resources/urdf/rbq10.urdf').getroot()
     for link in source.findall('link'):
         for kind in ('visual', 'collision'):
@@ -44,7 +44,18 @@ def build_scene(contract, course='flat', height=0.10):
     # Static terrain group 0; robot geoms group 1, excluded by terrain ray casting.
     for geom in trunk.findall('.//geom'):
         geom.set('group', '1')
-    if course == 'hurdle':
+    if course.startswith('isaac_'):
+        from terrains import generate, add_heightfield
+        terrain=generate(course,difficulty,terrain_seed)
+        # No plane at z=0: it would fill the negative-height gaps/pits.
+        world.remove(world.find("geom[@name='ground']"))
+        ET.SubElement(world,'geom',name='catch_floor',type='plane',pos='0 0 -2.5',
+                      size='100 20 .1',group='0',rgba='.15 .17 .19 1')
+        add_heightfield(root,terrain,origin=(0.,-1.95))
+        # Put the robot on the original initial platform, not on the hfield boundary.
+        initial_z=float(terrain['heights'][10,20])+.55
+        trunk.set('pos',f'1 0 {initial_z}')
+    elif course == 'hurdle':
         for i, x in enumerate((2.0, 4.0, 6.0)):
             ET.SubElement(world, 'geom', name=f'hurdle_{i}', type='box',
                           pos=f'{x} 0 {height/2}', size=f'0.12 1.5 {height/2}', rgba='0.8 0.5 0.2 1')

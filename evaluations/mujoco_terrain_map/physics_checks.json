@@ -1,0 +1,168 @@
+{
+  "deterministic_seed": true,
+  "scene_checks": [
+    {
+      "course": "flat",
+      "difficulty": 0,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.47643575414947875,
+      "final_tilt_rad": 0.05812788121687982,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "flat",
+      "difficulty": 0.4444444444444444,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.4786207074559627,
+      "final_tilt_rad": 0.03240162151128395,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "flat",
+      "difficulty": 1,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.4886824843067918,
+      "final_tilt_rad": 0.049047423599516214,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "hurdle",
+      "difficulty": 0,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.48335891371093387,
+      "final_tilt_rad": 0.005574597837918128,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "hurdle",
+      "difficulty": 0.4444444444444444,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.4853780775741929,
+      "final_tilt_rad": 0.09558694987978335,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "hurdle",
+      "difficulty": 1,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.4816388869553758,
+      "final_tilt_rad": 0.024931650652293632,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "step",
+      "difficulty": 0,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.48606452073073897,
+      "final_tilt_rad": 0.05362265960139515,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "step",
+      "difficulty": 0.4444444444444444,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.4695676792650092,
+      "final_tilt_rad": 0.15292290254178548,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "step",
+      "difficulty": 1,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.488682486841263,
+      "final_tilt_rad": 0.049047435944380116,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "gap",
+      "difficulty": 0,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.4761948338562477,
+      "final_tilt_rad": 0.04930660649610401,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "gap",
+      "difficulty": 0.4444444444444444,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.48318879353002775,
+      "final_tilt_rad": 0.031110621878565028,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "gap",
+      "difficulty": 1,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.4885019974574091,
+      "final_tilt_rad": 0.019063226033356005,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "platforms",
+      "difficulty": 0,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.47226848168594227,
+      "final_tilt_rad": 0.03516987609779978,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "platforms",
+      "difficulty": 0.4444444444444444,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.26784279666225524,
+      "final_tilt_rad": 1.3841456039717488,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "platforms",
+      "difficulty": 1,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.46417274438376366,
+      "final_tilt_rad": 0.04797862765109058,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "mixed",
+      "difficulty": 0,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.48280787359712907,
+      "final_tilt_rad": 0.02837399167084064,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "mixed",
+      "difficulty": 0.4444444444444444,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.4889162931873665,
+      "final_tilt_rad": 0.027792553349777937,
+      "fall_condition": false,
+      "hfields": 1
+    },
+    {
+      "course": "mixed",
+      "difficulty": 1,
+      "static_pd_seconds": 2,
+      "final_base_height_m": 0.43961663051151323,
+      "final_tilt_rad": 0.23623913878181246,
+      "fall_condition": false,
+      "hfields": 1
+    }
+  ],
+  "scope": "Initial-platform PD diagnostic; not policy traversal success"
+}

@@ -1,3 +1,5 @@
+> **지형 추가:** 원본 Isaac 생성 함수를 재사용한 6종×3난이도와 전체 조감도를 준비했다. [맵 사진·실행 방법·물리 표현 차이](MUJOCO_TERRAINS.md).
+
 # MuJoCo Student Sim2Sim
 
 2026-10-23 사용자 지정 반영. 기본 `sim2sim`과 `export-sim2sim`은 이제 **RBQ10 Vision Student** 기준이다. 기존 Teacher 도구는 별도 진단용으로만 남겨 둔다. 진행 중인 Isaac Teacher 학습은 변경하지 않았다.

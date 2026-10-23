@@ -1,0 +1,1280 @@
+{
+  "engine": "3.3.0",
+  "seed": 42,
+  "courses": [
+    {
+      "name": "flat",
+      "difficulty": 0.0,
+      "seed": 42,
+      "origin_xy": [
+        0.0,
+        25.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.03,
+        0.03
+      ],
+      "goals_xy": [
+        [
+          2.4000000000000004,
+          27.0
+        ],
+        [
+          3.5,
+          26.9
+        ],
+        [
+          5.2,
+          26.9
+        ],
+        [
+          7.1000000000000005,
+          26.9
+        ],
+        [
+          9.0,
+          26.9
+        ],
+        [
+          10.9,
+          26.9
+        ],
+        [
+          12.600000000000001,
+          27.0
+        ],
+        [
+          15.200000000000001,
+          27.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 0,
+      "row": 0,
+      "column": 0,
+      "grid_height_sha256": "d3e878cfc89444d5e7b40d7ba42b43e21635307456186c0bfe28142aa080b92a"
+    },
+    {
+      "name": "flat",
+      "difficulty": 0.4444444444444444,
+      "seed": 42,
+      "origin_xy": [
+        18.0,
+        25.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.03,
+        0.05
+      ],
+      "goals_xy": [
+        [
+          20.4,
+          27.0
+        ],
+        [
+          21.5,
+          26.9
+        ],
+        [
+          23.2,
+          26.9
+        ],
+        [
+          25.1,
+          26.9
+        ],
+        [
+          27.0,
+          26.9
+        ],
+        [
+          28.9,
+          26.9
+        ],
+        [
+          30.6,
+          27.0
+        ],
+        [
+          33.2,
+          27.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 4,
+      "row": 0,
+      "column": 1,
+      "grid_height_sha256": "a951d4351725e96fc8726c9eced55403cae41a81be043f9beb55aa9485260f9a"
+    },
+    {
+      "name": "flat",
+      "difficulty": 1.0,
+      "seed": 42,
+      "origin_xy": [
+        36.0,
+        25.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.035,
+        0.08
+      ],
+      "goals_xy": [
+        [
+          38.4,
+          27.0
+        ],
+        [
+          39.5,
+          26.9
+        ],
+        [
+          41.2,
+          26.9
+        ],
+        [
+          43.1,
+          26.9
+        ],
+        [
+          45.0,
+          26.9
+        ],
+        [
+          46.9,
+          26.9
+        ],
+        [
+          48.6,
+          27.0
+        ],
+        [
+          51.2,
+          27.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 9,
+      "row": 0,
+      "column": 2,
+      "grid_height_sha256": "24147daa4d07953008650696ee6027f8d7808620bdeb3cdaadcbea1a149ccf4a"
+    },
+    {
+      "name": "hurdle",
+      "difficulty": 0.0,
+      "seed": 42,
+      "origin_xy": [
+        0.0,
+        20.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.03,
+        0.03
+      ],
+      "goals_xy": [
+        [
+          2.4000000000000004,
+          22.0
+        ],
+        [
+          3.5,
+          21.9
+        ],
+        [
+          5.300000000000001,
+          22.0
+        ],
+        [
+          7.1000000000000005,
+          21.9
+        ],
+        [
+          8.8,
+          22.0
+        ],
+        [
+          10.600000000000001,
+          21.9
+        ],
+        [
+          12.3,
+          22.0
+        ],
+        [
+          14.8,
+          22.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 0,
+      "row": 1,
+      "column": 0,
+      "grid_height_sha256": "cc87b5e67460f58123391285d260886b6779ddbb3944eb7ba53fcbc2cd2d5503"
+    },
+    {
+      "name": "hurdle",
+      "difficulty": 0.4444444444444444,
+      "seed": 42,
+      "origin_xy": [
+        18.0,
+        20.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.03,
+        0.28500000000000003
+      ],
+      "goals_xy": [
+        [
+          20.4,
+          22.0
+        ],
+        [
+          21.5,
+          21.9
+        ],
+        [
+          23.3,
+          22.0
+        ],
+        [
+          25.1,
+          21.9
+        ],
+        [
+          27.0,
+          21.9
+        ],
+        [
+          28.9,
+          22.0
+        ],
+        [
+          30.700000000000003,
+          21.9
+        ],
+        [
+          33.4,
+          22.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 4,
+      "row": 1,
+      "column": 1,
+      "grid_height_sha256": "8a61f17b4822090e4c4ea0920b6e7f838c7cec19a4f20da6fc4963b0f6cf28f3"
+    },
+    {
+      "name": "hurdle",
+      "difficulty": 1.0,
+      "seed": 42,
+      "origin_xy": [
+        36.0,
+        20.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.035,
+        0.435
+      ],
+      "goals_xy": [
+        [
+          38.4,
+          22.0
+        ],
+        [
+          39.5,
+          21.9
+        ],
+        [
+          41.3,
+          22.0
+        ],
+        [
+          43.1,
+          21.9
+        ],
+        [
+          45.0,
+          21.9
+        ],
+        [
+          46.9,
+          22.0
+        ],
+        [
+          48.7,
+          21.9
+        ],
+        [
+          51.4,
+          22.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 9,
+      "row": 1,
+      "column": 2,
+      "grid_height_sha256": "a7bbad03a526cf51a4e59f9029ad33f98e872f8b44ca893127bff0ec4427aafa"
+    },
+    {
+      "name": "step",
+      "difficulty": 0.0,
+      "seed": 42,
+      "origin_xy": [
+        0.0,
+        15.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.03,
+        0.325
+      ],
+      "goals_xy": [
+        [
+          1.5,
+          17.0
+        ],
+        [
+          3.2,
+          17.0
+        ],
+        [
+          4.2,
+          16.9
+        ],
+        [
+          5.1000000000000005,
+          16.9
+        ],
+        [
+          6.2,
+          16.9
+        ],
+        [
+          7.300000000000001,
+          17.0
+        ],
+        [
+          8.3,
+          17.0
+        ],
+        [
+          9.600000000000001,
+          17.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        20.0,
+        40.0,
+        60.0,
+        60.0,
+        40.0,
+        20.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 0,
+      "row": 2,
+      "column": 0,
+      "grid_height_sha256": "02b5c46c3b6f0608d8869719c1f9be0be680d8ceca25038576455bdc52857d51"
+    },
+    {
+      "name": "step",
+      "difficulty": 0.4444444444444444,
+      "seed": 42,
+      "origin_xy": [
+        18.0,
+        15.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.035,
+        0.805
+      ],
+      "goals_xy": [
+        [
+          19.5,
+          17.0
+        ],
+        [
+          21.2,
+          17.0
+        ],
+        [
+          22.2,
+          16.9
+        ],
+        [
+          23.1,
+          16.9
+        ],
+        [
+          24.2,
+          16.9
+        ],
+        [
+          25.3,
+          17.0
+        ],
+        [
+          26.3,
+          17.0
+        ],
+        [
+          27.6,
+          17.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        51.0,
+        102.0,
+        153.0,
+        153.0,
+        102.0,
+        51.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 4,
+      "row": 2,
+      "column": 1,
+      "grid_height_sha256": "0d66539da5c8b042a84f3a15753f8a4ab4fcdfdec634ddc78bd026d929cbf971"
+    },
+    {
+      "name": "step",
+      "difficulty": 1.0,
+      "seed": 42,
+      "origin_xy": [
+        36.0,
+        15.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.035,
+        1.42
+      ],
+      "goals_xy": [
+        [
+          37.5,
+          17.0
+        ],
+        [
+          39.2,
+          17.0
+        ],
+        [
+          40.2,
+          16.9
+        ],
+        [
+          41.1,
+          16.9
+        ],
+        [
+          42.2,
+          16.9
+        ],
+        [
+          43.3,
+          17.0
+        ],
+        [
+          44.3,
+          17.0
+        ],
+        [
+          45.6,
+          17.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        90.0,
+        180.0,
+        270.0,
+        270.0,
+        180.0,
+        90.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 9,
+      "row": 2,
+      "column": 2,
+      "grid_height_sha256": "2cc0738fe5e164d98af0ec4579716ff72056d52737594284aa777b49ae157e8e"
+    },
+    {
+      "name": "gap",
+      "difficulty": 0.0,
+      "seed": 42,
+      "origin_xy": [
+        0.0,
+        10.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.53,
+        0.03
+      ],
+      "goals_xy": [
+        [
+          2.4000000000000004,
+          12.0
+        ],
+        [
+          3.1,
+          12.0
+        ],
+        [
+          4.3,
+          11.9
+        ],
+        [
+          5.7,
+          12.0
+        ],
+        [
+          7.0,
+          11.9
+        ],
+        [
+          8.1,
+          11.9
+        ],
+        [
+          9.3,
+          12.0
+        ],
+        [
+          11.0,
+          12.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 0,
+      "row": 3,
+      "column": 0,
+      "grid_height_sha256": "f7ad05ef631da90cd4e7f6fd74d941693c581801f837f4118abe13a40e2d252f"
+    },
+    {
+      "name": "gap",
+      "difficulty": 0.4444444444444444,
+      "seed": 42,
+      "origin_xy": [
+        18.0,
+        10.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.53,
+        0.045
+      ],
+      "goals_xy": [
+        [
+          20.4,
+          12.0
+        ],
+        [
+          21.2,
+          12.0
+        ],
+        [
+          22.7,
+          11.9
+        ],
+        [
+          24.4,
+          12.0
+        ],
+        [
+          26.0,
+          11.9
+        ],
+        [
+          27.4,
+          11.9
+        ],
+        [
+          28.9,
+          12.0
+        ],
+        [
+          31.1,
+          12.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 4,
+      "row": 3,
+      "column": 1,
+      "grid_height_sha256": "8459c76d6c0f558cced9fa226ad869c06fcb30234e28dbc45698112b4ed7a709"
+    },
+    {
+      "name": "gap",
+      "difficulty": 1.0,
+      "seed": 42,
+      "origin_xy": [
+        36.0,
+        10.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.535,
+        0.075
+      ],
+      "goals_xy": [
+        [
+          38.4,
+          12.0
+        ],
+        [
+          39.4,
+          12.0
+        ],
+        [
+          41.3,
+          11.9
+        ],
+        [
+          43.4,
+          12.0
+        ],
+        [
+          45.4,
+          11.9
+        ],
+        [
+          47.2,
+          11.9
+        ],
+        [
+          49.1,
+          12.0
+        ],
+        [
+          51.9,
+          12.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 9,
+      "row": 3,
+      "column": 2,
+      "grid_height_sha256": "784c26b5dbd9963b43a77493aee36df021789c163208aaae32707ee106a3f298"
+    },
+    {
+      "name": "platforms",
+      "difficulty": 0.0,
+      "seed": 42,
+      "origin_xy": [
+        0.0,
+        5.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.53,
+        0.12
+      ],
+      "goals_xy": [
+        [
+          2.0,
+          7.0
+        ],
+        [
+          3.0,
+          7.2
+        ],
+        [
+          3.9000000000000004,
+          6.8
+        ],
+        [
+          4.800000000000001,
+          7.2
+        ],
+        [
+          5.800000000000001,
+          6.8
+        ],
+        [
+          6.7,
+          7.2
+        ],
+        [
+          8.0,
+          6.8
+        ],
+        [
+          9.8,
+          7.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 0,
+      "row": 4,
+      "column": 0,
+      "grid_height_sha256": "1decdd35cf5080f59075ec18aa596b3cd3822290ff15f21b378d94cd7f1e7791"
+    },
+    {
+      "name": "platforms",
+      "difficulty": 0.4444444444444444,
+      "seed": 42,
+      "origin_xy": [
+        18.0,
+        5.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.535,
+        0.185
+      ],
+      "goals_xy": [
+        [
+          20.0,
+          7.0
+        ],
+        [
+          20.8,
+          7.2
+        ],
+        [
+          21.7,
+          6.8
+        ],
+        [
+          22.8,
+          7.2
+        ],
+        [
+          23.8,
+          6.8
+        ],
+        [
+          24.9,
+          7.2
+        ],
+        [
+          26.4,
+          6.8
+        ],
+        [
+          28.6,
+          7.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 4,
+      "row": 4,
+      "column": 1,
+      "grid_height_sha256": "4479ce5804a64ba45d4846ea9e52e1c1112f66a715a518e74c7cedc4f6163953"
+    },
+    {
+      "name": "platforms",
+      "difficulty": 1.0,
+      "seed": 42,
+      "origin_xy": [
+        36.0,
+        5.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.535,
+        0.31
+      ],
+      "goals_xy": [
+        [
+          38.1,
+          7.0
+        ],
+        [
+          39.1,
+          7.2
+        ],
+        [
+          39.9,
+          6.8
+        ],
+        [
+          40.8,
+          7.2
+        ],
+        [
+          41.9,
+          6.7
+        ],
+        [
+          42.8,
+          7.300000000000001
+        ],
+        [
+          44.3,
+          6.7
+        ],
+        [
+          46.3,
+          7.0
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 9,
+      "row": 4,
+      "column": 2,
+      "grid_height_sha256": "b957f1d498701c1b8849b324bd282a26f8efe96cc6443124d9a47ede97d5e294"
+    },
+    {
+      "name": "mixed",
+      "difficulty": 0.0,
+      "seed": 42,
+      "origin_xy": [
+        0.0,
+        0.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.03,
+        0.45
+      ],
+      "goals_xy": [
+        [
+          2.2,
+          2.0
+        ],
+        [
+          4.3500000000000005,
+          2.0
+        ],
+        [
+          5.0,
+          2.0
+        ],
+        [
+          6.3500000000000005,
+          2.0
+        ],
+        [
+          6.9,
+          2.0
+        ],
+        [
+          7.9,
+          2.2
+        ],
+        [
+          9.0,
+          1.8
+        ],
+        [
+          10.100000000000001,
+          2.2
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.365,
+        0.365,
+        0.365,
+        0.365,
+        0.27,
+        0.27,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 0,
+      "row": 5,
+      "column": 0,
+      "grid_height_sha256": "2395e30a46f07f36e4d35caebb6a5c6d96a279f14509729d6cd95dc2130ba8b3"
+    },
+    {
+      "name": "mixed",
+      "difficulty": 0.4444444444444444,
+      "seed": 42,
+      "origin_xy": [
+        18.0,
+        0.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.035,
+        0.47000000000000003
+      ],
+      "goals_xy": [
+        [
+          20.2,
+          2.0
+        ],
+        [
+          22.35,
+          2.0
+        ],
+        [
+          23.0,
+          2.0
+        ],
+        [
+          24.35,
+          2.0
+        ],
+        [
+          24.9,
+          2.0
+        ],
+        [
+          25.9,
+          2.2
+        ],
+        [
+          27.0,
+          1.8
+        ],
+        [
+          28.1,
+          2.2
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.365,
+        0.365,
+        0.365,
+        0.365,
+        0.27,
+        0.27,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 4,
+      "row": 5,
+      "column": 1,
+      "grid_height_sha256": "2617e71cb9ca5580bad57026a2aafcf999ee0b2ac26e6aa229573fb632d3e93c"
+    },
+    {
+      "name": "mixed",
+      "difficulty": 1.0,
+      "seed": 42,
+      "origin_xy": [
+        36.0,
+        0.0
+      ],
+      "extent_xy": [
+        15.9,
+        3.9000000000000004
+      ],
+      "grid_shape_xy": [
+        160,
+        40
+      ],
+      "height_range_m": [
+        -0.04,
+        0.49
+      ],
+      "goals_xy": [
+        [
+          38.2,
+          2.0
+        ],
+        [
+          40.35,
+          2.0
+        ],
+        [
+          41.0,
+          2.0
+        ],
+        [
+          42.35,
+          2.0
+        ],
+        [
+          42.9,
+          2.0
+        ],
+        [
+          43.9,
+          2.2
+        ],
+        [
+          45.0,
+          1.8
+        ],
+        [
+          46.1,
+          2.2
+        ]
+      ],
+      "goal_heights_m": [
+        0.0,
+        0.365,
+        0.365,
+        0.365,
+        0.365,
+        0.27,
+        0.27,
+        0.0
+      ],
+      "source_sha256": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+      "level": 9,
+      "row": 5,
+      "column": 2,
+      "grid_height_sha256": "5ba87c32dbb7f334f35b573426126c6fdbe839ef6eff24926b046afeb8d7554d"
+    }
+  ],
+  "validation": {
+    "ray_height_samples": 1224,
+    "maximum_absolute_height_error_m": 3.278255222838311e-08
+  },
+  "original_source": "upstream/Isaaclab_Parkour/parkour_isaaclab/terrains",
+  "source_files_sha256": {
+    "upstream/Isaaclab_Parkour/parkour_isaaclab/terrains/extreme_parkour/extreme_parkour_terrians.py": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022",
+    "upstream/Isaaclab_Parkour/parkour_isaaclab/terrains/extreme_parkour/extreme_parkour_terrains_cfg.py": "e9e9e391b75d292302353693f44d3974827e896d84da5cfdfd73547ffc55a4f1",
+    "upstream/Isaaclab_Parkour/parkour_isaaclab/terrains/extreme_parkour/config/parkour.py": "e4c75a566b36737cb6d9c491f6d0c1bbbcc56679fc8ad1564dd68e124dcdda5a",
+    "upstream/Isaaclab_Parkour/parkour_isaaclab/terrains/parkour_terrain_generator_cfg.py": "78bbeba8f7a922b4802183aa3d0ba9be7edb4bdea9e759e959ed33eb9211f6ec"
+  },
+  "adapter": "Original raw height generator, Student 0.1m horizontal scale, 0.005m vertical scale; replaced only Isaac mesh decorator/config construction",
+  "limitation": "Heightfield retains sampled heights but not Isaac slope-threshold vertical-edge correction or triangle simplification; gaps have bottoms, no overhang/Crawl added",
+  "image": "artifacts/mujoco_terrain_overview.png"
+}

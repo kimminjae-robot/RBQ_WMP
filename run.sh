@@ -35,6 +35,8 @@ case "$mode" in
     exec "${RBQ10_MUJOCO_PYTHON:-$project_root/.venv-sim2sim/bin/python}" "$project_root/sim2sim/run_student.py" "$@" ;;
   import-teacher)
     exec "$python_bin" "$project_root/tools/import_teacher_checkpoint.py" "$@" ;;
+  mujoco-map)
+    exec "${RBQ10_MUJOCO_PYTHON:-$project_root/.venv-sim2sim/bin/python}" "$project_root/tools/build_mujoco_terrain_map.py" "$@" ;;
   student-job)
     exec "$python_bin" "$project_root/tools/student_job.py" "$@" ;;
   teacher-job)

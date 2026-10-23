@@ -10,6 +10,7 @@ import numpy as np
 import torch
 
 from build_scene import ROOT, ASSETS, build_scene
+from terrains import COURSES
 from run_teacher import ObservationBridge
 from student_inputs import CommandInput, DepthInput, student_observation
 
@@ -35,7 +36,9 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--policy-dir',type=Path,default=ROOT/'outputs/sim2sim/student')
     p.add_argument('--config',type=Path,default=ROOT/'sim2sim/student_config.json')
-    p.add_argument('--course',choices=['flat','hurdle','step'],default='flat')
+    p.add_argument('--course',choices=['flat','hurdle','step',*COURSES],default='isaac_flat')
+    p.add_argument('--difficulty',type=float,default=.5)
+    p.add_argument('--terrain-seed',type=int,default=42)
     p.add_argument('--height',type=float,default=.10)
     p.add_argument('--seconds',type=float,default=10.)
     p.add_argument('--speed',type=float,default=.6,help='Reference vx m/s; original training is forward walking')
@@ -48,8 +51,8 @@ def main():
     p.add_argument('--viewer',action='store_true')
     p.add_argument('--output',type=Path,default=ROOT/'outputs/sim2sim/student_rollout.json')
     args=p.parse_args()
-    if args.seconds<=0 or args.height<=0:
-        p.error('seconds and height must be positive')
+    if args.seconds<=0 or args.height<=0 or not 0<=args.difficulty<=1:
+        p.error('seconds and height must be positive; difficulty must be in [0,1]')
     if not (args.policy_dir/'manifest.json').is_file():
         p.error('No RBQ10 Student export. Train/distill a real Student, then run export-sim2sim --checkpoint STUDENT.pt. No Teacher fallback.')
     meta=validate_export(args.policy_dir)
@@ -77,7 +80,7 @@ def main():
         if cfg['velocity_source']=='external' and initial[2] is None:
             raise ValueError('External measured_velocity_body_m_s is required; reference vx cannot substitute for it')
         c=meta['contract']
-        model=mujoco.MjModel.from_xml_string(build_scene(c,args.course,args.height))
+        model=mujoco.MjModel.from_xml_string(build_scene(c,args.course,args.height,args.difficulty,args.terrain_seed))
         data=mujoco.MjData(model)
         hd=json.loads((ASSETS/'official/info.json').read_text())['config_info']['init_state']['default_joint_angles']
         home=np.array([hd[n] for n in c['joint_order']])
@@ -143,7 +146,7 @@ def main():
         finally:
             if viewer:viewer.close()
         result={'role':'student','checkpoint':meta['checkpoint'],'checkpoint_sha256':meta['checkpoint_sha256'],
-            'configuration':cfg,'course':args.course,'height':args.height,'engine':mujoco.__version__,
+            'configuration':cfg,'course':args.course,'height':args.height,'difficulty':args.difficulty,'terrain_seed':args.terrain_seed,'engine':mujoco.__version__,
             'simulated_seconds':float(data.time),'termination':termination,
             'displacement_xyz':(data.xpos[bridge.base]-start).tolist(),
             'max_abs_torque_nm':max_torque,'max_abs_joint_speed_rad_s':max_speed,

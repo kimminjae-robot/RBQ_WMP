@@ -1,3 +1,5 @@
 # Install in a separate Python 3.11 venv with PyTorch; do not change the training venv.
 mujoco==3.3.0
 numpy==1.26.0
+scipy==1.15.3
+Pillow==11.3.0
