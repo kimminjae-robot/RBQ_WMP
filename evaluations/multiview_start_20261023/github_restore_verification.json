@@ -1,0 +1,8 @@
+{
+  "commit": "bef5519159ec67b010d7ac3ec4b96495a286288d",
+  "checkpoint_sha256": "708a3591052e5696c92c82cfd50c387ff1be86416d5520fd43b33356c3b565bd",
+  "checkpoint_bytes": 112833075,
+  "parts": 25,
+  "full_checkpoint_reconstructed": true,
+  "syntax_passed": true
+}
