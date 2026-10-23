@@ -1,0 +1,10 @@
+{
+  "static_pd_seconds": 10,
+  "static_pd_final_base_z": 0.47762878306590156,
+  "source_observation_fixture_steps": 7,
+  "source_observation_max_abs_error": 4.7031790018081665e-08,
+  "export_max_abs_error": 0.0,
+  "joint_and_actuator_name_order_verified": true,
+  "flat_height_formula_with_20m_offset_saturates": true,
+  "scope": "CPU fixtures and static dynamics; not live Isaac/MuJoCo trajectory parity or parkour success"
+}

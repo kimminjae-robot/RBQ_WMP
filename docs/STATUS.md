@@ -42,3 +42,7 @@ Phase 1·2를 완료했고 Phase 3 RBQ10 Teacher 학습을 진행 중이다. 배
 6. Crawl용 낮은 천장 지형·정책·평가와 모든 장애물을 섞은 연속 코스 검증은 아직 미구현/미검증이다. 수직 벽 부착 등반은 현재 범위에서 제외한다.
 
 이번 배포에 Teacher·영상이 포함됐다고 Phase 4/5나 실물 적용까지 완료됐다는 뜻은 아니다. 기존 작업 공간과 기본 Isaac 환경은 보존했다.
+
+## MuJoCo 초기 bridge (2026-10-23)
+
+Teacher TorchScript export, 공식 URDF 변환, 관측값 bridge, headless 실행을 구현했다. 관측값 fixture와 10초 정지 PD는 통과했으나 학습 정책은 짧은 실행에서 넘어져 안정적인 Sim2Sim 전이는 미완료다. Student 및 기존 Isaac 학습 설정은 바꾸지 않았다. [실행/한계](SIM2SIM.md), [추가 발견된 관측값 문제와 실물 적용 차이](DEPLOYMENT_GAPS.md).

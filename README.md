@@ -86,3 +86,5 @@ Go2/RBQ10 환경과 모델 계약은 분리돼 있습니다. 중간 검증은 he
 Phase 1 Go2 가중치는 새 설치 시 `--download-go2`로 별도 받을 수 있습니다. 출처와 hash는 `checkpoints/manifest.json`, 기존 venv에서의 다운로드 방법은 [PORTABILITY.md](docs/PORTABILITY.md)에 있습니다.
 
 원본 고지: [LICENSE](LICENSE), [THIRD_PARTY.md](THIRD_PARTY.md). `docs/history/`는 과거 PC의 검증 기록이며 현재 상태는 [docs/STATUS.md](docs/STATUS.md)가 기준입니다.
+
+MuJoCo 사전 준비: [실행 방법과 실제 초기 실패 결과](docs/SIM2SIM.md), [실물 적용 전 관측값·센서·제어 차이](docs/DEPLOYMENT_GAPS.md).

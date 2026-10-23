@@ -1,0 +1,110 @@
+{
+  "smoke_hurdle": {
+    "checkpoint": "model_3674.pt",
+    "checkpoint_sha256": "073bf99cb7f4b4afdcef9c0c338c4bc426fcab57d497af6a5fc2be9c6304b7af",
+    "engine": "3.3.0",
+    "course": "hurdle",
+    "height": 0.1,
+    "scan_mode": "source",
+    "action_delay_steps": 0,
+    "physics_dt": 0.005,
+    "policy_dt": 0.02,
+    "simulated_seconds": 2.7199999999999642,
+    "termination": "fall",
+    "displacement_xyz": [
+      2.814415116450747,
+      0.537968064726223,
+      -0.14245172282711266
+    ],
+    "max_abs_torque_nm": 150.0,
+    "max_abs_joint_speed_rad_s": 62.92506674153459,
+    "mass_kg": 40.68392,
+    "joint_order": [
+      "joint0_HRR",
+      "joint3_HLR",
+      "joint6_FRR",
+      "joint9_FLR",
+      "joint1_HRP",
+      "joint4_HLP",
+      "joint7_FRP",
+      "joint10_FLP",
+      "joint2_HRK",
+      "joint5_HLK",
+      "joint8_FRK",
+      "joint11_FLK"
+    ],
+    "limitation": "Independent simple courses; no original terrain/curriculum success-rate equivalence. MuJoCo PD/contact solver differs; 50 rad/s velocity cap is monitored, not imposed."
+  },
+  "smoke_step": {
+    "checkpoint": "model_3674.pt",
+    "checkpoint_sha256": "073bf99cb7f4b4afdcef9c0c338c4bc426fcab57d497af6a5fc2be9c6304b7af",
+    "engine": "3.3.0",
+    "course": "step",
+    "height": 0.1,
+    "scan_mode": "source",
+    "action_delay_steps": 0,
+    "physics_dt": 0.005,
+    "policy_dt": 0.02,
+    "simulated_seconds": 3.3599999999999506,
+    "termination": "fall",
+    "displacement_xyz": [
+      3.1828763551151296,
+      0.3649046180319047,
+      0.176200627218149
+    ],
+    "max_abs_torque_nm": 150.0,
+    "max_abs_joint_speed_rad_s": 68.3907239834163,
+    "mass_kg": 40.68392,
+    "joint_order": [
+      "joint0_HRR",
+      "joint3_HLR",
+      "joint6_FRR",
+      "joint9_FLR",
+      "joint1_HRP",
+      "joint4_HLP",
+      "joint7_FRP",
+      "joint10_FLP",
+      "joint2_HRK",
+      "joint5_HLK",
+      "joint8_FRK",
+      "joint11_FLK"
+    ],
+    "limitation": "Independent simple courses; no original terrain/curriculum success-rate equivalence. MuJoCo PD/contact solver differs; 50 rad/s velocity cap is monitored, not imposed."
+  },
+  "smoke_flat": {
+    "checkpoint": "model_3674.pt",
+    "checkpoint_sha256": "073bf99cb7f4b4afdcef9c0c338c4bc426fcab57d497af6a5fc2be9c6304b7af",
+    "engine": "3.3.0",
+    "course": "flat",
+    "height": 0.1,
+    "scan_mode": "source",
+    "action_delay_steps": 0,
+    "physics_dt": 0.005,
+    "policy_dt": 0.02,
+    "simulated_seconds": 1.9599999999999802,
+    "termination": "fall",
+    "displacement_xyz": [
+      1.9281212243844799,
+      0.29507346522813527,
+      -0.11851924929475344
+    ],
+    "max_abs_torque_nm": 150.0,
+    "max_abs_joint_speed_rad_s": 70.8048589716218,
+    "mass_kg": 40.68392,
+    "joint_order": [
+      "joint0_HRR",
+      "joint3_HLR",
+      "joint6_FRR",
+      "joint9_FLR",
+      "joint1_HRP",
+      "joint4_HLP",
+      "joint7_FRP",
+      "joint10_FLP",
+      "joint2_HRK",
+      "joint5_HLK",
+      "joint8_FRK",
+      "joint11_FLK"
+    ],
+    "limitation": "Independent simple courses; no original terrain/curriculum success-rate equivalence. MuJoCo PD/contact solver differs; 50 rad/s velocity cap is monitored, not imposed."
+  }
+}
