@@ -45,6 +45,18 @@ def main():
     # The terrain label comes from experiment config even on a different scene.
     assert x[11]==1 and cfg['terrain_label']=='parkour'
     depth=DepthInput(m,d,cfg['camera'])
+    # Independent manufacturer TF: optical x -> body -Y, y -> -Z, z -> +X.
+    expected_rotation=np.array([[0.,0.,1.],[-1.,0.,0.],[0.,-1.,0.]])
+    np.testing.assert_allclose(depth.rotation,expected_rotation,atol=1e-12)
+    np.testing.assert_allclose(cfg['camera']['position_m'],[.388031,-.0375,.037764],atol=1e-12)
+    cal=json.loads((ASSETS/'front_depth_camera.json').read_text())
+    np.testing.assert_allclose(cal['base_to_depth_tf'],np.block([[expected_rotation,np.array([[.388031],[-.0375],[.037764]])],[np.array([[0.,0.,0.,1.]])]]),atol=1e-12)
+    contract_spec=importlib.util.spec_from_file_location('_camera_contract',ROOT/'rbq10_parkour/contract.py')
+    contract_module=importlib.util.module_from_spec(contract_spec);contract_spec.loader.exec_module(contract_module)
+    contract_module.check_checkpoint_contract(c['robot_contract'],contract_module.robot_contract())
+    student_contract=contract_module.robot_contract('student')
+    np.testing.assert_allclose(student_contract['camera_position_m'],cfg['camera']['position_m'])
+    np.testing.assert_allclose(student_contract['camera_quaternion_wxyz_ros'],cfg['camera']['quaternion_wxyz_ros'])
     image=depth.sample()
     assert image.shape==(1,58,87) and torch.isfinite(image).all()
     assert depth.latest_raw.min()<1.99, 'Camera appears not to see ground'
@@ -62,7 +74,7 @@ def main():
         np.testing.assert_allclose(measured,[.1,.02,0])
     report={'teacher_checkpoint_rejected':True,'measured_velocity_separate_from_reference':True,
         'joystick_yaw_rate_and_manual_label_checked':True,'mujoco_standing_contacts_all_four':True,
-        'camera_sees_ground':True,'depth_resize_vs_original_max_abs_error':preprocessing_error,
+        'camera_sees_ground':True,'manufacturer_front_depth_TF_verified':True,'teacher_resume_contract_preserved':True,'depth_resize_vs_original_max_abs_error':preprocessing_error,
         'policy_execution_status':'No trained RBQ10 Student available; no RBQ10 Student rollout performed'}
     fixture=ROOT/'checkpoints/go2_student.pt'
     if fixture.is_file():

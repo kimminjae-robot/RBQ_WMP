@@ -127,7 +127,7 @@ index b6bbaf7..145ca18 100644
  
  from scripts.rsl_rl.vecenv_wrapper import ParkourRslRlVecEnvWrapper
 diff --git a/scripts/rsl_rl/modules/on_policy_runner_with_extractor.py b/scripts/rsl_rl/modules/on_policy_runner_with_extractor.py
-index 077d7e0..2f0ea1f 100644
+index 077d7e0..22113c1 100644
 --- a/scripts/rsl_rl/modules/on_policy_runner_with_extractor.py
 +++ b/scripts/rsl_rl/modules/on_policy_runner_with_extractor.py
 @@ -365,7 +365,7 @@ class OnPolicyRunnerWithExtractor(OnPolicyRunner):
@@ -148,7 +148,7 @@ index 077d7e0..2f0ea1f 100644
          # save model
          torch.save(saved_dict, path)
  
-@@ -546,6 +548,11 @@ class OnPolicyRunnerWithExtractor(OnPolicyRunner):
+@@ -546,6 +548,15 @@ class OnPolicyRunnerWithExtractor(OnPolicyRunner):
  
      def load(self, path: str, load_optimizer: bool = True):
          loaded_dict = torch.load(path, weights_only=False)
@@ -156,7 +156,11 @@ index 077d7e0..2f0ea1f 100644
 +            if self.cfg.get("robot_contract") is None:
 +                raise ValueError("RBQ10 checkpoint cannot be loaded into an unversioned/Go2 runner")
 +            from rbq10_parkour.contract import check_checkpoint_contract
-+            check_checkpoint_contract(loaded_dict.get("robot_contract"), self.cfg["robot_contract"])
++            check_checkpoint_contract(
++                loaded_dict.get("robot_contract"), self.cfg["robot_contract"],
++                allow_teacher_initialization=(self.depth_encoder_cfg is not None
++                                              and 'depth_actor_state_dict' not in loaded_dict),
++            )
          resumed_training = self.alg.policy.load_state_dict(loaded_dict["model_state_dict"])
          self.alg.estimator.load_state_dict(loaded_dict['estimator_state_dict'])
          if self.alg.rnd:

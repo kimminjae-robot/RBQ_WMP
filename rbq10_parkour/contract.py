@@ -15,7 +15,9 @@ FOOT_NAMES = [f"{leg}_foot" for leg in ("HR", "HL", "FR", "FL")]
 INFO = json.loads((ASSETS / "official/info.json").read_text())["config_info"]
 HOME = INFO["init_state"]["default_joint_angles"]
 ACTION_SCALE = 0.25  # Preserve the original parkour action interface.
-CAMERA_POSITION = (0.42, 0.0, 0.10)  # Provisional simulated mount, beyond the 0.40 m trunk front.
+CAMERA_CALIBRATION = json.loads((ASSETS / "front_depth_camera.json").read_text())
+CAMERA_POSITION = tuple(CAMERA_CALIBRATION["translation_m"])
+CAMERA_ROTATION = tuple(CAMERA_CALIBRATION["quaternion_wxyz_ros"])
 
 
 def verify_assets():
@@ -25,9 +27,11 @@ def verify_assets():
             raise ValueError(f"Official RBQ10 asset hash mismatch: {entry['path']}")
 
 
-def robot_contract():
+def robot_contract(role="teacher"):
     verify_assets()
-    return {
+    if role not in ("teacher", "student"):
+        raise ValueError(f"Unknown policy role: {role}")
+    contract = {
         "schema": "rbq10_extreme_parkour_v1",
         "robot": "Rainbow_RBQ10_without_arm",
         "source_commit": COMMIT,
@@ -38,13 +42,27 @@ def robot_contract():
         "actuator": "official_implicit_PD",
         "kp_R_P_K": [123.39138, 123.39138, 127.77215],
         "kd": 2.5, "effort_nm_R_P_K": [100.0, 100.0, 150.0], "velocity_rad_s": 50.0,
-        "camera_parent": "trunk", "camera_position_m": list(CAMERA_POSITION),
+        "camera_parent": "trunk", "camera_position_m": [0.42, 0.0, 0.10],
         "camera_mount_status": "simulation_initial_value_not_hardware_calibrated",
         "depth_hw": [58, 87],
     }
+    # Existing Teacher has no camera input: preserve its exact checkpoint/resume contract.
+    if role == "student":
+        contract.update({
+            "schema": "rbq10_extreme_parkour_student_front_depth_v2",
+            "camera_position_m": list(CAMERA_POSITION),
+            "camera_quaternion_wxyz_ros": list(CAMERA_ROTATION),
+            "camera_mount_status": "manufacturer_front_depth_TF",
+            "camera_sensor": CAMERA_CALIBRATION["sensor"],
+            "camera_tf_source": CAMERA_CALIBRATION["source_url"],
+        })
+    return contract
 
 
-def check_checkpoint_contract(saved, expected):
+def check_checkpoint_contract(saved, expected, allow_teacher_initialization=False):
+    if (allow_teacher_initialization and saved == robot_contract("teacher")
+            and expected == robot_contract("student")):
+        return  # Explicit original Teacher -> Student distillation initialization only.
     if saved != expected:
         raise ValueError("Robot checkpoint contract mismatch: RBQ10 requires an RBQ10 parkour checkpoint; "
                          "Go2 and manufacturer locomotion checkpoints cannot be used as RBQ10 parkour checkpoints.")

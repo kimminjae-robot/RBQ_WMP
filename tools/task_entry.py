@@ -16,7 +16,12 @@ if selection.task and "Rainbow-RBQ10" in selection.task and selection.checkpoint
         import torch
         from rbq10_parkour.contract import robot_contract, check_checkpoint_contract
         saved = torch.load(checkpoint, map_location="cpu", weights_only=True)
-        check_checkpoint_contract(saved.get("robot_contract"), robot_contract())
+        # Student distillation initializes from a Teacher; Student playback needs the new camera contract.
+        role = "student" if "Student" in selection.task else "teacher"
+        initialize = (role == "student" and Path(sys.argv[1]).name == "train.py"
+                      and "depth_actor_state_dict" not in saved)
+        check_checkpoint_contract(saved.get("robot_contract"), robot_contract(role),
+                                  allow_teacher_initialization=initialize)
 
 script = sys.argv[1]
 sys.argv = sys.argv[1:]

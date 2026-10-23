@@ -13,7 +13,7 @@ from parkour_tasks.extreme_parkour_task.config.go2.parkour_student_cfg import (
     UnitreeGo2StudentParkourEnvCfg_EVAL,
 )
 
-from .contract import ACTION_SCALE, CAMERA_POSITION, FOOT_NAMES
+from .contract import ACTION_SCALE, CAMERA_POSITION, CAMERA_ROTATION, FOOT_NAMES
 from .robot import RBQ10_CFG
 
 
@@ -26,6 +26,8 @@ def configure_rbq10(cfg):
         cfg.scene.depth_camera = CAMERA_CFG.copy()
         cfg.scene.depth_camera.prim_path = "{ENV_REGEX_NS}/Robot/trunk"
         cfg.scene.depth_camera.offset.pos = CAMERA_POSITION
+        cfg.scene.depth_camera.offset.rot = CAMERA_ROTATION
+        cfg.scene.depth_camera.offset.convention = "ros"
         cfg.scene.depth_camera.update_period = cfg.sim.dt * cfg.decimation
         # The source camera mesh is cosmetic and has Go2-specific placement.
         cfg.scene.depth_camera_usd = None

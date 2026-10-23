@@ -1,0 +1,62 @@
+{
+  "sensor": "front_depth_OAK-D_Pro_Wide",
+  "parent": "trunk",
+  "frame_convention": "ros_optical",
+  "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+  "translation_m": [
+    0.388031,
+    -0.0375,
+    0.037764
+  ],
+  "rotation_matrix": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ]
+  ],
+  "quaternion_wxyz_ros": [
+    0.5,
+    -0.5,
+    0.5,
+    -0.5
+  ],
+  "base_to_depth_tf": [
+    [
+      0,
+      0,
+      1,
+      0.388031
+    ],
+    [
+      -1,
+      0,
+      0,
+      -0.0375
+    ],
+    [
+      0,
+      -1,
+      0,
+      0.037764
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "base_mapping": "Manufacturer base/body frame mapped to URDF trunk; matching hip offsets and body inertial frame",
+  "checked_date": "2026-10-23"
+}

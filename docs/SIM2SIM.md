@@ -22,7 +22,18 @@
 
 ## 카메라
 
-공식 `assets/rbq10/resources/urdf/rbq10.urdf`에는 camera/depth/d435 링크나 joint가 없다. 현재 위치는 URDF에서 가져온 값이 아니라 `rbq10_parkour/config.py`의 `(0.42,0,0.10)m`이며, 자세와 intrinsics는 원본 `default_cfg.py`다. 이 값을 `sim2sim/student_config.json`에 동일하게 적용했다. 실제 장착이 이 값과 일치하면 추가 pose 변경 없이 사용할 수 있다. URDF에 있는 검증된 카메라 장착값이라고 표현하지 않는다.
+공식 [Coordinate Frames 문서](https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide)의 **전방 OAK-D Pro Wide Depth TF**를 사용한다. RGB TF나 하향 D430 TF가 아니다.
+
+- trunk/body 기준 translation: `(0.388031, -0.037500, 0.037764)m`
+- ROS optical quaternion `(w,x,y,z)`: `(0.5,-0.5,0.5,-0.5)`
+- 광학 축 매핑: camera x→body −Y, camera y→body −Z, camera z→body +X. 광축은 정면이며 기존 임시 하향 pitch를 제거했다.
+- 제조사 base/body frame은 관절 원점/질량 중심이 일치하는 URDF `trunk`에 대응시킨다.
+
+원본 TF와 출처는 `assets/rbq10/front_depth_camera.json`에 저장한다. Isaac Student는 이 파일에서 position/rotation을 읽어 `offset.convention="ros"`로 적용하고, MuJoCo의 `student_config.json`도 동일한 값을 사용한다. 기본 카메라는 URDF 링크 유무와 무관하게 제조사 문서로 지정한다.
+
+새 Student 계약은 `rbq10_extreme_parkour_student_front_depth_v2`이며 camera quaternion도 기록한다. export/실행에서 계약과 카메라 설정을 비교한다. 카메라를 사용하지 않는 기존 Teacher checkpoint 계약은 정확히 유지해 현재 학습과 resume에 영향을 주지 않는다. 원본 distillation의 Teacher→Student 초기화만 명시적으로 허용하고 Student playback/export에 Teacher를 쓰는 것은 거부한다.
+
+이번 변경은 **장착 TF**를 맞췄다. 입력 해상도, intrinsics/FOV, 최대 거리, 전처리는 원본 학습 값을 유지하며 실제 OAK-D의 개별 intrinsic calibration을 적용했다는 의미는 아니다.
 
 Depth는 raw 60×106, ray distance 최대 2m, crop `[:-2,4:-4]`, bicubic antialias resize 58×87, `distance/2−0.5`를 유지한다. 원본과 마찬가지로 terrain만 보며 robot/self 및 동적 물체는 제외한다. TorchVision 원본 resize와 MuJoCo 전처리의 fixture 오차는 0이었다. GUI 렌더러 없이 CPU ray로 생성한다.
 

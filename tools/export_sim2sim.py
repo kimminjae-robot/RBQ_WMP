@@ -121,7 +121,7 @@ def main():
     spec = importlib.util.spec_from_file_location('_rbq_contract', ROOT / 'rbq10_parkour/contract.py')
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    module.check_checkpoint_contract(c.get('robot_contract'), module.robot_contract())
+    module.check_checkpoint_contract(c.get('robot_contract'), module.robot_contract(args.role))
     if args.role == 'student':
         export_student(c, args.checkpoint, args.output)
         return

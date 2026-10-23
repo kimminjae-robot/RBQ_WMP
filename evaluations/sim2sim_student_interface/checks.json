@@ -4,6 +4,8 @@
   "joystick_yaw_rate_and_manual_label_checked": true,
   "mujoco_standing_contacts_all_four": true,
   "camera_sees_ground": true,
+  "manufacturer_front_depth_TF_verified": true,
+  "teacher_resume_contract_preserved": true,
   "depth_resize_vs_original_max_abs_error": 0.0,
   "policy_execution_status": "No trained RBQ10 Student available; no RBQ10 Student rollout performed",
   "offline_serialization_fixture": "Actual public Go2 Student weights; NOT an RBQ10 policy, never used for MuJoCo control",

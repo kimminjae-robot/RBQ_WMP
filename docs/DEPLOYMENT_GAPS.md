@@ -6,7 +6,7 @@
 - 지형 종류: 실제 실험 환경을 학습 환경에 맞춰 구성하고 운영자가 flat/parkour label을 수동 지정한다. 추론기를 새로 만들지 않는다. 서로 다른 지형을 한 번에 이동할 때 label을 고정할지 전환할지는 후속 실험에서 정한다.
 - 방향: joystick의 vx/yaw_rate를 사용한다. 원본에 직접 yaw-rate 입력이 없어 설정 가능한 horizon으로 방향 오차 2개로 변환한다. 원본 waypoint 정답을 MuJoCo Student에 공급하지 않는다. 이 변환의 실제 회전 응답은 학습된 Student로 확인해야 한다.
 - 발 접촉: MuJoCo contact 정보를 사용한다. 실제 로봇에서는 추후 contact 추정기를 연결한다.
-- 카메라: 공식 URDF에는 camera joint가 없다. 기존 별도 설정의 위치/자세를 MuJoCo와 동일하게 적용했다. 실제 mount가 일치하면 유지한다.
+- 카메라: 제조사 Coordinate Frames의 전방 OAK-D Pro Wide Depth TF를 Isaac Student와 MuJoCo에 적용했다. 위치 `(0.388031,-0.037500,0.037764)m`, ROS quaternion `(0.5,-0.5,0.5,-0.5)`이며 광축은 정면이다. 원본 intrinsic/FOV 설정은 유지한다.
 - 시간/메모리: 이번 변경에서 보류. 원본 주기, delay, 내부 GRU 상태를 유지한다.
 
 이 변경은 MuJoCo 입력/배포 코드에 적용했다. 실행 중인 Teacher 학습이나 아직 시작하지 않은 Student 학습 경로를 수정한 것은 아니다. Phase 4의 학습/검증도 측정 선속도, label 운용, joystick 방향 계약과 일관되게 구성해야 한다.

@@ -90,3 +90,5 @@ Phase 1 Go2 가중치는 새 설치 시 `--download-go2`로 별도 받을 수 �
 MuJoCo 사전 준비: [실행 방법과 실제 초기 실패 결과](docs/SIM2SIM.md), [실물 적용 전 관측값·센서·제어 차이](docs/DEPLOYMENT_GAPS.md).
 
 MuJoCo 기본 경로는 이제 **Vision Student**다. `export-sim2sim --checkpoint STUDENT.pt`와 `sim2sim`을 사용한다. reference/측정 선속도 분리, 조이스틱 방향, 수동 terrain label, MuJoCo contact를 반영했다. RBQ10 Student 학습 전에는 실제 rollout을 수행할 수 없다. [현재 계약과 명령](docs/SIM2SIM.md).
+
+카메라 장착 TF는 [제조사 공식 좌표](https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide)의 전방 OAK-D Pro Wide **Depth** 프레임으로 보정했다. Isaac Student/MuJoCo 모두 `(0.388031,-0.037500,0.037764)m`, ROS quaternion `(0.5,-0.5,0.5,-0.5)`를 사용한다.

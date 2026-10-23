@@ -50,3 +50,5 @@ Teacher TorchScript export, 공식 URDF 변환, 관측값 bridge, headless 실�
 ## Student Sim2Sim 입력 계약 적용
 
 MuJoCo 기본 실행/export를 Student로 변경했다. measured/reference velocity 분리, joystick yaw-rate 변환, 수동 terrain label, MuJoCo contact, 학습 카메라 위치/자세/전처리를 적용했다. 시간/GRU 동작은 유지한다. RBQ10 Student checkpoint가 없어 실제 Student rollout 성능은 미검증이며 Teacher를 대신 사용하지 않는다. [입력 계약과 검증](SIM2SIM.md).
+
+카메라 TF 보정: 제조사 전방 OAK-D Pro Wide Depth 기준으로 Isaac Student/MuJoCo position·orientation을 일치시켰다. 기존 Teacher 계약/실행은 유지하고 새로운 Student 계약에는 camera pose를 기록한다. [현재 카메라 계약](SIM2SIM.md#카메라).

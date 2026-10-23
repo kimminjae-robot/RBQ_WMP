@@ -54,6 +54,9 @@ def main():
         p.error('No RBQ10 Student export. Train/distill a real Student, then run export-sim2sim --checkpoint STUDENT.pt. No Teacher fallback.')
     meta=validate_export(args.policy_dir)
     cfg=json.loads(args.config.read_text())
+    for config_key, contract_key in [('position_m','camera_position_m'),('quaternion_wxyz_ros','camera_quaternion_wxyz_ros')]:
+        if contract_key not in meta['contract'] or not np.allclose(cfg['camera'][config_key],meta['contract'][contract_key],atol=1e-7):
+            p.error('Camera pose differs from the trained Student contract; use the matching camera configuration')
     for key in ['terrain_label','velocity_source','direction_source']:
         value=getattr(args,key)
         if value is not None:
