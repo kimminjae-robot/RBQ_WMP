@@ -1,0 +1,67 @@
+{
+  "repository": "https://github.com/RainbowRobotics/RBQ",
+  "commit": "c7b80ba49f9a79f983cb977e2726cb2246701fcf",
+  "files": [
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/resources/urdf/rbq10.urdf",
+      "path": "resources/urdf/rbq10.urdf",
+      "bytes": 17425,
+      "sha256": "70ad51db9bd3b5129d534cb681b6623107b2082e85c4e6005f5bfa4afe6535a0"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/resources/model/README.md",
+      "path": "official/MODEL_README.md",
+      "bytes": 2070,
+      "sha256": "5685135a54f76044fe7e28cf217fa45de70edc6689fb948924d9d932a90e0fdc"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/rbq_simulator/rbq_lab/rbq_lab/envs/rbq10/rbq10.py",
+      "path": "official/rbq10_lab.py",
+      "bytes": 3908,
+      "sha256": "93cc51d6249cbf70d53329017591e95bd47251ad8ca7ddaa6999f044bbddd13a"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/rbq_simulator/rbq_gym/policy/rbq10/policy.onnx",
+      "path": "official/policy.onnx",
+      "bytes": 758241,
+      "sha256": "a8328477f5e1061c259f05604530011ad0950d16c8eadb598d3710fed3b6a73b"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/rbq_simulator/rbq_gym/policy/rbq10/info.json",
+      "path": "official/info.json",
+      "bytes": 2296,
+      "sha256": "2a162e66410e2b390f29fc5c46ef875c97133ac3321f2c62d9e2f31b539220b0"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/resources/meshes/rbq/trunk.stl",
+      "path": "resources/meshes/rbq/trunk.stl",
+      "bytes": 504284,
+      "sha256": "1223cd34a61e05ffac7f85b1819763adc0931c5ff4ea1b2e1ea7df09743ad183"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/resources/meshes/rbq/hip2.stl",
+      "path": "resources/meshes/rbq/hip2.stl",
+      "bytes": 866584,
+      "sha256": "7068bb442e08cf5f68cf49a9c2ccff1447be4bcb2addb4d51443094ef86e6c7a"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/resources/meshes/rbq/hip3.stl",
+      "path": "resources/meshes/rbq/hip3.stl",
+      "bytes": 818784,
+      "sha256": "577bc9db3e473461f715e146296f18267d345af0e476d8448223bf97ebf0a1a6"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/resources/meshes/rbq/thigh.stl",
+      "path": "resources/meshes/rbq/thigh.stl",
+      "bytes": 25784,
+      "sha256": "0c04d2b9d71a6c89153269ca4c4a359fafcf210e37dc99f5549a01f6eadcb76f"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/RainbowRobotics/RBQ/c7b80ba49f9a79f983cb977e2726cb2246701fcf/resources/meshes/rbq/calf.stl",
+      "path": "resources/meshes/rbq/calf.stl",
+      "bytes": 71284,
+      "sha256": "cda1cfee40d8a37958e3c71ef0d407f5cf3d6403a3f2d51a76c933021b6d92d9"
+    }
+  ],
+  "urdf_changes": []
+}

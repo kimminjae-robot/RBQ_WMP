@@ -1,0 +1,8 @@
+# Sources and preserved notices
+
+- Isaaclab_Parkour: https://github.com/CAI23sbP/Isaaclab_Parkour, commit `d6766d8883cffe427f2d4c087717d4eca1f23d8c`. The training algorithm, rewards, terrain generator and teacher/student architecture are reused. Its GPL-3.0 license is preserved in `LICENSE`; setup checks out that revision and applies `patches/current_upstream.patch`. Per-file Isaac Lab copyright/SPDX notices are preserved by the patch.
+- Rainbow Robotics RBQ: https://github.com/RainbowRobotics/RBQ, commit `c7b80ba49f9a79f983cb977e2726cb2246701fcf`. Official URDF, meshes, Lab reference configuration, locomotion ONNX and source notice are recorded with pinned source URLs and SHA-256 in `assets/rbq10/manifest.json`. `assets/rbq10/official/MODEL_README.md` preserves the manufacturer's model notice. These third-party assets retain their own notices; the repository license does not replace them.
+- The Go2 baseline weights used for Phase 1 came from the public `muzi2018/Isaaclab_Parkour` fork at commit `388f3df5bc01d7d8f036b25c25490252205e7dcb`. Optional downloads, hashes and provenance are in `checkpoints/manifest.json`. Identity with the unavailable original Google Drive distribution has not been established.
+- `checkpoints/rbq10_teacher/model_3674.pt` is the actual RBQ10 Teacher trained in this project with the upstream PPO pipeline. It is not the Go2 model or the manufacturer's locomotion policy.
+
+Isaac Sim / Isaac Lab / PyTorch installations are not distributed here. The setup script reuses the user's existing compatible runtime and installs additional dependencies into a separate project virtual environment.

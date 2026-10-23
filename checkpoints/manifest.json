@@ -1,0 +1,20 @@
+[
+  {
+    "file": "go2_student.pt",
+    "source_url": "https://raw.githubusercontent.com/muzi2018/Isaaclab_Parkour/388f3df5bc01d7d8f036b25c25490252205e7dcb/logs/rsl_rl/unitree_go2_parkour_student_ppo/2025-09-03_12-07-56/model_99998.pt",
+    "bytes": 46374344,
+    "sha256": "905754cd58b5ff14265e2a9b5bd500ba659075d93602c44b284aae37847478c0",
+    "provenance": "public fork; original Drive identity unverified",
+    "git_blob_sha1": "6a6e00e24e79292ea252de4a394b8b6ffd1b7d0f",
+    "git_blob_verified": true
+  },
+  {
+    "file": "go2_teacher.pt",
+    "source_url": "https://raw.githubusercontent.com/muzi2018/Isaaclab_Parkour/388f3df5bc01d7d8f036b25c25490252205e7dcb/logs/rsl_rl/unitree_go2_parkour_student_ppo/teacher_policy/model_34700.pt",
+    "bytes": 9789238,
+    "sha256": "813050677a9583a599ed39f3ce9aa75cc63f0c714ae3265fbb70c346939f342b",
+    "provenance": "public fork; original Drive identity unverified",
+    "git_blob_sha1": "e523151706f4877494381c332ebadcf0749263fb",
+    "git_blob_verified": true
+  }
+]

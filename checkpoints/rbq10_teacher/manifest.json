@@ -1,0 +1,14 @@
+{
+  "file": "model_3674.pt",
+  "sha256": "073bf99cb7f4b4afdcef9c0c338c4bc426fcab57d497af6a5fc2be9c6304b7af",
+  "bytes": 9970329,
+  "iteration": 3674,
+  "updates_completed": 3675,
+  "training_transitions": 541900800,
+  "ppo_counter": 3859,
+  "source": "Actual project Teacher PPO training, seed 1, 6144 environments",
+  "robot": "Rainbow RBQ10, no arm",
+  "stop_reason": "disk_free_below_2_gib",
+  "stopped_kst": "2026-10-22T20:25:05+09:00",
+  "resume_note": "Optimizer and RMA counter included; simulator episodes and terrain curriculum restart on resume."
+}

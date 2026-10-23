@@ -1,0 +1,25 @@
+{
+  "python": "3.11.17 (main, Oct  1 2026, 15:41:07) [GCC 13.3.0]",
+  "isaaclab_tag": "v2.3.2",
+  "upstream_commit": "d6766d8883cffe427f2d4c087717d4eca1f23d8c",
+  "packages": {
+    "isaacsim": "5.1.0.0",
+    "isaaclab": "0.54.2",
+    "isaaclab-rl": "0.4.7",
+    "rsl-rl-lib": "2.3.3",
+    "torch": "2.7.0+cu128",
+    "torchvision": "0.22.0+cu128",
+    "numpy": "1.26.0",
+    "gymnasium": "1.2.1",
+    "warp-lang": "1.18.0",
+    "fast-simplification": "0.2.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "cuda": "12.8",
+  "driver": "580.65.06",
+  "kernel": "6.8.0-146-generic"
+}

@@ -1,0 +1,10 @@
+{
+  "same_host_new_directory_and_venv": true,
+  "physical_second_pc_tested": false,
+  "setup_exit_code": 0,
+  "checkpoint_import_verified": true,
+  "level9_smoke_episodes": 10,
+  "level9_smoke_completed": true,
+  "existing_base_rsl_rl_before": "3.1.2",
+  "existing_base_rsl_rl_after": "3.1.2"
+}

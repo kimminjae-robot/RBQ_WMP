@@ -1,0 +1,205 @@
+diff --git a/parkour_isaaclab/envs/mdp/observations.py b/parkour_isaaclab/envs/mdp/observations.py
+index 49f5ed5..2c2c37d 100644
+--- a/parkour_isaaclab/envs/mdp/observations.py
++++ b/parkour_isaaclab/envs/mdp/observations.py
+@@ -226,4 +226,4 @@ class obervation_delta_yaw_ok(ManagerTermBase):
+             asset: Articulation = env.scene[asset_cfg.name]
+             _, _, yaw = euler_xyz_from_quat(asset.data.root_quat_w)
+             self.delta_yaw = parkour_event.target_yaw - wrap_to_pi(yaw)
+-        return self.delta_yaw < threshold
++        return (self.delta_yaw < threshold).unsqueeze(-1)
+diff --git a/parkour_isaaclab/envs/parkour_viewprot_camera_contoller.py b/parkour_isaaclab/envs/parkour_viewprot_camera_contoller.py
+index b9ba6db..a8f2591 100644
+--- a/parkour_isaaclab/envs/parkour_viewprot_camera_contoller.py
++++ b/parkour_isaaclab/envs/parkour_viewprot_camera_contoller.py
+@@ -67,7 +67,7 @@ class ParkourViewportCameraController(ViewportCameraController):
+ 
+     def __del__(self):
+         """Release the keyboard interface."""
+-        self._input.unsubscribe_from_keyboard_events(self._keyboard, self._keyboard_sub)
++        self._input.unsubscribe_to_keyboard_events(self._keyboard, self._keyboard_sub)
+         self._keyboard_sub = None
+ 
+     def _on_keyboard_event(self, event, *args, **kwargs):
+diff --git a/scripts/rsl_rl/demo.py b/scripts/rsl_rl/demo.py
+index d2a9ac0..465b4b0 100644
+--- a/scripts/rsl_rl/demo.py
++++ b/scripts/rsl_rl/demo.py
+@@ -53,7 +53,7 @@ from parkour_isaaclab.envs import (
+ ParkourManagerBasedRLEnv
+ )
+ from isaaclab.utils.math import quat_apply
+-from isaaclab.utils.pretrained_checkpoint import get_published_pretrained_checkpoint
++from isaaclab_rl.utils.pretrained_checkpoint import get_published_pretrained_checkpoint
+ from isaaclab.utils.assets import retrieve_file_path
+ from isaaclab_tasks.utils import get_checkpoint_path
+ from scripts.rsl_rl.vecenv_wrapper import ParkourRslRlVecEnvWrapper
+diff --git a/scripts/rsl_rl/evaluation.py b/scripts/rsl_rl/evaluation.py
+index b6bbaf7..145ca18 100644
+--- a/scripts/rsl_rl/evaluation.py
++++ b/scripts/rsl_rl/evaluation.py
+@@ -58,7 +58,7 @@ from scripts.rsl_rl.modules.on_policy_runner_with_extractor import OnPolicyRunne
+ from isaaclab.envs import DirectMARLEnv, multi_agent_to_single_agent
+ from isaaclab.utils.assets import retrieve_file_path
+ from isaaclab.utils.dict import print_dict
+-from isaaclab.utils.pretrained_checkpoint import get_published_pretrained_checkpoint
++from isaaclab_rl.utils.pretrained_checkpoint import get_published_pretrained_checkpoint
+ from parkour_tasks.extreme_parkour_task.config.go2.agents.parkour_rl_cfg import ParkourRslRlOnPolicyRunnerCfg
+ 
+ from scripts.rsl_rl.vecenv_wrapper import ParkourRslRlVecEnvWrapper
+diff --git a/scripts/rsl_rl/modules/on_policy_runner_with_extractor.py b/scripts/rsl_rl/modules/on_policy_runner_with_extractor.py
+index 077d7e0..3613f8a 100644
+--- a/scripts/rsl_rl/modules/on_policy_runner_with_extractor.py
++++ b/scripts/rsl_rl/modules/on_policy_runner_with_extractor.py
+@@ -365,7 +365,7 @@ class OnPolicyRunnerWithExtractor(OnPolicyRunner):
+                 with torch.no_grad():
+                     actions_teacher = self.alg.policy.act_inference(obs, hist_encoding=True, scandots_latent=None)
+                     delta_yaw_ok_buffer.append(torch.nonzero(additional_obs["delta_yaw_ok"]).size(0) / additional_obs["delta_yaw_ok"].numel())
+-                obs[additional_obs["delta_yaw_ok"], 6:8] = yaw.detach()[additional_obs["delta_yaw_ok"]]
++                obs[additional_obs["delta_yaw_ok"].squeeze(-1), 6:8] = yaw.detach()[additional_obs["delta_yaw_ok"].squeeze(-1)]
+                 actions_student = self.alg.depth_actor(obs, hist_encoding=True, scandots_latent=depth_latent)
+                 actions_buffer.append(actions_teacher.detach() - actions_student)
+                 
+diff --git a/scripts/rsl_rl/play.py b/scripts/rsl_rl/play.py
+index 7604a3d..d5ae078 100644
+--- a/scripts/rsl_rl/play.py
++++ b/scripts/rsl_rl/play.py
+@@ -8,6 +8,7 @@
+ """Launch Isaac Sim Simulator first."""
+ 
+ import argparse
++import json
+ 
+ from isaaclab.app import AppLauncher
+ 
+@@ -29,6 +30,13 @@ parser.add_argument(
+     help="Use the pre-trained checkpoint from Nucleus.",
+ )
+ parser.add_argument("--real-time", action="store_true", default=False, help="Run in real-time, if possible.")
++parser.add_argument("--max_steps", type=int, default=0, help="Stop after this many policy steps; 0 runs until closed.")
++parser.add_argument("--telemetry", type=str, default=None, help="Write real simulation measurements as JSONL.")
++parser.add_argument("--viewer_switch_step", type=int, default=0, help="Policy step to switch the GUI camera.")
++parser.add_argument("--viewer_second_env", type=int, default=0, help="Environment followed after the switch.")
++parser.add_argument("--video_prefix", type=str, default="go2", help="Name prefix for recorded video files.")
++parser.add_argument("--viewer_env", type=int, default=0, help="Environment followed by the GUI camera.")
++parser.add_argument("--disable_depth_debug", action="store_true", help="Disable the auxiliary OpenCV depth window.")
+ # append RSL-RL cli arguments
+ cli_args.add_rsl_rl_args(parser)
+ # append AppLauncher cli args
+@@ -54,7 +62,7 @@ from scripts.rsl_rl.modules.on_policy_runner_with_extractor import OnPolicyRunne
+ from isaaclab.envs import DirectMARLEnv, multi_agent_to_single_agent
+ from isaaclab.utils.assets import retrieve_file_path
+ from isaaclab.utils.dict import print_dict
+-from isaaclab.utils.pretrained_checkpoint import get_published_pretrained_checkpoint
++from isaaclab_rl.utils.pretrained_checkpoint import get_published_pretrained_checkpoint
+ from parkour_tasks.extreme_parkour_task.config.go2.agents.parkour_rl_cfg import ParkourRslRlOnPolicyRunnerCfg
+ 
+ from scripts.rsl_rl.exporter import (
+@@ -76,6 +84,9 @@ def main():
+     env_cfg = parse_env_cfg(
+         args_cli.task, device=args_cli.device, num_envs=args_cli.num_envs, use_fabric=not args_cli.disable_fabric
+     )
++    env_cfg.viewer.env_index = args_cli.viewer_env
++    if args_cli.disable_depth_debug and hasattr(env_cfg.observations, "depth_camera"):
++        env_cfg.observations.depth_camera.depth_cam.params["debug_vis"] = False
+     agent_cfg: ParkourRslRlOnPolicyRunnerCfg = cli_args.parse_rsl_rl_cfg(args_cli.task, args_cli)
+ 
+     # specify directory for logging experiments
+@@ -108,6 +119,7 @@ def main():
+             "step_trigger": lambda step: step == 0,
+             "video_length": args_cli.video_length,
+             "disable_logger": True,
++            "name_prefix": args_cli.video_prefix,
+         }
+         print("[INFO] Recording videos during training.")
+         print_dict(video_kwargs, nesting=4)
+@@ -162,8 +174,13 @@ def main():
+     # reset environment
+     obs, extras = env.get_observations()
+     timestep = 0
++    telemetry = open(args_cli.telemetry, "w") if args_cli.telemetry else None
++    parkour = env.unwrapped.parkour_manager.get_term("base_parkour")
++    foot_ids = env.unwrapped.scene["contact_forces"].find_bodies(".*_foot")[0]
+     # simulate environment
+     while simulation_app.is_running():
++        if args_cli.viewer_switch_step and timestep == args_cli.viewer_switch_step:
++            env.unwrapped.viewport_camera_controller.set_view_env_index(args_cli.viewer_second_env)
+         start_time = time.time()
+         # run everything in inference mode
+         if agent_cfg.algorithm.class_name != "DistillationWithExtractor":
+@@ -184,9 +201,25 @@ def main():
+                 obs[:, 6:8] = 1.5*yaw
+                 # obs[:, num_prop+num_scan:num_prop+num_scan+num_priv_explicit] = estimator.inference(obs[:, :num_prop])
+                 actions = policy(obs, hist_encoding=True, scandots_latent=depth_latent)
+-        obs, _, _, extras = env.step(actions)
++        if not torch.isfinite(actions).all():
++            raise RuntimeError("Policy produced non-finite actions")
++        if telemetry is not None and timestep % 10 == 0:
++            telemetry.write(json.dumps({
++                "step": timestep, "time_s": timestep * dt,
++                "root_pos_w": env.unwrapped.scene["robot"].data.root_pos_w.tolist(),
++                "terrain": parkour.env_per_terrain_name.reshape(-1).tolist(),
++                "terrain_level": env.unwrapped.scene.terrain.terrain_levels.tolist(),
++                "goal_index": parkour.cur_goal_idx.tolist(),
++                "foot_force_norm": env.unwrapped.scene["contact_forces"].data.net_forces_w[:, foot_ids].norm(dim=-1).tolist(),
++                "episode_length": env.unwrapped.episode_length_buf.tolist(),
++                "actions_finite": True
++            }) + "\n")
++            telemetry.flush()
++        obs, _, dones, extras = env.step(actions)
++        timestep += 1
++        if args_cli.max_steps and timestep >= args_cli.max_steps:
++            break
+         if args_cli.video:
+-            timestep += 1
+             # Exit the play loop after recording one video
+             if timestep == args_cli.video_length:
+                 break
+@@ -197,11 +230,20 @@ def main():
+             time.sleep(sleep_time)
+ 
+     # # close the simulator
++    if telemetry is not None:
++        telemetry.close()
++    print(f"[PHASE1] Completed {timestep} real policy steps.", flush=True)
+     env.close()
+ 
+ 
+ if __name__ == "__main__":
+     # run the main function
+-    main()
+-    # close sim app
+-    simulation_app.close()
++    try:
++        main()
++    except BaseException:
++        import traceback
++        traceback.print_exc()
++        simulation_app.close(skip_cleanup=True)
++        raise
++    else:
++        simulation_app.close()
+diff --git a/scripts/rsl_rl/train.py b/scripts/rsl_rl/train.py
+index c5addbc..504a6fc 100644
+--- a/scripts/rsl_rl/train.py
++++ b/scripts/rsl_rl/train.py
+@@ -84,7 +84,18 @@ from isaaclab.envs import (
+     multi_agent_to_single_agent,
+ )
+ from isaaclab.utils.dict import print_dict
+-from isaaclab.utils.io import dump_pickle, dump_yaml
++from isaaclab.utils.io import dump_yaml
++try:
++    from isaaclab.utils.io import dump_pickle
++except ImportError:
++    # Isaac Lab 2.3 removed this helper; preserve the upstream pickle artifacts.
++    import pickle
++
++    def dump_pickle(filename, data):
++        os.makedirs(os.path.dirname(filename), exist_ok=True)
++        with open(filename, "wb") as stream:
++            pickle.dump(data, stream)
++
+ from parkour_tasks.extreme_parkour_task.config.go2.agents.parkour_rl_cfg import ParkourRslRlOnPolicyRunnerCfg
+ from scripts.rsl_rl.vecenv_wrapper import ParkourRslRlVecEnvWrapper
+ # import isaaclab_tasks  # noqa: F401

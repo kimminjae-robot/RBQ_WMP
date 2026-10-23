@@ -2,7 +2,7 @@
 
 공개 [Isaaclab_Parkour](https://github.com/CAI23sbP/Isaaclab_Parkour)의 PPO·Reward·Curriculum·Teacher/Student 구조를 재사용한 RBQ10 파쿠르 프로젝트입니다. 모델은 [Rainbow Robotics 공식 RBQ](https://github.com/RainbowRobotics/RBQ)를 사용합니다.
 
-**2026-10-23:** Phase 1·2 완료. Phase 3 Teacher **3,675 업데이트** 후 디스크 부족으로 안전 중단했습니다. 재개 가능한 실제 `model_3674.pt`를 포함합니다. Vision Student·실물 적용은 아직 완료하지 않았습니다. [진행 상황과 남은 단계](docs/STATUS.md).
+**2026-10-23:** Phase 1·2 완료. Phase 3 Teacher는 **3,675 업데이트**에서 디스크 부족으로 안전 중단한 뒤, 공간 확보 후 **2026-10-23 09:14 KST에 학습을 재개했습니다. 배포 snapshot은 3,675 업데이트 시점입니다.** 재개 가능한 실제 `model_3674.pt`를 포함합니다. Vision Student·실물 적용은 아직 완료하지 않았습니다. [진행 상황과 남은 단계](docs/STATUS.md).
 
 ## 마지막 단계 실제 평가
 

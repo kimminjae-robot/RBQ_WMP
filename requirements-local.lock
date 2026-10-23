@@ -1,0 +1,8 @@
+beautifulsoup4==4.15.0
+fast_simplification==0.2.0
+gdown==6.4.2
+-e git+https://github.com/CAI23sbP/Isaaclab_Parkour.git@d6766d8883cffe427f2d4c087717d4eca1f23d8c#egg=Isaaclab_Parkour
+-e git+https://github.com/CAI23sbP/Isaaclab_Parkour.git@d6766d8883cffe427f2d4c087717d4eca1f23d8c#egg=parkour_tasks&subdirectory=parkour_tasks
+PySocks==1.7.1
+rsl-rl-lib==2.3.3
+soupsieve==3.0.4

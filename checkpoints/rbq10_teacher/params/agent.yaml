@@ -1,0 +1,141 @@
+seed: 1
+device: cuda:0
+num_steps_per_env: 24
+max_iterations: 49118
+empirical_normalization: false
+obs_groups: {}
+clip_actions: null
+save_interval: 100
+experiment_name: rbq10_extreme_parkour
+run_name: phase3_teacher_s1_20261022_174548_807247
+logger: tensorboard
+neptune_project: isaaclab
+wandb_project: isaaclab
+resume: true
+load_run: 2026-10-22_16-51-32_phase3_teacher_s1_20261022_165126_683274
+load_checkpoint: model_881.pt
+class_name: OnPolicyRunner
+policy:
+  class_name: ActorCriticRMA
+  init_noise_std: 1.0
+  noise_std_type: scalar
+  state_dependent_std: false
+  actor_obs_normalization: {}
+  critic_obs_normalization: {}
+  actor_hidden_dims:
+  - 512
+  - 256
+  - 128
+  critic_hidden_dims:
+  - 512
+  - 256
+  - 128
+  activation: elu
+  tanh_encoder_output: false
+  scan_encoder_dims:
+  - 128
+  - 64
+  - 32
+  priv_encoder_dims:
+  - 64
+  - 20
+  actor:
+    num_priv_explicit: 9
+    num_priv_latent: 29
+    num_prop: 53
+    num_scan: 132
+    num_hist: 10
+    class_name: Actor
+    state_history_encoder:
+      num_priv_explicit: 9
+      num_priv_latent: 29
+      num_prop: 53
+      num_scan: 132
+      num_hist: 10
+      class_name: StateHistoryEncoder
+      channel_size: 10
+algorithm:
+  class_name: PPOWithExtractor
+  num_learning_epochs: 5
+  num_mini_batches: 4
+  learning_rate: 0.0002
+  schedule: adaptive
+  gamma: 0.99
+  lam: 0.95
+  entropy_coef: 0.01
+  desired_kl: 0.01
+  max_grad_norm: 1.0
+  value_loss_coef: 1.0
+  use_clipped_value_loss: true
+  clip_param: 0.2
+  normalize_advantage_per_mini_batch: false
+  rnd_cfg: null
+  symmetry_cfg: null
+  dagger_update_freq: 20
+  priv_reg_coef_schedual:
+  - 0.0
+  - 0.1
+  - 2000.0
+  - 3000.0
+estimator:
+  num_priv_explicit: 9
+  num_priv_latent: 29
+  num_prop: 53
+  num_scan: 132
+  num_hist: 10
+  class_name: DefaultEstimator
+  train_with_estimated_states: true
+  learning_rate: 0.0001
+  hidden_dims:
+  - 128
+  - 64
+depth_encoder: null
+robot_contract:
+  schema: rbq10_extreme_parkour_v1
+  robot: Rainbow_RBQ10_without_arm
+  source_commit: c7b80ba49f9a79f983cb977e2726cb2246701fcf
+  urdf_sha256: 70ad51db9bd3b5129d534cb681b6623107b2082e85c4e6005f5bfa4afe6535a0
+  base_body: trunk
+  joint_order:
+  - joint0_HRR
+  - joint3_HLR
+  - joint6_FRR
+  - joint9_FLR
+  - joint1_HRP
+  - joint4_HLP
+  - joint7_FRP
+  - joint10_FLP
+  - joint2_HRK
+  - joint5_HLK
+  - joint8_FRK
+  - joint11_FLK
+  foot_order:
+  - HR_foot
+  - HL_foot
+  - FR_foot
+  - FL_foot
+  action_scale_rad: 0.25
+  physics_dt: 0.005
+  policy_dt: 0.02
+  policy_observation_dim: 753
+  action_dim: 12
+  actuator: official_implicit_PD
+  kp_R_P_K:
+  - 123.39138
+  - 123.39138
+  - 127.77215
+  kd: 2.5
+  effort_nm_R_P_K:
+  - 100.0
+  - 100.0
+  - 150.0
+  velocity_rad_s: 50.0
+  camera_parent: trunk
+  camera_position_m:
+  - 0.42
+  - 0.0
+  - 0.1
+  camera_mount_status: simulation_initial_value_not_hardware_calibrated
+  depth_hw:
+  - 58
+  - 87
