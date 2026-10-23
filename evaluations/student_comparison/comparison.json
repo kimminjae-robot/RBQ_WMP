@@ -1,0 +1,1868 @@
+{
+  "teacher": "model_3674.pt",
+  "student": "model_619.pt",
+  "teacher_sha256": "073bf99cb7f4b4afdcef9c0c338c4bc426fcab57d497af6a5fc2be9c6304b7af",
+  "student_sha256": "5b9f64f2a21d1737f56c77c5dabdd68f1be395bd755fade1ab0c770b1cedda2c",
+  "conditions": {
+    "seed": 42,
+    "num_envs": 20,
+    "episodes_per_env": 3,
+    "terrain_profile": "Student horizontal_scale=0.1/simplified, original five types equally represented",
+    "velocity_input": "Both measured body velocity (matches distillation input contract)",
+    "direction_input": "Both commanded goal heading; no vision direction replacement",
+    "action_delay_policy_steps": 1,
+    "vx_command_m_s": 0.6,
+    "random_push_mass_com_camera": false,
+    "scope": "Nominal single-seed Isaac comparison; not MuJoCo/hardware or confidence interval"
+  },
+  "results": [
+    {
+      "role": "teacher",
+      "level": 4,
+      "episodes": 60,
+      "successes": 60,
+      "success_rate": 1.0,
+      "summary": {
+        "parkour": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_flat": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_gap": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_hurdle": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_step": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        }
+      },
+      "records": [
+        {
+          "env_id": 15,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 12,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 13,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 14,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 18,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 16,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 4,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 1,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 7,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 3,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 14,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 12,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 13,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 18,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 16,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 14,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 12,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 13,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 4,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 1,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 7,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 18,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 3,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 16,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 4,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 1,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 7,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 3,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        }
+      ]
+    },
+    {
+      "role": "student",
+      "level": 4,
+      "episodes": 60,
+      "successes": 50,
+      "success_rate": 0.8333333333333334,
+      "summary": {
+        "parkour": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_flat": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_gap": {
+          "episodes": 12,
+          "success": 2,
+          "fall": 7,
+          "timeout": 3
+        },
+        "parkour_hurdle": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_step": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        }
+      },
+      "records": [
+        {
+          "env_id": 12,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 13,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 14,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 16,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 18,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 3,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 4,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 7,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 12,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 14,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 13,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 16,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 18,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 5
+        },
+        {
+          "env_id": 1,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "timeout",
+          "goals": 6
+        },
+        {
+          "env_id": 0,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 3,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 17,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 1,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 12,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 14,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 4,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 3,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 13,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 7,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 16,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 18,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "timeout",
+          "goals": 3
+        },
+        {
+          "env_id": 1,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "timeout",
+          "goals": 6
+        },
+        {
+          "env_id": 4,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 7,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 5
+        }
+      ]
+    },
+    {
+      "role": "teacher",
+      "level": 9,
+      "episodes": 60,
+      "successes": 47,
+      "success_rate": 0.7833333333333333,
+      "summary": {
+        "parkour": {
+          "episodes": 12,
+          "success": 9,
+          "fall": 3,
+          "timeout": 0
+        },
+        "parkour_flat": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_gap": {
+          "episodes": 12,
+          "success": 8,
+          "fall": 4,
+          "timeout": 0
+        },
+        "parkour_hurdle": {
+          "episodes": 12,
+          "success": 11,
+          "fall": 1,
+          "timeout": 0
+        },
+        "parkour_step": {
+          "episodes": 12,
+          "success": 7,
+          "fall": 5,
+          "timeout": 0
+        }
+      },
+      "records": [
+        {
+          "env_id": 12,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 6,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 13,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 16,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 5
+        },
+        {
+          "env_id": 19,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 18,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 14,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 12,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 7,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 3,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 1,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 16,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 7
+        },
+        {
+          "env_id": 4,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 12,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 18,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 2
+        },
+        {
+          "env_id": 14,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 13,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 3,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 5
+        },
+        {
+          "env_id": 2,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 16,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 18,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 7,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 14,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 1,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 3,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 11,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 4,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 13,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 6
+        },
+        {
+          "env_id": 7,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 1,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 4,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        }
+      ]
+    },
+    {
+      "role": "student",
+      "level": 9,
+      "episodes": 60,
+      "successes": 28,
+      "success_rate": 0.4666666666666667,
+      "summary": {
+        "parkour": {
+          "episodes": 12,
+          "success": 2,
+          "fall": 9,
+          "timeout": 1
+        },
+        "parkour_flat": {
+          "episodes": 12,
+          "success": 12,
+          "fall": 0,
+          "timeout": 0
+        },
+        "parkour_gap": {
+          "episodes": 12,
+          "success": 3,
+          "fall": 7,
+          "timeout": 2
+        },
+        "parkour_hurdle": {
+          "episodes": 12,
+          "success": 6,
+          "fall": 4,
+          "timeout": 2
+        },
+        "parkour_step": {
+          "episodes": 12,
+          "success": 5,
+          "fall": 7,
+          "timeout": 0
+        }
+      },
+      "records": [
+        {
+          "env_id": 19,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 2
+        },
+        {
+          "env_id": 18,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 1
+        },
+        {
+          "env_id": 3,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 2
+        },
+        {
+          "env_id": 2,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 2
+        },
+        {
+          "env_id": 13,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 19,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 18,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 1,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 12,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 14,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 0,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 2
+        },
+        {
+          "env_id": 16,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 7,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 17,
+          "episode": 0,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 19,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 13,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 6,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 2,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 2
+        },
+        {
+          "env_id": 11,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 12,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 2
+        },
+        {
+          "env_id": 9,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 0,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 4,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 18,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 7
+        },
+        {
+          "env_id": 1,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 0,
+          "episode": 0,
+          "terrain": "parkour_gap",
+          "outcome": "timeout",
+          "goals": 7
+        },
+        {
+          "env_id": 5,
+          "episode": 0,
+          "terrain": "parkour_hurdle",
+          "outcome": "timeout",
+          "goals": 7
+        },
+        {
+          "env_id": 14,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 1,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 12,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 13,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 3
+        },
+        {
+          "env_id": 17,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 3,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "timeout",
+          "goals": 2
+        },
+        {
+          "env_id": 16,
+          "episode": 1,
+          "terrain": "parkour",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 7,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "fall",
+          "goals": 6
+        },
+        {
+          "env_id": 3,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "fall",
+          "goals": 2
+        },
+        {
+          "env_id": 14,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 11,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 1,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "timeout",
+          "goals": 7
+        },
+        {
+          "env_id": 1,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 15,
+          "episode": 2,
+          "terrain": "parkour_step",
+          "outcome": "fall",
+          "goals": 4
+        },
+        {
+          "env_id": 4,
+          "episode": 1,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 1,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 7,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 16,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 17,
+          "episode": 2,
+          "terrain": "parkour",
+          "outcome": "timeout",
+          "goals": 4
+        },
+        {
+          "env_id": 11,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 10,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 9,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 8,
+          "episode": 2,
+          "terrain": "parkour_flat",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 6,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "fall",
+          "goals": 6
+        },
+        {
+          "env_id": 4,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 5,
+          "episode": 2,
+          "terrain": "parkour_hurdle",
+          "outcome": "success",
+          "goals": 8
+        },
+        {
+          "env_id": 0,
+          "episode": 2,
+          "terrain": "parkour_gap",
+          "outcome": "success",
+          "goals": 8
+        }
+      ]
+    }
+  ],
+  "relative_success_rates": {
+    "4": 0.8333333333333334,
+    "9": 0.5957446808510638
+  }
+}

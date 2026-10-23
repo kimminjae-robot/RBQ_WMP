@@ -119,7 +119,7 @@ def main():
     commands = parser.add_subparsers(dest='operation', required=True)
     start = commands.add_parser('start')
     start.add_argument('--num_envs', type=int, default=192)
-    start.add_argument('--iterations', type=int, default=1000, help='Additional PPO updates to run.')
+    start.add_argument('--iterations', type=int, default=1000, help='Additional Student updates to run.')
     start.add_argument('--seed', type=int, default=1)
     start.add_argument('--resume', type=Path)
     commands.add_parser('status')
@@ -145,7 +145,7 @@ def main():
             stored.update(stop_requested=True, stop_reason='requested_via_cli', stop_requested_kst=now())
             write(job_file, stored)
             os.kill(job['trainer_pid'], signal.SIGTERM)
-            print('Stop requested; the runner saves at the next completed PPO update.')
+            print('Stop requested; the runner saves at the next completed distillation update.')
             return
         if job.get('worker_alive') or job.get('trainer_alive'):
             raise SystemExit('This project already has a live managed Student job. Use status.')

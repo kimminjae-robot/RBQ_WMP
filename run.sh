@@ -27,6 +27,8 @@ case "$mode" in
     exec "$python_bin" "$project_root/tools/task_entry.py" "$upstream_root/scripts/rsl_rl/train.py" --task Isaac-Extreme-Parkour-Student-Rainbow-RBQ10-v0 --seed 1 --headless "$@" ;;
   validate-rbq10)
     exec "$python_bin" "$project_root/tools/validate_rbq10.py" "$@" ;;
+  compare-policies)
+    exec "$python_bin" "$project_root/tools/compare_teacher_student.py" "$@" ;;
   evaluate-teacher)
     exec "$python_bin" "$project_root/tools/evaluate_teacher.py" "$@" ;;
   export-sim2sim)

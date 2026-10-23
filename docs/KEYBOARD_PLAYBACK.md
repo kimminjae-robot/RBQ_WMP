@@ -49,3 +49,11 @@ MUJOCO_GL=egl ./run.sh sim2sim-latest --no-keyboard --course isaac_flat --diffic
 동일한 `isaac_flat`, difficulty0, vx0.3m/s 조건에서 **7.66초에 fall**했다. 두 번의 단일 시행 차이는 통계적 개선 판정이 아니다. 최종 제공 영상은 이 최신 snapshot이며 학습은 유지했다.
 
 [최신 영상](../artifacts/student_latest_mujoco_flat.mp4), [최신 GIF](../artifacts/student_latest_mujoco_flat.gif), [결과](../evaluations/student_visual/latest_summary.json).
+
+## 중간 난이도 징검돌 바로 실행
+
+```bash
+~/Desktop/coop_ws/rbq10_vision_parkour/play_stones_medium.sh
+```
+
+원본 `parkour` 징검 플랫폼을 MuJoCo 높이장으로 변환한 `isaac_platforms`, difficulty0.5, seed42를 사용한다. 최신 저장 Student를 자동 선택하며 키보드 입력 대기로 시작한다. W를 3번 누르면 전진속도 명령 0.3m/s다. A/D로 좌우 방향을 맞추고 Space로 명령 0, R로 리셋한다. 실제 로봇/Isaac 대비 MuJoCo 전이는 아직 검증 중이므로 안정적인 코스 완주를 보장하는 명령은 아니다.

@@ -56,3 +56,5 @@ MuJoCo 기본 실행/export를 Student로 변경했다. measured/reference veloc
 카메라 TF 보정: 제조사 전방 OAK-D Pro Wide Depth 기준으로 Isaac Student/MuJoCo position·orientation을 일치시켰다. 기존 Teacher 계약/실행은 유지하고 새로운 Student 계약에는 camera pose를 기록한다. [현재 카메라 계약](SIM2SIM.md#카메라).
 
 MuJoCo 지형: 원본 6종(flat/hurdle/step/gap/platforms/mixed)과 18코스 조감도를 준비했다. [맵 사진과 검증](MUJOCO_TERRAINS.md). 실제 Student 전이 성능과 접촉 차이 보정은 별도다.
+
+Student model619 동일조건 평가: level4 Teacher60/60 vs Student50/60, level9 Teacher47/60 vs Student28/60. [상세 조건과 결과](STUDENT_PROGRESS.md). 평가 후 학습을 재개했다. 중간 징검돌 실행은 `./play_stones_medium.sh`.

@@ -98,3 +98,5 @@ MuJoCo 기본 경로는 이제 **Vision Student**다. `export-sim2sim --checkpoi
 MuJoCo 지형: 원본 Isaac 생성 함수를 재사용한 6종×3난이도와 [전체 조감도](docs/MUJOCO_TERRAINS.md)를 추가했다. `./run.sh mujoco-map`으로 재생성한다.
 
 키보드 GUI 실행: `./run.sh sim2sim-latest --course isaac_flat --difficulty 0 --terrain-label flat`. [조작법과 실제 최신 snapshot 테스트](docs/KEYBOARD_PLAYBACK.md).
+
+중간 징검돌 키보드 실행: `./play_stones_medium.sh` — 최신 저장 Student, `isaac_platforms`, difficulty0.5.
