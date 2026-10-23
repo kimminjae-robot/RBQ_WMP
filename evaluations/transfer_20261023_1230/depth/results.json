@@ -1,0 +1,1008 @@
+{
+  "scope": "CPU execution of installed Isaac source ray camera, Warp kernel and original preprocessing. Analytic scenes isolate pipeline; source simplified terrain compares geometry. Not live GPU camera/PhysX parity.",
+  "checkpoint": "model_999.pt",
+  "checkpoint_sha256": "282f2008bfd36f714fab9b324a8f2ff5192608a0c8ec4df9ff8bdc81efc302f9",
+  "source_sha256": {
+    "camera": "6d510326923f4c2718c02fbccedd54fe4d4445f4cc824be429d2ad3248f5060c",
+    "pattern": "bf91f91b92d56b0beab13f6192fff051e8674fa83e1e516c377c886f27a9a26d",
+    "math": "881ab27758816475e26d6721bab22c934fd70d0c064392266a90b06f5bbe4149",
+    "ops": "6202538ae05e3f424a0dfdd4df7e00cc272e4213827cceafa5a0a72df8baea84",
+    "kernels": "b38780baabb26b035595e6b6710e26381a18e99ed3bfbbc82887321aee7f82bf",
+    "preprocessing": "6bdd373fe99db4843fa49dadc21d8d9da7c871b6b68c09f4b2bea5554d6acc5c",
+    "terrain": "86d58af3f2b31632301a34afca0718fc0440d2b8fbfeeaf5c0b3ec5c4d273fd7"
+  },
+  "warp_device": "cpu",
+  "policy_device": "cpu",
+  "source_intrinsics": [
+    [
+      55.850440979003906,
+      0.0,
+      53.0
+    ],
+    [
+      0.0,
+      54.1225471496582,
+      30.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "cases": [
+    {
+      "course": "flat",
+      "ray_direction_max_abs_error": 1.541218733192018e-07,
+      "samples": [
+        {
+          "policy_step": 0,
+          "pose_xyz_rpy": [
+            0.0,
+            0.0,
+            0.55,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 4.320212099173659e-07,
+            "max": 1.049041748046875e-05,
+            "p99": 5.364418029785156e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 2.340421588087338e-06,
+            "max": 1.049041748046875e-05,
+            "p99": 7.62939453125e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.6880895259419049e-07,
+            "max": 3.933906555175781e-06,
+            "p99": 2.3245811462402344e-06
+          },
+          "latent": {
+            "mae": 3.3061951398849487e-07,
+            "max": 1.521781086921692e-06,
+            "p99": 1.317951828241349e-06
+          },
+          "raw_action": {
+            "mae": 1.645336595856861e-07,
+            "max": 4.76837158203125e-07,
+            "p99": 4.7028064727783207e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 5,
+          "pose_xyz_rpy": [
+            0.18,
+            0.03,
+            0.52,
+            0.08,
+            -0.1,
+            0.12
+          ],
+          "raw_depth_m": {
+            "mae": 1.5157948496380413e-07,
+            "max": 6.9141387939453125e-06,
+            "p99": 3.4570693969726562e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 1.8268201529281214e-06,
+            "max": 6.9141387939453125e-06,
+            "p99": 5.571842193603517e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.6880895259419049e-07,
+            "max": 3.933906555175781e-06,
+            "p99": 2.3245811462402344e-06
+          },
+          "latent": {
+            "mae": 5.100446287542582e-07,
+            "max": 2.7418136596679688e-06,
+            "p99": 2.344548702239992e-06
+          },
+          "raw_action": {
+            "mae": 2.893308703733055e-07,
+            "max": 9.5367431640625e-07,
+            "p99": 9.274482727050783e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 10,
+          "pose_xyz_rpy": [
+            0.4,
+            -0.04,
+            0.6,
+            -0.1,
+            0.12,
+            -0.2
+          ],
+          "raw_depth_m": {
+            "mae": 5.781838012808294e-07,
+            "max": 8.344650268554688e-06,
+            "p99": 5.245208740234375e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 1.9598642211349215e-06,
+            "max": 8.344650268554688e-06,
+            "p99": 6.9141387939453125e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 4.8749182468554864e-08,
+            "max": 2.9206275939941406e-06,
+            "p99": 1.3709068298339844e-06
+          },
+          "latent": {
+            "mae": 4.658650141209364e-07,
+            "max": 2.9653310775756836e-06,
+            "p99": 2.4930015206336993e-06
+          },
+          "raw_action": {
+            "mae": 3.048529322313698e-07,
+            "max": 8.344650268554688e-07,
+            "p99": 8.08238983154297e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 15,
+          "pose_xyz_rpy": [
+            0.65,
+            0.0,
+            0.5,
+            0.0,
+            -0.06,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 3.0145329787956143e-07,
+            "max": 1.0013580322265625e-05,
+            "p99": 4.76837158203125e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 2.130270104316878e-06,
+            "max": 1.0013580322265625e-05,
+            "p99": 6.5577030181884755e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 2.2581490100037627e-07,
+            "max": 3.4570693969726562e-06,
+            "p99": 2.1457672119140625e-06
+          },
+          "latent": {
+            "mae": 4.284665919840336e-07,
+            "max": 2.250075340270996e-06,
+            "p99": 2.0375847816467295e-06
+          },
+          "raw_action": {
+            "mae": 2.918144161867531e-07,
+            "max": 1.0132789611816406e-06,
+            "p99": 9.73939895629883e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        }
+      ]
+    },
+    {
+      "course": "hurdle",
+      "ray_direction_max_abs_error": 1.541218733192018e-07,
+      "samples": [
+        {
+          "policy_step": 0,
+          "pose_xyz_rpy": [
+            0.0,
+            0.0,
+            0.55,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 3.811136082276789e-07,
+            "max": 1.049041748046875e-05,
+            "p99": 5.364418029785156e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 1.303162662225077e-06,
+            "max": 1.049041748046875e-05,
+            "p99": 6.9141387939453125e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.4191245156780496e-07,
+            "max": 3.933906555175781e-06,
+            "p99": 2.3245811462402344e-06
+          },
+          "latent": {
+            "mae": 2.614106051623821e-07,
+            "max": 1.1753290891647339e-06,
+            "p99": 1.0061450302600868e-06
+          },
+          "raw_action": {
+            "mae": 1.5522043383953132e-07,
+            "max": 4.76837158203125e-07,
+            "p99": 4.6372413635253913e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 5,
+          "pose_xyz_rpy": [
+            0.18,
+            0.03,
+            0.52,
+            0.08,
+            -0.1,
+            0.12
+          ],
+          "raw_depth_m": {
+            "mae": 2.9127553702323894e-08,
+            "max": 1.3113021850585938e-06,
+            "p99": 4.76837158203125e-07
+          },
+          "visible_raw_depth_m": {
+            "mae": 1.4927577751677745e-07,
+            "max": 1.3113021850585938e-06,
+            "p99": 9.5367431640625e-07
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.4191245156780496e-07,
+            "max": 3.933906555175781e-06,
+            "p99": 2.3245811462402344e-06
+          },
+          "latent": {
+            "mae": 4.0771556086838245e-07,
+            "max": 2.039596438407898e-06,
+            "p99": 1.7630122601985944e-06
+          },
+          "raw_action": {
+            "mae": 2.0489096641540527e-07,
+            "max": 5.364418029785156e-07,
+            "p99": 5.298852920532227e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 10,
+          "pose_xyz_rpy": [
+            0.4,
+            -0.04,
+            0.6,
+            -0.1,
+            0.12,
+            -0.2
+          ],
+          "raw_depth_m": {
+            "mae": 3.420706775614235e-07,
+            "max": 8.225440979003906e-06,
+            "p99": 4.887580871582031e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 9.329200452157238e-07,
+            "max": 8.225440979003906e-06,
+            "p99": 5.9604644775390625e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.3808527654646241e-08,
+            "max": 6.556510925292969e-07,
+            "p99": 2.384185791015625e-07
+          },
+          "latent": {
+            "mae": 3.3518881537020206e-07,
+            "max": 1.996755599975586e-06,
+            "p99": 1.7172843217849743e-06
+          },
+          "raw_action": {
+            "mae": 3.688037395477295e-07,
+            "max": 1.0132789611816406e-06,
+            "p99": 9.80496406555176e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 15,
+          "pose_xyz_rpy": [
+            0.65,
+            0.0,
+            0.5,
+            0.0,
+            -0.06,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 2.734691051387017e-08,
+            "max": 8.344650268554688e-07,
+            "p99": 4.76837158203125e-07
+          },
+          "visible_raw_depth_m": {
+            "mae": 1.4916497548256302e-07,
+            "max": 8.344650268554688e-07,
+            "p99": 5.960464477539062e-07
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.2087481593425764e-07,
+            "max": 3.4570693969726562e-06,
+            "p99": 1.9073486328125e-06
+          },
+          "latent": {
+            "mae": 3.486056812107563e-07,
+            "max": 1.605600118637085e-06,
+            "p99": 1.532845199108124e-06
+          },
+          "raw_action": {
+            "mae": 2.632538382840721e-07,
+            "max": 7.152557373046875e-07,
+            "p99": 7.021427154541016e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        }
+      ]
+    },
+    {
+      "course": "step",
+      "ray_direction_max_abs_error": 1.541218733192018e-07,
+      "samples": [
+        {
+          "policy_step": 0,
+          "pose_xyz_rpy": [
+            0.0,
+            0.0,
+            0.55,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 4.0952889435175166e-07,
+            "max": 1.049041748046875e-05,
+            "p99": 5.364418029785156e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 1.4649065178673482e-06,
+            "max": 1.049041748046875e-05,
+            "p99": 6.941556930541994e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.5797711228060507e-07,
+            "max": 3.933906555175781e-06,
+            "p99": 2.3245811462402344e-06
+          },
+          "latent": {
+            "mae": 2.767483238130808e-07,
+            "max": 1.214444637298584e-06,
+            "p99": 1.0666251182556158e-06
+          },
+          "raw_action": {
+            "mae": 1.775721756303028e-07,
+            "max": 3.5762786865234375e-07,
+            "p99": 3.5762786865234375e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 5,
+          "pose_xyz_rpy": [
+            0.18,
+            0.03,
+            0.52,
+            0.08,
+            -0.1,
+            0.12
+          ],
+          "raw_depth_m": {
+            "mae": 7.60615250783303e-08,
+            "max": 6.9141387939453125e-06,
+            "p99": 1.430511474609375e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 3.6399646319296153e-07,
+            "max": 6.9141387939453125e-06,
+            "p99": 3.6621093750000033e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.5797711228060507e-07,
+            "max": 3.933906555175781e-06,
+            "p99": 2.3245811462402344e-06
+          },
+          "latent": {
+            "mae": 4.238099791109562e-07,
+            "max": 2.1960586309432983e-06,
+            "p99": 1.8986873328685772e-06
+          },
+          "raw_action": {
+            "mae": 2.4835267709022446e-07,
+            "max": 7.152557373046875e-07,
+            "p99": 6.791949272155764e-07
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 10,
+          "pose_xyz_rpy": [
+            0.4,
+            -0.04,
+            0.6,
+            -0.1,
+            0.12,
+            -0.2
+          ],
+          "raw_depth_m": {
+            "mae": 4.4643505248131987e-07,
+            "max": 8.344650268554688e-06,
+            "p99": 5.125999450683594e-06
+          },
+          "visible_raw_depth_m": {
+            "mae": 1.0919112582996604e-06,
+            "max": 8.344650268554688e-06,
+            "p99": 6.079673767089844e-06
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 2.1096688840316347e-08,
+            "max": 5.960464477539062e-07,
+            "p99": 2.980232238769531e-07
+          },
+          "latent": {
+            "mae": 3.61207639798522e-07,
+            "max": 2.346932888031006e-06,
+            "p99": 1.966990530490877e-06
+          },
+          "raw_action": {
+            "mae": 4.7062835051292495e-07,
+            "max": 1.2218952178955078e-06,
+            "p99": 1.1792778968811037e-06
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 15,
+          "pose_xyz_rpy": [
+            0.65,
+            0.0,
+            0.5,
+            0.0,
+            -0.06,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 6.009197761613905e-08,
+            "max": 1.1920928955078125e-06,
+            "p99": 7.152557373046875e-07
+          },
+          "visible_raw_depth_m": {
+            "mae": 2.123249913665859e-07,
+            "max": 1.1920928955078125e-06,
+            "p99": 8.344650268554688e-07
+          },
+          "fraction_pixels_error_over_2cm": 0.0,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 1.6643468825350283e-07,
+            "max": 3.4570693969726562e-06,
+            "p99": 2.086162567138672e-06
+          },
+          "latent": {
+            "mae": 3.57598764821887e-07,
+            "max": 1.9548460841178894e-06,
+            "p99": 1.7565023154020318e-06
+          },
+          "raw_action": {
+            "mae": 3.8370490074157715e-07,
+            "max": 1.0728836059570312e-06,
+            "p99": 1.0663270950317383e-06
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        }
+      ]
+    },
+    {
+      "course": "isaac_platforms",
+      "ray_direction_max_abs_error": 1.541218733192018e-07,
+      "samples": [
+        {
+          "policy_step": 0,
+          "pose_xyz_rpy": [
+            1.0,
+            0.0,
+            0.55,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 0.001037811511196196,
+            "max": 0.6466120481491089,
+            "p99": 0.012932621240615838
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.007783586625009775,
+            "max": 0.6466120481491089,
+            "p99": 0.033489676713943456
+          },
+          "fraction_pixels_error_over_2cm": 0.0020440251572327044,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.0003199364000465721,
+            "max": 0.22662895917892456,
+            "p99": 0.005746296048164372
+          },
+          "latent": {
+            "mae": 0.001200974453240633,
+            "max": 0.003923632204532623,
+            "p99": 0.0035798906162381188
+          },
+          "raw_action": {
+            "mae": 0.0007465891540050507,
+            "max": 0.002147078514099121,
+            "p99": 0.002072111368179322
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 5,
+          "pose_xyz_rpy": [
+            1.18,
+            0.03,
+            0.52,
+            0.08,
+            -0.1,
+            0.12
+          ],
+          "raw_depth_m": {
+            "mae": 0.00040750938933342695,
+            "max": 0.3535245656967163,
+            "p99": 0.006578607559204093
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.006230190861970186,
+            "max": 0.3535245656967163,
+            "p99": 0.08636319637298692
+          },
+          "fraction_pixels_error_over_2cm": 0.0015723270440251573,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.0003199364000465721,
+            "max": 0.22662895917892456,
+            "p99": 0.005746296048164372
+          },
+          "latent": {
+            "mae": 0.00217044516466558,
+            "max": 0.006252318620681763,
+            "p99": 0.00551508724689484
+          },
+          "raw_action": {
+            "mae": 0.0006568829412572086,
+            "max": 0.001968204975128174,
+            "p99": 0.0019370156526565554
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 10,
+          "pose_xyz_rpy": [
+            1.4,
+            -0.04,
+            0.6,
+            -0.1,
+            0.12,
+            -0.2
+          ],
+          "raw_depth_m": {
+            "mae": 0.0012720876839011908,
+            "max": 0.41973018646240234,
+            "p99": 0.016429893970489502
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.006850530859082937,
+            "max": 0.41973018646240234,
+            "p99": 0.027779674530029816
+          },
+          "fraction_pixels_error_over_2cm": 0.002672955974842767,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.00017442053649574518,
+            "max": 0.13744115829467773,
+            "p99": 0.003113761544227631
+          },
+          "latent": {
+            "mae": 0.002526502590626478,
+            "max": 0.0069106221199035645,
+            "p99": 0.006591960191726686
+          },
+          "raw_action": {
+            "mae": 0.0012897340347990394,
+            "max": 0.003208339214324951,
+            "p99": 0.003095917999744416
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 15,
+          "pose_xyz_rpy": [
+            1.65,
+            0.0,
+            0.5,
+            0.0,
+            -0.06,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 0.0006242315866984427,
+            "max": 0.7524563074111938,
+            "p99": 0.007628575563430785
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.008483147248625755,
+            "max": 0.7524563074111938,
+            "p99": 0.06710122823715182
+          },
+          "fraction_pixels_error_over_2cm": 0.0020440251572327044,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.000599351420532912,
+            "max": 0.11591297388076782,
+            "p99": 0.007564991712570197
+          },
+          "latent": {
+            "mae": 0.0023596915416419506,
+            "max": 0.010247617959976196,
+            "p99": 0.008963629901409155
+          },
+          "raw_action": {
+            "mae": 0.002127536805346608,
+            "max": 0.005480170249938965,
+            "p99": 0.005384982824325562
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        }
+      ]
+    },
+    {
+      "course": "isaac_gap",
+      "ray_direction_max_abs_error": 1.541218733192018e-07,
+      "samples": [
+        {
+          "policy_step": 0,
+          "pose_xyz_rpy": [
+            1.0,
+            0.0,
+            0.55,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 0.0009258159552700818,
+            "max": 0.1674731969833374,
+            "p99": 0.014945647716522206
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.005019108299165964,
+            "max": 0.1674731969833374,
+            "p99": 0.03491730690002437
+          },
+          "fraction_pixels_error_over_2cm": 0.005817610062893081,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.00042365488479845226,
+            "max": 0.0746527910232544,
+            "p99": 0.007185310125350968
+          },
+          "latent": {
+            "mae": 0.00019490713020786643,
+            "max": 0.0007422920316457748,
+            "p99": 0.0007025014422833921
+          },
+          "raw_action": {
+            "mae": 0.00010146821296075359,
+            "max": 0.0003300905227661133,
+            "p99": 0.00031611859798431403
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 5,
+          "pose_xyz_rpy": [
+            1.18,
+            0.03,
+            0.52,
+            0.08,
+            -0.1,
+            0.12
+          ],
+          "raw_depth_m": {
+            "mae": 0.00047988156438805163,
+            "max": 0.03316605091094971,
+            "p99": 0.013130233287811276
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.005683513358235359,
+            "max": 0.03316605091094971,
+            "p99": 0.02637732982635498
+          },
+          "fraction_pixels_error_over_2cm": 0.002987421383647799,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.00042365488479845226,
+            "max": 0.0746527910232544,
+            "p99": 0.007185310125350968
+          },
+          "latent": {
+            "mae": 0.00031692819902673364,
+            "max": 0.0014715702272951603,
+            "p99": 0.0013745617913082245
+          },
+          "raw_action": {
+            "mae": 0.00015264253306668252,
+            "max": 0.0006163120269775391,
+            "p99": 0.0005853587388992311
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 10,
+          "pose_xyz_rpy": [
+            1.4,
+            -0.04,
+            0.6,
+            -0.1,
+            0.12,
+            -0.2
+          ],
+          "raw_depth_m": {
+            "mae": 0.0012765881838276982,
+            "max": 0.4179267883300781,
+            "p99": 0.016834800243377673
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.00480704614892602,
+            "max": 0.4179267883300781,
+            "p99": 0.028998627662658687
+          },
+          "fraction_pixels_error_over_2cm": 0.007075471698113208,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.00016672165656927973,
+            "max": 0.015511572360992432,
+            "p99": 0.005208221077919007
+          },
+          "latent": {
+            "mae": 0.0004049430135637522,
+            "max": 0.0013595521450042725,
+            "p99": 0.0012463385611772542
+          },
+          "raw_action": {
+            "mae": 0.00020399440836627036,
+            "max": 0.0006533265113830566,
+            "p99": 0.0006278331577777863
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 15,
+          "pose_xyz_rpy": [
+            1.65,
+            0.0,
+            0.5,
+            0.0,
+            -0.06,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 0.0006835105014033616,
+            "max": 0.17365038394927979,
+            "p99": 0.013942552804946877
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.0056603215634822845,
+            "max": 0.17365038394927979,
+            "p99": 0.036039420366287725
+          },
+          "fraction_pixels_error_over_2cm": 0.0042452830188679245,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.0006148468237370253,
+            "max": 0.15822279453277588,
+            "p99": 0.008520039916038523
+          },
+          "latent": {
+            "mae": 0.0005567074404098094,
+            "max": 0.0017176419496536255,
+            "p99": 0.0015951157361269001
+          },
+          "raw_action": {
+            "mae": 0.00018783037376124412,
+            "max": 0.0005144774913787842,
+            "p99": 0.0005037280917167664
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        }
+      ]
+    },
+    {
+      "course": "isaac_mixed",
+      "ray_direction_max_abs_error": 1.541218733192018e-07,
+      "samples": [
+        {
+          "policy_step": 0,
+          "pose_xyz_rpy": [
+            1.0,
+            0.0,
+            0.55,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 0.0034689519088715315,
+            "max": 1.0628836154937744,
+            "p99": 0.015004409551620454
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.014317024499177933,
+            "max": 1.0628836154937744,
+            "p99": 0.5403430461883505
+          },
+          "fraction_pixels_error_over_2cm": 0.007389937106918239,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.0018130469834432006,
+            "max": 0.42138808965682983,
+            "p99": 0.019631001353263903
+          },
+          "latent": {
+            "mae": 0.002270602388307452,
+            "max": 0.008183449506759644,
+            "p99": 0.007167850881814961
+          },
+          "raw_action": {
+            "mae": 0.001171781332232058,
+            "max": 0.0021644234657287598,
+            "p99": 0.002158312797546387
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 5,
+          "pose_xyz_rpy": [
+            1.18,
+            0.03,
+            0.52,
+            0.08,
+            -0.1,
+            0.12
+          ],
+          "raw_depth_m": {
+            "mae": 0.0012777993688359857,
+            "max": 1.2410883903503418,
+            "p99": 0.010829345583915684
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.010908462107181549,
+            "max": 1.2410883903503418,
+            "p99": 0.13539263248443598
+          },
+          "fraction_pixels_error_over_2cm": 0.004088050314465409,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.0018130469834432006,
+            "max": 0.42138808965682983,
+            "p99": 0.019631001353263903
+          },
+          "latent": {
+            "mae": 0.003018010873347521,
+            "max": 0.008839964866638184,
+            "p99": 0.008189173266291622
+          },
+          "raw_action": {
+            "mae": 0.0006980101461522281,
+            "max": 0.0024677515029907227,
+            "p99": 0.0023975968360900883
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 10,
+          "pose_xyz_rpy": [
+            1.4,
+            -0.04,
+            0.6,
+            -0.1,
+            0.12,
+            -0.2
+          ],
+          "raw_depth_m": {
+            "mae": 0.0011403682874515653,
+            "max": 0.9618270397186279,
+            "p99": 0.018034070134162902
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.0038087486755102873,
+            "max": 0.9618270397186279,
+            "p99": 0.02872994303703311
+          },
+          "fraction_pixels_error_over_2cm": 0.008176100628930818,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.0007362437318079174,
+            "max": 0.6389180421829224,
+            "p99": 0.00684816986322407
+          },
+          "latent": {
+            "mae": 0.0025206957943737507,
+            "max": 0.00918218120932579,
+            "p99": 0.008634127639234069
+          },
+          "raw_action": {
+            "mae": 0.003138761268928647,
+            "max": 0.011075735092163086,
+            "p99": 0.010937023088335992
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        },
+        {
+          "policy_step": 15,
+          "pose_xyz_rpy": [
+            1.65,
+            0.0,
+            0.5,
+            0.0,
+            -0.06,
+            0.0
+          ],
+          "raw_depth_m": {
+            "mae": 0.0007917640614323318,
+            "max": 0.10379612445831299,
+            "p99": 0.013964910507202137
+          },
+          "visible_raw_depth_m": {
+            "mae": 0.005509430076926947,
+            "max": 0.10379612445831299,
+            "p99": 0.03473395943641664
+          },
+          "fraction_pixels_error_over_2cm": 0.003930817610062893,
+          "preprocess_same_raw_max": 0.0,
+          "delayed_depth": {
+            "mae": 0.0006017680279910564,
+            "max": 0.4212588369846344,
+            "p99": 0.0097093164920807
+          },
+          "latent": {
+            "mae": 0.0022127185948193073,
+            "max": 0.0065201520919799805,
+            "p99": 0.006261005997657777
+          },
+          "raw_action": {
+            "mae": 0.002003328176215291,
+            "max": 0.008032500743865967,
+            "p99": 0.0075008660554885895
+          },
+          "scope": "Same proprioception, different ray/geometry pipeline; latent/action sensitivity is not a rollout success rate"
+        }
+      ]
+    }
+  ],
+  "completed": true
+}

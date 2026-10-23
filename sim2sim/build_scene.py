@@ -4,12 +4,13 @@ import tempfile
 import xml.etree.ElementTree as ET
 
 import mujoco
+import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets/rbq10'
 
 
-def build_scene(contract, course='flat', height=0.10, difficulty=.5, terrain_seed=42):
+def build_scene(contract, course='flat', height=0.10, difficulty=.5, terrain_seed=42, terrain_edges='source', contact_profile='default', show_goals=False):
     source = ET.parse(ASSETS / 'resources/urdf/rbq10.urdf').getroot()
     for link in source.findall('link'):
         for kind in ('visual', 'collision'):
@@ -31,7 +32,10 @@ def build_scene(contract, course='flat', height=0.10, difficulty=.5, terrain_see
     default = root.find('default')
     if default is None:
         default = ET.SubElement(root, 'default')
-    ET.SubElement(default, 'geom', friction='0.9 0.005 0.0001', condim='3')
+    contact_settings={'friction':'0.9 0.005 0.0001','condim':'3'}
+    if contact_profile=='firm':contact_settings.update(solref='0.01 1',solimp='0.95 0.99 0.001')
+    elif contact_profile!='default':raise ValueError(contact_profile)
+    ET.SubElement(default,'geom',**contact_settings)
     visual=root.find('visual')
     if visual is None:visual=ET.SubElement(root,'visual')
     ET.SubElement(visual,'global',offwidth='960',offheight='640')
@@ -53,15 +57,20 @@ def build_scene(contract, course='flat', height=0.10, difficulty=.5, terrain_see
     for geom in trunk.findall('.//geom'):
         geom.set('group', '1')
     if course.startswith('isaac_'):
-        from terrains import generate, add_heightfield
+        from terrains import generate, add_heightfield, refine_source_edges
         terrain=generate(course,difficulty,terrain_seed)
         # No plane at z=0: it would fill the negative-height gaps/pits.
         world.remove(world.find("geom[@name='ground']"))
         ET.SubElement(world,'geom',name='catch_floor',type='plane',pos='0 0 -2.5',
                       size='100 20 .1',group='0',rgba='.15 .17 .19 1')
-        add_heightfield(root,terrain,origin=(0.,-1.95))
+        add_heightfield(root,refine_source_edges(terrain) if terrain_edges=='source' else terrain,origin=terrain['origin_xy'])
+        if show_goals:
+            for i,goal in enumerate(terrain['goals']+terrain['origin_xy']):
+                xi,yi=np.rint((goal-terrain['origin_xy'])/terrain['spacing']).astype(int)
+                z=float(terrain['heights'][xi,yi])+.08
+                ET.SubElement(world,'site',name=f'goal_{i}',type='sphere',pos=f'{goal[0]} {goal[1]} {z}',size='.045',rgba='.9 .5 .1 .7')
         # Put the robot on the original initial platform, not on the hfield boundary.
-        initial_z=float(terrain['heights'][10,20])+.55
+        initial_z=.55  # Original reset_root_state ignores terrain origin Z.
         trunk.set('pos',f'1 0 {initial_z}')
     elif course == 'hurdle':
         for i, x in enumerate((2.0, 4.0, 6.0)):

@@ -16,6 +16,18 @@ def wrap(x):
     return (x + np.pi) % (2 * np.pi) - np.pi
 
 
+def body_velocity(model, data, body):
+    """COM velocity in the trunk link axes, matching Isaac root_*_vel_b.
+
+    mjOBJ_BODY with flg_local=1 uses principal inertia axes (ximat),
+    not the URDF link axes (xmat). Obtain world COM velocity then rotate.
+    """
+    velocity = np.zeros(6)
+    mujoco.mj_objectVelocity(model, data, mujoco.mjtObj.mjOBJ_BODY, body, velocity, 0)
+    rotation = data.xmat[body].reshape(3, 3)
+    return np.concatenate((rotation.T @ velocity[:3], rotation.T @ velocity[3:]))
+
+
 class ObservationBridge:
     def __init__(self, model, data, contract, home, flat, speed, scan_mode='source'):
         self.m, self.d = model, data
@@ -45,8 +57,7 @@ class ObservationBridge:
         roll = np.arctan2(R[2, 1], R[2, 2])
         pitch = np.arcsin(np.clip(-R[2, 0], -1, 1))
         yaw = np.arctan2(R[1, 0], R[0, 0])
-        velocity = np.zeros(6)
-        mujoco.mj_objectVelocity(m, d, mujoco.mjtObj.mjOBJ_BODY, self.base, velocity, 1)
+        velocity = body_velocity(m, d, self.base)
         if np.linalg.norm(pos[:2] - self.goals[self.goal_idx]) < .3:
             self.goal_idx = min(self.goal_idx+1, len(self.goals)-2)
         if self.step % 5 == 0 and self.terrain_scan_enabled:

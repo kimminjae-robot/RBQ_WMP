@@ -19,8 +19,15 @@ p.add_argument('--roles',choices=['teacher','student'],nargs='+',default=['stude
 p.add_argument('--num_envs',type=int,default=20)
 p.add_argument('--episodes',type=int,default=3)
 p.add_argument('--seed',type=int,default=42)
+p.add_argument('--speed',type=float,default=.6)
+p.add_argument('--video',type=Path)
+p.add_argument('--video-env',type=int,help='Optional explicit environment index of the chosen terrain')
+p.add_argument('--video-terrain',choices=['parkour','parkour_hurdle','parkour_gap','parkour_step','parkour_flat'],default='parkour')
+p.add_argument('--trace',type=Path)
+p.add_argument('--record-seconds',type=float,default=20.)
 AppLauncher.add_app_launcher_args(p)
 a=p.parse_args()
+if a.video:a.enable_cameras=True
 if a.num_envs%10 or a.num_envs<10 or any(l<0 or l>9 for l in a.levels):p.error('Use num_envs divisible by 10 and levels 0..9')
 if len(a.levels)*len(a.roles)!=1:p.error('Run one role/level per process; use separate invocations for independent Isaac contexts')
 a.output.parent.mkdir(parents=True,exist_ok=True)
@@ -46,13 +53,18 @@ def main():
         sub.use_simplified=True;sub.horizontal_scale=.1
         if name!='parkour':sub.y_range=(-.1,.1)
     cfg.parkours=reference.parkours;cfg.commands=reference.commands
+    cfg.commands.base_velocity.ranges.lin_vel_x=(a.speed,a.speed)
     cfg.episode_length_s=20.
     cfg.events.push_by_setting_velocity=None
     cfg.events.randomize_rigid_body_mass=None;cfg.events.randomize_rigid_body_com=None
     cfg.events.random_camera_position=None
     cfg.events.physics_material.params['friction_range']=(.9,.9)
     cfg.training_metrics_enabled=False
-    raw=FixedLevelEvaluationEnv(cfg=cfg)
+    cfg.viewer=reference.viewer
+    if a.video:
+        cfg.viewer.eye=(.5,3.2,1.6)
+        cfg.viewer.lookat=(.3,0.,.4)
+    raw=FixedLevelEvaluationEnv(cfg=cfg,render_mode='rgb_array' if a.video else None)
     env=ParkourRslRlVecEnvWrapper(raw)
     tc=torch.load(a.teacher,map_location='cpu',weights_only=False)
     sc=torch.load(a.student,map_location='cpu',weights_only=False)
@@ -67,7 +79,7 @@ def main():
         'conditions':{'seed':a.seed,'num_envs':a.num_envs,'episodes_per_env':a.episodes,'terrain_profile':'Student horizontal_scale=0.1/simplified, original five types equally represented',
         'velocity_input':'Both measured body velocity (matches distillation input contract)',
         'direction_input':'Both commanded goal heading; no vision direction replacement',
-        'action_delay_policy_steps':1,'vx_command_m_s':.6,'random_push_mass_com_camera':False,
+        'action_delay_policy_steps':1,'vx_command_m_s':a.speed,'random_push_mass_com_camera':False,
         'scope':'Nominal single-seed Isaac comparison; not MuJoCo/hardware or confidence interval'},'results':[]}
     try:
         for level in a.levels:
@@ -96,6 +108,18 @@ def main():
                         counts[i]+=1;peaks[i]=0
                 raw.episode_end_observer=finish
                 tick=0
+                trace=[]
+                writer=None
+                if a.video:
+                    import cv2
+                    a.video.parent.mkdir(parents=True,exist_ok=True)
+                    writer=cv2.VideoWriter(str(a.video),cv2.VideoWriter_fourcc(*'mp4v'),25.,cfg.viewer.resolution)
+                    assert writer.isOpened()
+                    camera_id=a.video_env if a.video_env is not None else int(np.where(names==a.video_terrain)[0][0])
+                    assert names[camera_id]==a.video_terrain
+                    video_states=[]
+                    foot_ids,_=raw.scene['contact_forces'].find_bodies(['HR_foot','HL_foot','FR_foot','FL_foot'],preserve_order=True)
+                    raw.viewport_camera_controller.set_view_env_index(camera_id)
                 with torch.inference_mode():
                     while not (counts>=a.episodes).all() and tick<a.episodes*raw.max_episode_length+50:
                         assert bool((raw.scene.terrain.terrain_levels==level).all())
@@ -107,8 +131,33 @@ def main():
                                 prop=obs[:,:53].clone();prop[:,6:8]=0
                                 latent=depth(extras['observations']['depth_camera'],prop)[:,:32]
                             action=student(obs,latent)
+                        if a.trace and tick<200:
+                            i=0
+                            row={}
+                            for key in ['root_link_pos_w','root_link_quat_w','root_lin_vel_w','root_ang_vel_w','joint_pos','joint_vel','body_pos_w','joint_pos_limits','joint_vel_limits','applied_torque']:
+                                row[key]=getattr(robot.data,key)[i].detach().cpu().numpy()
+                            row['obs']=obs[i].cpu().numpy();row['action']=action[i].cpu().numpy()
+                            row['body_names']=np.array(robot.body_names)
+                            row['origin']=raw.scene.env_origins[i].cpu().numpy()
+                            trace.append(row)
                         if not torch.isfinite(action).all():raise FloatingPointError('Nonfinite evaluation action')
                         obs,_,_,extras=env.step(action);tick+=1
+                        if writer is not None and tick%2==0 and tick*raw.step_dt<=a.record_seconds:
+                            force=raw.scene['contact_forces'].data.net_forces_w[camera_id,foot_ids].norm(dim=-1)
+                            contacts=(force>2).cpu().numpy()
+                            airborne=not bool(contacts.any())
+                            video_states.append({'t':tick*raw.step_dt,'airborne':airborne,'foot_contacts':contacts.tolist(),'base_z':float(robot.data.root_pos_w[camera_id,2]),'goals':int(parkour.cur_goal_idx[camera_id])})
+                            frame=cv2.cvtColor(raw.render(),cv2.COLOR_RGB2BGR)
+                            cv2.rectangle(frame,(0,0),(960,58),(20,20,20),-1)
+                            cv2.putText(frame,f'Isaac Sim | RBQ10 Student {a.student.stem} | {a.video_terrain} level {level}/9',(12,24),cv2.FONT_HERSHEY_SIMPLEX,.55,(255,255,255),1,cv2.LINE_AA)
+                            cv2.putText(frame,f'Actual simulation {tick*raw.step_dt:.2f}s | '+('AIRBORNE (all feet off contact)' if airborne else 'GROUND CONTACT'),(12,47),cv2.FONT_HERSHEY_SIMPLEX,.5,(220,220,220),1,cv2.LINE_AA)
+                            writer.write(frame)
+                if writer is not None:
+                    writer.release()
+                    a.video.with_suffix('.states.json').write_text(json.dumps(video_states,indent=2)+'\n')
+                if a.trace:
+                    a.trace.parent.mkdir(parents=True,exist_ok=True)
+                    np.savez_compressed(a.trace,**{k:np.stack([r[k] for r in trace]) for k in trace[0]})
                 if not (counts>=a.episodes).all():raise RuntimeError('Incomplete scored episodes')
                 summaries={}
                 for name in sorted(set(names.tolist())):

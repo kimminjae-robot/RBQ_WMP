@@ -10,8 +10,9 @@ import numpy as np
 import torch
 
 from build_scene import ROOT, ASSETS, build_scene
-from terrains import COURSES
-from run_teacher import ObservationBridge
+from terrains import COURSES, generate
+from goal_follower import TerrainGoalFollower
+from run_teacher import ObservationBridge, body_velocity
 from student_inputs import CommandInput, DepthInput, student_observation
 from keyboard import KeyboardInput
 
@@ -40,6 +41,8 @@ def main():
     p.add_argument('--course',choices=['flat','hurdle','step',*COURSES],default='isaac_flat')
     p.add_argument('--difficulty',type=float,default=.5)
     p.add_argument('--terrain-seed',type=int,default=42)
+    p.add_argument('--terrain-edges',choices=['source','hfield'],default='source')
+    p.add_argument('--contact-profile',choices=['default','firm'],default='firm')
     p.add_argument('--height',type=float,default=.10)
     p.add_argument('--seconds',type=float,default=None)
     p.add_argument('--speed',type=float,default=None,help='Reference vx m/s; original training is forward walking')
@@ -50,13 +53,19 @@ def main():
     p.add_argument('--velocity-source',choices=['mujoco','external'])
     p.add_argument('--direction-source',choices=['joystick','vision'])
     p.add_argument('--viewer',action='store_true')
+    p.add_argument('--hold-seconds',type=float,default=3.,help='Hold final autonomous viewer frame without advancing physics')
+    p.add_argument('--autonomous',action='store_true',help='Use original terrain current/next waypoint headings; no keyboard required')
     p.add_argument('--keyboard',action='store_true',help='Viewer key presses: W/S speed, A/D turn, space stop, R reset, Q quit')
     p.add_argument('--video',type=Path)
     p.add_argument('--screenshot',type=Path)
     p.add_argument('--output',type=Path,default=ROOT/'outputs/sim2sim/student_rollout.json')
     args=p.parse_args()
-    args.seconds=args.seconds if args.seconds is not None else (3600. if args.keyboard else 10.)
+    args.seconds=args.seconds if args.seconds is not None else (3600. if args.keyboard else 30. if args.autonomous else 10.)
     args.speed=args.speed if args.speed is not None else (0. if args.keyboard else .6)
+    if args.autonomous:
+        if args.keyboard or args.joystick or args.input_json:p.error('Autonomous terrain goals cannot be combined with manual input')
+        if not args.course.startswith('isaac_'):p.error('Autonomous mode requires an isaac_* course with original goals')
+        if args.speed<=0:p.error('Autonomous mode requires positive speed')
     if args.keyboard:
         args.viewer=True
         if args.joystick:p.error('Choose keyboard or joystick')
@@ -73,7 +82,10 @@ def main():
         value=getattr(args,key)
         if value is not None:
             cfg[key]=value
-    if cfg['terrain_label'] not in ['flat','parkour'] or cfg['velocity_source'] not in ['mujoco','external'] or cfg['direction_source'] not in ['joystick','vision']:
+    if args.autonomous:
+        cfg['direction_source']='terrain_goals'
+        cfg['terrain_label']='flat' if args.course=='isaac_flat' else 'parkour'
+    if cfg['terrain_label'] not in ['flat','parkour'] or cfg['velocity_source'] not in ['mujoco','external'] or cfg['direction_source'] not in ['joystick','vision','terrain_goals']:
         p.error('Invalid Student input configuration')
     if cfg['depth_update_policy_steps']!=5 or cfg['action_delay_policy_steps']!=1:
         p.error('This runner retains original Student timing: depth 5 steps, action delay 1 step')
@@ -89,12 +101,13 @@ def main():
         if cfg['velocity_source']=='external' and initial[2] is None:
             raise ValueError('External measured_velocity_body_m_s is required; reference vx cannot substitute for it')
         c=meta['contract']
-        model=mujoco.MjModel.from_xml_string(build_scene(c,args.course,args.height,args.difficulty,args.terrain_seed))
+        model=mujoco.MjModel.from_xml_string(build_scene(c,args.course,args.height,args.difficulty,args.terrain_seed,args.terrain_edges,args.contact_profile,args.autonomous))
         data=mujoco.MjData(model)
+        follower=TerrainGoalFollower(generate(args.course,args.difficulty,args.terrain_seed)) if args.autonomous else None
         hd=json.loads((ASSETS/'official/info.json').read_text())['config_info']['init_state']['default_joint_angles']
         home=np.array([hd[n] for n in c['joint_order']])
         bridge=ObservationBridge(model,data,c,home,cfg['terrain_label']=='flat',args.speed)
-        bridge.terrain_scan_enabled=False  # Student never receives Teacher height rays or oracle waypoints.
+        bridge.terrain_scan_enabled=False  # Student has no Teacher height scan; optional goal commands are supplied separately.
         data.qpos[bridge.qids]=home
         mujoco.mj_forward(model,data)
         camera=DepthInput(model,data,cfg['camera'])
@@ -139,14 +152,25 @@ def main():
                     if not keyboard.active:
                         viewer.cam.lookat[:]=data.xpos[bridge.base]+np.array([.25,0.,.15])
                         viewer.sync();time.sleep(.02);continue
-                measured=np.zeros(6)
-                mujoco.mj_objectVelocity(model,data,mujoco.mjtObj.mjOBJ_BODY,bridge.base,measured,1)
+                measured=body_velocity(model,data,bridge.base)
                 measured_velocity=measured[3:] if cfg['velocity_source']=='mujoco' else external
                 if measured_velocity is None:
                     raise ValueError('External measured velocity missing; no fallback to reference command')
                 bridge.speed=vx
                 obs,angles=bridge.sample(action)
                 obs=student_observation(obs,vx,yaw_rate,measured_velocity,cfg)
+                if follower:
+                    rotation=data.xmat[bridge.base].reshape(3,3)
+                    yaw=np.arctan2(rotation[1,0],rotation[0,0])
+                    previous_goal=follower.index
+                    obs[6:8]=follower.update(data.xpos[bridge.base,:2],yaw)
+                    if follower.index!=previous_goal:print(f'AUTONOMOUS t={data.time:.2f}s goal {follower.index}/{len(follower.goals)}',flush=True)
+                    for marker in range(len(follower.goals)):
+                        model.site_rgba[model.site(f'goal_{marker}').id]=([.2,.8,.2,.7] if marker<follower.index else [.1,1.,1.,.9] if marker==follower.index else [.9,.5,.1,.7])
+                    if follower.complete:
+                        termination='success'
+                        if capture:capture.frame(data,bridge.base,meta['checkpoint'],args.course,vx,yaw_rate,f'SUCCESS {follower.index}/{len(follower.goals)}',autonomous=True)
+                        break
                 with torch.inference_mode():
                     if policy_step%5==0:
                         image=camera.sample()
@@ -167,15 +191,18 @@ def main():
                     mujoco.mj_step(model,data)
                     max_torque=max(max_torque,float(np.max(np.abs(data.actuator_force))))
                     max_speed=max(max_speed,float(np.max(np.abs(data.qvel[bridge.vids]))))
+                mujoco.mj_forward(model,data)  # Derived poses, contacts and velocities now match current qpos/qvel.
                 if not np.isfinite(data.qpos).all() or not np.isfinite(data.qvel).all():
                     raise FloatingPointError('Non-finite simulation state')
                 records.append({'episode':episode,'time':float(data.time),'base_xyz':data.xpos[bridge.base].tolist(),
                     'reference_vx':vx,'reference_yaw_rate':yaw_rate,'measured_velocity_body_m_s':np.asarray(measured_velocity).tolist(),
-                    'actor_direction_errors':obs[6:8].tolist(),'foot_contacts':bridge.current_contacts.tolist(),
+                    'actor_direction_errors':obs[6:8].tolist(),'goals_reached':follower.index if follower else None,'foot_contacts':bridge.current_contacts.tolist(),
                     'depth_range_m':[float(camera.latest_raw.min()),float(camera.latest_raw.max())]})
-                fallen=max(map(abs,angles))>1.5 or data.xpos[bridge.base,2]<.15
+                rotation=data.xmat[bridge.base].reshape(3,3)
+                post_angles=(np.arctan2(rotation[2,1],rotation[2,2]),np.arcsin(np.clip(-rotation[2,0],-1,1)))
+                fallen=max(map(abs,post_angles))>1.5 or data.xpos[bridge.base,2]<.15
                 if capture and (step%2==0 or fallen):
-                    capture.frame(data,bridge.base,meta['checkpoint'],args.course,vx,yaw_rate,'FALL - STOPPED' if fallen else 'RUNNING')
+                    capture.frame(data,bridge.base,meta['checkpoint'],args.course,vx,yaw_rate,'FALL - STOPPED' if fallen else f'GOAL {follower.index}/{len(follower.goals)}' if follower else 'RUNNING',autonomous=args.autonomous)
                 policy_step+=1
                 if fallen:
                     fall_count+=1
@@ -191,21 +218,26 @@ def main():
                     viewer.sync()
                     time.sleep(max(0,.02-(time.monotonic()-wall)))
         finally:
-            if capture:capture.finish(hold_last=(termination=='fall'))
+            if viewer and follower and termination in ['success','fall']:
+                until=time.monotonic()+max(0.,args.hold_seconds)
+                while viewer.is_running() and time.monotonic()<until:
+                    viewer.sync();time.sleep(.02)
+            if capture:capture.finish(hold_last=(termination in ['fall','success']))
             if viewer:viewer.close()
         result={'role':'student','checkpoint':meta['checkpoint'],'checkpoint_sha256':meta['checkpoint_sha256'],
-            'configuration':cfg,'course':args.course,'height':args.height,'difficulty':args.difficulty,'terrain_seed':args.terrain_seed,'engine':mujoco.__version__,
-            'simulated_seconds':float(data.time),'termination':termination,'fall_count':fall_count,'episodes_started':episode+1,'keyboard':args.keyboard,'video':str(args.video) if args.video else None,
+            'terrain_profile':'upstream_wrapper_v2', 'terrain_edges':args.terrain_edges,'contact_profile':args.contact_profile,'configuration':cfg,'course':args.course,'height':args.height,'difficulty':args.difficulty,'terrain_seed':args.terrain_seed,'engine':mujoco.__version__,
+            'simulated_seconds':float(data.time),'termination':termination,'fall_count':fall_count,'episodes_started':episode+1,'keyboard':args.keyboard,'autonomous':args.autonomous,'goals_reached':follower.index if follower else None,'total_goals':len(follower.goals) if follower else None,'video':str(args.video) if args.video else None,
             'displacement_xyz':(data.xpos[bridge.base]-start).tolist(),
             'max_abs_torque_nm':max_torque,'max_abs_joint_speed_rad_s':max_speed,
-            'limitation':'Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending.',
+            'limitation':'Terrain-goal mode uses known map waypoints; motor velocity cap and complete contact/depth parity remain pending. Single-rollout success is not a transfer success rate.',
             'records':records}
         args.output.parent.mkdir(parents=True,exist_ok=True)
         args.output.write_text(json.dumps(result,indent=2)+'\n')
         print(json.dumps({k:v for k,v in result.items() if k!='records'},indent=2))
     finally:
         command.close()
+    return 2 if args.autonomous and termination!='success' else 0
 
 
 if __name__=='__main__':
-    main()
+    raise SystemExit(main())

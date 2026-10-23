@@ -1,0 +1,112 @@
+{
+  "checked_at": "2026-10-23T12:46:20.260888+09:00",
+  "training": {
+    "state": "running",
+    "trainer_alive": true,
+    "updates_completed": 1225,
+    "target_updates": 3000,
+    "additional_updates_requested": 2000,
+    "median_seconds_per_update_last30": 4.036144971847534,
+    "estimated_finish_kst": "2026-10-23T14:47:26.996758+09:00",
+    "eta_scope": "Estimate only; GPU/CPU load may change."
+  },
+  "mujoco_baseline": {
+    "checkpoint": "model_999.pt",
+    "successes": 9,
+    "cases": 18,
+    "conditions": {
+      "courses": [
+        "isaac_flat",
+        "isaac_hurdle",
+        "isaac_step",
+        "isaac_gap",
+        "isaac_platforms",
+        "isaac_mixed"
+      ],
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "difficulty": 0.5,
+      "speed_m_s": 0.6,
+      "seconds": 30,
+      "terrain_edges": "source",
+      "contact_profile": "firm",
+      "autonomous": true,
+      "episodes_per_case": 1,
+      "scope": "Small fixed development set; not held-out success rate or Isaac comparison"
+    },
+    "by_terrain": {
+      "isaac_flat": {
+        "successes": 3,
+        "cases": 3
+      },
+      "isaac_hurdle": {
+        "successes": 3,
+        "cases": 3
+      },
+      "isaac_step": {
+        "successes": 1,
+        "cases": 3
+      },
+      "isaac_gap": {
+        "successes": 0,
+        "cases": 3
+      },
+      "isaac_platforms": {
+        "successes": 2,
+        "cases": 3
+      },
+      "isaac_mixed": {
+        "successes": 0,
+        "cases": 3
+      }
+    }
+  },
+  "depth_source_pipeline": {
+    "completed": true,
+    "device": "cpu",
+    "not_live_isaac_sim": true,
+    "by_terrain": {
+      "flat": {
+        "mean_raw_mae_m": 3.658094485103902e-07,
+        "max_raw_error_m": 1.049041748046875e-05,
+        "max_action_sensitivity": 1.0132789611816406e-06
+      },
+      "hurdle": {
+        "mean_raw_mae_m": 1.9491468750132412e-07,
+        "max_raw_error_m": 1.049041748046875e-05,
+        "max_action_sensitivity": 1.0132789611816406e-06
+      },
+      "step": {
+        "mean_raw_mae_m": 2.480293623818852e-07,
+        "max_raw_error_m": 1.049041748046875e-05,
+        "max_action_sensitivity": 1.2218952178955078e-06
+      },
+      "isaac_platforms": {
+        "mean_raw_mae_m": 0.0008354100427823141,
+        "max_raw_error_m": 0.7524563074111938,
+        "max_action_sensitivity": 0.005480170249938965
+      },
+      "isaac_gap": {
+        "mean_raw_mae_m": 0.0008414490512222983,
+        "max_raw_error_m": 0.4179267883300781,
+        "max_action_sensitivity": 0.0006533265113830566
+      },
+      "isaac_mixed": {
+        "mean_raw_mae_m": 0.0016697209066478536,
+        "max_raw_error_m": 1.2410883903503418,
+        "max_action_sensitivity": 0.011075735092163086
+      }
+    }
+  },
+  "pending": [
+    "Held-out multi-map statistical evaluation",
+    "Live PhysX actuator/contact replay",
+    "Motor velocity constraint matching",
+    "GPU sensor end-to-end timing comparison",
+    "Actual camera intrinsics/noise calibration"
+  ],
+  "monitor_state": "waiting_for_checkpoint"
+}

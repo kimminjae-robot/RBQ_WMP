@@ -1,4 +1,4 @@
-> **2026-10-23 최신 상태:** Student 1,000 update 완료. 성능 개선은 후속 과제로 등록했습니다. [개선 로드맵](docs/PERFORMANCE_ROADMAP.md) · [추적 이슈 #1](https://github.com/kimminjae-robot/RBQ_WMP/issues/1).
+> **2026-10-23 저장 기록:** 전방 Student를 누적 **1,550 update**에서 저장·정상 중단했습니다. 전체 가중치·optimizer·재개 정보는 [체크포인트 보관 문서](docs/FRONT_STUDENT_ARCHIVE.md)를 따라 복원할 수 있습니다.
 
 # RBQ_WMP — RBQ10 Isaac Lab Vision Parkour
 
@@ -6,9 +6,17 @@
 
 **초기 Teacher 배포 당시 기록:** Phase 1·2 완료. Phase 3 Teacher는 **3,675 업데이트**에서 디스크 부족으로 안전 중단한 뒤, 공간 확보 후 **2026-10-23 09:14 KST에 학습을 재개했습니다. 배포 snapshot은 3,675 업데이트 시점입니다.** 재개 가능한 실제 `model_3674.pt`를 포함합니다. Vision Student·실물 적용은 아직 완료하지 않았습니다. [진행 상황과 남은 단계](docs/STATUS.md).
 
+## 전방 Student checkpoint 복원
+
+```bash
+python tools/restore_student_checkpoint.py
+```
+
+새 카메라 학습은 별도 [5뷰 실험 브랜치](https://github.com/kimminjae-robot/RBQ_WMP/tree/experiment/depth5-student-20261023)에서 진행합니다. 이 보관 브랜치는 기존 전방 전용 태스크와 재개 checkpoint를 유지합니다.
+
 ## 성능 개선 후속 과제
 
-현재 1,000 update 완료는 수렴 또는 모든 지형의 안정적인 완주를 의미하지 않습니다.
+전방 Student 1,550 update 완료는 수렴 또는 모든 지형의 안정적인 완주를 의미하지 않습니다.
 우선 최종 Student와 Teacher를 동일 조건에서 재평가하고, Depth·접촉·구동기의 Sim2Sim 차이를
 검증한 뒤 Gap·플랫폼 중심으로 원본 Student 증류를 추가하는 순서입니다.
 Teacher 보강은 같은 조건에서 Teacher도 실패하는 구간에 한해 검토합니다.
@@ -16,9 +24,6 @@ Teacher 보강은 같은 조건에서 Teacher도 실패하는 구간에 한해 �
 [상세 로드맵과 완료 기준](docs/PERFORMANCE_ROADMAP.md) ·
 [GitHub 작업 목록 #1](https://github.com/kimminjae-robot/RBQ_WMP/issues/1) ·
 [평가 근거 JSON](evaluations/performance_baseline_20261023.json).
-
-이 업데이트는 문서·후속 과제·평가 요약입니다. 최신 로컬 model941/999와 일부 자동 시연 수정이
-모두 이 저장소에 배포된 것은 아닙니다. 이를 재현 가능한 코드/가중치로 정리하는 작업도 P0에 포함합니다.
 
 ## 기존 Teacher 마지막 단계 평가
 
@@ -114,4 +119,5 @@ MuJoCo 지형: 원본 Isaac 생성 함수를 재사용한 6종×3난이도와 [�
 키보드 GUI 실행: `./run.sh sim2sim-latest --course isaac_flat --difficulty 0 --terrain-label flat`. [조작법과 실제 최신 snapshot 테스트](docs/KEYBOARD_PLAYBACK.md).
 
 중간 징검돌 키보드 실행: `./play_stones_medium.sh` — 최신 저장 Student, `isaac_platforms`, difficulty0.5.
+
 

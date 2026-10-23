@@ -1,0 +1,22 @@
+{
+  "before": "model_999.pt",
+  "after": "model_1100.pt",
+  "before_sha256": "282f2008bfd36f714fab9b324a8f2ff5192608a0c8ec4df9ff8bdc81efc302f9",
+  "after_sha256": "55d794ed5d85316d3af124a54eb4dc47a2f190eee745e1b18a6ce8d3b8210a8f",
+  "before_updates": 1000,
+  "after_updates": 1101,
+  "optimizer_steps_before": [
+    1000.0,
+    1000.0
+  ],
+  "optimizer_steps_after": [
+    1101.0,
+    1101.0
+  ],
+  "optimizer_learning_rates": [
+    0.001
+  ],
+  "frozen_teacher_weights_identical": true,
+  "depth_actor_max_weight_change": 0.03367319703102112,
+  "depth_encoder_max_weight_change": 0.0749056339263916
+}

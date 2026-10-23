@@ -75,7 +75,7 @@ def main():
     report={'teacher_checkpoint_rejected':True,'measured_velocity_separate_from_reference':True,
         'joystick_yaw_rate_and_manual_label_checked':True,'mujoco_standing_contacts_all_four':True,
         'camera_sees_ground':True,'manufacturer_front_depth_TF_verified':True,'teacher_resume_contract_preserved':True,'depth_resize_vs_original_max_abs_error':preprocessing_error,
-        'policy_execution_status':'No trained RBQ10 Student available; no RBQ10 Student rollout performed'}
+        'policy_execution_status':'Interface-only check; actual trained RBQ10 rollouts are reported separately under evaluations/autonomous'}
     fixture=ROOT/'checkpoints/go2_student.pt'
     if fixture.is_file():
         # Verify actual pretrained Student networks without ever controlling RBQ10 with Go2 weights.

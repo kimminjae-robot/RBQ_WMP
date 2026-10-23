@@ -25,7 +25,7 @@ def main():
     subprocess.run([sys.executable,str(ROOT/'tools/export_sim2sim.py'),'--checkpoint',str(checkpoint),'--output',str(output)],check=True,cwd=ROOT)
     python=os.environ.get('RBQ10_MUJOCO_PYTHON',str(ROOT/'.venv-sim2sim/bin/python'))
     command=[python,str(ROOT/'sim2sim/run_student.py'),'--policy-dir',str(output)]
-    if not args.no_keyboard:command.append('--keyboard')
+    if not args.no_keyboard and '--autonomous' not in remaining:command.append('--keyboard')
     os.chdir(ROOT)
     os.execv(python,command+remaining)
 

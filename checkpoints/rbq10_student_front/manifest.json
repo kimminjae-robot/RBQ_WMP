@@ -1,0 +1,210 @@
+{
+  "role": "front_only_student",
+  "checkpoint": "model_1549.pt",
+  "sha256": "708a3591052e5696c92c82cfd50c387ff1be86416d5520fd43b33356c3b565bd",
+  "bytes": 112833075,
+  "updates_completed": 1550,
+  "next_iteration": 1550,
+  "source_path": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour/2026-10-23_12-30-37_phase4_student_s1_20261023_123031_630135/model_1549.pt",
+  "full_resume_checkpoint": true,
+  "depth_optimizer_preserved": true,
+  "contract": {
+    "schema": "rbq10_extreme_parkour_student_front_depth_v2",
+    "robot": "Rainbow_RBQ10_without_arm",
+    "source_commit": "c7b80ba49f9a79f983cb977e2726cb2246701fcf",
+    "urdf_sha256": "70ad51db9bd3b5129d534cb681b6623107b2082e85c4e6005f5bfa4afe6535a0",
+    "base_body": "trunk",
+    "joint_order": [
+      "joint0_HRR",
+      "joint3_HLR",
+      "joint6_FRR",
+      "joint9_FLR",
+      "joint1_HRP",
+      "joint4_HLP",
+      "joint7_FRP",
+      "joint10_FLP",
+      "joint2_HRK",
+      "joint5_HLK",
+      "joint8_FRK",
+      "joint11_FLK"
+    ],
+    "foot_order": [
+      "HR_foot",
+      "HL_foot",
+      "FR_foot",
+      "FL_foot"
+    ],
+    "action_scale_rad": 0.25,
+    "physics_dt": 0.005,
+    "policy_dt": 0.02,
+    "policy_observation_dim": 753,
+    "action_dim": 12,
+    "actuator": "official_implicit_PD",
+    "kp_R_P_K": [
+      123.39138,
+      123.39138,
+      127.77215
+    ],
+    "kd": 2.5,
+    "effort_nm_R_P_K": [
+      100.0,
+      100.0,
+      150.0
+    ],
+    "velocity_rad_s": 50.0,
+    "camera_parent": "trunk",
+    "camera_position_m": [
+      0.388031,
+      -0.0375,
+      0.037764
+    ],
+    "camera_mount_status": "manufacturer_front_depth_TF",
+    "depth_hw": [
+      58,
+      87
+    ],
+    "camera_quaternion_wxyz_ros": [
+      0.5,
+      -0.5,
+      0.5,
+      -0.5
+    ],
+    "camera_sensor": "front_depth_OAK-D_Pro_Wide",
+    "camera_tf_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide"
+  },
+  "stopped_kst": "2026-10-23T13:09:32.598324+09:00",
+  "storage": {
+    "format": "gzip_concatenated_parts_v1",
+    "parts_dir": "parts",
+    "parts": [
+      {
+        "file": "model_1549.pt.gz.part000",
+        "bytes": 4194304,
+        "sha256": "e1f72ef3318d6d6fa7d70d70df40250a2e6221e387717f3deceab172d02faea3"
+      },
+      {
+        "file": "model_1549.pt.gz.part001",
+        "bytes": 4194304,
+        "sha256": "de0d6b7bb32a96442585b30b577f727f158e840459fdb9d5f2c4fabe7c45d63e"
+      },
+      {
+        "file": "model_1549.pt.gz.part002",
+        "bytes": 4194304,
+        "sha256": "edb088eaa3f32f14ba7f7d456a111be3de70bf2ebddf747a85ce7cc8798ec8cd"
+      },
+      {
+        "file": "model_1549.pt.gz.part003",
+        "bytes": 4194304,
+        "sha256": "523575d72e4d83b1836fb49b8cd357d60faef7783632c1eb20379c98ab324cfe"
+      },
+      {
+        "file": "model_1549.pt.gz.part004",
+        "bytes": 4194304,
+        "sha256": "a7accb1d3c1bc8e01fae2b24dbf400978a4a93df7911497fbb5547d92646d4f9"
+      },
+      {
+        "file": "model_1549.pt.gz.part005",
+        "bytes": 4194304,
+        "sha256": "61aaddf3496720a2e4fe2901beae3a54298557cf443eaf2dd291794404df315c"
+      },
+      {
+        "file": "model_1549.pt.gz.part006",
+        "bytes": 4194304,
+        "sha256": "dde819a851b0caac627c6713192bd1782fe49275559d4826dcee900bcf6a2594"
+      },
+      {
+        "file": "model_1549.pt.gz.part007",
+        "bytes": 4194304,
+        "sha256": "53a06b2130dfcb9dc0ccd741baf19f76d1ea82434a5d4f3441700b2777f35ae7"
+      },
+      {
+        "file": "model_1549.pt.gz.part008",
+        "bytes": 4194304,
+        "sha256": "fdac546e3b3cce0a9901d09cebc168cafe02b1ba2358ef4384bf858c9ae7cea4"
+      },
+      {
+        "file": "model_1549.pt.gz.part009",
+        "bytes": 4194304,
+        "sha256": "afdd6987bb79cf33a134cda582edd15419733fb2bd1c997d493c3f61c4623ae7"
+      },
+      {
+        "file": "model_1549.pt.gz.part010",
+        "bytes": 4194304,
+        "sha256": "23cd8f96acc5bcf1e1d0c0ab2694e21cd49c26bae5f92bb360a0070813328bc3"
+      },
+      {
+        "file": "model_1549.pt.gz.part011",
+        "bytes": 4194304,
+        "sha256": "66bb44951108e8199bfda6c60d6e26ab3a334d6f9e44d74e0a42f0f8ffb18c93"
+      },
+      {
+        "file": "model_1549.pt.gz.part012",
+        "bytes": 4194304,
+        "sha256": "93cc687d4ef139def3a5bed524b9103f8003ec08a195175ded5da27e728d03e6"
+      },
+      {
+        "file": "model_1549.pt.gz.part013",
+        "bytes": 4194304,
+        "sha256": "5d5a21b14db1d901df237d72123c8a2c63146535f1286b36b63fc35e33272a17"
+      },
+      {
+        "file": "model_1549.pt.gz.part014",
+        "bytes": 4194304,
+        "sha256": "e9689f9466d7f5bab5b2657c93b90e8e233e4576601125eb35469ece11f5ec80"
+      },
+      {
+        "file": "model_1549.pt.gz.part015",
+        "bytes": 4194304,
+        "sha256": "009dea08d3bc9f8b71ace81730cce1749c67728ac76faf17d8a503a803654089"
+      },
+      {
+        "file": "model_1549.pt.gz.part016",
+        "bytes": 4194304,
+        "sha256": "0efd42b17ddc8c263cb5ed91f0279d195ee1b5059209e25f11e3eacfa67e335c"
+      },
+      {
+        "file": "model_1549.pt.gz.part017",
+        "bytes": 4194304,
+        "sha256": "e64e087ef11cc7ae81f95a2a7d1aad6cc67b9937acefe09efee75fe5ce8a2682"
+      },
+      {
+        "file": "model_1549.pt.gz.part018",
+        "bytes": 4194304,
+        "sha256": "6078e69fefb4d54add24b09cc6f950706f413602a4aa5777d9f7838fa0841277"
+      },
+      {
+        "file": "model_1549.pt.gz.part019",
+        "bytes": 4194304,
+        "sha256": "573a83b64e3e7f0fda7be9969eaf9790e631d31753964388e5fe6377a72a967f"
+      },
+      {
+        "file": "model_1549.pt.gz.part020",
+        "bytes": 4194304,
+        "sha256": "94d1864c8c9fd49214173d501da75cbdcb3ed9ac9ade7bd889d06e88f4d6e30e"
+      },
+      {
+        "file": "model_1549.pt.gz.part021",
+        "bytes": 4194304,
+        "sha256": "939ef97b1b0c7bf9b467788391a814379ebb788c527da85a886268e7caa012f2"
+      },
+      {
+        "file": "model_1549.pt.gz.part022",
+        "bytes": 4194304,
+        "sha256": "8c872734413c96a5830d127da4bb9fde5a38ef7eb30934c71705420aaf079663"
+      },
+      {
+        "file": "model_1549.pt.gz.part023",
+        "bytes": 4194304,
+        "sha256": "6463bf75babcd323e8eb73a4ad91ecb2ccf2a20aabddf312140efc65ba5de603"
+      },
+      {
+        "file": "model_1549.pt.gz.part024",
+        "bytes": 1843398,
+        "sha256": "7f29a77271c85492146a96989e0c485ab0f1ea4656a970d4cded9d82b4ee74b4"
+      }
+    ],
+    "compressed_bytes": 102506694,
+    "compressed_sha256": "9492c9ab6ff9138fe5f424a4219889fb4937af18d3fa9bd0a39bec50fb804bb3",
+    "restore_command": "python tools/restore_student_checkpoint.py"
+  }
+}

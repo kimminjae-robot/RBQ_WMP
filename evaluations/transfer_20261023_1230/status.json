@@ -1,0 +1,67 @@
+{
+  "pid": 654010,
+  "start_ticks": "15785851",
+  "state": "training_finished_before_next_threshold",
+  "training_job": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/phase4/job_20261023_123031_630135.json",
+  "baseline": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour/2026-10-23_11-52-10_phase4_student_s1_20261023_115204_886937/model_999.pt",
+  "code_sha256": {
+    "sim2sim/run_student.py": "e7c48d3df2797cfb96f9bf0e50b7ecd15c55a34aa0973a2821c46aa9d522ea25",
+    "sim2sim/run_teacher.py": "da7e95a9a74afebb87d47d330a70fb3754d9ad66393193f3635886ed5a6347ef",
+    "sim2sim/build_scene.py": "96ec9824b7cfd2d814989a4b859557440588c8168f00d3f804ab32c8481addeb",
+    "sim2sim/student_inputs.py": "e85d7ff66141cba20b087853ee72cc311e88e84e0ecc38d6081843a2a7032521",
+    "sim2sim/terrains.py": "c09f6484a577534ae7bdd392475432bec5c720d11d6049583d355a42412e0a19",
+    "sim2sim/goal_follower.py": "f353a2df1b78f74ac484e54915413ebe1f4a52b73cc5f205b298b21127856beb",
+    "sim2sim/student_config.json": "dfd422d5de2a4df4a241a762a93b03850bb55917dbd58b937e8b185a269e0aa1",
+    "tools/export_sim2sim.py": "24358fb609147f6d275529277a5821bd25d23da5491e60df3ef12a5a4fab49ab",
+    "upstream/Isaaclab_Parkour/parkour_isaaclab/terrains/utils.py": "86d58af3f2b31632301a34afca0718fc0440d2b8fbfeeaf5c0b3ec5c4d273fd7",
+    "upstream/Isaaclab_Parkour/parkour_isaaclab/terrains/extreme_parkour/extreme_parkour_terrians.py": "0509326ace1f3cfb49e94c072f97f67dcd026a1f446ece76b7e2aeb3d084a022"
+  },
+  "target_updates": 3000,
+  "baseline_updates": 1000,
+  "interval_updates": 500,
+  "completed": [
+    {
+      "checkpoint": "model_999.pt",
+      "sha256": "282f2008bfd36f714fab9b324a8f2ff5192608a0c8ec4df9ff8bdc81efc302f9",
+      "threshold_updates": 1000,
+      "successes": 9,
+      "cases": 18
+    },
+    {
+      "checkpoint": "model_1500.pt",
+      "sha256": "6c888e3c5df5a20dd14107e2be05ec54b5fbdca6f4966815cf08c0540e1baa9b",
+      "threshold_updates": 1500,
+      "successes": 13,
+      "cases": 18
+    }
+  ],
+  "conditions": {
+    "courses": [
+      "isaac_flat",
+      "isaac_hurdle",
+      "isaac_step",
+      "isaac_gap",
+      "isaac_platforms",
+      "isaac_mixed"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "difficulty": 0.5,
+    "speed_m_s": 0.6,
+    "seconds": 30,
+    "terrain_edges": "source",
+    "contact_profile": "firm",
+    "autonomous": true,
+    "episodes_per_case": 1,
+    "scope": "Small fixed development set; not held-out success rate or Isaac comparison"
+  },
+  "heartbeat": "2026-10-23T13:09:36.492070+09:00",
+  "current_checkpoint": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour/2026-10-23_12-30-37_phase4_student_s1_20261023_123031_630135/model_1500.pt",
+  "current_threshold": 1500,
+  "current_case": null,
+  "next_threshold": 2000,
+  "training_state": "stopped"
+}
