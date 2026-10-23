@@ -154,7 +154,7 @@ def main():
         'iteration': c['iter'], 'input_shape': [1, 753], 'output_shape': [1, 12],
         'estimator_embedded': True, 'history_encoding': True,
         'export_max_abs_error': max_error,
-        'scan_semantics': 'IsaacLab 2.3.2 sensor pos_w including offset, original clip(pos_w.z-hit.z-0.3,-1,1)',
+        'scan_semantics': 'IsaacLab 2.3.2 tracked trunk pos_w; cfg.offset shifts ray starts only; clip(pos_w.z-hit.z-0.3,-1,1)',
         'deployment_status': 'simulation Teacher; privileged terrain and course labels remain',
     }
     (args.output / 'manifest.json').write_text(json.dumps(meta, indent=2) + '\n')

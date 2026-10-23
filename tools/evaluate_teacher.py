@@ -88,6 +88,7 @@ def main():
         assert writer.isOpened()
     obs, extras = env.get_observations()
     tick = 0
+    scan_audit = []
     # 10 simulation seconds per terrain; the original auto-reset remains visible.
     video_steps = 2500 if args.video else 0
     maximum_steps = args.episodes * raw.max_episode_length + 50
@@ -98,6 +99,14 @@ def main():
                 sample(torch.arange(raw.num_envs, device=raw.device))
                 obs[:, 185:194] = estimator.inference(obs[:, :53])
                 actions = policy(obs, hist_encoding=True)
+                if tick >= 5 and tick % 100 == 0:
+                    scan = obs[:, 53:185]
+                    alternate = obs.clone()
+                    alternate[:, 53:185] = 0
+                    masked_actions = policy(alternate, hist_encoding=True)
+                    scan_audit.append({'step':tick,'min':float(scan.min()),'max':float(scan.max()),
+                        'std':float(scan.std()),'fraction_at_upper_clip':float((scan >= .9999).float().mean()),
+                        'zero_scan_action_mean_abs_delta':float((actions-masked_actions).abs().mean())})
                 if not torch.isfinite(actions).all():
                     raise FloatingPointError('Nonfinite Teacher actions')
                 obs, reward, dones, extras = env.step(actions)
@@ -131,7 +140,7 @@ def main():
               'steps': tick, 'control_dt': raw.step_dt, 'policy_inference': 'original estimator + history encoder, hist_encoding=True',
               'robot_contract': robot_contract(), 'conditions': {'vx_m_s':0.6,'friction':0.9,'push':False,
               'mass_com_randomization':False,'joint_reset_scale':[0.95,1.05],'roughness':'original enabled'},
-              'summary': summary, 'episodes': records,
+              'summary': summary, 'episodes': records, 'height_scan_audit': scan_audit,
               'video': str(args.video) if args.video else None,
               'scope': 'Teacher fixed-level simulation evaluation; not vision Student or hardware validation'}
     args.output.write_text(json.dumps(report, indent=2) + '\n')

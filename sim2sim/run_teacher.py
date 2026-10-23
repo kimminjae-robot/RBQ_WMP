@@ -55,16 +55,15 @@ class ObservationBridge:
             self.yaws = np.arctan2(delta[:, 1], delta[:, 0]) - yaw
             Ry = np.array([[np.cos(yaw), -np.sin(yaw), 0],
                            [np.sin(yaw), np.cos(yaw), 0], [0, 0, 1]])
-            # Isaac's RayCaster combines the full body transform and mount offset,
-            # then applies yaw-only rotation to the ray grid.
-            origin = pos + R @ np.array([.42, 0., 20.])
-            origins = self.rays @ Ry.T + origin
+            # Isaac cfg.offset shifts ray starts, not sensor data.pos_w.
+            # Tracking offset (_offset) is separate and zero for trunk.
+            origins = (self.rays + np.array([.42, 0., 20.])) @ Ry.T + pos
             group = np.array([1, 0, 0, 0, 0, 0], dtype=np.uint8)
             for i, start in enumerate(origins):
                 hit = np.array([-1], dtype=np.int32)
                 distance = mujoco.mj_ray(m, d, start, np.array([0., 0., -1.]), group, 1, -1, hit)
                 height = start[2] - distance if distance >= 0 else -np.inf
-                ref = origin[2] if self.scan_mode == 'source' else pos[2]
+                ref = pos[2]  # sensor data.pos_w is the tracked trunk frame
                 self.scan[i] = np.clip(ref-height-.3, -1, 1)
             self.scan_min, self.scan_max = float(self.scan.min()), float(self.scan.max())
         forces = np.zeros((4, 3))
@@ -107,7 +106,7 @@ def main():
     p.add_argument('--action-delay', type=int, choices=[0, 1], default=0,
                    help='Teacher uses 0; source Student uses 1 policy step')
     p.add_argument('--scan-mode', choices=['source', 'base-height'], default='source',
-                   help='base-height is a diagnostic distribution change; source matches existing training code')
+                   help='source and base-height both use the tracked trunk height; cfg.offset only shifts ray starts')
     p.add_argument('--viewer', action='store_true')
     p.add_argument('--output', type=Path, default=ROOT/'outputs/sim2sim/rollout.json')
     args = p.parse_args()

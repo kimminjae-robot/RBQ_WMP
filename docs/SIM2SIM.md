@@ -41,7 +41,7 @@ Depth는 raw 60×106, ray distance 최대 2m, crop `[:-2,4:-4]`, bicubic antiali
 
 ## 실행
 
-아직 학습된 **RBQ10 Student checkpoint는 없다.** 아래 export/rollout은 Phase 4에서 실제 Student가 만들어진 뒤 실행한다. checkpoint가 없거나 Teacher/Go2 checkpoint이면 명확한 오류를 반환한다. Teacher를 Student로 대신 실행하지 않는다.
+**RBQ10 Student 학습을 2026-10-23 10:23 KST에 시작했다.** 초기 실제 Student checkpoint의 export와 짧은 MuJoCo 입력 연결도 확인했지만 완성 정책의 주행 성능 검증은 아니다. 아래 export/rollout은 검증할 실제 Student checkpoint를 지정한다. checkpoint가 없거나 Teacher/Go2 checkpoint이면 명확한 오류를 반환한다. Teacher를 Student로 대신 실행하지 않는다.
 
 ```bash
 cd ~/Desktop/coop_ws/rbq10_vision_parkour
@@ -82,7 +82,7 @@ JSON은 매 policy step 다시 읽는다. 외부 프로그램은 임시 파일 �
 - `sim2sim/student_config.json`: 카메라와 입력 선택, 방향 변환 horizon.
 - `sim2sim/check_student_bridge.py`: 실제 정지 모델의 네 발 contact, 명령/측정값 분리, 수동 label, 카메라 ground ray와 resize, checkpoint 거부를 검사한다.
 
-공개 Go2 Student 체크포인트가 있으면 이를 **오프라인 네트워크 직렬화 검증 fixture로만** 사용한다. 8-step recurrent export 비교 오차는 0이었고 저장/재로드 초기 state도 확인했다. Go2 가중치로 RBQ10을 제어하거나 RBQ10 Student 성공 결과를 만들지 않았다. 실제 RBQ10 Student 성능 검증은 아직 수행하지 않았다. 증거: `evaluations/sim2sim_student_interface/checks.json`.
+공개 Go2 Student 체크포인트가 있으면 이를 **오프라인 네트워크 직렬화 검증 fixture로만** 사용한다. 8-step recurrent export 비교 오차는 0이었고 저장/재로드 초기 state도 확인했다. Go2 가중치로 RBQ10을 제어하거나 RBQ10 Student 성공 결과를 만들지 않았다. 실제 RBQ10 Student 성능 검증은 아직 수행하지 않았다. 학습 시작 후 초기 checkpoint의 export/0.2초 연결 확인은 성능 평가에 포함하지 않는다. 증거: `evaluations/sim2sim_student_interface/checks.json`.
 
 ## 별도 실행 환경
 
@@ -174,7 +174,7 @@ python3.11 -m venv .venv-sim2sim
 
 ## 남은 작업
 
-1. **높이 스캐너 의미 확인**: 원본은 mount z=20m, 현재 Isaac RayCaster의 sensor pos_w는 mount를 포함하고 `_get_heights`는 여기에서 hit height와 0.3만 뺀다. 평지 fixture는 132개 모두 +1로 clip된다. 현재 checkpoint 실행은 이 기존 의미를 `--scan-mode source`로 유지한다. `--scan-mode base-height`는 비교 실험용이며 기존 정책의 입력 분포를 바꾼다. 학습 중 실제 tensor의 min/max/std/clip 비율을 지형별로 수집하고, scan 제거/변경 ablation으로 정책의 지형 의존성을 확인해야 한다. fixture만으로 전체 학습 기간의 관측값이 항상 동일했다고 결론 내리지 않는다.
+1. **높이 스캐너 정정 완료**: 실제 Isaac 평가에서 29회 raw scan을 측정해 변화를 확인했다. cfg.offset은 ray 시작점에만 더해지며 sensor pos_w는 tracked trunk 위치다. 이전 “20m sensor origin으로 인한 전체 +1 포화” 분석은 tracking offset과 ray offset을 혼동한 오류였다. MuJoCo Teacher bridge의 ray 시작점과 높이 기준을 수정했다. 위 Teacher 초기 낙상 기록은 수정 전 잘못된 scan bridge로 얻은 과거 결과이므로 수정 후 전이 성능을 나타내지 않는다.
 2. 동일한 저장 상태에서 Isaac/MuJoCo 관절 위치·속도, quaternion/frame, contact, scan, action을 순서대로 비교한다. 현재 fixture는 source 배열 호환성 검증이며 simulator trajectory parity는 아니다.
 3. PhysX implicit PD와 MuJoCo position servo는 같은 숫자의 gain만으로 동일해지지 않는다. 현재 100/100/150Nm torque limit은 적용하지만 PhysX 50rad/s 속도 제한은 MuJoCo에서 재현하지 않고 기록한다. 초기 정책 실행에서 50rad/s 초과가 관측됐으며 모터 모델·속도 제약·접촉 solver 차이를 보정해야 한다. qvel을 강제로 잘라 성공을 만들지 않는다.
 4. 원본 지형 mesh·waypoint·reset·종료 조건을 공유한 본 평가를 추가한다. 현재 직선 test course 결과로 Jump/Climb/Leap 성능을 인증하지 않는다.

@@ -1,0 +1,1075 @@
+{
+  "checkpoint": "model_4832.pt",
+  "checkpoint_sha256": "7596ac7dc171e7d36b041389344f79cf3f924f5392fb61deb5187e699d17a193",
+  "level": 9,
+  "difficulty": 1.0,
+  "seed": 42,
+  "num_envs": 20,
+  "episodes_per_env": 3,
+  "all_episodes_completed": true,
+  "steps": 3000,
+  "control_dt": 0.02,
+  "policy_inference": "original estimator + history encoder, hist_encoding=True",
+  "robot_contract": {
+    "schema": "rbq10_extreme_parkour_v1",
+    "robot": "Rainbow_RBQ10_without_arm",
+    "source_commit": "c7b80ba49f9a79f983cb977e2726cb2246701fcf",
+    "urdf_sha256": "70ad51db9bd3b5129d534cb681b6623107b2082e85c4e6005f5bfa4afe6535a0",
+    "base_body": "trunk",
+    "joint_order": [
+      "joint0_HRR",
+      "joint3_HLR",
+      "joint6_FRR",
+      "joint9_FLR",
+      "joint1_HRP",
+      "joint4_HLP",
+      "joint7_FRP",
+      "joint10_FLP",
+      "joint2_HRK",
+      "joint5_HLK",
+      "joint8_FRK",
+      "joint11_FLK"
+    ],
+    "foot_order": [
+      "HR_foot",
+      "HL_foot",
+      "FR_foot",
+      "FL_foot"
+    ],
+    "action_scale_rad": 0.25,
+    "physics_dt": 0.005,
+    "policy_dt": 0.02,
+    "policy_observation_dim": 753,
+    "action_dim": 12,
+    "actuator": "official_implicit_PD",
+    "kp_R_P_K": [
+      123.39138,
+      123.39138,
+      127.77215
+    ],
+    "kd": 2.5,
+    "effort_nm_R_P_K": [
+      100.0,
+      100.0,
+      150.0
+    ],
+    "velocity_rad_s": 50.0,
+    "camera_parent": "trunk",
+    "camera_position_m": [
+      0.42,
+      0.0,
+      0.1
+    ],
+    "camera_mount_status": "simulation_initial_value_not_hardware_calibrated",
+    "depth_hw": [
+      58,
+      87
+    ]
+  },
+  "conditions": {
+    "vx_m_s": 0.6,
+    "friction": 0.9,
+    "push": false,
+    "mass_com_randomization": false,
+    "joint_reset_scale": [
+      0.95,
+      1.05
+    ],
+    "roughness": "original enabled"
+  },
+  "summary": {
+    "parkour_flat": {
+      "episodes": 12,
+      "success": 12,
+      "fall": 0,
+      "timeout": 0,
+      "success_rate": 1.0
+    },
+    "parkour_hurdle": {
+      "episodes": 12,
+      "success": 12,
+      "fall": 0,
+      "timeout": 0,
+      "success_rate": 1.0
+    },
+    "parkour_step": {
+      "episodes": 12,
+      "success": 7,
+      "fall": 2,
+      "timeout": 3,
+      "success_rate": 0.5833333333333334
+    },
+    "parkour_gap": {
+      "episodes": 12,
+      "success": 12,
+      "fall": 0,
+      "timeout": 0,
+      "success_rate": 1.0
+    },
+    "parkour": {
+      "episodes": 12,
+      "success": 12,
+      "fall": 0,
+      "timeout": 0,
+      "success_rate": 1.0
+    }
+  },
+  "episodes": [
+    {
+      "env_id": 13,
+      "episode": 0,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "fall",
+      "goal_index": 2,
+      "episode_steps": 281,
+      "peak_foot_force_n": 1721.087646484375,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 14,
+      "episode": 0,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 532,
+      "peak_foot_force_n": 1296.2913818359375,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 15,
+      "episode": 0,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 561,
+      "peak_foot_force_n": 1728.247314453125,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 17,
+      "episode": 0,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 569,
+      "peak_foot_force_n": 573.81396484375,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 16,
+      "episode": 0,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 574,
+      "peak_foot_force_n": 608.4976806640625,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 19,
+      "episode": 0,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 592,
+      "peak_foot_force_n": 559.8121337890625,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 18,
+      "episode": 0,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 593,
+      "peak_foot_force_n": 556.5677490234375,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 4,
+      "episode": 0,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 772,
+      "peak_foot_force_n": 1212.580810546875,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 5,
+      "episode": 0,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 779,
+      "peak_foot_force_n": 1110.437255859375,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 13,
+      "episode": 1,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 504,
+      "peak_foot_force_n": 3524.936767578125,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 1,
+      "episode": 0,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 848,
+      "peak_foot_force_n": 3534.305908203125,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 7,
+      "episode": 0,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 854,
+      "peak_foot_force_n": 1276.3673095703125,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 0,
+      "episode": 0,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 857,
+      "peak_foot_force_n": 1175.66455078125,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 6,
+      "episode": 0,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 858,
+      "peak_foot_force_n": 1203.6240234375,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 2,
+      "episode": 0,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 879,
+      "peak_foot_force_n": 1622.7779541015625,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 9,
+      "episode": 0,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 899,
+      "peak_foot_force_n": 489.4651794433594,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 8,
+      "episode": 0,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 905,
+      "peak_foot_force_n": 425.0020446777344,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 3,
+      "episode": 0,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 912,
+      "peak_foot_force_n": 927.4435424804688,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 11,
+      "episode": 0,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 915,
+      "peak_foot_force_n": 460.2333679199219,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 10,
+      "episode": 0,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 921,
+      "peak_foot_force_n": 446.0221862792969,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 12,
+      "episode": 0,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "timeout",
+      "goal_index": 2,
+      "episode_steps": 1000,
+      "peak_foot_force_n": 1657.662353515625,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 14,
+      "episode": 1,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 541,
+      "peak_foot_force_n": 2047.504638671875,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 15,
+      "episode": 1,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 529,
+      "peak_foot_force_n": 903.5477294921875,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 17,
+      "episode": 1,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 565,
+      "peak_foot_force_n": 768.7739868164062,
+      "peak_estimated_torque_nm": 105.08551025390625
+    },
+    {
+      "env_id": 16,
+      "episode": 1,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 576,
+      "peak_foot_force_n": 699.551513671875,
+      "peak_estimated_torque_nm": 87.90234375
+    },
+    {
+      "env_id": 18,
+      "episode": 1,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 586,
+      "peak_foot_force_n": 944.8092651367188,
+      "peak_estimated_torque_nm": 94.43346405029297
+    },
+    {
+      "env_id": 19,
+      "episode": 1,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 588,
+      "peak_foot_force_n": 603.959716796875,
+      "peak_estimated_torque_nm": 94.23318481445312
+    },
+    {
+      "env_id": 13,
+      "episode": 2,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "fall",
+      "goal_index": 2,
+      "episode_steps": 481,
+      "peak_foot_force_n": 2739.920654296875,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 5,
+      "episode": 1,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 772,
+      "peak_foot_force_n": 1103.979248046875,
+      "peak_estimated_torque_nm": 89.7857894897461
+    },
+    {
+      "env_id": 4,
+      "episode": 1,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 783,
+      "peak_foot_force_n": 1108.182861328125,
+      "peak_estimated_torque_nm": 100.9563217163086
+    },
+    {
+      "env_id": 14,
+      "episode": 2,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 538,
+      "peak_foot_force_n": 2531.68994140625,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 15,
+      "episode": 2,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 543,
+      "peak_foot_force_n": 2573.553955078125,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 0,
+      "episode": 1,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 841,
+      "peak_foot_force_n": 1132.928466796875,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 6,
+      "episode": 1,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 847,
+      "peak_foot_force_n": 1176.472900390625,
+      "peak_estimated_torque_nm": 117.45377349853516
+    },
+    {
+      "env_id": 7,
+      "episode": 1,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 851,
+      "peak_foot_force_n": 1299.3502197265625,
+      "peak_estimated_torque_nm": 117.45538330078125
+    },
+    {
+      "env_id": 17,
+      "episode": 2,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 573,
+      "peak_foot_force_n": 596.2544555664062,
+      "peak_estimated_torque_nm": 97.17301177978516
+    },
+    {
+      "env_id": 1,
+      "episode": 1,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 861,
+      "peak_foot_force_n": 692.6205444335938,
+      "peak_estimated_torque_nm": 112.9116439819336
+    },
+    {
+      "env_id": 16,
+      "episode": 2,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 571,
+      "peak_foot_force_n": 623.14794921875,
+      "peak_estimated_torque_nm": 84.58486938476562
+    },
+    {
+      "env_id": 19,
+      "episode": 2,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 574,
+      "peak_foot_force_n": 1654.72607421875,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 2,
+      "episode": 1,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 891,
+      "peak_foot_force_n": 943.4094848632812,
+      "peak_estimated_torque_nm": 117.21217346191406
+    },
+    {
+      "env_id": 18,
+      "episode": 2,
+      "terrain": "parkour",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 593,
+      "peak_foot_force_n": 729.3873901367188,
+      "peak_estimated_torque_nm": 113.55549621582031
+    },
+    {
+      "env_id": 9,
+      "episode": 1,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 902,
+      "peak_foot_force_n": 569.2423706054688,
+      "peak_estimated_torque_nm": 94.5018539428711
+    },
+    {
+      "env_id": 3,
+      "episode": 1,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 893,
+      "peak_foot_force_n": 974.3035888671875,
+      "peak_estimated_torque_nm": 140.6226348876953
+    },
+    {
+      "env_id": 8,
+      "episode": 1,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 911,
+      "peak_foot_force_n": 387.4460754394531,
+      "peak_estimated_torque_nm": 71.109375
+    },
+    {
+      "env_id": 11,
+      "episode": 1,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 919,
+      "peak_foot_force_n": 503.38555908203125,
+      "peak_estimated_torque_nm": 73.94365692138672
+    },
+    {
+      "env_id": 10,
+      "episode": 1,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 920,
+      "peak_foot_force_n": 423.717529296875,
+      "peak_estimated_torque_nm": 99.81206512451172
+    },
+    {
+      "env_id": 12,
+      "episode": 1,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "timeout",
+      "goal_index": 6,
+      "episode_steps": 1000,
+      "peak_foot_force_n": 2690.732666015625,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 4,
+      "episode": 2,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 776,
+      "peak_foot_force_n": 1126.1031494140625,
+      "peak_estimated_torque_nm": 89.11956024169922
+    },
+    {
+      "env_id": 5,
+      "episode": 2,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 780,
+      "peak_foot_force_n": 975.8199462890625,
+      "peak_estimated_torque_nm": 90.09199523925781
+    },
+    {
+      "env_id": 7,
+      "episode": 2,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 828,
+      "peak_foot_force_n": 1539.3087158203125,
+      "peak_estimated_torque_nm": 123.86805725097656
+    },
+    {
+      "env_id": 0,
+      "episode": 2,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 854,
+      "peak_foot_force_n": 630.6964721679688,
+      "peak_estimated_torque_nm": 124.96475219726562
+    },
+    {
+      "env_id": 1,
+      "episode": 2,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 847,
+      "peak_foot_force_n": 1233.4639892578125,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 6,
+      "episode": 2,
+      "terrain": "parkour_hurdle",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 864,
+      "peak_foot_force_n": 1194.226318359375,
+      "peak_estimated_torque_nm": 114.84066772460938
+    },
+    {
+      "env_id": 2,
+      "episode": 2,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 885,
+      "peak_foot_force_n": 1011.5230712890625,
+      "peak_estimated_torque_nm": 113.233154296875
+    },
+    {
+      "env_id": 9,
+      "episode": 2,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 904,
+      "peak_foot_force_n": 425.5107116699219,
+      "peak_estimated_torque_nm": 83.63926696777344
+    },
+    {
+      "env_id": 3,
+      "episode": 2,
+      "terrain": "parkour_gap",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 901,
+      "peak_foot_force_n": 1737.6270751953125,
+      "peak_estimated_torque_nm": 150.0
+    },
+    {
+      "env_id": 8,
+      "episode": 2,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 900,
+      "peak_foot_force_n": 639.03076171875,
+      "peak_estimated_torque_nm": 80.16673278808594
+    },
+    {
+      "env_id": 10,
+      "episode": 2,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 912,
+      "peak_foot_force_n": 435.32928466796875,
+      "peak_estimated_torque_nm": 95.3047866821289
+    },
+    {
+      "env_id": 11,
+      "episode": 2,
+      "terrain": "parkour_flat",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "success",
+      "goal_index": 8,
+      "episode_steps": 921,
+      "peak_foot_force_n": 429.54345703125,
+      "peak_estimated_torque_nm": 75.1554946899414
+    },
+    {
+      "env_id": 12,
+      "episode": 2,
+      "terrain": "parkour_step",
+      "level": 9,
+      "difficulty": 1.0,
+      "outcome": "timeout",
+      "goal_index": 2,
+      "episode_steps": 1000,
+      "peak_foot_force_n": 1358.5281982421875,
+      "peak_estimated_torque_nm": 150.0
+    }
+  ],
+  "height_scan_audit": [
+    {
+      "step": 100,
+      "min": -0.6243409514427185,
+      "max": 1.0,
+      "std": 0.26573997735977173,
+      "fraction_at_upper_clip": 0.03901515156030655,
+      "zero_scan_action_mean_abs_delta": 0.3961471617221832
+    },
+    {
+      "step": 200,
+      "min": -0.8336814045906067,
+      "max": 1.0,
+      "std": 0.32714730501174927,
+      "fraction_at_upper_clip": 0.06628787517547607,
+      "zero_scan_action_mean_abs_delta": 0.46574273705482483
+    },
+    {
+      "step": 300,
+      "min": -0.3837776780128479,
+      "max": 1.0,
+      "std": 0.27672573924064636,
+      "fraction_at_upper_clip": 0.08598484843969345,
+      "zero_scan_action_mean_abs_delta": 0.3361012935638428
+    },
+    {
+      "step": 400,
+      "min": -0.9086923599243164,
+      "max": 1.0,
+      "std": 0.29146403074264526,
+      "fraction_at_upper_clip": 0.0624999962747097,
+      "zero_scan_action_mean_abs_delta": 0.4009898006916046
+    },
+    {
+      "step": 500,
+      "min": -0.17660456895828247,
+      "max": 1.0,
+      "std": 0.22162441909313202,
+      "fraction_at_upper_clip": 0.028787877410650253,
+      "zero_scan_action_mean_abs_delta": 0.3485220968723297
+    },
+    {
+      "step": 600,
+      "min": -0.1940476894378662,
+      "max": 1.0,
+      "std": 0.203054741024971,
+      "fraction_at_upper_clip": 0.025378787890076637,
+      "zero_scan_action_mean_abs_delta": 0.3424481153488159
+    },
+    {
+      "step": 700,
+      "min": -0.6978590488433838,
+      "max": 1.0,
+      "std": 0.29275619983673096,
+      "fraction_at_upper_clip": 0.04318181797862053,
+      "zero_scan_action_mean_abs_delta": 0.35372424125671387
+    },
+    {
+      "step": 800,
+      "min": -0.1163780689239502,
+      "max": 1.0,
+      "std": 0.26210683584213257,
+      "fraction_at_upper_clip": 0.07878787815570831,
+      "zero_scan_action_mean_abs_delta": 0.3761124610900879
+    },
+    {
+      "step": 900,
+      "min": -0.9401518106460571,
+      "max": 1.0,
+      "std": 0.2889265716075897,
+      "fraction_at_upper_clip": 0.07348484545946121,
+      "zero_scan_action_mean_abs_delta": 0.3936364948749542
+    },
+    {
+      "step": 1000,
+      "min": -0.7805473208427429,
+      "max": 1.0,
+      "std": 0.28304243087768555,
+      "fraction_at_upper_clip": 0.05454545468091965,
+      "zero_scan_action_mean_abs_delta": 0.4212273359298706
+    },
+    {
+      "step": 1100,
+      "min": -0.7995145320892334,
+      "max": 1.0,
+      "std": 0.2043030560016632,
+      "fraction_at_upper_clip": 0.007575757335871458,
+      "zero_scan_action_mean_abs_delta": 0.4198422431945801
+    },
+    {
+      "step": 1200,
+      "min": -0.8303892016410828,
+      "max": 1.0,
+      "std": 0.2633879780769348,
+      "fraction_at_upper_clip": 0.005303029902279377,
+      "zero_scan_action_mean_abs_delta": 0.4460790753364563
+    },
+    {
+      "step": 1300,
+      "min": -1.0,
+      "max": 1.0,
+      "std": 0.296852171421051,
+      "fraction_at_upper_clip": 0.059090908616781235,
+      "zero_scan_action_mean_abs_delta": 0.4255516827106476
+    },
+    {
+      "step": 1400,
+      "min": -0.8966466188430786,
+      "max": 1.0,
+      "std": 0.3108568489551544,
+      "fraction_at_upper_clip": 0.07689394056797028,
+      "zero_scan_action_mean_abs_delta": 0.455340176820755
+    },
+    {
+      "step": 1500,
+      "min": -0.8854646682739258,
+      "max": 1.0,
+      "std": 0.31788185238838196,
+      "fraction_at_upper_clip": 0.07537878304719925,
+      "zero_scan_action_mean_abs_delta": 0.5069342255592346
+    },
+    {
+      "step": 1600,
+      "min": -0.12076336145401001,
+      "max": 1.0,
+      "std": 0.2343050092458725,
+      "fraction_at_upper_clip": 0.06022727116942406,
+      "zero_scan_action_mean_abs_delta": 0.4729612171649933
+    },
+    {
+      "step": 1700,
+      "min": -1.0,
+      "max": 1.0,
+      "std": 0.20576949417591095,
+      "fraction_at_upper_clip": 0.030303029343485832,
+      "zero_scan_action_mean_abs_delta": 0.3458832800388336
+    },
+    {
+      "step": 1800,
+      "min": -0.6196604371070862,
+      "max": 1.0,
+      "std": 0.26513147354125977,
+      "fraction_at_upper_clip": 0.014393938705325127,
+      "zero_scan_action_mean_abs_delta": 0.3807167708873749
+    },
+    {
+      "step": 1900,
+      "min": -0.05027353763580322,
+      "max": 1.0,
+      "std": 0.25909027457237244,
+      "fraction_at_upper_clip": 0.08257575333118439,
+      "zero_scan_action_mean_abs_delta": 0.35224997997283936
+    },
+    {
+      "step": 2000,
+      "min": -0.9436902403831482,
+      "max": 1.0,
+      "std": 0.2994212508201599,
+      "fraction_at_upper_clip": 0.0833333283662796,
+      "zero_scan_action_mean_abs_delta": 0.3627738654613495
+    },
+    {
+      "step": 2100,
+      "min": -0.5743257403373718,
+      "max": 1.0,
+      "std": 0.2909412682056427,
+      "fraction_at_upper_clip": 0.06477272510528564,
+      "zero_scan_action_mean_abs_delta": 0.4109068214893341
+    },
+    {
+      "step": 2200,
+      "min": -0.8076587915420532,
+      "max": 1.0,
+      "std": 0.25684794783592224,
+      "fraction_at_upper_clip": 0.04318181797862053,
+      "zero_scan_action_mean_abs_delta": 0.34429240226745605
+    },
+    {
+      "step": 2300,
+      "min": -0.7400544881820679,
+      "max": 1.0,
+      "std": 0.23369169235229492,
+      "fraction_at_upper_clip": 0.016287878155708313,
+      "zero_scan_action_mean_abs_delta": 0.39216354489326477
+    },
+    {
+      "step": 2400,
+      "min": -1.0,
+      "max": 1.0,
+      "std": 0.3163667917251587,
+      "fraction_at_upper_clip": 0.05833332985639572,
+      "zero_scan_action_mean_abs_delta": 0.373153418302536
+    },
+    {
+      "step": 2500,
+      "min": -1.0,
+      "max": 1.0,
+      "std": 0.31755608320236206,
+      "fraction_at_upper_clip": 0.06590908765792847,
+      "zero_scan_action_mean_abs_delta": 0.41083070635795593
+    },
+    {
+      "step": 2600,
+      "min": -1.0,
+      "max": 1.0,
+      "std": 0.3162238299846649,
+      "fraction_at_upper_clip": 0.0833333283662796,
+      "zero_scan_action_mean_abs_delta": 0.3595361113548279
+    },
+    {
+      "step": 2700,
+      "min": -1.0,
+      "max": 1.0,
+      "std": 0.31124642491340637,
+      "fraction_at_upper_clip": 0.06628787517547607,
+      "zero_scan_action_mean_abs_delta": 0.32493746280670166
+    },
+    {
+      "step": 2800,
+      "min": -1.0,
+      "max": 1.0,
+      "std": 0.2821822166442871,
+      "fraction_at_upper_clip": 0.036363635212183,
+      "zero_scan_action_mean_abs_delta": 0.4788537323474884
+    },
+    {
+      "step": 2900,
+      "min": -1.0,
+      "max": 0.999959409236908,
+      "std": 0.2787702977657318,
+      "fraction_at_upper_clip": 0.0003787878667935729,
+      "zero_scan_action_mean_abs_delta": 0.3915904760360718
+    }
+  ],
+  "video": null,
+  "scope": "Teacher fixed-level simulation evaluation; not vision Student or hardware validation"
+}

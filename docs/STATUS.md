@@ -1,3 +1,5 @@
+> **현재: Teacher는 4,833회에서 저장·종료, Student 학습 진행 중. [실행·판단·검증 기록](../PHASE4_STATUS.md).**
+
 # 현재 진행 상황과 남은 단계 — 2026-10-23 KST
 
 ## 현재
@@ -12,11 +14,11 @@ Phase 1·2를 완료했고 Phase 3 RBQ10 Teacher 학습을 진행 중이다. 배
 | --- | --- | --- |
 | Phase 1 — 원본 Go2 | 완료 | 실제 Teacher/Student 실행, 사전학습 정책 재생, 점프·Climb 확인. 원본 Drive 대신 pinned public fork 모델 사용 |
 | Phase 2 — RBQ10 이식 | 완료 | 공식 40.684kg/12관절 모델, PD·foot·depth 계약, 정지·제조사 보행 정책의 평지·낮은 step 물리 검증 |
-| Phase 3 — RBQ10 Teacher | 진행 중 | 실제 PPO 학습·checkpoint·안전 재개. snapshot 3674의 최고 단계 60개 episode 평가 완료 |
-| Phase 4 — Vision Student | 미시작 | 완성 Teacher 선정 후 원본 distillation, 실센서 observation 계약, depth 노이즈·지연·물리 오차 검증 |
+| Phase 3 — RBQ10 Teacher | 현 학습 저장·종료 | 실제 PPO 학습·checkpoint·안전 재개. snapshot 3674의 최고 단계 60개 episode 평가 완료 |
+| Phase 4 — Vision Student | 학습 중 | model_3674 Teacher로 192환경/1,000회 증류 시작. 실센서 계약·추가 검증 진행 |
 | Phase 5 — 최종 검증·배포 | 미완료 | Student의 평지·Jump·Climb·Leap·연속 코스 평가, recurrent export·MuJoCo Sim2Sim 검증 |
 
-현재 모델은 **시뮬레이션 지형 정답 정보를 활용하는 Teacher**다. 실제 로봇 센서만 사용하는 Vision Student는 아직 없다.
+현재 모델은 **시뮬레이션 지형 정답 정보를 활용하는 Teacher**다. Vision Student는 학습을 시작했으며 검증 완료된 배포 모델은 아직 없다.
 
 ## 마지막 단계 성능
 

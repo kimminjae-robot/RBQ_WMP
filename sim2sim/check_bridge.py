@@ -72,15 +72,15 @@ def main():
         maximum=max(maximum,error)
         assert error<1e-5, (step,error)
     get_heights=source_method('_get_heights')
-    fake=NS(ray_sensor=NS(data=NS(pos_w=torch.tensor([[.42,0.,20.55]]),
+    fake=NS(ray_sensor=NS(data=NS(pos_w=torch.tensor([[0.,0.,.55]]),
                                  ray_hits_w=torch.zeros(1,132,3))),device='cpu')
-    saturated=bool(torch.all(get_heights(fake)==1))
-    assert saturated
+    flat_height=float(get_heights(fake)[0,0])
+    assert abs(flat_height-.25)<1e-6
     report={'static_pd_seconds':10,'static_pd_final_base_z':standing_z,
         'source_observation_fixture_steps':7,'source_observation_max_abs_error':maximum,
         'export_max_abs_error':meta['export_max_abs_error'],
         'joint_and_actuator_name_order_verified':True,
-        'flat_height_formula_with_20m_offset_saturates':saturated,
+        'flat_height_025_verified':True,
         'scope':'CPU fixtures and static dynamics; not live Isaac/MuJoCo trajectory parity or parkour success'}
     out=ROOT/'outputs/sim2sim/bridge_checks.json'
     out.write_text(json.dumps(report,indent=2)+'\n')

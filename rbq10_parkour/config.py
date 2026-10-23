@@ -83,6 +83,7 @@ class RBQ10TeacherEnvCfg_EVAL(UnitreeGo2TeacherParkourEnvCfg_EVAL):
 
 @configclass
 class RBQ10StudentEnvCfg(UnitreeGo2StudentParkourEnvCfg):
+    training_metrics_enabled: bool = True
     def __post_init__(self):
         super().__post_init__()
         configure_rbq10(self)

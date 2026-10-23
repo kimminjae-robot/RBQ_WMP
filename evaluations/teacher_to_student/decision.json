@@ -1,0 +1,54 @@
+{
+  "decision": "Switch to Student given limited time; modest training-window gains do not improve fixed-level Step performance",
+  "teacher_final_checkpoint": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour/2026-10-23_09-14-53_phase3_teacher_s1_20261023_091448_324100/model_4832.pt",
+  "teacher_final_updates": 4833,
+  "teacher_progress_windows": [
+    {
+      "iterations": [
+        4333,
+        4582
+      ],
+      "reward_mean": 20.471558864622118,
+      "episode_length_steps_mean": 704.424,
+      "course_success_rate": {
+        "Parkour/parkour/course_success_rate": 0.93938,
+        "Parkour/parkour_flat/course_success_rate": 0.77096,
+        "Parkour/parkour_gap/course_success_rate": 0.91024,
+        "Parkour/parkour_hurdle/course_success_rate": 0.766452,
+        "Parkour/parkour_step/course_success_rate": 0.919652
+      }
+    },
+    {
+      "iterations": [
+        4583,
+        4832
+      ],
+      "reward_mean": 21.431989423418045,
+      "episode_length_steps_mean": 713.65244,
+      "course_success_rate": {
+        "Parkour/parkour/course_success_rate": 0.963128,
+        "Parkour/parkour_flat/course_success_rate": 0.7210639999999999,
+        "Parkour/parkour_gap/course_success_rate": 0.9144680000000001,
+        "Parkour/parkour_hurdle/course_success_rate": 0.755096,
+        "Parkour/parkour_step/course_success_rate": 0.944284
+      }
+    }
+  ],
+  "latest_level9_success": 55,
+  "previous_3674_level9_success": 58,
+  "episodes": 60,
+  "selected_teacher": "model_3674.pt",
+  "selection_limitation": "Same nominal seed42 60-episode snapshots, not multi-seed confidence intervals",
+  "height_scan_live_audit": {
+    "samples": 29,
+    "global_min": -1.0,
+    "global_max": 1.0,
+    "mean_std": 0.27494531767121677,
+    "mean_upper_clip_fraction": 0.051306163406417034,
+    "mean_zero_scan_action_delta": 0.39618099763475617,
+    "conclusion": "Not constant or fully saturated in live evaluation. cfg.offset shifts ray starts; _offset tracks the prim, not cfg.offset."
+  },
+  "student_job_file": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/phase4/job_20261023_102324_394207.json",
+  "student_target_updates": 1000,
+  "student_envs": 192
+}

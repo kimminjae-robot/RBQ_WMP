@@ -13,5 +13,6 @@ class RBQ10TeacherRunnerCfg(UnitreeGo2ParkourTeacherPPORunnerCfg):
 
 @configclass
 class RBQ10StudentRunnerCfg(UnitreeGo2ParkourStudentPPORunnerCfg):
+    student_direction_source: str = "joystick"
     experiment_name = "rbq10_extreme_parkour"
     robot_contract: dict = robot_contract("student")

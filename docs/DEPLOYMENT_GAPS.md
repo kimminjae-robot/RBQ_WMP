@@ -75,17 +75,17 @@ MuJoCo position servo의 implicit 적분·접촉 해법은 PhysX와 다르고 �
 
 관절 순서는 Isaac native(R 네 다리→P 네 다리→K 네 다리)이며 제조사 배열은 다리별 R/P/K다. 반드시 이름 기반으로 매핑하고 영점·부호·발 HR/HL/FR/FL 순서를 확인해야 한다.
 
-## 7. 새로 발견한 Teacher 지형 높이 입력의 포화 가능성
+## 7. 높이 입력 포화 우려: 실제 관측으로 정정
 
-원본 scanner mount z=20m를 RBQ10도 유지한다. 설치된 IsaacLab의 `RayCaster._update_ray_infos`는 mount 변환을 적용한 위치를 `data.pos_w`에 저장한다. 원본 `_get_heights`는 `clip(sensor.pos_w.z − ray_hit.z − 0.3, −1, 1)`이므로, 평지에서 몸체가 0.55m일 때 약 20.25를 clip해 **모든 점이 +1**이 된다. 실제 원본 함수에 fixture를 넣어 이 결과를 확인했다.
+2026-10-23 `model_4832.pt`의 Isaac 고정 level9 평가에서 raw observation을 29번 측정했다. scan 값은 −1..1에서 변화했고, 평균 upper clip 비율은 약 5.13%였다. zero-scan으로 바꿨을 때 행동도 달라졌다. 따라서 이전 fixture에 근거한 “전체 +1 포화 가능성”은 현재 실행에서 확인되지 않았다.
 
-이는 현재 코드 조합에서 Teacher의 지형 입력이 정보량을 잃을 수 있다는 의미다. 아직 진행 중인 Isaac 프로세스의 tensor를 직접 읽은 것은 아니므로 모든 학습 지형·상태에서 같은 값이라고 단정하지 않는다. 지형별 scan min/max/std/clip 비율을 수집하고, scan을 가린 정책과 원본 정책의 차이를 확인해야 한다. 높은 코스 완주만으로 시각/높이 정보 활용이 입증되는 것은 아니다.
+앞선 분석은 `RayCaster._offset`을 `cfg.offset`과 혼동한 오류였다. 실제 구현은 `cfg.offset`을 `_initialize_rays_impl`에서 ray 시작점에만 더한다. `data.pos_w`는 별도 tracking transform으로 얻은 trunk 위치다. 평지에서 body z=0.55이면 원본 높이식은 0.25이며 20.25가 아니다. MuJoCo Teacher 진단 bridge도 이 의미로 수정했다. Student는 Teacher scan을 직접 입력받지 않는다.
 
-진행 중인 학습을 조용히 수정하지 않는다. MuJoCo 기본 `source` 모드는 기존 수식을 재현한다. height 기준을 base로 고치는 진단 모드는 별도 제공하며, 고친 입력을 사용하려면 새 observation 계약과 재학습/미세조정 검증이 필요하다. 원본 재사용 원칙에 따라 변경 이유와 기존 checkpoint 호환성 차이를 기록해야 한다.
+이전 JSON fixture는 가상의 sensor z=20.55를 가정한 계산일 뿐 실제 학습 센서 위치를 검증한 것이 아니었다. 근거는 `evaluations/teacher_to_student/teacher_4832_level9.json`의 `height_scan_audit`와 `decision.json`이다. 행동 차이는 지형 입력에 대한 의존성 증거이며, zero-scan으로 실제 코스를 재평가한 성능 ablation은 아니다.
 
 ## 권장 진행 순서
 
-1. 학습은 계속하면서, 저장 checkpoint에 대한 Isaac 관측값 실측·높이 포화/방향/속도 경로 audit.
+1. Teacher는 checkpoint를 보존하고 Student로 전환했다. 높이 관측 실측은 완료했으며, 방향/속도 경로는 사용자 지정 계약에 맞춰 검증한다.
 2. 같은 저장 상태에서 두 엔진의 관측값/행동 비교 → PD/contact/velocity limit 보정 → 평지/낮은 step의 실제 전이 확보.
 3. 실센서 Student 계약을 확정하고 정답 입력 누출을 제거한 원본 distillation 학습.
 4. 동일 전처리·타임스탬프·명시적 GRU 상태로 export, depth 포함 MuJoCo 평가.

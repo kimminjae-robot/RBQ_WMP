@@ -1,3 +1,5 @@
+> **2026-10-23 현재:** Teacher 추가 학습의 이득을 평가한 뒤 `model_3674.pt`를 선택해 Student 학습을 시작했다. [실행 상태와 판단 근거](PHASE4_STATUS.md).
+
 # RBQ_WMP — RBQ10 Isaac Lab Vision Parkour
 
 공개 [Isaaclab_Parkour](https://github.com/CAI23sbP/Isaaclab_Parkour)의 PPO·Reward·Curriculum·Teacher/Student 구조를 재사용한 RBQ10 파쿠르 프로젝트입니다. 모델은 [Rainbow Robotics 공식 RBQ](https://github.com/RainbowRobotics/RBQ)를 사용합니다.
