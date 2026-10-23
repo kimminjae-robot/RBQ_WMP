@@ -1,0 +1,10 @@
+{
+  "source": "logs/rsl_rl/rbq10_extreme_parkour/2026-10-23_11-52-10_phase4_student_s1_20261023_115204_886937/model_999.pt",
+  "initial_depth_max_error": 0.0,
+  "initial_action_max_error": 0.0,
+  "ground_fusion_gradient_norm": 22.720937728881836,
+  "ground_fusion_weight_change": 0.0010000000474974513,
+  "torchscript_max_error": 0.0,
+  "strict_front_checkpoint_rejection": true,
+  "contract_schema": "rbq10_extreme_parkour_student_depth5_v1"
+}

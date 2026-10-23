@@ -1,0 +1,8 @@
+{
+  "checkpoint": "logs/rsl_rl/rbq10_extreme_parkour_multiview/2026-10-23_13-23-19_depth5_current_contract_resume/model_1.pt",
+  "counter_before": 1,
+  "counter_after": 2,
+  "depth_optimizer_step": 2,
+  "device_migration": "actual_GPU_checkpoint_resumed_on_CPU",
+  "passed": true
+}

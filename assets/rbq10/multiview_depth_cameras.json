@@ -1,0 +1,353 @@
+{
+  "schema": "rbq10_depth5_calibration_v1",
+  "checked_date": "2026-10-23",
+  "view_order": [
+    "front",
+    "ground_0",
+    "ground_1",
+    "ground_2",
+    "ground_3"
+  ],
+  "views": [
+    {
+      "name": "front",
+      "sensor_name": "depth_camera",
+      "sensor": "front_depth_OAK-D_Pro_Wide",
+      "parent": "trunk",
+      "frame_convention": "ros_optical",
+      "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+      "translation_m": [
+        0.388031,
+        -0.0375,
+        0.037764
+      ],
+      "rotation_matrix": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "quaternion_wxyz_ros": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "base_to_depth_tf": [
+        [
+          0,
+          0,
+          1,
+          0.388031
+        ],
+        [
+          -1,
+          0,
+          0,
+          -0.0375
+        ],
+        [
+          0,
+          -1,
+          0,
+          0.037764
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "base_mapping": "Manufacturer base/body frame mapped to URDF trunk; matching hip offsets and body inertial frame",
+      "checked_date": "2026-10-23"
+    },
+    {
+      "name": "ground_0",
+      "sensor_name": "depth_camera_ground_0",
+      "sensor": "Intel_RealSense_D430",
+      "parent": "trunk",
+      "frame_convention": "ros_optical",
+      "published_base_to_depth_tf": [
+        [
+          -0.939693,
+          0,
+          0.34202,
+          0.36462
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -0.34202,
+          0,
+          -0.939693,
+          -0.02663
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "translation_m": [
+        0.36462,
+        0.0,
+        -0.02663
+      ],
+      "rotation_matrix": [
+        [
+          -0.9396927112094517,
+          0.0,
+          0.3420198948889229
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.3420198948889229,
+          0.0,
+          -0.9396927112094517
+        ]
+      ],
+      "quaternion_wxyz_ros": [
+        0.1736480474847734,
+        0.0,
+        0.9848077759668258,
+        0.0
+      ],
+      "rotation_projection_max_abs": 2.8879054825292627e-07,
+      "fov_deg_hv": [
+        87,
+        58
+      ],
+      "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#ground-view-cameras-intel-realsense-d430"
+    },
+    {
+      "name": "ground_1",
+      "sensor_name": "depth_camera_ground_1",
+      "sensor": "Intel_RealSense_D430",
+      "parent": "trunk",
+      "frame_convention": "ros_optical",
+      "published_base_to_depth_tf": [
+        [
+          -0.970296,
+          0,
+          -0.241922,
+          0.26053
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0.241922,
+          0,
+          -0.970296,
+          -0.04759
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "translation_m": [
+        0.26053,
+        0.0,
+        -0.04759
+      ],
+      "rotation_matrix": [
+        [
+          -0.9702957177895315,
+          0.0,
+          -0.24192192963701697
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.24192192963701697,
+          0.0,
+          -0.9702957177895315
+        ]
+      ],
+      "quaternion_wxyz_ros": [
+        -0.12186936081408746,
+        0.0,
+        0.9925461495037728,
+        0.0
+      ],
+      "rotation_projection_max_abs": 2.82210468549593e-07,
+      "fov_deg_hv": [
+        87,
+        58
+      ],
+      "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#ground-view-cameras-intel-realsense-d430"
+    },
+    {
+      "name": "ground_2",
+      "sensor_name": "depth_camera_ground_2",
+      "sensor": "Intel_RealSense_D430",
+      "parent": "trunk",
+      "frame_convention": "ros_optical",
+      "published_base_to_depth_tf": [
+        [
+          -1,
+          0,
+          0,
+          -0.19515
+        ],
+        [
+          0,
+          1,
+          0,
+          0.0065
+        ],
+        [
+          0,
+          0,
+          -1,
+          -0.04832
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "translation_m": [
+        -0.19515,
+        0.0065,
+        -0.04832
+      ],
+      "rotation_matrix": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "quaternion_wxyz_ros": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "rotation_projection_max_abs": 0.0,
+      "fov_deg_hv": [
+        87,
+        58
+      ],
+      "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#ground-view-cameras-intel-realsense-d430"
+    },
+    {
+      "name": "ground_3",
+      "sensor_name": "depth_camera_ground_3",
+      "sensor": "Intel_RealSense_D430",
+      "parent": "trunk",
+      "frame_convention": "ros_optical",
+      "published_base_to_depth_tf": [
+        [
+          0.861341,
+          -0.0909518,
+          -0.49982,
+          -0.352993
+        ],
+        [
+          -0.105042,
+          -0.994468,
+          -5.69736e-05,
+          -1.1e-50
+        ],
+        [
+          -0.49705,
+          0.0525513,
+          -0.866129,
+          -0.020514
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "translation_m": [
+        -0.352993,
+        -1.1e-50,
+        -0.020514
+      ],
+      "rotation_matrix": [
+        [
+          0.8613406130322055,
+          -0.0909516837704363,
+          -0.4998201071992069
+        ],
+        [
+          -0.10504207029935446,
+          -0.9944677773663136,
+          -5.698534032161362e-05
+        ],
+        [
+          -0.4970498081767356,
+          0.05255122262541635,
+          -0.8661292381579346
+        ]
+      ],
+      "quaternion_wxyz_ros": [
+        0.013634492179369016,
+        0.9646161968052959,
+        -0.050795786634855594,
+        -0.25835921029458847
+      ],
+      "rotation_projection_max_abs": 3.8696779447455754e-07,
+      "fov_deg_hv": [
+        87,
+        58
+      ],
+      "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#ground-view-cameras-intel-realsense-d430"
+    }
+  ],
+  "notes": [
+    "Published ground camera 3 y translation -1.1e-050 is retained literally (approximately zero); verify against hardware TF before deployment.",
+    "Rounded rotations projected to the closest proper SO(3) matrix using SVD.",
+    "Front optics remain the original training pinhole optics for an isolated camera-count experiment; OAK-D Wide full optics calibration is a separate experiment.",
+    "Ground cameras use D430 nominal H87/V58 FOV; all views reuse original 60x106 acquisition, 58x87 preprocessing, 2m depth cap, 10Hz delayed input.",
+    "Terrain-only raycasting matches the existing front camera: no robot self-occlusion or stereo artifacts are simulated."
+  ],
+  "fov_source": "https://www.intel.com/content/www/us/en/products/sku/98320/intel-realsense-depth-module-d430/specifications.html"
+}

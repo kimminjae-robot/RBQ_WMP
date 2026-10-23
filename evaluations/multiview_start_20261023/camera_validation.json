@@ -1,0 +1,49 @@
+{
+  "policy_shape": [
+    192,
+    753
+  ],
+  "depth_shape": [
+    192,
+    5,
+    58,
+    87
+  ],
+  "cameras": {
+    "depth_camera": {
+      "min_m": 0.7400311827659607,
+      "max_m": 2.0,
+      "mean_m": 1.8992884159088135,
+      "finite_fraction": 1.0,
+      "processed_std": 0.11929783970117569
+    },
+    "depth_camera_ground_0": {
+      "min_m": 0.4949853718280792,
+      "max_m": 1.304975986480713,
+      "mean_m": 0.680255115032196,
+      "finite_fraction": 1.0,
+      "processed_std": 0.07785792648792267
+    },
+    "depth_camera_ground_1": {
+      "min_m": 0.47340261936187744,
+      "max_m": 1.027915120124817,
+      "mean_m": 0.6198384761810303,
+      "finite_fraction": 1.0,
+      "processed_std": 0.052774861454963684
+    },
+    "depth_camera_ground_2": {
+      "min_m": 0.4768312871456146,
+      "max_m": 0.7748365998268127,
+      "mean_m": 0.5887078046798706,
+      "finite_fraction": 1.0,
+      "processed_std": 0.02665063366293907
+    },
+    "depth_camera_ground_3": {
+      "min_m": 0.500974178314209,
+      "max_m": 2.0,
+      "mean_m": 0.8138833045959473,
+      "finite_fraction": 1.0,
+      "processed_std": 0.1508176475763321
+    }
+  }
+}

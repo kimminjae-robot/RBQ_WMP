@@ -12,3 +12,14 @@ for role in ("Teacher", "Student"):
                 "rsl_rl_cfg_entry_point": f"rbq10_parkour.agents:RBQ10{role}RunnerCfg",
             },
         )
+
+# Separate registration and entry point: never replace the existing front-only task.
+gym.register(
+    id="Isaac-Extreme-Parkour-Student-MultiDepth-Rainbow-RBQ10-v0",
+    entry_point="rbq10_parkour.env:RBQ10ParkourEnv",
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": "rbq10_parkour.multiview_config:RBQ10MultiViewStudentEnvCfg",
+        "rsl_rl_cfg_entry_point": "rbq10_parkour.multiview_config:RBQ10MultiViewStudentRunnerCfg",
+    },
+)

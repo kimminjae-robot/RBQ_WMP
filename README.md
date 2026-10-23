@@ -1,4 +1,4 @@
-> **2026-10-23 저장 기록:** 전방 Student를 누적 **1,550 update**에서 저장·정상 중단했습니다. 전체 가중치·optimizer·재개 정보는 [체크포인트 보관 문서](docs/FRONT_STUDENT_ARCHIVE.md)를 따라 복원할 수 있습니다.
+> **2026-10-23 최신 상태:** 전방 Student는 **1,550 update에서 저장·중단**했고, 현재 **전방+하향4개 5뷰 Student만 2,000 update 목표로 학습 중**입니다. [새 실험·공식 카메라 검증](docs/MULTIVIEW_STUDENT.md) · [기존 학습 보관](docs/FRONT_STUDENT_ARCHIVE.md).
 
 # RBQ_WMP — RBQ10 Isaac Lab Vision Parkour
 
@@ -6,13 +6,18 @@
 
 **초기 Teacher 배포 당시 기록:** Phase 1·2 완료. Phase 3 Teacher는 **3,675 업데이트**에서 디스크 부족으로 안전 중단한 뒤, 공간 확보 후 **2026-10-23 09:14 KST에 학습을 재개했습니다. 배포 snapshot은 3,675 업데이트 시점입니다.** 재개 가능한 실제 `model_3674.pt`를 포함합니다. Vision Student·실물 적용은 아직 완료하지 않았습니다. [진행 상황과 남은 단계](docs/STATUS.md).
 
-## 전방 Student checkpoint 복원
+## 5뷰 Student 실행
+
+공식 D430 Camera0~3 장착 TF와 명목 FOV를 적용한 별도 태스크입니다. 기존 전방 모델과 분리된 checkpoint contract·로그·manager를 사용합니다. 성능 향상은 학습 후 동일 조건 평가로 확인합니다.
 
 ```bash
 python tools/restore_student_checkpoint.py
+# docs/PORTABILITY.md에 따라 기존 Isaac Lab/프로젝트 venv를 준비한 뒤:
+./run.sh multiview-student-job start --checkpoint checkpoints/rbq10_student_front/model_1549.pt --iterations 2000 --num_envs 192 --seed 1
+./run.sh multiview-student-job status
 ```
 
-새 카메라 학습은 별도 [5뷰 실험 브랜치](https://github.com/kimminjae-robot/RBQ_WMP/tree/experiment/depth5-student-20261023)에서 진행합니다. 이 보관 브랜치는 기존 전방 전용 태스크와 재개 checkpoint를 유지합니다.
+[전방 보관 브랜치](https://github.com/kimminjae-robot/RBQ_WMP/tree/archive/front-depth-1550-20261023) · [5뷰 실험 브랜치](https://github.com/kimminjae-robot/RBQ_WMP/tree/experiment/depth5-student-20261023).
 
 ## 성능 개선 후속 과제
 

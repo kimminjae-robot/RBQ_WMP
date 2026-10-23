@@ -1,0 +1,18 @@
+{
+  "front_checkpoint_sha256": "708a3591052e5696c92c82cfd50c387ff1be86416d5520fd43b33356c3b565bd",
+  "gpu_checkpoint": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour_multiview/2026-10-23_13-15-36_depth5_student_s1_20261023_131531_862725/model_0.pt",
+  "branch_updates": 1,
+  "teacher_bitwise_unchanged": true,
+  "student_actor_changed": true,
+  "all_depth_weights_finite": true,
+  "ground_fusion_norms": [
+    0.03199990838766098,
+    0.031999990344047546,
+    0.03199990093708038,
+    0.031999923288822174
+  ],
+  "optimizer_steps": [
+    1
+  ],
+  "schema": "rbq10_extreme_parkour_student_depth5_v1"
+}

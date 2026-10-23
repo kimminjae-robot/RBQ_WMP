@@ -1,0 +1,383 @@
+{
+  "scope": "Published hardware geometry and live Isaac sensor audit, not a connection to the physical robot",
+  "body_frame": "URDF trunk link frame; no inertial/CoM offset applied",
+  "body_frame_hip_offsets_m": {
+    "joint0_HRR": [
+      -0.31218,
+      -0.09,
+      0.0
+    ],
+    "joint3_HLR": [
+      -0.31218,
+      0.09,
+      0.0
+    ],
+    "joint6_FRR": [
+      0.31218,
+      -0.09,
+      0.0
+    ],
+    "joint9_FLR": [
+      0.31218,
+      0.09,
+      0.0
+    ]
+  },
+  "urdf_has_camera_links": false,
+  "topics_source": "https://rainbowrobotics.github.io/RBQ/software/sdk/ros/topics.html#vision-camera-sensors",
+  "views": [
+    {
+      "name": "front",
+      "hardware_sensor_id": 4,
+      "hardware_depth_topic": "/rbq/vision/sensor_4/depth/compressed",
+      "hardware_intrinsics_topic": "/rbq/vision/sensor_4/depth/camera_info",
+      "hardware_pose_topic": "/rbq/vision/sensor_4/depth/tf",
+      "configured_position_m": [
+        0.388031,
+        -0.0375,
+        0.037764
+      ],
+      "actual_position_m": [
+        0.388031005859375,
+        -0.03749847412109375,
+        0.037764012813568115
+      ],
+      "actual_rotation_matrix": [
+        [
+          -4.76837158203125e-06,
+          -0.00013846888032276183,
+          0.9999999403953552
+        ],
+        [
+          -0.9995494484901428,
+          0.030013442039489746,
+          -6.601409268114367e-07
+        ],
+        [
+          -0.030013389885425568,
+          -0.9995494484901428,
+          -0.0001385211944580078
+        ]
+      ],
+      "optical_forward_in_body": [
+        0.9999999403953552,
+        -6.601409268114367e-07,
+        -0.0001385211944580078
+      ],
+      "position_max_error_m": 1.5273690223693848e-06,
+      "rotation_max_error": 0.08691265434026718,
+      "actual_fov_hv_deg": [
+        86.9999033520675,
+        57.99899943857119
+      ],
+      "intrinsic_matrix": [
+        [
+          55.850440979003906,
+          0.0,
+          53.0
+        ],
+        [
+          0.0,
+          54.1225471496582,
+          30.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_hw": [
+        60,
+        106
+      ],
+      "rate_policy_input_hz": 10,
+      "max_range_m": 2.0,
+      "nominal_hardware_fov_matches": false
+    },
+    {
+      "name": "ground_0",
+      "hardware_sensor_id": 0,
+      "hardware_depth_topic": "/rbq/vision/sensor_0/depth/compressed",
+      "hardware_intrinsics_topic": "/rbq/vision/sensor_0/depth/camera_info",
+      "hardware_pose_topic": "/rbq/vision/sensor_0/depth/tf",
+      "configured_position_m": [
+        0.36462,
+        0.0,
+        -0.02663
+      ],
+      "actual_position_m": [
+        0.3646202087402344,
+        1.6824205873941511e-12,
+        -0.026629984378814697
+      ],
+      "actual_rotation_matrix": [
+        [
+          -0.9396927356719971,
+          3.618426391849283e-10,
+          0.3420198857784271
+        ],
+        [
+          3.549250138235038e-08,
+          1.0,
+          9.645697929272501e-08
+        ],
+        [
+          -0.3420198857784271,
+          1.0277906170585993e-07,
+          -0.9396927356719971
+        ]
+      ],
+      "optical_forward_in_body": [
+        0.3420198857784271,
+        9.645697929272501e-08,
+        -0.9396927356719971
+      ],
+      "position_max_error_m": 2.086162567138672e-07,
+      "rotation_max_error": 1.0277906170585993e-07,
+      "actual_fov_hv_deg": [
+        87.00000105348636,
+        57.99999946140444
+      ],
+      "intrinsic_matrix": [
+        [
+          55.850345611572266,
+          0.0,
+          53.0
+        ],
+        [
+          0.0,
+          54.12143325805664,
+          30.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_hw": [
+        60,
+        106
+      ],
+      "rate_policy_input_hz": 10,
+      "max_range_m": 2.0,
+      "nominal_hardware_fov_matches": true
+    },
+    {
+      "name": "ground_1",
+      "hardware_sensor_id": 1,
+      "hardware_depth_topic": "/rbq/vision/sensor_1/depth/compressed",
+      "hardware_intrinsics_topic": "/rbq/vision/sensor_1/depth/camera_info",
+      "hardware_pose_topic": "/rbq/vision/sensor_1/depth/tf",
+      "configured_position_m": [
+        0.26053,
+        0.0,
+        -0.04759
+      ],
+      "actual_position_m": [
+        0.260528564453125,
+        1.1121709293532983e-13,
+        -0.047590017318725586
+      ],
+      "actual_rotation_matrix": [
+        [
+          -0.9702956676483154,
+          -8.914104654422772e-08,
+          -0.2419220507144928
+        ],
+        [
+          -6.024151133487976e-08,
+          1.0,
+          -1.268547862309788e-07
+        ],
+        [
+          0.2419220507144928,
+          -1.0851289999891378e-07,
+          -0.9702956676483154
+        ]
+      ],
+      "optical_forward_in_body": [
+        -0.2419220507144928,
+        -1.268547862309788e-07,
+        -0.9702956676483154
+      ],
+      "position_max_error_m": 1.430511474609375e-06,
+      "rotation_max_error": 1.268547862309788e-07,
+      "actual_fov_hv_deg": [
+        87.00000105348636,
+        57.99999946140444
+      ],
+      "intrinsic_matrix": [
+        [
+          55.850345611572266,
+          0.0,
+          53.0
+        ],
+        [
+          0.0,
+          54.12143325805664,
+          30.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_hw": [
+        60,
+        106
+      ],
+      "rate_policy_input_hz": 10,
+      "max_range_m": 2.0,
+      "nominal_hardware_fov_matches": true
+    },
+    {
+      "name": "ground_2",
+      "hardware_sensor_id": 2,
+      "hardware_depth_topic": "/rbq/vision/sensor_2/depth/compressed",
+      "hardware_intrinsics_topic": "/rbq/vision/sensor_2/depth/camera_info",
+      "hardware_pose_topic": "/rbq/vision/sensor_2/depth/tf",
+      "configured_position_m": [
+        -0.19515,
+        0.0065,
+        -0.04832
+      ],
+      "actual_position_m": [
+        -0.19514846801757812,
+        0.006500244140625,
+        -0.048319995403289795
+      ],
+      "actual_rotation_matrix": [
+        [
+          -1.0,
+          4.3703991536858666e-08,
+          -4.456332902691429e-08
+        ],
+        [
+          4.3703991536858666e-08,
+          1.0,
+          -3.8188847917286495e-11
+        ],
+        [
+          4.456332902691429e-08,
+          -3.819079427702654e-11,
+          -1.0
+        ]
+      ],
+      "optical_forward_in_body": [
+        -4.456332902691429e-08,
+        -3.8188847917286495e-11,
+        -1.0
+      ],
+      "position_max_error_m": 1.5348196029663086e-06,
+      "rotation_max_error": 4.456332902691429e-08,
+      "actual_fov_hv_deg": [
+        87.00000105348636,
+        57.99999946140444
+      ],
+      "intrinsic_matrix": [
+        [
+          55.850345611572266,
+          0.0,
+          53.0
+        ],
+        [
+          0.0,
+          54.12143325805664,
+          30.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_hw": [
+        60,
+        106
+      ],
+      "rate_policy_input_hz": 10,
+      "max_range_m": 2.0,
+      "nominal_hardware_fov_matches": true
+    },
+    {
+      "name": "ground_3",
+      "hardware_sensor_id": 3,
+      "hardware_depth_topic": "/rbq/vision/sensor_3/depth/compressed",
+      "hardware_intrinsics_topic": "/rbq/vision/sensor_3/depth/camera_info",
+      "hardware_pose_topic": "/rbq/vision/sensor_3/depth/tf",
+      "configured_position_m": [
+        -0.352993,
+        -1.1e-50,
+        -0.020514
+      ],
+      "actual_position_m": [
+        -0.3529930114746094,
+        -3.3969485210838535e-12,
+        -0.02051401138305664
+      ],
+      "actual_rotation_matrix": [
+        [
+          0.8613407015800476,
+          -0.09095169603824615,
+          -0.4998199939727783
+        ],
+        [
+          -0.10504208505153656,
+          -0.9944678544998169,
+          -5.699957546312362e-05
+        ],
+        [
+          -0.4970496892929077,
+          0.05255122482776642,
+          -0.8661293983459473
+        ]
+      ],
+      "optical_forward_in_body": [
+        -0.4998199939727783,
+        -5.699957546312362e-05,
+        -0.8661293983459473
+      ],
+      "position_max_error_m": 1.1175870895385742e-08,
+      "rotation_max_error": 1.7881393432617188e-07,
+      "actual_fov_hv_deg": [
+        87.00000105348636,
+        57.99999946140444
+      ],
+      "intrinsic_matrix": [
+        [
+          55.850345611572266,
+          0.0,
+          53.0
+        ],
+        [
+          0.0,
+          54.12143325805664,
+          30.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "raw_hw": [
+        60,
+        106
+      ],
+      "rate_policy_input_hz": 10,
+      "max_range_m": 2.0,
+      "nominal_hardware_fov_matches": true
+    }
+  ],
+  "remaining_hardware_differences": [
+    "Front optics retain the existing training H87/V58 approximately; hardware OAK-D Wide specifies H127/V79.5.",
+    "Ground D430 H87/V58 are nominal specifications; per-device CameraInfo/distortion and stream TF must be measured on the robot.",
+    "Ground camera 3 published y translation is -1.1e-050, retained literally; confirm the live stream TF.",
+    "Raycasting covers terrain only, without robot self-occlusion, stereo holes, camera interference or sensor noise.",
+    "Hardware optical-Z depth must be converted through CameraInfo to Euclidean range before the original preprocessing, with common 2m clipping and ground 0.2m optical-Z invalid handling.",
+    "Native sensor resolution/FPS, exposure, per-camera delay and timestamp synchronization are not yet calibrated; policy consumes delayed 10Hz 58x87 views."
+  ]
+}

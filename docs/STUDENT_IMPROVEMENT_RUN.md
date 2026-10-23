@@ -2,7 +2,7 @@
 
 **13:09 KST 업데이트:** 사용자 요청으로 전방 전용 학습을 model1549(누적1550 update)에
 저장·중단했다. 전체 checkpoint를 `checkpoints/rbq10_student_front/`에 보관했다.
-이후에는 [전방+하향4개 5뷰 Student](https://github.com/kimminjae-robot/RBQ_WMP/blob/experiment/depth5-student-20261023/docs/MULTIVIEW_STUDENT.md)만 별도로 학습한다.
+이후에는 [전방+하향4개 5뷰 Student](MULTIVIEW_STUDENT.md)만 별도로 학습한다.
 아래 내용은 기존 전방 실험의 실행 당시 기록이다.
 
 사용자 요청에 따라 12:30 KST에 model999에서 **추가2,000 update**를 시작했다.
