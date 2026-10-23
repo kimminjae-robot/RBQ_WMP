@@ -1,0 +1,99 @@
+{
+  "role": "student",
+  "checkpoint": "model_400.pt",
+  "checkpoint_sha256": "d3df3ecbf60e62cc481de4f39e019b54281421d5de041f86ee08b11dcb041e08",
+  "configuration": {
+    "camera": {
+      "parent": "trunk",
+      "position_m": [
+        0.388031,
+        -0.0375,
+        0.037764
+      ],
+      "quaternion_wxyz_ros": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "mount_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.955,
+      "vertical_aperture": 12.24,
+      "max_distance_m": 2.0,
+      "sensor": "front_depth_OAK-D_Pro_Wide"
+    },
+    "direction_source": "joystick",
+    "yaw_rate_to_error_seconds": 0.5,
+    "terrain_label": "flat",
+    "velocity_source": "mujoco",
+    "depth_update_policy_steps": 5,
+    "action_delay_policy_steps": 1
+  },
+  "course": "isaac_flat",
+  "height": 0.1,
+  "difficulty": 0.0,
+  "terrain_seed": 42,
+  "engine": "3.3.0",
+  "simulated_seconds": 5.6599999999999016,
+  "termination": "fall",
+  "fall_count": 1,
+  "episodes_started": 1,
+  "keyboard": false,
+  "video": "artifacts/student_model_400_mujoco_flat.mp4",
+  "displacement_xyz": [
+    -1.2375830019690472,
+    1.2341401159567424,
+    -0.39642787499563176
+  ],
+  "max_abs_torque_nm": 150.0,
+  "max_abs_joint_speed_rad_s": 84.27985647622032,
+  "limitation": "Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending.",
+  "video_terminal_hold_seconds": 2,
+  "scope": "Single early-Student MuJoCo rollout; fall recorded, not successful transfer",
+  "keyboard_session": {
+    "termination": "viewer_closed",
+    "episodes_started": 6,
+    "falls": 4,
+    "recorded_steps": 594,
+    "observed_velocity_commands": [
+      [
+        -0.1,
+        0.0
+      ],
+      [
+        -0.1,
+        0.2
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.2
+      ],
+      [
+        0.1,
+        0.0
+      ]
+    ],
+    "scope": "Actual local viewer keyboard callback session; separate from fixed-command video"
+  },
+  "artifacts": {
+    "artifacts/student_model_400_mujoco_flat.mp4": {
+      "bytes": 763288,
+      "sha256": "34521fd4480170b9c1b275b2ccde75cccbc3eaedfdd430f10d5281f58673e863"
+    },
+    "artifacts/student_model_400_mujoco_flat.gif": {
+      "bytes": 1930241,
+      "sha256": "23fc5f49bb146e7c5818059735eef3bd0a8145998c8da34d522803ab68b79457"
+    },
+    "artifacts/student_model_400_mujoco_flat.png": {
+      "bytes": 95154,
+      "sha256": "7ca50df0a84218dda3fb5092b99c394898c255f5b946c3d4ceeba47b7f2b6aad"
+    }
+  }
+}

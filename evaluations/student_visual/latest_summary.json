@@ -1,0 +1,70 @@
+{
+  "role": "student",
+  "checkpoint": "model_500.pt",
+  "checkpoint_sha256": "d076d4bc8da4d72fe0345c0f3a44eeaf6f8e1c331c637d0e68f03b858d2e6edc",
+  "configuration": {
+    "camera": {
+      "parent": "trunk",
+      "position_m": [
+        0.388031,
+        -0.0375,
+        0.037764
+      ],
+      "quaternion_wxyz_ros": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "mount_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.955,
+      "vertical_aperture": 12.24,
+      "max_distance_m": 2.0,
+      "sensor": "front_depth_OAK-D_Pro_Wide"
+    },
+    "direction_source": "joystick",
+    "yaw_rate_to_error_seconds": 0.5,
+    "terrain_label": "flat",
+    "velocity_source": "mujoco",
+    "depth_update_policy_steps": 5,
+    "action_delay_policy_steps": 1
+  },
+  "course": "isaac_flat",
+  "height": 0.1,
+  "difficulty": 0.0,
+  "terrain_seed": 42,
+  "engine": "3.3.0",
+  "simulated_seconds": 7.659999999999859,
+  "termination": "fall",
+  "fall_count": 1,
+  "episodes_started": 1,
+  "keyboard": false,
+  "video": "artifacts/student_latest_mujoco_flat.mp4",
+  "displacement_xyz": [
+    4.640865876965388,
+    2.471626154700644,
+    -0.43536168486879856
+  ],
+  "max_abs_torque_nm": 150.0,
+  "max_abs_joint_speed_rad_s": 86.73216287734111,
+  "limitation": "Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending.",
+  "video_terminal_hold_seconds": 2,
+  "scope": "Single fixed-command early Student rollout; fall, not stable Sim2Sim",
+  "artifacts": {
+    "artifacts/student_latest_mujoco_flat.mp4": {
+      "bytes": 1014730,
+      "sha256": "a3edf853bfe3546c0f1fb80943f7db5e77a158bbe3caa097eafcf6d995f05a52"
+    },
+    "artifacts/student_latest_mujoco_flat.gif": {
+      "bytes": 3112693,
+      "sha256": "25e8e660dff189b34b11baa03993627da3416d23b6ab6f4a77d831e869b55295"
+    },
+    "artifacts/student_latest_mujoco_flat.png": {
+      "bytes": 76256,
+      "sha256": "5d3038f4e5bddef04eebb039236425217ab4de9831f287bd2d257081fe15ccd4"
+    }
+  }
+}

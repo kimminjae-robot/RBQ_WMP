@@ -31,6 +31,8 @@ case "$mode" in
     exec "$python_bin" "$project_root/tools/evaluate_teacher.py" "$@" ;;
   export-sim2sim)
     exec "$python_bin" "$project_root/tools/export_sim2sim.py" "$@" ;;
+  sim2sim-latest)
+    exec "$python_bin" "$project_root/tools/play_latest_mujoco.py" "$@" ;;
   sim2sim)
     exec "${RBQ10_MUJOCO_PYTHON:-$project_root/.venv-sim2sim/bin/python}" "$project_root/sim2sim/run_student.py" "$@" ;;
   import-teacher)

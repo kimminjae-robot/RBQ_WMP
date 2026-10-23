@@ -13,6 +13,7 @@ from build_scene import ROOT, ASSETS, build_scene
 from terrains import COURSES
 from run_teacher import ObservationBridge
 from student_inputs import CommandInput, DepthInput, student_observation
+from keyboard import KeyboardInput
 
 
 def validate_export(directory):
@@ -40,8 +41,8 @@ def main():
     p.add_argument('--difficulty',type=float,default=.5)
     p.add_argument('--terrain-seed',type=int,default=42)
     p.add_argument('--height',type=float,default=.10)
-    p.add_argument('--seconds',type=float,default=10.)
-    p.add_argument('--speed',type=float,default=.6,help='Reference vx m/s; original training is forward walking')
+    p.add_argument('--seconds',type=float,default=None)
+    p.add_argument('--speed',type=float,default=None,help='Reference vx m/s; original training is forward walking')
     p.add_argument('--yaw-rate',type=float,default=0.,help='Reference body yaw rate rad/s')
     p.add_argument('--joystick',help='Linux joystick device, e.g. /dev/input/js0; axis1 forward, axis0 turn')
     p.add_argument('--input-json',type=Path,help='Live reference command and optional measured body velocity')
@@ -49,8 +50,16 @@ def main():
     p.add_argument('--velocity-source',choices=['mujoco','external'])
     p.add_argument('--direction-source',choices=['joystick','vision'])
     p.add_argument('--viewer',action='store_true')
+    p.add_argument('--keyboard',action='store_true',help='Viewer key presses: W/S speed, A/D turn, space stop, R reset, Q quit')
+    p.add_argument('--video',type=Path)
+    p.add_argument('--screenshot',type=Path)
     p.add_argument('--output',type=Path,default=ROOT/'outputs/sim2sim/student_rollout.json')
     args=p.parse_args()
+    args.seconds=args.seconds if args.seconds is not None else (3600. if args.keyboard else 10.)
+    args.speed=args.speed if args.speed is not None else (0. if args.keyboard else .6)
+    if args.keyboard:
+        args.viewer=True
+        if args.joystick:p.error('Choose keyboard or joystick')
     if args.seconds<=0 or args.height<=0 or not 0<=args.difficulty<=1:
         p.error('seconds and height must be positive; difficulty must be in [0,1]')
     if not (args.policy_dir/'manifest.json').is_file():
@@ -91,17 +100,45 @@ def main():
         camera=DepthInput(model,data,cfg['camera'])
         policy=torch.jit.load(str(args.policy_dir/'student.pt'),map_location='cpu').eval()
         depth=torch.jit.load(str(args.policy_dir/'depth.pt'),map_location='cpu').eval()
+        keyboard=KeyboardInput(args.speed,args.yaw_rate) if args.keyboard else None
         viewer=None
+        capture=None
         if args.viewer:
             from mujoco import viewer as mj_viewer
-            viewer=mj_viewer.launch_passive(model,data)
+            viewer=mj_viewer.launch_passive(model,data,key_callback=keyboard.on_key if keyboard else None)
+            viewer.cam.distance=3.4;viewer.cam.azimuth=125;viewer.cam.elevation=-24
+        if args.video or args.screenshot:
+            from visualization import Capture
+            capture=Capture(model,args.video,args.screenshot)
+        if keyboard:print('KEYBOARD: W/S speed +/-0.1; A/D turn +/-0.2; SPACE zero; R reset; Q/ESC close. Click the viewer first.',flush=True)
         records=[]; action=np.zeros(12,dtype=np.float32)
         termination='duration'; max_torque=0.; max_speed=0.
         start=data.xpos[bridge.base].copy()
+        initial_qpos=data.qpos.copy()
+        paused_on_fall=False;episode=0;policy_step=0;fall_count=0
         try:
             for step in range(int(args.seconds/.02)):
                 wall=time.monotonic()
                 vx,yaw_rate,external=command.read()
+                if keyboard:
+                    vx,yaw_rate,reset,quit_requested=keyboard.read()
+                    if quit_requested or not viewer.is_running():
+                        termination='viewer_closed';break
+                    if reset:
+                        mujoco.mj_resetData(model,data);data.qpos[:]=initial_qpos;data.ctrl[:]=home
+                        mujoco.mj_forward(model,data)
+                        bridge=ObservationBridge(model,data,c,home,cfg['terrain_label']=='flat',vx)
+                        bridge.terrain_scan_enabled=False
+                        camera=DepthInput(model,data,cfg['camera'])
+                        depth.hidden_states=torch.zeros(1,0,512)
+                        action=np.zeros(12,dtype=np.float32)
+                        paused_on_fall=False;episode+=1;policy_step=0
+                        print('KEYBOARD RESET',episode,flush=True)
+                    if paused_on_fall:
+                        viewer.sync();time.sleep(.02);continue
+                    if not keyboard.active:
+                        viewer.cam.lookat[:]=data.xpos[bridge.base]+np.array([.25,0.,.15])
+                        viewer.sync();time.sleep(.02);continue
                 measured=np.zeros(6)
                 mujoco.mj_objectVelocity(model,data,mujoco.mjtObj.mjOBJ_BODY,bridge.base,measured,1)
                 measured_velocity=measured[3:] if cfg['velocity_source']=='mujoco' else external
@@ -111,7 +148,7 @@ def main():
                 obs,angles=bridge.sample(action)
                 obs=student_observation(obs,vx,yaw_rate,measured_velocity,cfg)
                 with torch.inference_mode():
-                    if step%5==0:
+                    if policy_step%5==0:
                         image=camera.sample()
                         prop=torch.from_numpy(obs[None,:53].copy())
                         prop[:,6:8]=0
@@ -132,22 +169,33 @@ def main():
                     max_speed=max(max_speed,float(np.max(np.abs(data.qvel[bridge.vids]))))
                 if not np.isfinite(data.qpos).all() or not np.isfinite(data.qvel).all():
                     raise FloatingPointError('Non-finite simulation state')
-                records.append({'time':float(data.time),'base_xyz':data.xpos[bridge.base].tolist(),
+                records.append({'episode':episode,'time':float(data.time),'base_xyz':data.xpos[bridge.base].tolist(),
                     'reference_vx':vx,'reference_yaw_rate':yaw_rate,'measured_velocity_body_m_s':np.asarray(measured_velocity).tolist(),
                     'actor_direction_errors':obs[6:8].tolist(),'foot_contacts':bridge.current_contacts.tolist(),
                     'depth_range_m':[float(camera.latest_raw.min()),float(camera.latest_raw.max())]})
-                if max(map(abs,angles))>1.5 or data.xpos[bridge.base,2]<.15:
-                    termination='fall';break
+                fallen=max(map(abs,angles))>1.5 or data.xpos[bridge.base,2]<.15
+                if capture and (step%2==0 or fallen):
+                    capture.frame(data,bridge.base,meta['checkpoint'],args.course,vx,yaw_rate,'FALL - STOPPED' if fallen else 'RUNNING')
+                policy_step+=1
+                if fallen:
+                    fall_count+=1
+                    if keyboard:
+                        paused_on_fall=True
+                        print('FALL: simulation paused. Press R to reset or Q to quit.',flush=True)
+                    else:
+                        termination='fall';break
                 if viewer:
                     if not viewer.is_running():
                         termination='viewer_closed';break
+                    viewer.cam.lookat[:]=data.xpos[bridge.base]+np.array([.25,0.,.15])
                     viewer.sync()
                     time.sleep(max(0,.02-(time.monotonic()-wall)))
         finally:
+            if capture:capture.finish(hold_last=(termination=='fall'))
             if viewer:viewer.close()
         result={'role':'student','checkpoint':meta['checkpoint'],'checkpoint_sha256':meta['checkpoint_sha256'],
             'configuration':cfg,'course':args.course,'height':args.height,'difficulty':args.difficulty,'terrain_seed':args.terrain_seed,'engine':mujoco.__version__,
-            'simulated_seconds':float(data.time),'termination':termination,
+            'simulated_seconds':float(data.time),'termination':termination,'fall_count':fall_count,'episodes_started':episode+1,'keyboard':args.keyboard,'video':str(args.video) if args.video else None,
             'displacement_xyz':(data.xpos[bridge.base]-start).tolist(),
             'max_abs_torque_nm':max_torque,'max_abs_joint_speed_rad_s':max_speed,
             'limitation':'Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending.',

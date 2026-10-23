@@ -183,3 +183,5 @@ python3.11 -m venv .venv-sim2sim
 5. 실센서 Student 계약 확정 후 Depth range/camera axis/intrinsics/preprocessing을 맞추고, GRU hidden state를 명시적 입력/출력으로 export한다. Student 없이 Teacher를 Vision Student로 가장하지 않는다.
 
 [실물 적용 전 해결 사항](DEPLOYMENT_GAPS.md)
+
+키보드 GUI 실행: `./run.sh sim2sim-latest --course isaac_flat --difficulty 0 --terrain-label flat`. [조작법과 실제 최신 snapshot 테스트](KEYBOARD_PLAYBACK.md).

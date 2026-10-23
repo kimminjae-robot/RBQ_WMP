@@ -32,6 +32,14 @@ def build_scene(contract, course='flat', height=0.10, difficulty=.5, terrain_see
     if default is None:
         default = ET.SubElement(root, 'default')
     ET.SubElement(default, 'geom', friction='0.9 0.005 0.0001', condim='3')
+    visual=root.find('visual')
+    if visual is None:visual=ET.SubElement(root,'visual')
+    ET.SubElement(visual,'global',offwidth='960',offheight='640')
+    ET.SubElement(visual,'headlight',ambient='.5 .5 .5',diffuse='.6 .6 .6',specular='.1 .1 .1')
+    assets=root.find('asset')
+    if assets is None:assets=ET.SubElement(root,'asset')
+    ET.SubElement(assets,'texture',name='viewer_sky',type='skybox',builtin='gradient',
+                  rgb1='.23 .29 .38',rgb2='.10 .14 .20',width='256',height='256')
     world = root.find('worldbody')
     trunk = world.find("body[@name='trunk']")
     if trunk is None:
