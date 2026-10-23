@@ -1,0 +1,16 @@
+{
+  "pid": 581040,
+  "command": [
+    "./run.sh",
+    "evaluate-teacher",
+    "--checkpoint",
+    "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour/2026-10-23_09-14-53_phase3_teacher_s1_20261023_091448_324100/model_4832.pt",
+    "--output",
+    "evaluations/teacher_to_student/teacher_4832_level9.json",
+    "--headless",
+    "--num_envs",
+    "20",
+    "--episodes",
+    "3"
+  ]
+}

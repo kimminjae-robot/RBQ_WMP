@@ -1,0 +1,15 @@
+{
+  "checkpoint": "model_999.pt",
+  "source_video": "student_isaac_high_hurdle.mp4",
+  "simulation_clip_seconds": [
+    4.8,
+    7.6
+  ],
+  "playback_time_scale": 1.5,
+  "task": "Isaac RBQ10 Student, level9, hurdle",
+  "vx_reference": 0.8,
+  "seed": 42,
+  "env_id": 2,
+  "evidence": "AIRBORNE label is measured contact force <=2 N on each of the four feet",
+  "full_episode": "fall at goal6; clip is not complete-course evidence"
+}

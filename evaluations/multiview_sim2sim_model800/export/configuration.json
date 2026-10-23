@@ -1,0 +1,128 @@
+{
+  "cameras": [
+    {
+      "name": "front",
+      "parent": "trunk",
+      "position_m": [
+        0.388031,
+        -0.0375,
+        0.037764
+      ],
+      "quaternion_wxyz_ros": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.955,
+      "vertical_aperture": 12.24,
+      "max_distance_m": 2.0,
+      "min_optical_z_m": 0.0
+    },
+    {
+      "name": "ground_0",
+      "parent": "trunk",
+      "position_m": [
+        0.36462,
+        0.0,
+        -0.02663
+      ],
+      "quaternion_wxyz_ros": [
+        0.1736480474847734,
+        0.0,
+        0.9848077759668258,
+        0.0
+      ],
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.95503556219797,
+      "vertical_aperture": 12.240252474180044,
+      "max_distance_m": 2.0,
+      "min_optical_z_m": 0.2
+    },
+    {
+      "name": "ground_1",
+      "parent": "trunk",
+      "position_m": [
+        0.26053,
+        0.0,
+        -0.04759
+      ],
+      "quaternion_wxyz_ros": [
+        -0.12186936081408746,
+        0.0,
+        0.9925461495037728,
+        0.0
+      ],
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.95503556219797,
+      "vertical_aperture": 12.240252474180044,
+      "max_distance_m": 2.0,
+      "min_optical_z_m": 0.2
+    },
+    {
+      "name": "ground_2",
+      "parent": "trunk",
+      "position_m": [
+        -0.19515,
+        0.0065,
+        -0.04832
+      ],
+      "quaternion_wxyz_ros": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.95503556219797,
+      "vertical_aperture": 12.240252474180044,
+      "max_distance_m": 2.0,
+      "min_optical_z_m": 0.2
+    },
+    {
+      "name": "ground_3",
+      "parent": "trunk",
+      "position_m": [
+        -0.352993,
+        -1.1e-50,
+        -0.020514
+      ],
+      "quaternion_wxyz_ros": [
+        0.013634492179369016,
+        0.9646161968052959,
+        -0.050795786634855594,
+        -0.25835921029458847
+      ],
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.95503556219797,
+      "vertical_aperture": 12.240252474180044,
+      "max_distance_m": 2.0,
+      "min_optical_z_m": 0.2
+    }
+  ],
+  "view_order": [
+    "front",
+    "ground_0",
+    "ground_1",
+    "ground_2",
+    "ground_3"
+  ],
+  "direction_source": "joystick",
+  "yaw_rate_to_error_seconds": 0.5,
+  "terrain_label": "parkour",
+  "velocity_source": "mujoco",
+  "depth_update_policy_steps": 5,
+  "depth_buffer_length": 2,
+  "action_delay_policy_steps": 1
+}

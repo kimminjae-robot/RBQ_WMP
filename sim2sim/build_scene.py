@@ -5,6 +5,7 @@ import xml.etree.ElementTree as ET
 
 import mujoco
 import numpy as np
+from viewer_style import GOAL_PENDING, robot_colors
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets/rbq10'
@@ -39,7 +40,7 @@ def build_scene(contract, course='flat', height=0.10, difficulty=.5, terrain_see
     visual=root.find('visual')
     if visual is None:visual=ET.SubElement(root,'visual')
     ET.SubElement(visual,'global',offwidth='960',offheight='640')
-    ET.SubElement(visual,'headlight',ambient='.5 .5 .5',diffuse='.6 .6 .6',specular='.1 .1 .1')
+    ET.SubElement(visual,'headlight',ambient='.55 .55 .55',diffuse='.4 .4 .4',specular='.05 .05 .05')
     assets=root.find('asset')
     if assets is None:assets=ET.SubElement(root,'asset')
     ET.SubElement(assets,'texture',name='viewer_sky',type='skybox',builtin='gradient',
@@ -52,33 +53,34 @@ def build_scene(contract, course='flat', height=0.10, difficulty=.5, terrain_see
     ET.SubElement(trunk, 'freejoint', name='floating_base')
     ET.SubElement(world, 'light', pos='0 -3 5', dir='0 0 -1')
     ET.SubElement(world, 'geom', name='ground', type='plane', size='100 20 0.1',
-                  group='0', rgba='0.35 0.38 0.4 1')
+                  group='0', rgba='0.24 0.30 0.39 1')
     # Static terrain group 0; robot geoms group 1, excluded by terrain ray casting.
     for geom in trunk.findall('.//geom'):
         geom.set('group', '1')
+    robot_colors(trunk)
     if course.startswith('isaac_'):
         from terrains import generate, add_heightfield, refine_source_edges
         terrain=generate(course,difficulty,terrain_seed)
         # No plane at z=0: it would fill the negative-height gaps/pits.
         world.remove(world.find("geom[@name='ground']"))
         ET.SubElement(world,'geom',name='catch_floor',type='plane',pos='0 0 -2.5',
-                      size='100 20 .1',group='0',rgba='.15 .17 .19 1')
+                      size='100 20 .1',group='0',rgba='.055 .085 .14 1')
         add_heightfield(root,refine_source_edges(terrain) if terrain_edges=='source' else terrain,origin=terrain['origin_xy'])
         if show_goals:
             for i,goal in enumerate(terrain['goals']+terrain['origin_xy']):
                 xi,yi=np.rint((goal-terrain['origin_xy'])/terrain['spacing']).astype(int)
                 z=float(terrain['heights'][xi,yi])+.08
-                ET.SubElement(world,'site',name=f'goal_{i}',type='sphere',pos=f'{goal[0]} {goal[1]} {z}',size='.045',rgba='.9 .5 .1 .7')
+                ET.SubElement(world,'site',name=f'goal_{i}',type='sphere',pos=f'{goal[0]} {goal[1]} {z}',size='.045',rgba=' '.join(map(str,GOAL_PENDING)))
         # Put the robot on the original initial platform, not on the hfield boundary.
         initial_z=.55  # Original reset_root_state ignores terrain origin Z.
         trunk.set('pos',f'1 0 {initial_z}')
     elif course == 'hurdle':
         for i, x in enumerate((2.0, 4.0, 6.0)):
             ET.SubElement(world, 'geom', name=f'hurdle_{i}', type='box',
-                          pos=f'{x} 0 {height/2}', size=f'0.12 1.5 {height/2}', rgba='0.8 0.5 0.2 1')
+                          pos=f'{x} 0 {height/2}', size=f'0.12 1.5 {height/2}', rgba='0.95 0.57 0.13 1')
     elif course == 'step':
         ET.SubElement(world, 'geom', name='platform', type='box',
-                      pos=f'4 0 {height/2}', size=f'2.0 1.5 {height/2}', rgba='0.8 0.5 0.2 1')
+                      pos=f'4 0 {height/2}', size=f'2.0 1.5 {height/2}', rgba='0.95 0.57 0.13 1')
     elif course != 'flat':
         raise ValueError(course)
     actuators = ET.SubElement(root, 'actuator')

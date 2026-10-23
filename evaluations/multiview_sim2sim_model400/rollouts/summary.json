@@ -1,0 +1,493 @@
+{
+  "time_kst": "2026-10-23T14:36:38.311688+09:00",
+  "complete": true,
+  "expected_cases": 20,
+  "checkpoint": "model_400.pt",
+  "checkpoint_sha256": "8f5cc545d026a0c8fb1955a45a9cb1ec069a994d43555a5ced73f546104ec2a6",
+  "depth_views": [
+    "front",
+    "ground_0",
+    "ground_1",
+    "ground_2",
+    "ground_3"
+  ],
+  "code_sha256": {
+    "sim2sim/run_student.py": "67fa82a8f6e786ac53ac7840f1aeab5ed187328a872d7de221ca12b842d77dae",
+    "sim2sim/multiview_depth.py": "4dffa6b88428cd40eb3e0956d1cd50d08f3b9e83482ada652a8785a35c9a581c",
+    "sim2sim/student_inputs.py": "e85d7ff66141cba20b087853ee72cc311e88e84e0ecc38d6081843a2a7032521",
+    "sim2sim/run_teacher.py": "da7e95a9a74afebb87d47d330a70fb3754d9ad66393193f3635886ed5a6347ef",
+    "sim2sim/build_scene.py": "96ec9824b7cfd2d814989a4b859557440588c8168f00d3f804ab32c8481addeb",
+    "sim2sim/terrains.py": "c09f6484a577534ae7bdd392475432bec5c720d11d6049583d355a42412e0a19",
+    "sim2sim/goal_follower.py": "f353a2df1b78f74ac484e54915413ebe1f4a52b73cc5f205b298b21127856beb"
+  },
+  "conditions": {
+    "speed": 0.6,
+    "seconds": 30,
+    "contact_profile": "firm",
+    "terrain_edges": "source",
+    "automatic_reset": false,
+    "direction_source": "known_course_current_next_waypoints",
+    "velocity_source": "MuJoCo_measured_body"
+  },
+  "scope": "Small fixed development set, one episode per condition; not a held-out transfer success rate",
+  "summary": {
+    "isaac_flat_d0.5": {
+      "cases": 3,
+      "successes": 3,
+      "falls": 0,
+      "duration": 0,
+      "errors": 0
+    },
+    "isaac_hurdle_d0.5": {
+      "cases": 3,
+      "successes": 3,
+      "falls": 0,
+      "duration": 0,
+      "errors": 0
+    },
+    "isaac_step_d0.5": {
+      "cases": 3,
+      "successes": 0,
+      "falls": 2,
+      "duration": 1,
+      "errors": 0
+    },
+    "isaac_gap_d0.5": {
+      "cases": 3,
+      "successes": 3,
+      "falls": 0,
+      "duration": 0,
+      "errors": 0
+    },
+    "isaac_platforms_d0.5": {
+      "cases": 3,
+      "successes": 3,
+      "falls": 0,
+      "duration": 0,
+      "errors": 0
+    },
+    "isaac_mixed_d0.5": {
+      "cases": 3,
+      "successes": 3,
+      "falls": 0,
+      "duration": 0,
+      "errors": 0
+    },
+    "isaac_gap_d1": {
+      "cases": 1,
+      "successes": 0,
+      "falls": 1,
+      "duration": 0,
+      "errors": 0
+    },
+    "isaac_step_d1": {
+      "cases": 1,
+      "successes": 1,
+      "falls": 0,
+      "duration": 0,
+      "errors": 0
+    }
+  },
+  "cases": [
+    {
+      "course": "isaac_flat",
+      "difficulty": 0.5,
+      "seed": 43,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 14.560000000000876,
+      "goals": 8,
+      "max_torque_nm": 57.07042196575688,
+      "max_joint_speed_rad_s": 9.972762349089988,
+      "max_raw_action": 3.059934377670288,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        11.44703846440646,
+        -0.04809120913234225,
+        0.02685910390906565
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_flat_d0.5_s43.json"
+    },
+    {
+      "course": "isaac_flat",
+      "difficulty": 0.5,
+      "seed": 42,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 17.86000000000073,
+      "goals": 8,
+      "max_torque_nm": 61.82678673916804,
+      "max_joint_speed_rad_s": 9.437394342032112,
+      "max_raw_action": 2.9990692138671875,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        14.132915319902414,
+        -0.04485912998930789,
+        0.03111875864000524
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_flat_d0.5_s42.json"
+    },
+    {
+      "course": "isaac_flat",
+      "difficulty": 0.5,
+      "seed": 44,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 17.46000000000081,
+      "goals": 8,
+      "max_torque_nm": 108.22185759413067,
+      "max_joint_speed_rad_s": 10.213320465463433,
+      "max_raw_action": 3.378016233444214,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        13.736989384811867,
+        -0.03297527949341439,
+        0.03882257790661614
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_flat_d0.5_s44.json"
+    },
+    {
+      "course": "isaac_hurdle",
+      "difficulty": 0.5,
+      "seed": 42,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 16.680000000000966,
+      "goals": 8,
+      "max_torque_nm": 124.20811035731461,
+      "max_joint_speed_rad_s": 29.129947931269474,
+      "max_raw_action": 5.817380905151367,
+      "clipped_action_components": 12,
+      "displacement_xyz": [
+        14.342484487434835,
+        -0.06450517006206646,
+        0.0232421193444472
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_hurdle_d0.5_s42.json"
+    },
+    {
+      "course": "isaac_hurdle",
+      "difficulty": 0.5,
+      "seed": 43,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 13.82000000000076,
+      "goals": 8,
+      "max_torque_nm": 127.8174518034703,
+      "max_joint_speed_rad_s": 24.319916864126167,
+      "max_raw_action": 5.623019218444824,
+      "clipped_action_components": 10,
+      "displacement_xyz": [
+        12.546926500052448,
+        -0.02629451027603929,
+        0.03303633333050526
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_hurdle_d0.5_s43.json"
+    },
+    {
+      "course": "isaac_hurdle",
+      "difficulty": 0.5,
+      "seed": 44,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 15.48000000000102,
+      "goals": 8,
+      "max_torque_nm": 148.90530170887763,
+      "max_joint_speed_rad_s": 30.94979111229642,
+      "max_raw_action": 7.3114447593688965,
+      "clipped_action_components": 22,
+      "displacement_xyz": [
+        13.034118040061832,
+        -0.049515443422250456,
+        0.026267627704971708
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_hurdle_d0.5_s44.json"
+    },
+    {
+      "course": "isaac_step",
+      "difficulty": 0.5,
+      "seed": 43,
+      "returncode": 2,
+      "termination": "fall",
+      "success": false,
+      "seconds": 6.719999999999879,
+      "goals": 4,
+      "max_torque_nm": 150.0,
+      "max_joint_speed_rad_s": 61.33042372034334,
+      "max_raw_action": 18.09375762939453,
+      "clipped_action_components": 269,
+      "displacement_xyz": [
+        3.808731889282239,
+        0.5968783406511471,
+        0.6686305741515999
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_step_d0.5_s43.json"
+    },
+    {
+      "course": "isaac_step",
+      "difficulty": 0.5,
+      "seed": 44,
+      "returncode": 2,
+      "termination": "fall",
+      "success": false,
+      "seconds": 7.5399999999998615,
+      "goals": 3,
+      "max_torque_nm": 150.0,
+      "max_joint_speed_rad_s": 56.488781718216224,
+      "max_raw_action": 26.731103897094727,
+      "clipped_action_components": 526,
+      "displacement_xyz": [
+        3.0940364167483354,
+        0.8529555320947878,
+        0.4663513179217582
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_step_d0.5_s44.json"
+    },
+    {
+      "course": "isaac_gap",
+      "difficulty": 0.5,
+      "seed": 42,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 12.98000000000063,
+      "goals": 8,
+      "max_torque_nm": 120.78860298347107,
+      "max_joint_speed_rad_s": 18.170008916428834,
+      "max_raw_action": 4.426462173461914,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        12.04412718735451,
+        -0.03849907335277649,
+        0.016925412034710208
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_gap_d0.5_s42.json"
+    },
+    {
+      "course": "isaac_gap",
+      "difficulty": 0.5,
+      "seed": 43,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 12.420000000000542,
+      "goals": 8,
+      "max_torque_nm": 111.08719656348237,
+      "max_joint_speed_rad_s": 21.908728493816973,
+      "max_raw_action": 4.520275115966797,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        11.555404233969975,
+        -0.07755494048779171,
+        0.03743416561211699
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_gap_d0.5_s43.json"
+    },
+    {
+      "course": "isaac_step",
+      "difficulty": 0.5,
+      "seed": 42,
+      "returncode": 2,
+      "termination": "duration",
+      "success": false,
+      "seconds": 29.999999999998316,
+      "goals": 3,
+      "max_torque_nm": 150.0,
+      "max_joint_speed_rad_s": 61.675309131254664,
+      "max_raw_action": 16.69839859008789,
+      "clipped_action_components": 1593,
+      "displacement_xyz": [
+        3.991329584461872,
+        0.8841728505291232,
+        0.22031284195880174
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_step_d0.5_s42.json"
+    },
+    {
+      "course": "isaac_gap",
+      "difficulty": 0.5,
+      "seed": 44,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 13.020000000000636,
+      "goals": 8,
+      "max_torque_nm": 125.83990532739514,
+      "max_joint_speed_rad_s": 18.49140921332737,
+      "max_raw_action": 4.255318641662598,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        11.845890357050589,
+        -0.024057679845429187,
+        0.035079890341626396
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_gap_d0.5_s44.json"
+    },
+    {
+      "course": "isaac_platforms",
+      "difficulty": 0.5,
+      "seed": 43,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 9.780000000000129,
+      "goals": 8,
+      "max_torque_nm": 88.40096327084892,
+      "max_joint_speed_rad_s": 13.646217302599153,
+      "max_raw_action": 3.8444788455963135,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        8.132900719209744,
+        -0.037415389280891595,
+        0.034805071454934056
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_platforms_d0.5_s43.json"
+    },
+    {
+      "course": "isaac_platforms",
+      "difficulty": 0.5,
+      "seed": 42,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 9.180000000000035,
+      "goals": 8,
+      "max_torque_nm": 118.99491097953877,
+      "max_joint_speed_rad_s": 19.18911273490277,
+      "max_raw_action": 4.229156494140625,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        8.050960241244121,
+        -0.04997428436112302,
+        0.035746970322724
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_platforms_d0.5_s42.json"
+    },
+    {
+      "course": "isaac_mixed",
+      "difficulty": 0.5,
+      "seed": 42,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 10.36000000000022,
+      "goals": 8,
+      "max_torque_nm": 148.9170769931283,
+      "max_joint_speed_rad_s": 31.732445602340967,
+      "max_raw_action": 6.45506477355957,
+      "clipped_action_components": 28,
+      "displacement_xyz": [
+        9.032374013726766,
+        0.1693507288266142,
+        0.06821739483252043
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_mixed_d0.5_s42.json"
+    },
+    {
+      "course": "isaac_platforms",
+      "difficulty": 0.5,
+      "seed": 44,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 9.500000000000085,
+      "goals": 8,
+      "max_torque_nm": 98.44924929258828,
+      "max_joint_speed_rad_s": 15.933643501020228,
+      "max_raw_action": 4.139095306396484,
+      "clipped_action_components": 0,
+      "displacement_xyz": [
+        8.145439715953334,
+        -0.028331785722536452,
+        0.015227856395750972
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_platforms_d0.5_s44.json"
+    },
+    {
+      "course": "isaac_mixed",
+      "difficulty": 0.5,
+      "seed": 43,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 9.34000000000006,
+      "goals": 8,
+      "max_torque_nm": 150.0,
+      "max_joint_speed_rad_s": 32.17937529259482,
+      "max_raw_action": 7.515775680541992,
+      "clipped_action_components": 43,
+      "displacement_xyz": [
+        7.9395062875211515,
+        0.13801159883741052,
+        0.039793606536398185
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_mixed_d0.5_s43.json"
+    },
+    {
+      "course": "isaac_gap",
+      "difficulty": 1.0,
+      "seed": 42,
+      "returncode": 2,
+      "termination": "fall",
+      "success": false,
+      "seconds": 4.039999999999936,
+      "goals": 2,
+      "max_torque_nm": 124.57291345303821,
+      "max_joint_speed_rad_s": 34.50413219167796,
+      "max_raw_action": 9.337925910949707,
+      "clipped_action_components": 19,
+      "displacement_xyz": [
+        3.38793345261701,
+        -0.12768623023410133,
+        -0.42663392433316577
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_gap_d1_s42.json"
+    },
+    {
+      "course": "isaac_mixed",
+      "difficulty": 0.5,
+      "seed": 44,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 9.320000000000057,
+      "goals": 8,
+      "max_torque_nm": 127.40281730469454,
+      "max_joint_speed_rad_s": 30.540213581077122,
+      "max_raw_action": 6.649090766906738,
+      "clipped_action_components": 30,
+      "displacement_xyz": [
+        8.277540327043225,
+        0.2537294851441286,
+        0.09912192623694083
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_mixed_d0.5_s44.json"
+    },
+    {
+      "course": "isaac_step",
+      "difficulty": 1.0,
+      "seed": 42,
+      "returncode": 0,
+      "termination": "success",
+      "success": true,
+      "seconds": 11.26000000000036,
+      "goals": 8,
+      "max_torque_nm": 150.0,
+      "max_joint_speed_rad_s": 38.26913837286758,
+      "max_raw_action": 16.664064407348633,
+      "clipped_action_components": 249,
+      "displacement_xyz": [
+        8.545754311848462,
+        -0.0907018945548545,
+        0.0275568996635307
+      ],
+      "report": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/multiview_sim2sim_model400/rollouts/isaac_step_d1_s42.json"
+    }
+  ]
+}

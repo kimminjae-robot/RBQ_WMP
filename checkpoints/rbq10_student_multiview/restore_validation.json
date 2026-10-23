@@ -1,0 +1,11 @@
+{
+  "scope": "Full archive reconstruction in a new temporary directory before publication",
+  "passed": true,
+  "checkpoint": "model_700.pt",
+  "sha256": "a7d7feed127e0273ffb5f0f7a3821676409a22c98a1de9af12290e77cfac1799",
+  "updates_completed": 701,
+  "adam_steps": [
+    701.0
+  ],
+  "full_resume_state_hash_matches": true
+}

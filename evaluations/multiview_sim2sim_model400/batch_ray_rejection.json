@@ -1,0 +1,4 @@
+{
+  "reason": "mj_multiRay differs from mj_ray on identical analytic hurdle rays; up to 0.447995m missed surface depth in MuJoCo3.3.0. Discard these rollout results and rerun using scalar mj_ray.",
+  "validated": false
+}

@@ -1,0 +1,93 @@
+{
+  "role": "student",
+  "checkpoint": "model_941.pt",
+  "checkpoint_sha256": "1f4c1cf9bf8e6261b081ee7038d28b66f75be399b0791b27edd832140b6ef053",
+  "terrain_profile": "upstream_wrapper_v2",
+  "terrain_edges": "source",
+  "contact_profile": "firm",
+  "configuration": {
+    "camera": {
+      "parent": "trunk",
+      "position_m": [
+        0.388031,
+        -0.0375,
+        0.037764
+      ],
+      "quaternion_wxyz_ros": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "mount_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.955,
+      "vertical_aperture": 12.24,
+      "max_distance_m": 2.0,
+      "sensor": "front_depth_OAK-D_Pro_Wide"
+    },
+    "direction_source": "terrain_goals",
+    "yaw_rate_to_error_seconds": 0.5,
+    "terrain_label": "parkour",
+    "velocity_source": "mujoco",
+    "depth_update_policy_steps": 5,
+    "action_delay_policy_steps": 1
+  },
+  "course": "isaac_platforms",
+  "height": 0.1,
+  "difficulty": 0.5,
+  "terrain_seed": 42,
+  "engine": "3.3.0",
+  "simulated_seconds": 0.02,
+  "termination": "duration",
+  "fall_count": 0,
+  "episodes_started": 1,
+  "keyboard": false,
+  "autonomous": true,
+  "goals_reached": 0,
+  "total_goals": 8,
+  "video": null,
+  "displacement_xyz": [
+    4.636594998164156e-06,
+    -2.1084770922920367e-05,
+    -0.0023380755052256896
+  ],
+  "max_abs_torque_nm": 3.2088346342841874,
+  "max_abs_joint_speed_rad_s": 0.9306585645120548,
+  "limitation": "Terrain-goal mode uses known map waypoints; motor velocity cap and complete contact/depth parity remain pending. Single-rollout success is not a transfer success rate.",
+  "records": [
+    {
+      "episode": 0,
+      "time": 0.02,
+      "base_xyz": [
+        1.0000046365949982,
+        -2.1084770922920367e-05,
+        0.5476619244947744
+      ],
+      "reference_vx": 0.6,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actor_direction_errors": [
+        -0.04345089569687843,
+        0.08550529181957245
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        1.1806012392044067,
+        2.0
+      ]
+    }
+  ]
+}

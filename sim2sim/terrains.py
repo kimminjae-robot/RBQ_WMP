@@ -89,7 +89,7 @@ def generate(name,difficulty=.5,seed=42):
             'slope_threshold':cfg.slope_threshold,'source_sha256':hashlib.sha256((SOURCE/'extreme_parkour/extreme_parkour_terrians.py').read_bytes()).hexdigest()}
 
 
-def add_heightfield(root, terrain, name='terrain', origin=(0.,0.), rgba=(.55,.65,.75,1.)):
+def add_heightfield(root, terrain, name='terrain', origin=(0.,0.), rgba=(1.,1.,1.,1.)):
     """MuJoCo hfield rows are Y, columns X; source raw array is X,Y."""
     asset=root.find('asset')
     if asset is None:asset=ET.SubElement(root,'asset')
@@ -104,9 +104,11 @@ def add_heightfield(root, terrain, name='terrain', origin=(0.,0.), rgba=(.55,.65
     ET.SubElement(asset,'hfield',name=name,nrow=str(z.shape[1]),ncol=str(z.shape[0]),
                   size=f'{width/2} {length/2} {scale} 0.15',
                   elevation=' '.join(f'{x:.9g}' for x in elevation))
+    from viewer_style import heightfield_material
+    material=heightfield_material(asset,name,z,spacing)
     ET.SubElement(world,'geom',name=name,type='hfield',hfield=name,group='0',
                   pos=f'{origin[0]+width/2} {origin[1]+length/2} {zmin}',
-                  rgba=' '.join(map(str,rgba)),friction='0.9 0.005 0.0001')
+                  rgba=' '.join(map(str,rgba)),material=material,friction='0.9 0.005 0.0001')
     return {'name':terrain['name'],'difficulty':terrain['difficulty'],'seed':terrain['seed'],
             'origin_xy':list(origin),'extent_xy':[width,length],'grid_shape_xy':list(z.shape),
             'height_range_m':[zmin,zmax],'goals_xy':(terrain['goals']+np.asarray(origin)).tolist(),

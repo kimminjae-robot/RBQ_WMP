@@ -1,0 +1,57 @@
+{
+  "gap": {
+    "checkpoint_sha256": "bcd3a8f6097c103604d3bbe561853eae0683e2da632bd66035367a4e836e2456",
+    "terrain_geometry": {
+      "heightfield_nominal_gap_width_m": 0.8
+    },
+    "episodes": [],
+    "last_goal": 6,
+    "max_base_world_z_m": 0.5878126621246338,
+    "max_foot_contact_world_z_m": 0.08879387378692627,
+    "airborne_intervals_s": [],
+    "gif": {
+      "path": "artifacts/student_depth5_model200_isaac_gap_l9.gif",
+      "bytes": 5811294,
+      "frames": 80,
+      "duration_s": 8.0,
+      "source_start_s": 1,
+      "source_duration_s": 8,
+      "sha256": "0fd53c49ef8890b8f25754e25ed69079746fc47fc4839fa70573af56c8e21848"
+    }
+  },
+  "step": {
+    "checkpoint_sha256": "bcd3a8f6097c103604d3bbe561853eae0683e2da632bd66035367a4e836e2456",
+    "terrain_geometry": {
+      "heightfield_nominal_step_height_m": 0.45
+    },
+    "episodes": [
+      {
+        "time_s": 8.4,
+        "outcome": "success",
+        "goals": 8
+      }
+    ],
+    "last_goal": 7,
+    "max_base_world_z_m": 1.9295673370361328,
+    "max_foot_contact_world_z_m": 1.4304659366607666,
+    "airborne_intervals_s": [
+      [
+        3.8000000000000003,
+        3.8200000000000003
+      ],
+      [
+        7.44,
+        7.5200000000000005
+      ]
+    ],
+    "gif": {
+      "path": "artifacts/student_depth5_model200_isaac_step_l9.gif",
+      "bytes": 6528693,
+      "frames": 96,
+      "duration_s": 8.0,
+      "source_start_s": 0,
+      "source_duration_s": 8,
+      "sha256": "7a4228887332a5a231b1e7050d282c8e00e8cd73b0195d3c431b7c754658725e"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-"""Restore the complete front Student + optimizer checkpoint from verified GitHub parts."""
+"""Restore a complete front or five-view Student checkpoint from verified GitHub parts."""
 import argparse
 import gzip
 import hashlib

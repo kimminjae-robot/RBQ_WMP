@@ -1,0 +1,5436 @@
+{
+  "checkpoint": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour_multiview/2026-10-23_13-15-36_depth5_student_s1_20261023_131531_862725/model_200.pt",
+  "checkpoint_sha256": "bcd3a8f6097c103604d3bbe561853eae0683e2da632bd66035367a4e836e2456",
+  "student_updates": 201,
+  "terrain": "parkour_hurdle",
+  "level": 4,
+  "difficulty": 0.4444444444444444,
+  "seed": 42,
+  "seconds": 12.0,
+  "speed_command_m_s": 0.6,
+  "depth_input_shape": [
+    1,
+    5,
+    58,
+    87
+  ],
+  "inference": "Actual trained five-view Student, original CNN/GRU/actor; no Teacher actions",
+  "conditions": "Single fixed-level nominal Isaac terrain; pushes/mass/CoM/camera randomization disabled; original action delay and timing preserved",
+  "scope": "Qualitative uninterrupted preview of this seed, not a success-rate evaluation",
+  "episodes": [],
+  "states": [
+    {
+      "time_s": 0.04,
+      "base_position_m": [
+        -14.99991512298584,
+        0.00010686920722946525,
+        0.5433257818222046
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.0015511512756347656,
+      "resets": 0
+    },
+    {
+      "time_s": 0.08,
+      "base_position_m": [
+        -14.994159698486328,
+        0.000896753859706223,
+        0.542039155960083
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.011014938354492188,
+      "resets": 0
+    },
+    {
+      "time_s": 0.12,
+      "base_position_m": [
+        -14.974525451660156,
+        0.0017473994521424174,
+        0.5523722767829895
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.027057647705078125,
+      "resets": 0
+    },
+    {
+      "time_s": 0.16,
+      "base_position_m": [
+        -14.945725440979004,
+        0.0019282256253063679,
+        0.5658386945724487
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.036898136138916016,
+      "resets": 0
+    },
+    {
+      "time_s": 0.2,
+      "base_position_m": [
+        -14.912546157836914,
+        0.0008603566675446928,
+        0.5750322937965393
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.04086422920227051,
+      "resets": 0
+    },
+    {
+      "time_s": 0.24,
+      "base_position_m": [
+        -14.877280235290527,
+        -0.0008857200155034661,
+        0.579491913318634
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.032634735107421875,
+      "resets": 0
+    },
+    {
+      "time_s": 0.28,
+      "base_position_m": [
+        -14.840561866760254,
+        -0.001757975434884429,
+        0.5799580812454224
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.03675436973571777,
+      "resets": 0
+    },
+    {
+      "time_s": 0.32,
+      "base_position_m": [
+        -14.80124568939209,
+        -0.0010502662044018507,
+        0.5779473781585693
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06530117988586426,
+      "resets": 0
+    },
+    {
+      "time_s": 0.36,
+      "base_position_m": [
+        -14.761236190795898,
+        7.267948240041733e-05,
+        0.5779344439506531
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.060721635818481445,
+      "resets": 0
+    },
+    {
+      "time_s": 0.4,
+      "base_position_m": [
+        -14.724679946899414,
+        2.1279440261423588e-05,
+        0.5760740041732788
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.055043697357177734,
+      "resets": 0
+    },
+    {
+      "time_s": 0.44,
+      "base_position_m": [
+        -14.691224098205566,
+        0.00034664885606616735,
+        0.5751203298568726
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06965398788452148,
+      "resets": 0
+    },
+    {
+      "time_s": 0.48,
+      "base_position_m": [
+        -14.65912914276123,
+        0.0012087582144886255,
+        0.5752646923065186
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07821440696716309,
+      "resets": 0
+    },
+    {
+      "time_s": 0.52,
+      "base_position_m": [
+        -14.627528190612793,
+        0.002049243077635765,
+        0.5755005478858948
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.08082461357116699,
+      "resets": 0
+    },
+    {
+      "time_s": 0.56,
+      "base_position_m": [
+        -14.596107482910156,
+        0.002872775075957179,
+        0.5753232836723328
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.08278107643127441,
+      "resets": 0
+    },
+    {
+      "time_s": 0.6,
+      "base_position_m": [
+        -14.564497947692871,
+        0.0033387234434485435,
+        0.5739021897315979
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.08412027359008789,
+      "resets": 0
+    },
+    {
+      "time_s": 0.64,
+      "base_position_m": [
+        -14.532767295837402,
+        0.0025703427381813526,
+        0.5713344812393188
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07084107398986816,
+      "resets": 0
+    },
+    {
+      "time_s": 0.68,
+      "base_position_m": [
+        -14.501324653625488,
+        0.0006485324120149016,
+        0.5706776976585388
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06726479530334473,
+      "resets": 0
+    },
+    {
+      "time_s": 0.72,
+      "base_position_m": [
+        -14.468640327453613,
+        0.00021310895681381226,
+        0.570654571056366
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.057782888412475586,
+      "resets": 0
+    },
+    {
+      "time_s": 0.76,
+      "base_position_m": [
+        -14.434629440307617,
+        0.0007108289282768965,
+        0.5703056454658508
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06858277320861816,
+      "resets": 0
+    },
+    {
+      "time_s": 0.8,
+      "base_position_m": [
+        -14.398944854736328,
+        0.002383168786764145,
+        0.5683162212371826
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.08357882499694824,
+      "resets": 0
+    },
+    {
+      "time_s": 0.84,
+      "base_position_m": [
+        -14.361008644104004,
+        0.004923535510897636,
+        0.5661147236824036
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.0862874984741211,
+      "resets": 0
+    },
+    {
+      "time_s": 0.88,
+      "base_position_m": [
+        -14.323607444763184,
+        0.0062146661803126335,
+        0.5671281218528748
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.08365440368652344,
+      "resets": 0
+    },
+    {
+      "time_s": 0.92,
+      "base_position_m": [
+        -14.288384437561035,
+        0.004544397816061974,
+        0.566964864730835
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07965445518493652,
+      "resets": 0
+    },
+    {
+      "time_s": 0.96,
+      "base_position_m": [
+        -14.256256103515625,
+        0.0015508539509028196,
+        0.5658450126647949
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.09920263290405273,
+      "resets": 0
+    },
+    {
+      "time_s": 1.0,
+      "base_position_m": [
+        -14.226189613342285,
+        -0.0010118313366547227,
+        0.5652980208396912
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.10169529914855957,
+      "resets": 0
+    },
+    {
+      "time_s": 1.04,
+      "base_position_m": [
+        -14.197086334228516,
+        -0.0036585507914423943,
+        0.5655660033226013
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.10074901580810547,
+      "resets": 0
+    },
+    {
+      "time_s": 1.08,
+      "base_position_m": [
+        -14.168563842773438,
+        -0.006223500706255436,
+        0.5656923055648804
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.09337711334228516,
+      "resets": 0
+    },
+    {
+      "time_s": 1.12,
+      "base_position_m": [
+        -14.139981269836426,
+        -0.009278183802962303,
+        0.5647917985916138
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.08798861503601074,
+      "resets": 0
+    },
+    {
+      "time_s": 1.16,
+      "base_position_m": [
+        -14.11093807220459,
+        -0.012907852418720722,
+        0.5623282194137573
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.08970761299133301,
+      "resets": 0
+    },
+    {
+      "time_s": 1.2,
+      "base_position_m": [
+        -14.08212947845459,
+        -0.01603887230157852,
+        0.5636792182922363
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.0864872932434082,
+      "resets": 0
+    },
+    {
+      "time_s": 1.24,
+      "base_position_m": [
+        -14.053096771240234,
+        -0.017749764025211334,
+        0.5667199492454529
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06658339500427246,
+      "resets": 0
+    },
+    {
+      "time_s": 1.28,
+      "base_position_m": [
+        -14.02270793914795,
+        -0.01883789896965027,
+        0.5695186853408813
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06667947769165039,
+      "resets": 0
+    },
+    {
+      "time_s": 1.32,
+      "base_position_m": [
+        -13.99111270904541,
+        -0.018970049917697906,
+        0.570589005947113
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07840323448181152,
+      "resets": 0
+    },
+    {
+      "time_s": 1.36,
+      "base_position_m": [
+        -13.957220077514648,
+        -0.018229594454169273,
+        0.5692933201789856
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.08168435096740723,
+      "resets": 0
+    },
+    {
+      "time_s": 1.4000000000000001,
+      "base_position_m": [
+        -13.922204971313477,
+        -0.01710439659655094,
+        0.5697404146194458
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07823848724365234,
+      "resets": 0
+    },
+    {
+      "time_s": 1.44,
+      "base_position_m": [
+        -13.888127326965332,
+        -0.017572268843650818,
+        0.5716363787651062
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07102203369140625,
+      "resets": 0
+    },
+    {
+      "time_s": 1.48,
+      "base_position_m": [
+        -13.855709075927734,
+        -0.02104632928967476,
+        0.5720418095588684
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06905078887939453,
+      "resets": 0
+    },
+    {
+      "time_s": 1.52,
+      "base_position_m": [
+        -13.825456619262695,
+        -0.025042377412319183,
+        0.5721225738525391
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07995319366455078,
+      "resets": 0
+    },
+    {
+      "time_s": 1.56,
+      "base_position_m": [
+        -13.795719146728516,
+        -0.0284793209284544,
+        0.5728492736816406
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07931900024414062,
+      "resets": 0
+    },
+    {
+      "time_s": 1.6,
+      "base_position_m": [
+        -13.766149520874023,
+        -0.03199095278978348,
+        0.5733885765075684
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07727766036987305,
+      "resets": 0
+    },
+    {
+      "time_s": 1.6400000000000001,
+      "base_position_m": [
+        -13.736591339111328,
+        -0.03585721552371979,
+        0.5728719830513
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.07078099250793457,
+      "resets": 0
+    },
+    {
+      "time_s": 1.68,
+      "base_position_m": [
+        -13.706881523132324,
+        -0.04026933014392853,
+        0.5698946118354797
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06578946113586426,
+      "resets": 0
+    },
+    {
+      "time_s": 1.72,
+      "base_position_m": [
+        -13.676663398742676,
+        -0.045249681919813156,
+        0.5656011700630188
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 0,
+      "tilt_rad": 0.06498479843139648,
+      "resets": 0
+    },
+    {
+      "time_s": 1.76,
+      "base_position_m": [
+        -13.6471529006958,
+        -0.04906696826219559,
+        0.5656346678733826
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.0514373779296875,
+      "resets": 0
+    },
+    {
+      "time_s": 1.8,
+      "base_position_m": [
+        -13.617057800292969,
+        -0.05172029510140419,
+        0.5673203468322754
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.04046177864074707,
+      "resets": 0
+    },
+    {
+      "time_s": 1.84,
+      "base_position_m": [
+        -13.586542129516602,
+        -0.05403687804937363,
+        0.5679738521575928
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.05697059631347656,
+      "resets": 0
+    },
+    {
+      "time_s": 1.8800000000000001,
+      "base_position_m": [
+        -13.554308891296387,
+        -0.05594414100050926,
+        0.5662965774536133
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.0706796646118164,
+      "resets": 0
+    },
+    {
+      "time_s": 1.92,
+      "base_position_m": [
+        -13.519865989685059,
+        -0.05749613046646118,
+        0.5649422407150269
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.07476449012756348,
+      "resets": 0
+    },
+    {
+      "time_s": 1.96,
+      "base_position_m": [
+        -13.485907554626465,
+        -0.060441192239522934,
+        0.5668550133705139
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.06949734687805176,
+      "resets": 0
+    },
+    {
+      "time_s": 2.0,
+      "base_position_m": [
+        -13.45396614074707,
+        -0.06633360683917999,
+        0.5674896240234375
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.07366108894348145,
+      "resets": 0
+    },
+    {
+      "time_s": 2.04,
+      "base_position_m": [
+        -13.424375534057617,
+        -0.07264841347932816,
+        0.5672675967216492
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.09189414978027344,
+      "resets": 0
+    },
+    {
+      "time_s": 2.08,
+      "base_position_m": [
+        -13.396495819091797,
+        -0.07827825099229813,
+        0.5670109391212463
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.09160900115966797,
+      "resets": 0
+    },
+    {
+      "time_s": 2.12,
+      "base_position_m": [
+        -13.369722366333008,
+        -0.08401286602020264,
+        0.5668335556983948
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.0904083251953125,
+      "resets": 0
+    },
+    {
+      "time_s": 2.16,
+      "base_position_m": [
+        -13.343184471130371,
+        -0.08978183567523956,
+        0.5666775703430176
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08464670181274414,
+      "resets": 0
+    },
+    {
+      "time_s": 2.2,
+      "base_position_m": [
+        -13.316329002380371,
+        -0.09581712633371353,
+        0.5659236907958984
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08030295372009277,
+      "resets": 0
+    },
+    {
+      "time_s": 2.24,
+      "base_position_m": [
+        -13.28905200958252,
+        -0.10231426358222961,
+        0.5636002421379089
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.07519078254699707,
+      "resets": 0
+    },
+    {
+      "time_s": 2.2800000000000002,
+      "base_position_m": [
+        -13.260937690734863,
+        -0.10837562382221222,
+        0.5610036253929138
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08238577842712402,
+      "resets": 0
+    },
+    {
+      "time_s": 2.32,
+      "base_position_m": [
+        -13.23357105255127,
+        -0.11200734227895737,
+        0.5606817603111267
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.06355690956115723,
+      "resets": 0
+    },
+    {
+      "time_s": 2.36,
+      "base_position_m": [
+        -13.20511531829834,
+        -0.1148124486207962,
+        0.5628354549407959
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.05821084976196289,
+      "resets": 0
+    },
+    {
+      "time_s": 2.4,
+      "base_position_m": [
+        -13.175834655761719,
+        -0.11672665178775787,
+        0.5651609301567078
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.06775474548339844,
+      "resets": 0
+    },
+    {
+      "time_s": 2.44,
+      "base_position_m": [
+        -13.144732475280762,
+        -0.11779110133647919,
+        0.5655974745750427
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.07338523864746094,
+      "resets": 0
+    },
+    {
+      "time_s": 2.48,
+      "base_position_m": [
+        -13.11131763458252,
+        -0.11799784749746323,
+        0.56426602602005
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.07756829261779785,
+      "resets": 0
+    },
+    {
+      "time_s": 2.52,
+      "base_position_m": [
+        -13.077337265014648,
+        -0.11768938601016998,
+        0.5651890635490417
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.07410025596618652,
+      "resets": 0
+    },
+    {
+      "time_s": 2.56,
+      "base_position_m": [
+        -13.044783592224121,
+        -0.11964025348424911,
+        0.566947877407074
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.06592488288879395,
+      "resets": 0
+    },
+    {
+      "time_s": 2.6,
+      "base_position_m": [
+        -13.01470947265625,
+        -0.12396988272666931,
+        0.5681793689727783
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.0814673900604248,
+      "resets": 0
+    },
+    {
+      "time_s": 2.64,
+      "base_position_m": [
+        -12.986509323120117,
+        -0.12813033163547516,
+        0.5689160823822021
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08624792098999023,
+      "resets": 0
+    },
+    {
+      "time_s": 2.68,
+      "base_position_m": [
+        -12.959004402160645,
+        -0.13228635489940643,
+        0.5696508288383484
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08631587028503418,
+      "resets": 0
+    },
+    {
+      "time_s": 2.72,
+      "base_position_m": [
+        -12.931611061096191,
+        -0.13660064339637756,
+        0.5696812868118286
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08508896827697754,
+      "resets": 0
+    },
+    {
+      "time_s": 2.7600000000000002,
+      "base_position_m": [
+        -12.904390335083008,
+        -0.14098499715328217,
+        0.5687405467033386
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08100414276123047,
+      "resets": 0
+    },
+    {
+      "time_s": 2.8000000000000003,
+      "base_position_m": [
+        -12.876883506774902,
+        -0.14567041397094727,
+        0.5666742920875549
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.07893610000610352,
+      "resets": 0
+    },
+    {
+      "time_s": 2.84,
+      "base_position_m": [
+        -12.84924602508545,
+        -0.14997626841068268,
+        0.5654617547988892
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08640241622924805,
+      "resets": 0
+    },
+    {
+      "time_s": 2.88,
+      "base_position_m": [
+        -12.82214069366455,
+        -0.15180490911006927,
+        0.5678630471229553
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.06341004371643066,
+      "resets": 0
+    },
+    {
+      "time_s": 2.92,
+      "base_position_m": [
+        -12.793848037719727,
+        -0.15302209556102753,
+        0.571250319480896
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.060010433197021484,
+      "resets": 0
+    },
+    {
+      "time_s": 2.96,
+      "base_position_m": [
+        -12.764461517333984,
+        -0.1536272168159485,
+        0.5734896659851074
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.07139158248901367,
+      "resets": 0
+    },
+    {
+      "time_s": 3.0,
+      "base_position_m": [
+        -12.733036041259766,
+        -0.1532149463891983,
+        0.5736188888549805
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.0773777961730957,
+      "resets": 0
+    },
+    {
+      "time_s": 3.04,
+      "base_position_m": [
+        -12.698938369750977,
+        -0.15147410333156586,
+        0.5718610882759094
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 1,
+      "tilt_rad": 0.08310079574584961,
+      "resets": 0
+    },
+    {
+      "time_s": 3.08,
+      "base_position_m": [
+        -12.663557052612305,
+        -0.1488678902387619,
+        0.5708730220794678
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.07985997200012207,
+      "resets": 0
+    },
+    {
+      "time_s": 3.12,
+      "base_position_m": [
+        -12.629196166992188,
+        -0.1482100635766983,
+        0.569733202457428
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.06612706184387207,
+      "resets": 0
+    },
+    {
+      "time_s": 3.16,
+      "base_position_m": [
+        -12.597314834594727,
+        -0.15003882348537445,
+        0.5683955550193787
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.08230376243591309,
+      "resets": 0
+    },
+    {
+      "time_s": 3.2,
+      "base_position_m": [
+        -12.567076683044434,
+        -0.15191401541233063,
+        0.5674787759780884
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.08450555801391602,
+      "resets": 0
+    },
+    {
+      "time_s": 3.24,
+      "base_position_m": [
+        -12.538249969482422,
+        -0.1538120061159134,
+        0.5673073530197144
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.08038115501403809,
+      "resets": 0
+    },
+    {
+      "time_s": 3.2800000000000002,
+      "base_position_m": [
+        -12.50926399230957,
+        -0.1564636081457138,
+        0.5671164393424988
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.07657003402709961,
+      "resets": 0
+    },
+    {
+      "time_s": 3.3200000000000003,
+      "base_position_m": [
+        -12.480244636535645,
+        -0.15998885035514832,
+        0.5659093856811523
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.07262516021728516,
+      "resets": 0
+    },
+    {
+      "time_s": 3.36,
+      "base_position_m": [
+        -12.450886726379395,
+        -0.164337620139122,
+        0.5627549886703491
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.0713202953338623,
+      "resets": 0
+    },
+    {
+      "time_s": 3.4,
+      "base_position_m": [
+        -12.42194938659668,
+        -0.16849681735038757,
+        0.5621435046195984
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.06284761428833008,
+      "resets": 0
+    },
+    {
+      "time_s": 3.44,
+      "base_position_m": [
+        -12.393853187561035,
+        -0.1706700474023819,
+        0.564844012260437
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.047464609146118164,
+      "resets": 0
+    },
+    {
+      "time_s": 3.48,
+      "base_position_m": [
+        -12.364678382873535,
+        -0.17169521749019623,
+        0.5678738355636597
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.04731893539428711,
+      "resets": 0
+    },
+    {
+      "time_s": 3.52,
+      "base_position_m": [
+        -12.33471393585205,
+        -0.17182111740112305,
+        0.5696027874946594
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05553317070007324,
+      "resets": 0
+    },
+    {
+      "time_s": 3.56,
+      "base_position_m": [
+        -12.303136825561523,
+        -0.17095603048801422,
+        0.5696348547935486
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05898737907409668,
+      "resets": 0
+    },
+    {
+      "time_s": 3.6,
+      "base_position_m": [
+        -12.269516944885254,
+        -0.16865324974060059,
+        0.5682417750358582
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.06577920913696289,
+      "resets": 0
+    },
+    {
+      "time_s": 3.64,
+      "base_position_m": [
+        -12.235407829284668,
+        -0.1656980663537979,
+        0.5682016015052795
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.0604705810546875,
+      "resets": 0
+    },
+    {
+      "time_s": 3.68,
+      "base_position_m": [
+        -12.202942848205566,
+        -0.1655309796333313,
+        0.568320095539093
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05611133575439453,
+      "resets": 0
+    },
+    {
+      "time_s": 3.72,
+      "base_position_m": [
+        -12.172823905944824,
+        -0.1678919643163681,
+        0.5677074193954468
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.060294389724731445,
+      "resets": 0
+    },
+    {
+      "time_s": 3.7600000000000002,
+      "base_position_m": [
+        -12.144193649291992,
+        -0.17049594223499298,
+        0.5674667954444885
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.0605778694152832,
+      "resets": 0
+    },
+    {
+      "time_s": 3.8000000000000003,
+      "base_position_m": [
+        -12.11605167388916,
+        -0.17355318367481232,
+        0.5673413276672363
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.06095576286315918,
+      "resets": 0
+    },
+    {
+      "time_s": 3.84,
+      "base_position_m": [
+        -12.0884370803833,
+        -0.17662891745567322,
+        0.5663636922836304
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05438947677612305,
+      "resets": 0
+    },
+    {
+      "time_s": 3.88,
+      "base_position_m": [
+        -12.061020851135254,
+        -0.1798914670944214,
+        0.5646420121192932
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.04825162887573242,
+      "resets": 0
+    },
+    {
+      "time_s": 3.92,
+      "base_position_m": [
+        -12.033626556396484,
+        -0.1834009885787964,
+        0.5634241104125977
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.047537803649902344,
+      "resets": 0
+    },
+    {
+      "time_s": 3.96,
+      "base_position_m": [
+        -12.006478309631348,
+        -0.1852818727493286,
+        0.5633816123008728
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.04343414306640625,
+      "resets": 0
+    },
+    {
+      "time_s": 4.0,
+      "base_position_m": [
+        -11.97903060913086,
+        -0.1848352998495102,
+        0.565266489982605
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.023981094360351562,
+      "resets": 0
+    },
+    {
+      "time_s": 4.04,
+      "base_position_m": [
+        -11.949383735656738,
+        -0.18425588309764862,
+        0.5703242421150208
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.020937204360961914,
+      "resets": 0
+    },
+    {
+      "time_s": 4.08,
+      "base_position_m": [
+        -11.915245056152344,
+        -0.1816333383321762,
+        0.5804831385612488
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.007653474807739258,
+      "resets": 0
+    },
+    {
+      "time_s": 4.12,
+      "base_position_m": [
+        -11.875438690185547,
+        -0.17796778678894043,
+        0.5992349982261658
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.04557919502258301,
+      "resets": 0
+    },
+    {
+      "time_s": 4.16,
+      "base_position_m": [
+        -11.831143379211426,
+        -0.17779992520809174,
+        0.6193413138389587
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.07695317268371582,
+      "resets": 0
+    },
+    {
+      "time_s": 4.2,
+      "base_position_m": [
+        -11.783041000366211,
+        -0.17856870591640472,
+        0.6299269795417786
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.08340096473693848,
+      "resets": 0
+    },
+    {
+      "time_s": 4.24,
+      "base_position_m": [
+        -11.732782363891602,
+        -0.17728929221630096,
+        0.6332663297653198
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.0677337646484375,
+      "resets": 0
+    },
+    {
+      "time_s": 4.28,
+      "base_position_m": [
+        -11.679641723632812,
+        -0.1749061942100525,
+        0.6298008561134338
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.03660941123962402,
+      "resets": 0
+    },
+    {
+      "time_s": 4.32,
+      "base_position_m": [
+        -11.629024505615234,
+        -0.17360134422779083,
+        0.6237356066703796
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.011406183242797852,
+      "resets": 0
+    },
+    {
+      "time_s": 4.36,
+      "base_position_m": [
+        -11.580801010131836,
+        -0.17498403787612915,
+        0.6212263107299805
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.017913341522216797,
+      "resets": 0
+    },
+    {
+      "time_s": 4.4,
+      "base_position_m": [
+        -11.534053802490234,
+        -0.17826595902442932,
+        0.6189662218093872
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.017778873443603516,
+      "resets": 0
+    },
+    {
+      "time_s": 4.44,
+      "base_position_m": [
+        -11.490238189697266,
+        -0.18298785388469696,
+        0.614467978477478
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05023527145385742,
+      "resets": 0
+    },
+    {
+      "time_s": 4.48,
+      "base_position_m": [
+        -11.448487281799316,
+        -0.19125184416770935,
+        0.6039730906486511
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.07066607475280762,
+      "resets": 0
+    },
+    {
+      "time_s": 4.5200000000000005,
+      "base_position_m": [
+        -11.406522750854492,
+        -0.20236092805862427,
+        0.5853463411331177
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.07831382751464844,
+      "resets": 0
+    },
+    {
+      "time_s": 4.5600000000000005,
+      "base_position_m": [
+        -11.366025924682617,
+        -0.21187476813793182,
+        0.566297709941864
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.044409751892089844,
+      "resets": 0
+    },
+    {
+      "time_s": 4.6000000000000005,
+      "base_position_m": [
+        -11.32944393157959,
+        -0.21832512319087982,
+        0.5601497292518616
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.0265195369720459,
+      "resets": 0
+    },
+    {
+      "time_s": 4.64,
+      "base_position_m": [
+        -11.296306610107422,
+        -0.22318905591964722,
+        0.5678606629371643
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.0476682186126709,
+      "resets": 0
+    },
+    {
+      "time_s": 4.68,
+      "base_position_m": [
+        -11.263205528259277,
+        -0.2253131866455078,
+        0.5796297788619995
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.08454585075378418,
+      "resets": 0
+    },
+    {
+      "time_s": 4.72,
+      "base_position_m": [
+        -11.22799301147461,
+        -0.22380071878433228,
+        0.5918800234794617
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.10860085487365723,
+      "resets": 0
+    },
+    {
+      "time_s": 4.76,
+      "base_position_m": [
+        -11.192078590393066,
+        -0.2190226912498474,
+        0.5981556177139282
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.10095524787902832,
+      "resets": 0
+    },
+    {
+      "time_s": 4.8,
+      "base_position_m": [
+        -11.1582670211792,
+        -0.21390347182750702,
+        0.5929096341133118
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.0876014232635498,
+      "resets": 0
+    },
+    {
+      "time_s": 4.84,
+      "base_position_m": [
+        -11.126497268676758,
+        -0.21171027421951294,
+        0.5774707794189453
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.06241464614868164,
+      "resets": 0
+    },
+    {
+      "time_s": 4.88,
+      "base_position_m": [
+        -11.0958890914917,
+        -0.21247030794620514,
+        0.5591164827346802
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.03512263298034668,
+      "resets": 0
+    },
+    {
+      "time_s": 4.92,
+      "base_position_m": [
+        -11.066709518432617,
+        -0.21289600431919098,
+        0.5502093434333801
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.051004886627197266,
+      "resets": 0
+    },
+    {
+      "time_s": 4.96,
+      "base_position_m": [
+        -11.036419868469238,
+        -0.21119509637355804,
+        0.5474234223365784
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05940747261047363,
+      "resets": 0
+    },
+    {
+      "time_s": 5.0,
+      "base_position_m": [
+        -11.003595352172852,
+        -0.20891784131526947,
+        0.5469749569892883
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05803871154785156,
+      "resets": 0
+    },
+    {
+      "time_s": 5.04,
+      "base_position_m": [
+        -10.97026538848877,
+        -0.20582275092601776,
+        0.5501861572265625
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05540132522583008,
+      "resets": 0
+    },
+    {
+      "time_s": 5.08,
+      "base_position_m": [
+        -10.938324928283691,
+        -0.19768370687961578,
+        0.5531361699104309
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.05138969421386719,
+      "resets": 0
+    },
+    {
+      "time_s": 5.12,
+      "base_position_m": [
+        -10.907489776611328,
+        -0.18604469299316406,
+        0.5492092967033386
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.058632612228393555,
+      "resets": 0
+    },
+    {
+      "time_s": 5.16,
+      "base_position_m": [
+        -10.879420280456543,
+        -0.17348085343837738,
+        0.5443498492240906
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 2,
+      "tilt_rad": 0.04213094711303711,
+      "resets": 0
+    },
+    {
+      "time_s": 5.2,
+      "base_position_m": [
+        -10.851518630981445,
+        -0.16015657782554626,
+        0.5429614782333374
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.05518937110900879,
+      "resets": 0
+    },
+    {
+      "time_s": 5.24,
+      "base_position_m": [
+        -10.822772026062012,
+        -0.14487479627132416,
+        0.542546808719635
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.0741891860961914,
+      "resets": 0
+    },
+    {
+      "time_s": 5.28,
+      "base_position_m": [
+        -10.79386043548584,
+        -0.13211126625537872,
+        0.5449223518371582
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07331013679504395,
+      "resets": 0
+    },
+    {
+      "time_s": 5.32,
+      "base_position_m": [
+        -10.764408111572266,
+        -0.12452178448438644,
+        0.5502270460128784
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07779407501220703,
+      "resets": 0
+    },
+    {
+      "time_s": 5.36,
+      "base_position_m": [
+        -10.734350204467773,
+        -0.12143871188163757,
+        0.5564616322517395
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07163500785827637,
+      "resets": 0
+    },
+    {
+      "time_s": 5.4,
+      "base_position_m": [
+        -10.70425033569336,
+        -0.12255088239908218,
+        0.5614174008369446
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.08198380470275879,
+      "resets": 0
+    },
+    {
+      "time_s": 5.44,
+      "base_position_m": [
+        -10.674942970275879,
+        -0.1262129545211792,
+        0.5636985301971436
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.0887002944946289,
+      "resets": 0
+    },
+    {
+      "time_s": 5.48,
+      "base_position_m": [
+        -10.646281242370605,
+        -0.13066133856773376,
+        0.5653305649757385
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.0785672664642334,
+      "resets": 0
+    },
+    {
+      "time_s": 5.5200000000000005,
+      "base_position_m": [
+        -10.617437362670898,
+        -0.13580138981342316,
+        0.5661318898200989
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07075834274291992,
+      "resets": 0
+    },
+    {
+      "time_s": 5.5600000000000005,
+      "base_position_m": [
+        -10.588006019592285,
+        -0.14178888499736786,
+        0.5637834072113037
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.06308484077453613,
+      "resets": 0
+    },
+    {
+      "time_s": 5.6000000000000005,
+      "base_position_m": [
+        -10.557650566101074,
+        -0.14775702357292175,
+        0.5596839189529419
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.06731271743774414,
+      "resets": 0
+    },
+    {
+      "time_s": 5.64,
+      "base_position_m": [
+        -10.528462409973145,
+        -0.1511528342962265,
+        0.5604830384254456
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.05128931999206543,
+      "resets": 0
+    },
+    {
+      "time_s": 5.68,
+      "base_position_m": [
+        -10.499309539794922,
+        -0.15299811959266663,
+        0.5638664364814758
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.04706764221191406,
+      "resets": 0
+    },
+    {
+      "time_s": 5.72,
+      "base_position_m": [
+        -10.469925880432129,
+        -0.15408676862716675,
+        0.5661627650260925
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.0548861026763916,
+      "resets": 0
+    },
+    {
+      "time_s": 5.76,
+      "base_position_m": [
+        -10.439370155334473,
+        -0.15438638627529144,
+        0.5665085315704346
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.06119537353515625,
+      "resets": 0
+    },
+    {
+      "time_s": 5.8,
+      "base_position_m": [
+        -10.406819343566895,
+        -0.1533544957637787,
+        0.5657788515090942
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.06795072555541992,
+      "resets": 0
+    },
+    {
+      "time_s": 5.84,
+      "base_position_m": [
+        -10.37311840057373,
+        -0.1512085646390915,
+        0.5663849115371704
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.06491756439208984,
+      "resets": 0
+    },
+    {
+      "time_s": 5.88,
+      "base_position_m": [
+        -10.340560913085938,
+        -0.15066960453987122,
+        0.5680354833602905
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.06008648872375488,
+      "resets": 0
+    },
+    {
+      "time_s": 5.92,
+      "base_position_m": [
+        -10.310665130615234,
+        -0.15173602104187012,
+        0.5692043304443359
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07207417488098145,
+      "resets": 0
+    },
+    {
+      "time_s": 5.96,
+      "base_position_m": [
+        -10.282139778137207,
+        -0.15296658873558044,
+        0.5695973634719849
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07924056053161621,
+      "resets": 0
+    },
+    {
+      "time_s": 6.0,
+      "base_position_m": [
+        -10.254378318786621,
+        -0.15367674827575684,
+        0.5693135857582092
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.08230113983154297,
+      "resets": 0
+    },
+    {
+      "time_s": 6.04,
+      "base_position_m": [
+        -10.22718620300293,
+        -0.15386539697647095,
+        0.5678111910820007
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.08246779441833496,
+      "resets": 0
+    },
+    {
+      "time_s": 6.08,
+      "base_position_m": [
+        -10.200389862060547,
+        -0.15394246578216553,
+        0.5655711889266968
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07695913314819336,
+      "resets": 0
+    },
+    {
+      "time_s": 6.12,
+      "base_position_m": [
+        -10.173604965209961,
+        -0.1542077362537384,
+        0.5632596611976624
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07819914817810059,
+      "resets": 0
+    },
+    {
+      "time_s": 6.16,
+      "base_position_m": [
+        -10.14697265625,
+        -0.15380698442459106,
+        0.563124418258667
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07631993293762207,
+      "resets": 0
+    },
+    {
+      "time_s": 6.2,
+      "base_position_m": [
+        -10.118278503417969,
+        -0.15189792215824127,
+        0.5651264190673828
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.05709028244018555,
+      "resets": 0
+    },
+    {
+      "time_s": 6.24,
+      "base_position_m": [
+        -10.086127281188965,
+        -0.1485394388437271,
+        0.5705458521842957
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.034339189529418945,
+      "resets": 0
+    },
+    {
+      "time_s": 6.28,
+      "base_position_m": [
+        -10.049365997314453,
+        -0.14376409351825714,
+        0.5823339223861694
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.019325971603393555,
+      "resets": 0
+    },
+    {
+      "time_s": 6.32,
+      "base_position_m": [
+        -10.00952434539795,
+        -0.13992367684841156,
+        0.5970636606216431
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.019184112548828125,
+      "resets": 0
+    },
+    {
+      "time_s": 6.36,
+      "base_position_m": [
+        -9.966020584106445,
+        -0.1376778781414032,
+        0.602775514125824
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.017157793045043945,
+      "resets": 0
+    },
+    {
+      "time_s": 6.4,
+      "base_position_m": [
+        -9.919337272644043,
+        -0.13416920602321625,
+        0.5981394648551941
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.0203399658203125,
+      "resets": 0
+    },
+    {
+      "time_s": 6.44,
+      "base_position_m": [
+        -9.871000289916992,
+        -0.1292087584733963,
+        0.5868316888809204
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.06628060340881348,
+      "resets": 0
+    },
+    {
+      "time_s": 6.48,
+      "base_position_m": [
+        -9.824352264404297,
+        -0.12498539686203003,
+        0.5806306004524231
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.058313846588134766,
+      "resets": 0
+    },
+    {
+      "time_s": 6.5200000000000005,
+      "base_position_m": [
+        -9.779720306396484,
+        -0.12267378717660904,
+        0.5808388590812683
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.05071568489074707,
+      "resets": 0
+    },
+    {
+      "time_s": 6.5600000000000005,
+      "base_position_m": [
+        -9.737544059753418,
+        -0.12282124161720276,
+        0.5833165645599365
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.04564166069030762,
+      "resets": 0
+    },
+    {
+      "time_s": 6.6000000000000005,
+      "base_position_m": [
+        -9.698664665222168,
+        -0.12488547712564468,
+        0.5850231051445007
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.042580604553222656,
+      "resets": 0
+    },
+    {
+      "time_s": 6.640000000000001,
+      "base_position_m": [
+        -9.661816596984863,
+        -0.12960241734981537,
+        0.5827401876449585
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.052388906478881836,
+      "resets": 0
+    },
+    {
+      "time_s": 6.68,
+      "base_position_m": [
+        -9.62551212310791,
+        -0.137034609913826,
+        0.5750687718391418
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.06869626045227051,
+      "resets": 0
+    },
+    {
+      "time_s": 6.72,
+      "base_position_m": [
+        -9.589158058166504,
+        -0.1454571634531021,
+        0.5658170580863953
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.057019710540771484,
+      "resets": 0
+    },
+    {
+      "time_s": 6.76,
+      "base_position_m": [
+        -9.55453872680664,
+        -0.15134814381599426,
+        0.5627497434616089
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.03932332992553711,
+      "resets": 0
+    },
+    {
+      "time_s": 6.8,
+      "base_position_m": [
+        -9.521093368530273,
+        -0.15644687414169312,
+        0.5681841969490051
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.038559675216674805,
+      "resets": 0
+    },
+    {
+      "time_s": 6.84,
+      "base_position_m": [
+        -9.488035202026367,
+        -0.1609462946653366,
+        0.5771195888519287
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.05811023712158203,
+      "resets": 0
+    },
+    {
+      "time_s": 6.88,
+      "base_position_m": [
+        -9.453741073608398,
+        -0.1636834442615509,
+        0.5870175361633301
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.08394646644592285,
+      "resets": 0
+    },
+    {
+      "time_s": 6.92,
+      "base_position_m": [
+        -9.416970252990723,
+        -0.16319027543067932,
+        0.5950663685798645
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.10760354995727539,
+      "resets": 0
+    },
+    {
+      "time_s": 6.96,
+      "base_position_m": [
+        -9.37979793548584,
+        -0.16013219952583313,
+        0.5965138077735901
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.1064760684967041,
+      "resets": 0
+    },
+    {
+      "time_s": 7.0,
+      "base_position_m": [
+        -9.344902038574219,
+        -0.1582442969083786,
+        0.5876648426055908
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.09025287628173828,
+      "resets": 0
+    },
+    {
+      "time_s": 7.04,
+      "base_position_m": [
+        -9.311896324157715,
+        -0.15898831188678741,
+        0.570797860622406
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.053961992263793945,
+      "resets": 0
+    },
+    {
+      "time_s": 7.08,
+      "base_position_m": [
+        -9.282014846801758,
+        -0.16150455176830292,
+        0.5585857629776001
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.05446147918701172,
+      "resets": 0
+    },
+    {
+      "time_s": 7.12,
+      "base_position_m": [
+        -9.252150535583496,
+        -0.1632167547941208,
+        0.5546949505805969
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07303142547607422,
+      "resets": 0
+    },
+    {
+      "time_s": 7.16,
+      "base_position_m": [
+        -9.220755577087402,
+        -0.16438028216362,
+        0.5527263283729553
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07812380790710449,
+      "resets": 0
+    },
+    {
+      "time_s": 7.2,
+      "base_position_m": [
+        -9.1870756149292,
+        -0.16716957092285156,
+        0.5519944429397583
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 3,
+      "tilt_rad": 0.07640910148620605,
+      "resets": 0
+    },
+    {
+      "time_s": 7.24,
+      "base_position_m": [
+        -9.151994705200195,
+        -0.17050042748451233,
+        0.5511483550071716
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.06801915168762207,
+      "resets": 0
+    },
+    {
+      "time_s": 7.28,
+      "base_position_m": [
+        -9.117406845092773,
+        -0.1706496775150299,
+        0.5505101084709167
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.0844118595123291,
+      "resets": 0
+    },
+    {
+      "time_s": 7.32,
+      "base_position_m": [
+        -9.083544731140137,
+        -0.16578324139118195,
+        0.5470037460327148
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.08555841445922852,
+      "resets": 0
+    },
+    {
+      "time_s": 7.36,
+      "base_position_m": [
+        -9.051995277404785,
+        -0.16080188751220703,
+        0.546360194683075
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.07532382011413574,
+      "resets": 0
+    },
+    {
+      "time_s": 7.4,
+      "base_position_m": [
+        -9.02078628540039,
+        -0.15589338541030884,
+        0.5467622876167297
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.07820630073547363,
+      "resets": 0
+    },
+    {
+      "time_s": 7.44,
+      "base_position_m": [
+        -8.988003730773926,
+        -0.1500367671251297,
+        0.5464509129524231
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.09774923324584961,
+      "resets": 0
+    },
+    {
+      "time_s": 7.48,
+      "base_position_m": [
+        -8.954978942871094,
+        -0.14405010640621185,
+        0.5488629937171936
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.09499073028564453,
+      "resets": 0
+    },
+    {
+      "time_s": 7.5200000000000005,
+      "base_position_m": [
+        -8.92275333404541,
+        -0.140631765127182,
+        0.5534991025924683
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.09454822540283203,
+      "resets": 0
+    },
+    {
+      "time_s": 7.5600000000000005,
+      "base_position_m": [
+        -8.892108917236328,
+        -0.14015096426010132,
+        0.559382975101471
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.09767866134643555,
+      "resets": 0
+    },
+    {
+      "time_s": 7.6000000000000005,
+      "base_position_m": [
+        -8.862499237060547,
+        -0.14190706610679626,
+        0.5642631649971008
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.10553598403930664,
+      "resets": 0
+    },
+    {
+      "time_s": 7.640000000000001,
+      "base_position_m": [
+        -8.83373737335205,
+        -0.14517903327941895,
+        0.5664693713188171
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.11122274398803711,
+      "resets": 0
+    },
+    {
+      "time_s": 7.68,
+      "base_position_m": [
+        -8.806933403015137,
+        -0.14833950996398926,
+        0.5683210492134094
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.10767531394958496,
+      "resets": 0
+    },
+    {
+      "time_s": 7.72,
+      "base_position_m": [
+        -8.780579566955566,
+        -0.15093320608139038,
+        0.5700531601905823
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.09804916381835938,
+      "resets": 0
+    },
+    {
+      "time_s": 7.76,
+      "base_position_m": [
+        -8.754009246826172,
+        -0.1535491645336151,
+        0.5709549784660339
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.08614540100097656,
+      "resets": 0
+    },
+    {
+      "time_s": 7.8,
+      "base_position_m": [
+        -8.726673126220703,
+        -0.1565404087305069,
+        0.5710164904594421
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.07703423500061035,
+      "resets": 0
+    },
+    {
+      "time_s": 7.84,
+      "base_position_m": [
+        -8.698164939880371,
+        -0.15999308228492737,
+        0.5698410868644714
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.07229399681091309,
+      "resets": 0
+    },
+    {
+      "time_s": 7.88,
+      "base_position_m": [
+        -8.668832778930664,
+        -0.16268639266490936,
+        0.5696554183959961
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.07596945762634277,
+      "resets": 0
+    },
+    {
+      "time_s": 7.92,
+      "base_position_m": [
+        -8.640183448791504,
+        -0.16356326639652252,
+        0.5717947483062744
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.0511469841003418,
+      "resets": 0
+    },
+    {
+      "time_s": 7.96,
+      "base_position_m": [
+        -8.609835624694824,
+        -0.16432684659957886,
+        0.574721097946167
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.04702639579772949,
+      "resets": 0
+    },
+    {
+      "time_s": 8.0,
+      "base_position_m": [
+        -8.576757431030273,
+        -0.16388951241970062,
+        0.5777261257171631
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.04332733154296875,
+      "resets": 0
+    },
+    {
+      "time_s": 8.040000000000001,
+      "base_position_m": [
+        -8.539840698242188,
+        -0.16199196875095367,
+        0.5822712182998657
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.031336069107055664,
+      "resets": 0
+    },
+    {
+      "time_s": 8.08,
+      "base_position_m": [
+        -8.498403549194336,
+        -0.15854685008525848,
+        0.590416669845581
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.010997533798217773,
+      "resets": 0
+    },
+    {
+      "time_s": 8.120000000000001,
+      "base_position_m": [
+        -8.453106880187988,
+        -0.15554721653461456,
+        0.5986718535423279
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.015369653701782227,
+      "resets": 0
+    },
+    {
+      "time_s": 8.16,
+      "base_position_m": [
+        -8.404804229736328,
+        -0.15437527000904083,
+        0.5964270234107971
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.025540828704833984,
+      "resets": 0
+    },
+    {
+      "time_s": 8.2,
+      "base_position_m": [
+        -8.354815483093262,
+        -0.15143580734729767,
+        0.5855309963226318
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.04642057418823242,
+      "resets": 0
+    },
+    {
+      "time_s": 8.24,
+      "base_position_m": [
+        -8.30469036102295,
+        -0.1464053839445114,
+        0.5714718103408813
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.06907224655151367,
+      "resets": 0
+    },
+    {
+      "time_s": 8.28,
+      "base_position_m": [
+        -8.258804321289062,
+        -0.1432572305202484,
+        0.5657577514648438
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.03508472442626953,
+      "resets": 0
+    },
+    {
+      "time_s": 8.32,
+      "base_position_m": [
+        -8.21536636352539,
+        -0.1432727426290512,
+        0.5675649642944336
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.030916929244995117,
+      "resets": 0
+    },
+    {
+      "time_s": 8.36,
+      "base_position_m": [
+        -8.171459197998047,
+        -0.14508509635925293,
+        0.5726557970046997
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.0460965633392334,
+      "resets": 0
+    },
+    {
+      "time_s": 8.4,
+      "base_position_m": [
+        -8.128910064697266,
+        -0.14657026529312134,
+        0.5780051946640015
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.0336611270904541,
+      "resets": 0
+    },
+    {
+      "time_s": 8.44,
+      "base_position_m": [
+        -8.08932113647461,
+        -0.14894872903823853,
+        0.5805528163909912
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.01221609115600586,
+      "resets": 0
+    },
+    {
+      "time_s": 8.48,
+      "base_position_m": [
+        -8.051682472229004,
+        -0.1544029712677002,
+        0.5772891044616699
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.03392505645751953,
+      "resets": 0
+    },
+    {
+      "time_s": 8.52,
+      "base_position_m": [
+        -8.013877868652344,
+        -0.1626015305519104,
+        0.5671966075897217
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.05325818061828613,
+      "resets": 0
+    },
+    {
+      "time_s": 8.56,
+      "base_position_m": [
+        -7.977420806884766,
+        -0.1690472662448883,
+        0.5572806000709534
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.03712606430053711,
+      "resets": 0
+    },
+    {
+      "time_s": 8.6,
+      "base_position_m": [
+        -7.94310998916626,
+        -0.17271322011947632,
+        0.5558465123176575
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.033690690994262695,
+      "resets": 0
+    },
+    {
+      "time_s": 8.64,
+      "base_position_m": [
+        -7.910379409790039,
+        -0.17506936192512512,
+        0.5636209845542908
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.06058144569396973,
+      "resets": 0
+    },
+    {
+      "time_s": 8.68,
+      "base_position_m": [
+        -7.876819133758545,
+        -0.17518451809883118,
+        0.5745431780815125
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.0801551342010498,
+      "resets": 0
+    },
+    {
+      "time_s": 8.72,
+      "base_position_m": [
+        -7.841206073760986,
+        -0.17347635328769684,
+        0.5877698063850403
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.09058713912963867,
+      "resets": 0
+    },
+    {
+      "time_s": 8.76,
+      "base_position_m": [
+        -7.80457067489624,
+        -0.1700163632631302,
+        0.5956169366836548
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.08102107048034668,
+      "resets": 0
+    },
+    {
+      "time_s": 8.8,
+      "base_position_m": [
+        -7.769646167755127,
+        -0.16643062233924866,
+        0.5917922854423523
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.05895686149597168,
+      "resets": 0
+    },
+    {
+      "time_s": 8.84,
+      "base_position_m": [
+        -7.73755407333374,
+        -0.16514155268669128,
+        0.5780271887779236
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.01981949806213379,
+      "resets": 0
+    },
+    {
+      "time_s": 8.88,
+      "base_position_m": [
+        -7.709616661071777,
+        -0.16604579985141754,
+        0.565712571144104
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.014624834060668945,
+      "resets": 0
+    },
+    {
+      "time_s": 8.92,
+      "base_position_m": [
+        -7.6826395988464355,
+        -0.1668035238981247,
+        0.561381995677948
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.04481697082519531,
+      "resets": 0
+    },
+    {
+      "time_s": 8.96,
+      "base_position_m": [
+        -7.652456283569336,
+        -0.16743560135364532,
+        0.559414803981781
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.0377504825592041,
+      "resets": 0
+    },
+    {
+      "time_s": 9.0,
+      "base_position_m": [
+        -7.62044095993042,
+        -0.16929785907268524,
+        0.559080183506012
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.04738783836364746,
+      "resets": 0
+    },
+    {
+      "time_s": 9.040000000000001,
+      "base_position_m": [
+        -7.588704586029053,
+        -0.1692342311143875,
+        0.5610915422439575
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.06076216697692871,
+      "resets": 0
+    },
+    {
+      "time_s": 9.08,
+      "base_position_m": [
+        -7.557909965515137,
+        -0.16437365114688873,
+        0.5603606700897217
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.05966353416442871,
+      "resets": 0
+    },
+    {
+      "time_s": 9.120000000000001,
+      "base_position_m": [
+        -7.527750492095947,
+        -0.15645922720432281,
+        0.5545575618743896
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.06196141242980957,
+      "resets": 0
+    },
+    {
+      "time_s": 9.16,
+      "base_position_m": [
+        -7.49946403503418,
+        -0.14815792441368103,
+        0.5509033203125
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.05974149703979492,
+      "resets": 0
+    },
+    {
+      "time_s": 9.200000000000001,
+      "base_position_m": [
+        -7.470306396484375,
+        -0.13899290561676025,
+        0.5503678321838379
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.07713556289672852,
+      "resets": 0
+    },
+    {
+      "time_s": 9.24,
+      "base_position_m": [
+        -7.439766883850098,
+        -0.12849391996860504,
+        0.5509138107299805
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.09389448165893555,
+      "resets": 0
+    },
+    {
+      "time_s": 9.28,
+      "base_position_m": [
+        -7.409219741821289,
+        -0.12020300328731537,
+        0.553922712802887
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.08687162399291992,
+      "resets": 0
+    },
+    {
+      "time_s": 9.32,
+      "base_position_m": [
+        -7.378641128540039,
+        -0.1158471554517746,
+        0.55738365650177
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 4,
+      "tilt_rad": 0.08702635765075684,
+      "resets": 0
+    },
+    {
+      "time_s": 9.36,
+      "base_position_m": [
+        -7.348408222198486,
+        -0.11586795747280121,
+        0.5625149607658386
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.08321881294250488,
+      "resets": 0
+    },
+    {
+      "time_s": 9.4,
+      "base_position_m": [
+        -7.319511890411377,
+        -0.12020303308963776,
+        0.5681295990943909
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.09912681579589844,
+      "resets": 0
+    },
+    {
+      "time_s": 9.44,
+      "base_position_m": [
+        -7.291694164276123,
+        -0.1275174915790558,
+        0.5719038844108582
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.10516214370727539,
+      "resets": 0
+    },
+    {
+      "time_s": 9.48,
+      "base_position_m": [
+        -7.265324115753174,
+        -0.13505011796951294,
+        0.5736762881278992
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.09650516510009766,
+      "resets": 0
+    },
+    {
+      "time_s": 9.52,
+      "base_position_m": [
+        -7.239030838012695,
+        -0.14156825840473175,
+        0.5750181078910828
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.07377791404724121,
+      "resets": 0
+    },
+    {
+      "time_s": 9.56,
+      "base_position_m": [
+        -7.212086200714111,
+        -0.14795640110969543,
+        0.5747908353805542
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.06935548782348633,
+      "resets": 0
+    },
+    {
+      "time_s": 9.6,
+      "base_position_m": [
+        -7.184273719787598,
+        -0.1523086428642273,
+        0.5757024884223938
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.08690571784973145,
+      "resets": 0
+    },
+    {
+      "time_s": 9.64,
+      "base_position_m": [
+        -7.156249046325684,
+        -0.15221302211284637,
+        0.575406014919281
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.07599329948425293,
+      "resets": 0
+    },
+    {
+      "time_s": 9.68,
+      "base_position_m": [
+        -7.128055095672607,
+        -0.15104015171527863,
+        0.576667845249176
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.06614470481872559,
+      "resets": 0
+    },
+    {
+      "time_s": 9.72,
+      "base_position_m": [
+        -7.098973274230957,
+        -0.14906452596187592,
+        0.5774338841438293
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.07468891143798828,
+      "resets": 0
+    },
+    {
+      "time_s": 9.76,
+      "base_position_m": [
+        -7.06759786605835,
+        -0.14597797393798828,
+        0.5757387280464172
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.08278751373291016,
+      "resets": 0
+    },
+    {
+      "time_s": 9.8,
+      "base_position_m": [
+        -7.033787727355957,
+        -0.14201077818870544,
+        0.5725051760673523
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.08595442771911621,
+      "resets": 0
+    },
+    {
+      "time_s": 9.84,
+      "base_position_m": [
+        -6.9994916915893555,
+        -0.13965967297554016,
+        0.5708971619606018
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.07210302352905273,
+      "resets": 0
+    },
+    {
+      "time_s": 9.88,
+      "base_position_m": [
+        -6.96678352355957,
+        -0.1409309357404709,
+        0.5704107284545898
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.07930874824523926,
+      "resets": 0
+    },
+    {
+      "time_s": 9.92,
+      "base_position_m": [
+        -6.936011791229248,
+        -0.14312520623207092,
+        0.5700921416282654
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.09037303924560547,
+      "resets": 0
+    },
+    {
+      "time_s": 9.96,
+      "base_position_m": [
+        -6.9069013595581055,
+        -0.14538194239139557,
+        0.5695919394493103
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.08430838584899902,
+      "resets": 0
+    },
+    {
+      "time_s": 10.0,
+      "base_position_m": [
+        -6.878626823425293,
+        -0.14809221029281616,
+        0.5695629119873047
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.07861781120300293,
+      "resets": 0
+    },
+    {
+      "time_s": 10.040000000000001,
+      "base_position_m": [
+        -6.850316524505615,
+        -0.15154218673706055,
+        0.5690270662307739
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.07300949096679688,
+      "resets": 0
+    },
+    {
+      "time_s": 10.08,
+      "base_position_m": [
+        -6.821849822998047,
+        -0.15600159764289856,
+        0.5677571892738342
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.06784868240356445,
+      "resets": 0
+    },
+    {
+      "time_s": 10.120000000000001,
+      "base_position_m": [
+        -6.792806148529053,
+        -0.1613415777683258,
+        0.5662842988967896
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.06250810623168945,
+      "resets": 0
+    },
+    {
+      "time_s": 10.16,
+      "base_position_m": [
+        -6.762989521026611,
+        -0.16732576489448547,
+        0.563592791557312
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.049918174743652344,
+      "resets": 0
+    },
+    {
+      "time_s": 10.200000000000001,
+      "base_position_m": [
+        -6.733247756958008,
+        -0.1727972775697708,
+        0.5637187361717224
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.044660091400146484,
+      "resets": 0
+    },
+    {
+      "time_s": 10.24,
+      "base_position_m": [
+        -6.704331398010254,
+        -0.17634356021881104,
+        0.566943883895874
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.04556465148925781,
+      "resets": 0
+    },
+    {
+      "time_s": 10.28,
+      "base_position_m": [
+        -6.672699928283691,
+        -0.17918482422828674,
+        0.572468638420105
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.03723716735839844,
+      "resets": 0
+    },
+    {
+      "time_s": 10.32,
+      "base_position_m": [
+        -6.638453006744385,
+        -0.18135809898376465,
+        0.5788143277168274
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.02638721466064453,
+      "resets": 0
+    },
+    {
+      "time_s": 10.36,
+      "base_position_m": [
+        -6.600347995758057,
+        -0.18262222409248352,
+        0.5878888964653015
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.01737666130065918,
+      "resets": 0
+    },
+    {
+      "time_s": 10.4,
+      "base_position_m": [
+        -6.557135105133057,
+        -0.1839144080877304,
+        0.6019879579544067
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.0518336296081543,
+      "resets": 0
+    },
+    {
+      "time_s": 10.44,
+      "base_position_m": [
+        -6.509642124176025,
+        -0.1884419471025467,
+        0.6122092008590698
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.05513763427734375,
+      "resets": 0
+    },
+    {
+      "time_s": 10.48,
+      "base_position_m": [
+        -6.460587978363037,
+        -0.1927238255739212,
+        0.6150466799736023
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.04236769676208496,
+      "resets": 0
+    },
+    {
+      "time_s": 10.52,
+      "base_position_m": [
+        -6.410661697387695,
+        -0.19338543713092804,
+        0.6120907664299011
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.02172112464904785,
+      "resets": 0
+    },
+    {
+      "time_s": 10.56,
+      "base_position_m": [
+        -6.358872413635254,
+        -0.1930239200592041,
+        0.603175699710846
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.03545784950256348,
+      "resets": 0
+    },
+    {
+      "time_s": 10.6,
+      "base_position_m": [
+        -6.3116326332092285,
+        -0.19505900144577026,
+        0.5990166664123535
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.024691343307495117,
+      "resets": 0
+    },
+    {
+      "time_s": 10.64,
+      "base_position_m": [
+        -6.264347553253174,
+        -0.20005697011947632,
+        0.5991960167884827
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.017017364501953125,
+      "resets": 0
+    },
+    {
+      "time_s": 10.68,
+      "base_position_m": [
+        -6.217156887054443,
+        -0.20471113920211792,
+        0.6006362438201904
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.017240285873413086,
+      "resets": 0
+    },
+    {
+      "time_s": 10.72,
+      "base_position_m": [
+        -6.171902179718018,
+        -0.20963841676712036,
+        0.600916862487793
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.019106388092041016,
+      "resets": 0
+    },
+    {
+      "time_s": 10.76,
+      "base_position_m": [
+        -6.129403114318848,
+        -0.21705220639705658,
+        0.5963128209114075
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.05160355567932129,
+      "resets": 0
+    },
+    {
+      "time_s": 10.8,
+      "base_position_m": [
+        -6.0872802734375,
+        -0.2273159623146057,
+        0.5822268724441528
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.06770467758178711,
+      "resets": 0
+    },
+    {
+      "time_s": 10.84,
+      "base_position_m": [
+        -6.0456438064575195,
+        -0.2354128360748291,
+        0.5658436417579651
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.05948019027709961,
+      "resets": 0
+    },
+    {
+      "time_s": 10.88,
+      "base_position_m": [
+        -6.006513595581055,
+        -0.23920638859272003,
+        0.5568304061889648
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.01620960235595703,
+      "resets": 0
+    },
+    {
+      "time_s": 10.92,
+      "base_position_m": [
+        -5.971112251281738,
+        -0.24226218461990356,
+        0.5626055598258972
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.030438661575317383,
+      "resets": 0
+    },
+    {
+      "time_s": 10.96,
+      "base_position_m": [
+        -5.936135768890381,
+        -0.24255315959453583,
+        0.5756074786186218
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.07170462608337402,
+      "resets": 0
+    },
+    {
+      "time_s": 11.0,
+      "base_position_m": [
+        -5.899883270263672,
+        -0.23877771198749542,
+        0.5884878039360046
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.09885168075561523,
+      "resets": 0
+    },
+    {
+      "time_s": 11.040000000000001,
+      "base_position_m": [
+        -5.863864898681641,
+        -0.23180556297302246,
+        0.5964283347129822
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.10057187080383301,
+      "resets": 0
+    },
+    {
+      "time_s": 11.08,
+      "base_position_m": [
+        -5.8305511474609375,
+        -0.2249142825603485,
+        0.5938957929611206
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.09117412567138672,
+      "resets": 0
+    },
+    {
+      "time_s": 11.120000000000001,
+      "base_position_m": [
+        -5.798996925354004,
+        -0.2209206372499466,
+        0.5822188854217529
+      ],
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.06815242767333984,
+      "resets": 0
+    },
+    {
+      "time_s": 11.16,
+      "base_position_m": [
+        -5.767704963684082,
+        -0.2195005714893341,
+        0.5650413036346436
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.03418588638305664,
+      "resets": 0
+    },
+    {
+      "time_s": 11.200000000000001,
+      "base_position_m": [
+        -5.7386555671691895,
+        -0.21762141585350037,
+        0.555344820022583
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.049742937088012695,
+      "resets": 0
+    },
+    {
+      "time_s": 11.24,
+      "base_position_m": [
+        -5.708845138549805,
+        -0.21307745575904846,
+        0.5507827997207642
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.06426763534545898,
+      "resets": 0
+    },
+    {
+      "time_s": 11.28,
+      "base_position_m": [
+        -5.676283359527588,
+        -0.20824280381202698,
+        0.54948890209198
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.05484652519226074,
+      "resets": 0
+    },
+    {
+      "time_s": 11.32,
+      "base_position_m": [
+        -5.64269495010376,
+        -0.20367753505706787,
+        0.5493078231811523
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.06250834465026855,
+      "resets": 0
+    },
+    {
+      "time_s": 11.36,
+      "base_position_m": [
+        -5.610274791717529,
+        -0.1956864446401596,
+        0.5499013066291809
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.0748438835144043,
+      "resets": 0
+    },
+    {
+      "time_s": 11.4,
+      "base_position_m": [
+        -5.579372882843018,
+        -0.18316416442394257,
+        0.5468809008598328
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 5,
+      "tilt_rad": 0.0739591121673584,
+      "resets": 0
+    },
+    {
+      "time_s": 11.44,
+      "base_position_m": [
+        -5.551286220550537,
+        -0.17023445665836334,
+        0.5448763966560364
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.05345296859741211,
+      "resets": 0
+    },
+    {
+      "time_s": 11.48,
+      "base_position_m": [
+        -5.523038387298584,
+        -0.15677456557750702,
+        0.5454022884368896
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.05841398239135742,
+      "resets": 0
+    },
+    {
+      "time_s": 11.52,
+      "base_position_m": [
+        -5.493514537811279,
+        -0.14117643237113953,
+        0.5463011264801025
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.07836794853210449,
+      "resets": 0
+    },
+    {
+      "time_s": 11.56,
+      "base_position_m": [
+        -5.463037490844727,
+        -0.12564989924430847,
+        0.5469111204147339
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.0799558162689209,
+      "resets": 0
+    },
+    {
+      "time_s": 11.6,
+      "base_position_m": [
+        -5.432417392730713,
+        -0.11458134651184082,
+        0.550208568572998
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.08177757263183594,
+      "resets": 0
+    },
+    {
+      "time_s": 11.64,
+      "base_position_m": [
+        -5.402003288269043,
+        -0.10814287513494492,
+        0.5555652379989624
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.07944846153259277,
+      "resets": 0
+    },
+    {
+      "time_s": 11.68,
+      "base_position_m": [
+        -5.371932506561279,
+        -0.10570614784955978,
+        0.560698926448822
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.0793297290802002,
+      "resets": 0
+    },
+    {
+      "time_s": 11.72,
+      "base_position_m": [
+        -5.34280252456665,
+        -0.10612288117408752,
+        0.5636901259422302
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.09133434295654297,
+      "resets": 0
+    },
+    {
+      "time_s": 11.76,
+      "base_position_m": [
+        -5.31477165222168,
+        -0.10739149153232574,
+        0.565240740776062
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.08463644981384277,
+      "resets": 0
+    },
+    {
+      "time_s": 11.8,
+      "base_position_m": [
+        -5.287042617797852,
+        -0.10891403257846832,
+        0.5665743350982666
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.08014607429504395,
+      "resets": 0
+    },
+    {
+      "time_s": 11.84,
+      "base_position_m": [
+        -5.259012222290039,
+        -0.11097539216279984,
+        0.5664921402931213
+      ],
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.0750117301940918,
+      "resets": 0
+    },
+    {
+      "time_s": 11.88,
+      "base_position_m": [
+        -5.230274200439453,
+        -0.11359047889709473,
+        0.5638183355331421
+      ],
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.06899452209472656,
+      "resets": 0
+    },
+    {
+      "time_s": 11.92,
+      "base_position_m": [
+        -5.2016801834106445,
+        -0.11624178290367126,
+        0.5635544061660767
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.06316113471984863,
+      "resets": 0
+    },
+    {
+      "time_s": 11.96,
+      "base_position_m": [
+        -5.173791885375977,
+        -0.1168849766254425,
+        0.5660533905029297
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.052536725997924805,
+      "resets": 0
+    },
+    {
+      "time_s": 12.0,
+      "base_position_m": [
+        -5.144782066345215,
+        -0.11640052497386932,
+        0.569656252861023
+      ],
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "airborne": false,
+      "goal_index": 6,
+      "tilt_rad": 0.04720926284790039,
+      "resets": 0
+    }
+  ],
+  "video": "artifacts/student_depth5_model200_isaac_hurdle.mp4",
+  "frame_count": 300,
+  "gif": {
+    "path": "artifacts/student_depth5_model200_isaac_hurdle.gif",
+    "bytes": 11334191,
+    "sha256": "fed6700f27f7cc43d99c7af74d9adcb0d4aa7a51699259eeae44c46c95e9d1be",
+    "frames": 120,
+    "size": [
+      640,
+      360
+    ],
+    "duration_s": 12.0
+  }
+}

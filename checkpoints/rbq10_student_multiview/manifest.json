@@ -1,0 +1,591 @@
+{
+  "role": "five_view_student",
+  "checkpoint": "model_700.pt",
+  "sha256": "a7d7feed127e0273ffb5f0f7a3821676409a22c98a1de9af12290e77cfac1799",
+  "bytes": 112902425,
+  "updates_completed": 701,
+  "next_iteration": 701,
+  "full_resume_checkpoint": true,
+  "depth_optimizer_preserved": true,
+  "source_path": "logs/rsl_rl/rbq10_extreme_parkour_multiview/2026-10-23_13-15-36_depth5_student_s1_20261023_131531_862725/model_700.pt",
+  "snapshot_kst": "2026-10-23T15:00:01.558227+09:00",
+  "training_continues": true,
+  "target_branch_updates": 2000,
+  "remaining_to_target": 1299,
+  "contract": {
+    "schema": "rbq10_extreme_parkour_student_depth5_v1",
+    "robot": "Rainbow_RBQ10_without_arm",
+    "source_commit": "c7b80ba49f9a79f983cb977e2726cb2246701fcf",
+    "urdf_sha256": "70ad51db9bd3b5129d534cb681b6623107b2082e85c4e6005f5bfa4afe6535a0",
+    "base_body": "trunk",
+    "joint_order": [
+      "joint0_HRR",
+      "joint3_HLR",
+      "joint6_FRR",
+      "joint9_FLR",
+      "joint1_HRP",
+      "joint4_HLP",
+      "joint7_FRP",
+      "joint10_FLP",
+      "joint2_HRK",
+      "joint5_HLK",
+      "joint8_FRK",
+      "joint11_FLK"
+    ],
+    "foot_order": [
+      "HR_foot",
+      "HL_foot",
+      "FR_foot",
+      "FL_foot"
+    ],
+    "action_scale_rad": 0.25,
+    "physics_dt": 0.005,
+    "policy_dt": 0.02,
+    "policy_observation_dim": 753,
+    "action_dim": 12,
+    "actuator": "official_implicit_PD",
+    "kp_R_P_K": [
+      123.39138,
+      123.39138,
+      127.77215
+    ],
+    "kd": 2.5,
+    "effort_nm_R_P_K": [
+      100.0,
+      100.0,
+      150.0
+    ],
+    "velocity_rad_s": 50.0,
+    "camera_parent": "trunk",
+    "camera_position_m": [
+      0.388031,
+      -0.0375,
+      0.037764
+    ],
+    "camera_mount_status": "manufacturer_front_depth_TF",
+    "depth_hw": [
+      58,
+      87
+    ],
+    "camera_quaternion_wxyz_ros": [
+      0.5,
+      -0.5,
+      0.5,
+      -0.5
+    ],
+    "camera_sensor": "front_depth_OAK-D_Pro_Wide",
+    "camera_tf_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+    "depth_input_shape": [
+      5,
+      58,
+      87
+    ],
+    "depth_view_order": [
+      "front",
+      "ground_0",
+      "ground_1",
+      "ground_2",
+      "ground_3"
+    ],
+    "depth_calibration": {
+      "schema": "rbq10_depth5_calibration_v1",
+      "checked_date": "2026-10-23",
+      "view_order": [
+        "front",
+        "ground_0",
+        "ground_1",
+        "ground_2",
+        "ground_3"
+      ],
+      "views": [
+        {
+          "name": "front",
+          "sensor_name": "depth_camera",
+          "sensor": "front_depth_OAK-D_Pro_Wide",
+          "parent": "trunk",
+          "frame_convention": "ros_optical",
+          "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+          "translation_m": [
+            0.388031,
+            -0.0375,
+            0.037764
+          ],
+          "rotation_matrix": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              -1,
+              0
+            ]
+          ],
+          "quaternion_wxyz_ros": [
+            0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ],
+          "base_to_depth_tf": [
+            [
+              0,
+              0,
+              1,
+              0.388031
+            ],
+            [
+              -1,
+              0,
+              0,
+              -0.0375
+            ],
+            [
+              0,
+              -1,
+              0,
+              0.037764
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "base_mapping": "Manufacturer base/body frame mapped to URDF trunk; matching hip offsets and body inertial frame",
+          "checked_date": "2026-10-23"
+        },
+        {
+          "name": "ground_0",
+          "sensor_name": "depth_camera_ground_0",
+          "sensor": "Intel_RealSense_D430",
+          "parent": "trunk",
+          "frame_convention": "ros_optical",
+          "published_base_to_depth_tf": [
+            [
+              -0.939693,
+              0,
+              0.34202,
+              0.36462
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              -0.34202,
+              0,
+              -0.939693,
+              -0.02663
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "translation_m": [
+            0.36462,
+            0.0,
+            -0.02663
+          ],
+          "rotation_matrix": [
+            [
+              -0.9396927112094517,
+              0.0,
+              0.3420198948889229
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              -0.3420198948889229,
+              0.0,
+              -0.9396927112094517
+            ]
+          ],
+          "quaternion_wxyz_ros": [
+            0.1736480474847734,
+            0.0,
+            0.9848077759668258,
+            0.0
+          ],
+          "rotation_projection_max_abs": 2.8879054825292627e-07,
+          "fov_deg_hv": [
+            87,
+            58
+          ],
+          "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#ground-view-cameras-intel-realsense-d430"
+        },
+        {
+          "name": "ground_1",
+          "sensor_name": "depth_camera_ground_1",
+          "sensor": "Intel_RealSense_D430",
+          "parent": "trunk",
+          "frame_convention": "ros_optical",
+          "published_base_to_depth_tf": [
+            [
+              -0.970296,
+              0,
+              -0.241922,
+              0.26053
+            ],
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0.241922,
+              0,
+              -0.970296,
+              -0.04759
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "translation_m": [
+            0.26053,
+            0.0,
+            -0.04759
+          ],
+          "rotation_matrix": [
+            [
+              -0.9702957177895315,
+              0.0,
+              -0.24192192963701697
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.24192192963701697,
+              0.0,
+              -0.9702957177895315
+            ]
+          ],
+          "quaternion_wxyz_ros": [
+            -0.12186936081408746,
+            0.0,
+            0.9925461495037728,
+            0.0
+          ],
+          "rotation_projection_max_abs": 2.82210468549593e-07,
+          "fov_deg_hv": [
+            87,
+            58
+          ],
+          "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#ground-view-cameras-intel-realsense-d430"
+        },
+        {
+          "name": "ground_2",
+          "sensor_name": "depth_camera_ground_2",
+          "sensor": "Intel_RealSense_D430",
+          "parent": "trunk",
+          "frame_convention": "ros_optical",
+          "published_base_to_depth_tf": [
+            [
+              -1,
+              0,
+              0,
+              -0.19515
+            ],
+            [
+              0,
+              1,
+              0,
+              0.0065
+            ],
+            [
+              0,
+              0,
+              -1,
+              -0.04832
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "translation_m": [
+            -0.19515,
+            0.0065,
+            -0.04832
+          ],
+          "rotation_matrix": [
+            [
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0
+            ]
+          ],
+          "quaternion_wxyz_ros": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "rotation_projection_max_abs": 0.0,
+          "fov_deg_hv": [
+            87,
+            58
+          ],
+          "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#ground-view-cameras-intel-realsense-d430"
+        },
+        {
+          "name": "ground_3",
+          "sensor_name": "depth_camera_ground_3",
+          "sensor": "Intel_RealSense_D430",
+          "parent": "trunk",
+          "frame_convention": "ros_optical",
+          "published_base_to_depth_tf": [
+            [
+              0.861341,
+              -0.0909518,
+              -0.49982,
+              -0.352993
+            ],
+            [
+              -0.105042,
+              -0.994468,
+              -5.69736e-05,
+              -1.1e-50
+            ],
+            [
+              -0.49705,
+              0.0525513,
+              -0.866129,
+              -0.020514
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ]
+          ],
+          "translation_m": [
+            -0.352993,
+            -1.1e-50,
+            -0.020514
+          ],
+          "rotation_matrix": [
+            [
+              0.8613406130322055,
+              -0.0909516837704363,
+              -0.4998201071992069
+            ],
+            [
+              -0.10504207029935446,
+              -0.9944677773663136,
+              -5.698534032161362e-05
+            ],
+            [
+              -0.4970498081767356,
+              0.05255122262541635,
+              -0.8661292381579346
+            ]
+          ],
+          "quaternion_wxyz_ros": [
+            0.013634492179369016,
+            0.9646161968052959,
+            -0.050795786634855594,
+            -0.25835921029458847
+          ],
+          "rotation_projection_max_abs": 3.8696779447455754e-07,
+          "fov_deg_hv": [
+            87,
+            58
+          ],
+          "source_url": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#ground-view-cameras-intel-realsense-d430"
+        }
+      ],
+      "notes": [
+        "Published ground camera 3 y translation -1.1e-050 is retained literally (approximately zero); verify against hardware TF before deployment.",
+        "Rounded rotations projected to the closest proper SO(3) matrix using SVD.",
+        "Front optics remain the original training pinhole optics for an isolated camera-count experiment; OAK-D Wide full optics calibration is a separate experiment.",
+        "Ground cameras use D430 nominal H87/V58 FOV; all views reuse original 60x106 acquisition, 58x87 preprocessing, 2m depth cap, 10Hz delayed input.",
+        "Terrain-only raycasting matches the existing front camera: no robot self-occlusion or stereo artifacts are simulated."
+      ],
+      "fov_source": "https://www.intel.com/content/www/us/en/products/sku/98320/intel-realsense-depth-module-d430/specifications.html"
+    },
+    "depth_calibration_sha256": "78ce0f70eed536020c373f5fd2d9c3d2ade8262f6033daee7e249c2fac8abaaa",
+    "depth_encoder": "shared_original_CNN_5x32_linear_fusion_32_original_GRU512",
+    "depth_front_intrinsics": "original_f11.041_aperture20.955x12.240_106x60",
+    "depth_ground_fov_hv_deg": [
+      87.0,
+      58.0
+    ],
+    "depth_max_distance_m": 2.0,
+    "depth_ground_min_optical_z_m": 0.2,
+    "depth_ground_invalid_fill": "max_distance_before_original_preprocessing",
+    "depth_measurement": "euclidean_distance_to_camera",
+    "depth_update_policy_steps": 5,
+    "depth_buffer_length": 2
+  },
+  "storage": {
+    "format": "gzip_concatenated_parts_v1",
+    "parts_dir": "parts",
+    "parts": [
+      {
+        "file": "model_700.pt.gz.part000",
+        "bytes": 4194304,
+        "sha256": "123685eca3b8f57beb30f66ff353c325dfbafc6e89071fbec10a25384fa84e7d"
+      },
+      {
+        "file": "model_700.pt.gz.part001",
+        "bytes": 4194304,
+        "sha256": "3280983aced8574ab194a6ae689000d7b1176a5db7a18cb0c07f65537518f522"
+      },
+      {
+        "file": "model_700.pt.gz.part002",
+        "bytes": 4194304,
+        "sha256": "463418f60d80a46b2b6b2c18b94d9d356fa6b9a1696d6f5cd4293b3f5dba9057"
+      },
+      {
+        "file": "model_700.pt.gz.part003",
+        "bytes": 4194304,
+        "sha256": "db213ac0d639fc32204956358461195b432a3b5c7b48b292c9845d66689f5fb0"
+      },
+      {
+        "file": "model_700.pt.gz.part004",
+        "bytes": 4194304,
+        "sha256": "49d2343155ea7a5201b60d99d2d185b8429482f1ece715e897c9585762280a19"
+      },
+      {
+        "file": "model_700.pt.gz.part005",
+        "bytes": 4194304,
+        "sha256": "e2e42dfbd221adf9fddc74b46062dac87e5d199124e5fb329b828fd9dc69dba0"
+      },
+      {
+        "file": "model_700.pt.gz.part006",
+        "bytes": 4194304,
+        "sha256": "0fbd0c0c75cfac2eac7cd6c7cba9ed54bca9a2f6dfdb89a3af5fe9cc97280f5e"
+      },
+      {
+        "file": "model_700.pt.gz.part007",
+        "bytes": 4194304,
+        "sha256": "2eacfd21f4a681ba38f528102866da1f24fcb153a27bf021878ab3d4b00f6dec"
+      },
+      {
+        "file": "model_700.pt.gz.part008",
+        "bytes": 4194304,
+        "sha256": "8a117843ad3fcfd3f3c53316e5902c086e187f2dcce70397cc37cba9e19d7e00"
+      },
+      {
+        "file": "model_700.pt.gz.part009",
+        "bytes": 4194304,
+        "sha256": "f74b56c3542fb813abc55e00122934ebe419682c1b4f87b3b32152c264d97527"
+      },
+      {
+        "file": "model_700.pt.gz.part010",
+        "bytes": 4194304,
+        "sha256": "0207c215875a3923d8f79ef1663ab1c6fc627ef2eea0aeeedebfedde1e7f0071"
+      },
+      {
+        "file": "model_700.pt.gz.part011",
+        "bytes": 4194304,
+        "sha256": "1cde91ab64a5a847b09670ff9764d82072ed33d517ba2be870428349b81b7b39"
+      },
+      {
+        "file": "model_700.pt.gz.part012",
+        "bytes": 4194304,
+        "sha256": "3ddc17f92993279880924828716e8fe29d132af2c7fe3f5f991fb8444feacc81"
+      },
+      {
+        "file": "model_700.pt.gz.part013",
+        "bytes": 4194304,
+        "sha256": "86f3aad74b1d4115c1169b5405f8f477a3c5fbb3fc6e62eeae9cedc5cca7e311"
+      },
+      {
+        "file": "model_700.pt.gz.part014",
+        "bytes": 4194304,
+        "sha256": "2fa1ca5dfa4960b293b5f121fd4e826cdf2cee42b86d8df5992cd827d9138920"
+      },
+      {
+        "file": "model_700.pt.gz.part015",
+        "bytes": 4194304,
+        "sha256": "12b2a5fc07e546198ed9e998c831f596fe191e5e49810f7a4dbe63df5f6e108b"
+      },
+      {
+        "file": "model_700.pt.gz.part016",
+        "bytes": 4194304,
+        "sha256": "077904931245345045493aaa4520dd3d5b6672f4dda09a2e35d217359efec9fe"
+      },
+      {
+        "file": "model_700.pt.gz.part017",
+        "bytes": 4194304,
+        "sha256": "a697e6fba29dbf8805e704b3495f0ab54dd2fe637aebb851fbddf270dc59e062"
+      },
+      {
+        "file": "model_700.pt.gz.part018",
+        "bytes": 4194304,
+        "sha256": "648946e30b3815747c84cebdb5a4a370b0b191be993f67c8b7383603d05ed217"
+      },
+      {
+        "file": "model_700.pt.gz.part019",
+        "bytes": 4194304,
+        "sha256": "0daf68ea77b996e8bf168d8405ae9a07b5ba232ad63b241972b94e9ecaa10156"
+      },
+      {
+        "file": "model_700.pt.gz.part020",
+        "bytes": 4194304,
+        "sha256": "8b4f9f66a04f9d2d06df2f8b169fa03005e1d0d637b692bffb5aa3bf63e658fb"
+      },
+      {
+        "file": "model_700.pt.gz.part021",
+        "bytes": 4194304,
+        "sha256": "b8297ded3f6651da34c1226467d61c649a0d0ae23f85cfb0576e2e9670b26aa2"
+      },
+      {
+        "file": "model_700.pt.gz.part022",
+        "bytes": 4194304,
+        "sha256": "6f8190e6329dfbdf1bf5e1b14b4ddc2c0e2bdbbf74ac08dd95888796178d1cf3"
+      },
+      {
+        "file": "model_700.pt.gz.part023",
+        "bytes": 4194304,
+        "sha256": "1e404146153b1af696639be9001643312bd879168d732d1850708e49e0342765"
+      },
+      {
+        "file": "model_700.pt.gz.part024",
+        "bytes": 2859036,
+        "sha256": "316274047232b669c688879a193d2b045c2106c75a3628caf4b6d3817ed2b928"
+      }
+    ],
+    "compressed_bytes": 103522332,
+    "compressed_sha256": "d66a81d6ce740cb0361315f87a9702cf2e987dd008fe3d7d708d7fbd16afd28c",
+    "restore_command": "python tools/restore_student_checkpoint.py --directory checkpoints/rbq10_student_multiview"
+  }
+}

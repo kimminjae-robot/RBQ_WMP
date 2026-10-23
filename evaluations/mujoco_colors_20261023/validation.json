@@ -1,0 +1,84 @@
+{
+  "scope": "Display-only changes: original/new compiled physical arrays, actual five-view depth, and deterministic contact stepping at identical states and commands",
+  "fields": [
+    "qpos0",
+    "qpos_spring",
+    "body_pos",
+    "body_quat",
+    "body_mass",
+    "body_inertia",
+    "body_ipos",
+    "body_iquat",
+    "body_gravcomp",
+    "jnt_type",
+    "jnt_pos",
+    "jnt_axis",
+    "jnt_range",
+    "jnt_solref",
+    "jnt_solimp",
+    "dof_damping",
+    "dof_armature",
+    "dof_frictionloss",
+    "geom_type",
+    "geom_pos",
+    "geom_quat",
+    "geom_size",
+    "geom_contype",
+    "geom_conaffinity",
+    "geom_friction",
+    "geom_solref",
+    "geom_solimp",
+    "geom_condim",
+    "geom_gap",
+    "geom_margin",
+    "mesh_vert",
+    "mesh_face",
+    "hfield_data",
+    "hfield_size",
+    "actuator_trnid",
+    "actuator_gear",
+    "actuator_dynprm",
+    "actuator_gainprm",
+    "actuator_biasprm",
+    "actuator_forcerange",
+    "actuator_ctrlrange"
+  ],
+  "cases": [
+    {
+      "course": "isaac_mixed",
+      "identical_physics": true,
+      "steps": 100,
+      "max_state_error": 0.0,
+      "max_depth_error_m": 0.0
+    },
+    {
+      "course": "isaac_step",
+      "identical_physics": true,
+      "steps": 100,
+      "max_state_error": 0.0,
+      "max_depth_error_m": 0.0
+    },
+    {
+      "course": "isaac_gap",
+      "identical_physics": true,
+      "steps": 100,
+      "max_state_error": 0.0,
+      "max_depth_error_m": 0.0
+    },
+    {
+      "course": "flat",
+      "identical_physics": true,
+      "steps": 100,
+      "max_state_error": 0.0,
+      "max_depth_error_m": 0.0
+    },
+    {
+      "course": "hurdle",
+      "identical_physics": true,
+      "steps": 100,
+      "max_state_error": 0.0,
+      "max_depth_error_m": 0.0
+    }
+  ],
+  "passed": true
+}

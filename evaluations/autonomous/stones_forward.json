@@ -1,0 +1,7685 @@
+{
+  "role": "student",
+  "checkpoint": "model_941.pt",
+  "checkpoint_sha256": "1f4c1cf9bf8e6261b081ee7038d28b66f75be399b0791b27edd832140b6ef053",
+  "configuration": {
+    "camera": {
+      "parent": "trunk",
+      "position_m": [
+        0.388031,
+        -0.0375,
+        0.037764
+      ],
+      "quaternion_wxyz_ros": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "mount_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+      "width": 106,
+      "height": 60,
+      "focal_length": 11.041,
+      "horizontal_aperture": 20.955,
+      "vertical_aperture": 12.24,
+      "max_distance_m": 2.0,
+      "sensor": "front_depth_OAK-D_Pro_Wide"
+    },
+    "direction_source": "terrain_goals",
+    "yaw_rate_to_error_seconds": 0.5,
+    "terrain_label": "parkour",
+    "velocity_source": "mujoco",
+    "depth_update_policy_steps": 5,
+    "action_delay_policy_steps": 1
+  },
+  "course": "isaac_platforms",
+  "height": 0.1,
+  "difficulty": 0.5,
+  "terrain_seed": 42,
+  "engine": "3.3.0",
+  "simulated_seconds": 4.919999999999917,
+  "termination": "fall",
+  "fall_count": 1,
+  "episodes_started": 1,
+  "keyboard": false,
+  "autonomous": true,
+  "goals_reached": 3,
+  "total_goals": 8,
+  "video": null,
+  "displacement_xyz": [
+    3.049203194677932,
+    0.27402261399555045,
+    -0.43847469964178154
+  ],
+  "max_abs_torque_nm": 150.0,
+  "max_abs_joint_speed_rad_s": 63.750566340907774,
+  "limitation": "Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending.",
+  "records": [
+    {
+      "episode": 0,
+      "time": 0.02,
+      "base_xyz": [
+        1.0,
+        5.695026263391754e-22,
+        0.5735285000000001
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actor_direction_errors": [
+        0.04542328044772148,
+        0.14601226150989532
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        1.193686842918396,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.04,
+      "base_xyz": [
+        1.000091131366879,
+        3.57656415595182e-05,
+        0.5689489865925421
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        -6.191310057583407e-19,
+        -9.248300762567495e-20,
+        -0.19619999999999999
+      ],
+      "actor_direction_errors": [
+        0.04542328044772148,
+        0.14601226150989532
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        1.193686842918396,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.05999999999999999,
+      "base_xyz": [
+        1.0008850217035261,
+        0.00016884524049281405,
+        0.5623235887646693
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.012006364858305738,
+        0.0031792890493456956,
+        -0.311583330736269
+      ],
+      "actor_direction_errors": [
+        0.04542328044772148,
+        0.14601226150989532
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.193686842918396,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.08,
+      "base_xyz": [
+        1.002670885073027,
+        0.0003954737162621284,
+        0.5552936867529217
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.08469844833714842,
+        0.012176152520474107,
+        -0.33887154364659944
+      ],
+      "actor_direction_errors": [
+        0.04542328044772148,
+        0.14601226150989532
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.193686842918396,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.10000000000000002,
+      "base_xyz": [
+        1.0046767307465787,
+        0.0008670595794169129,
+        0.5493270690407321
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.07899217527001616,
+        0.027402408436199913,
+        -0.37056088821205824
+      ],
+      "actor_direction_errors": [
+        0.04542328044772148,
+        0.14601226150989532
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.193686842918396,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.12000000000000004,
+      "base_xyz": [
+        1.0079859924175225,
+        0.0017062245418296453,
+        0.5472111087035169
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.12274200323450696,
+        0.046420347059052666,
+        -0.18628277085816028
+      ],
+      "actor_direction_errors": [
+        0.04698977991938591,
+        0.14815710484981537
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.1672937870025635,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.14000000000000004,
+      "base_xyz": [
+        1.013870179319728,
+        0.002901115826251745,
+        0.54885287107157
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.23823438546421893,
+        0.05184561632764547,
+        0.029161211822541985
+      ],
+      "actor_direction_errors": [
+        0.04698977991938591,
+        0.14815710484981537
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.1672937870025635,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.16000000000000006,
+      "base_xyz": [
+        1.0227752522880722,
+        0.0042962382459674564,
+        0.5526654091996717
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.3898281079236062,
+        0.05518714917772955,
+        0.16373246044134768
+      ],
+      "actor_direction_errors": [
+        0.04698977991938591,
+        0.14815710484981537
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.1672937870025635,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.18000000000000008,
+      "base_xyz": [
+        1.0342426398989082,
+        0.005751416514772047,
+        0.5576835385671033
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5351352958616914,
+        0.0558802057399806,
+        0.22768782696616408
+      ],
+      "actor_direction_errors": [
+        0.04698977991938591,
+        0.14815710484981537
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.1672937870025635,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.2000000000000001,
+      "base_xyz": [
+        1.0473570069666538,
+        0.007241442425004232,
+        0.5631011639247543
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6394483487794606,
+        0.05894003699830252,
+        0.25398101130589984
+      ],
+      "actor_direction_errors": [
+        0.04698977991938591,
+        0.14815710484981537
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.1672937870025635,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.2200000000000001,
+      "base_xyz": [
+        1.0611903417016446,
+        0.008655456644035596,
+        0.5679817152944198
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6919109029493561,
+        0.055998716174152696,
+        0.2379187571618409
+      ],
+      "actor_direction_errors": [
+        0.025356970727443695,
+        0.13090425729751587
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.2081416845321655,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.24000000000000013,
+      "base_xyz": [
+        1.0752515822385302,
+        0.009963812107521472,
+        0.5718502049613827
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7079210612506276,
+        0.04929096830827116,
+        0.19490703159904368
+      ],
+      "actor_direction_errors": [
+        0.025356970727443695,
+        0.13090425729751587
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.2081416845321655,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.2600000000000001,
+      "base_xyz": [
+        1.0896616351489836,
+        0.011222166034373766,
+        0.5744943891111226
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7174666362025984,
+        0.043528068060567304,
+        0.14212771434485721
+      ],
+      "actor_direction_errors": [
+        0.025356970727443695,
+        0.13090425729751587
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.2081416845321655,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.28000000000000014,
+      "base_xyz": [
+        1.1044667791140785,
+        0.012628339292395171,
+        0.57573512123921
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.746180499314768,
+        0.04064425207457468,
+        0.0807304542481258
+      ],
+      "actor_direction_errors": [
+        0.025356970727443695,
+        0.13090425729751587
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.2081416845321655,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.30000000000000016,
+      "base_xyz": [
+        1.1195140453406722,
+        0.014445842082044457,
+        0.5754159151098912
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.750084839343552,
+        0.05884334295669926,
+        0.005083122095083021
+      ],
+      "actor_direction_errors": [
+        0.025356970727443695,
+        0.13090425729751587
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.2081416845321655,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.3200000000000002,
+      "base_xyz": [
+        1.1350119349957952,
+        0.016688607415084496,
+        0.5739344726626088
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7754813891110409,
+        0.08161035882667807,
+        -0.0594082240686417
+      ],
+      "actor_direction_errors": [
+        -0.009038140997290611,
+        0.10309087485074997
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.124956727027893,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.3400000000000002,
+      "base_xyz": [
+        1.1505406277658812,
+        0.019049049487839947,
+        0.5725734981079167
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7925947241683494,
+        0.08603492422921245,
+        -0.07175964693878728
+      ],
+      "actor_direction_errors": [
+        -0.009038140997290611,
+        0.10309087485074997
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.124956727027893,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.3600000000000002,
+      "base_xyz": [
+        1.165438605985957,
+        0.020969820396867643,
+        0.5714360387324882
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7685361361980243,
+        0.05727986599730105,
+        -0.045291625723644896
+      ],
+      "actor_direction_errors": [
+        -0.009038140997290611,
+        0.10309087485074997
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.124956727027893,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.3800000000000002,
+      "base_xyz": [
+        1.1793552217934726,
+        0.02212694695195938,
+        0.5698655383777806
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7159117309475729,
+        0.011423566568551844,
+        -0.06098975879596701
+      ],
+      "actor_direction_errors": [
+        -0.009038140997290611,
+        0.10309087485074997
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.124956727027893,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.40000000000000024,
+      "base_xyz": [
+        1.1925933898016967,
+        0.022635017341008267,
+        0.5672124298361951
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6694186430025051,
+        -0.02914156859149091,
+        -0.10822511976561029
+      ],
+      "actor_direction_errors": [
+        -0.009038140997290611,
+        0.10309087485074997
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.124956727027893,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.42000000000000026,
+      "base_xyz": [
+        1.2049489082052507,
+        0.022898614108627882,
+        0.5643205510830696
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6310353169410107,
+        -0.053038025054107166,
+        -0.1768840070346137
+      ],
+      "actor_direction_errors": [
+        -0.06597333401441574,
+        0.053819440305233
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0822086334228516,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.4400000000000003,
+      "base_xyz": [
+        1.2161281503876737,
+        0.02317439032671875,
+        0.562699081831434
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5736675928670796,
+        -0.04562354145396053,
+        -0.11606862846487903
+      ],
+      "actor_direction_errors": [
+        -0.06597333401441574,
+        0.053819440305233
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0822086334228516,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.4600000000000003,
+      "base_xyz": [
+        1.226561604619437,
+        0.023630180334328964,
+        0.5624479861707931
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5345695521846194,
+        -0.03139875137735821,
+        -0.03691640564425537
+      ],
+      "actor_direction_errors": [
+        -0.06597333401441574,
+        0.053819440305233
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0822086334228516,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.4800000000000003,
+      "base_xyz": [
+        1.236577395179385,
+        0.02430290285793266,
+        0.5631799311339485
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5115458829040272,
+        -0.02224098368727374,
+        0.03289519491983949
+      ],
+      "actor_direction_errors": [
+        -0.06597333401441574,
+        0.053819440305233
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0822086334228516,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.5000000000000003,
+      "base_xyz": [
+        1.2464922110298953,
+        0.025095115499119188,
+        0.5643456413794982
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5005118636703153,
+        -0.01860036987488579,
+        0.06244845136020778
+      ],
+      "actor_direction_errors": [
+        -0.06597333401441574,
+        0.053819440305233
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0822086334228516,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.5200000000000004,
+      "base_xyz": [
+        1.2564064091627118,
+        0.025907077239233422,
+        0.5656152440778389
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.498372960970366,
+        -0.01895263704089802,
+        0.07130949864155955
+      ],
+      "actor_direction_errors": [
+        -0.07821889221668243,
+        0.04640079662203789
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0224905014038086,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.5400000000000004,
+      "base_xyz": [
+        1.2662688486033196,
+        0.026704840526895847,
+        0.5667110787999862
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.49440463806775686,
+        -0.01653950539961998,
+        0.06204299258021041
+      ],
+      "actor_direction_errors": [
+        -0.07821889221668243,
+        0.04640079662203789
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0224905014038086,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.5600000000000004,
+      "base_xyz": [
+        1.2760870456348568,
+        0.02747596055521811,
+        0.5674924586900133
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.49088047205329277,
+        -0.012859804888638103,
+        0.04639075372688223
+      ],
+      "actor_direction_errors": [
+        -0.07821889221668243,
+        0.04640079662203789
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0224905014038086,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.5800000000000004,
+      "base_xyz": [
+        1.2859196434085578,
+        0.028242637542214056,
+        0.5678522641109793
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.49055698664259834,
+        -0.007760669687225887,
+        0.025249598370328582
+      ],
+      "actor_direction_errors": [
+        -0.07821889221668243,
+        0.04640079662203789
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0224905014038086,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.6000000000000004,
+      "base_xyz": [
+        1.2958075567153748,
+        0.029000205732771994,
+        0.5678263117198161
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.4938362602644674,
+        -0.001794065094040229,
+        0.0010629172393416845
+      ],
+      "actor_direction_errors": [
+        -0.07821889221668243,
+        0.04640079662203789
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0224905014038086,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.6200000000000004,
+      "base_xyz": [
+        1.3056179334388855,
+        0.029604514061193587,
+        0.5679385314958039
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.4949160086669649,
+        -0.0038670503758561066,
+        -0.00255874767008752
+      ],
+      "actor_direction_errors": [
+        -0.06150546297430992,
+        0.06877958029508591
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0405616760253906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.6400000000000005,
+      "base_xyz": [
+        1.3153845654927425,
+        0.029794677066601594,
+        0.5684397760903905
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.4896897987179852,
+        -0.020981101864357723,
+        0.020726763758376055
+      ],
+      "actor_direction_errors": [
+        -0.06150546297430992,
+        0.06877958029508591
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0405616760253906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.6600000000000005,
+      "base_xyz": [
+        1.3253375085037575,
+        0.029315267724669827,
+        0.5691415079314278
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.49535492297596,
+        -0.05151911487154291,
+        0.043497464711236104
+      ],
+      "actor_direction_errors": [
+        -0.06150546297430992,
+        0.06877958029508591
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0405616760253906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.6800000000000005,
+      "base_xyz": [
+        1.3355696935110692,
+        0.02812278547368508,
+        0.5698968860965998
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5066719476764941,
+        -0.08787616937642782,
+        0.042650486770286225
+      ],
+      "actor_direction_errors": [
+        -0.06150546297430992,
+        0.06877958029508591
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0405616760253906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.7000000000000005,
+      "base_xyz": [
+        1.3459880210090003,
+        0.026438651380054235,
+        0.5708497974692055
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5155885973538588,
+        -0.11135944538124244,
+        0.06341700876322715
+      ],
+      "actor_direction_errors": [
+        -0.06150546297430992,
+        0.06877958029508591
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0405616760253906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.7200000000000005,
+      "base_xyz": [
+        1.3564174461064806,
+        0.024594506166008136,
+        0.5718311775202033
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5133718475737838,
+        -0.11917012736956145,
+        0.05056866087078798
+      ],
+      "actor_direction_errors": [
+        -0.025157734751701355,
+        0.10715847462415695
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0712766647338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.7400000000000005,
+      "base_xyz": [
+        1.3668846856451593,
+        0.022866648680020252,
+        0.5731094531185881
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5135590320501291,
+        -0.1198354681810964,
+        0.06786768373784582
+      ],
+      "actor_direction_errors": [
+        -0.025157734751701355,
+        0.10715847462415695
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0712766647338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.7600000000000006,
+      "base_xyz": [
+        1.3774605045630004,
+        0.021373411010711836,
+        0.574531880791215
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.51978668857766,
+        -0.11281172972016751,
+        0.08489538706690672
+      ],
+      "actor_direction_errors": [
+        -0.025157734751701355,
+        0.10715847462415695
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0712766647338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.7800000000000006,
+      "base_xyz": [
+        1.388257658785364,
+        0.020007348008760754,
+        0.5758277100985003
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5314653688815103,
+        -0.10632817838484661,
+        0.08543681508120665
+      ],
+      "actor_direction_errors": [
+        -0.025157734751701355,
+        0.10715847462415695
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0712766647338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.8000000000000006,
+      "base_xyz": [
+        1.399367424106514,
+        0.01865378194856524,
+        0.5768887333044629
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5427607735887193,
+        -0.10315192456021352,
+        0.0737514031630744
+      ],
+      "actor_direction_errors": [
+        -0.025157734751701355,
+        0.10715847462415695
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0712766647338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.8200000000000006,
+      "base_xyz": [
+        1.410889041893824,
+        0.017333562135596715,
+        0.5776743725138807
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.562050245218084,
+        -0.10315846653215305,
+        0.058928945385598536
+      ],
+      "actor_direction_errors": [
+        -0.014310718514025211,
+        0.11697324365377426
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0751181840896606,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.8400000000000006,
+      "base_xyz": [
+        1.4228058669677475,
+        0.01614295575491692,
+        0.5781246897392224
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5825214755845822,
+        -0.10125406286880684,
+        0.0423005124097484
+      ],
+      "actor_direction_errors": [
+        -0.014310718514025211,
+        0.11697324365377426
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0751181840896606,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.8600000000000007,
+      "base_xyz": [
+        1.4351382776791157,
+        0.015080098650957802,
+        0.5781893084646617
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6041913485194047,
+        -0.10035050016445732,
+        0.026748179321763356
+      ],
+      "actor_direction_errors": [
+        -0.014310718514025211,
+        0.11697324365377426
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0751181840896606,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.8800000000000007,
+      "base_xyz": [
+        1.4479689605920887,
+        0.01410971541397557,
+        0.5778253654714084
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.629731267376027,
+        -0.10157915267154026,
+        0.0117985964529891
+      ],
+      "actor_direction_errors": [
+        -0.014310718514025211,
+        0.11697324365377426
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0751181840896606,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.9000000000000007,
+      "base_xyz": [
+        1.4613254267892457,
+        0.013263194607165574,
+        0.5772062414618051
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.659012304909185,
+        -0.10113857999211413,
+        -0.0035360680211343302
+      ],
+      "actor_direction_errors": [
+        -0.014310718514025211,
+        0.11697324365377426
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0751181840896606,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.9200000000000007,
+      "base_xyz": [
+        1.4749649777503446,
+        0.012475854879369433,
+        0.5772499880198623
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6772858052079224,
+        -0.10321554335330806,
+        0.016624744916301414
+      ],
+      "actor_direction_errors": [
+        -0.029004501178860664,
+        0.10242920368909836
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0223360061645508,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.9400000000000007,
+      "base_xyz": [
+        1.488587488679786,
+        0.011553357196953499,
+        0.5780122209445302
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6751330219932702,
+        -0.11433552907810468,
+        0.0628642102528569
+      ],
+      "actor_direction_errors": [
+        -0.029004501178860664,
+        0.10242920368909836
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0223360061645508,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.9600000000000007,
+      "base_xyz": [
+        1.5019397998975543,
+        0.010270154888399883,
+        0.5788033388408338
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6586069413714812,
+        -0.13307572132360646,
+        0.06977506037812628
+      ],
+      "actor_direction_errors": [
+        -0.029004501178860664,
+        0.10242920368909836
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0223360061645508,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 0.9800000000000008,
+      "base_xyz": [
+        1.5147109612995668,
+        0.008632507397238748,
+        0.5795941854389367
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6343502688575413,
+        -0.15777460781179858,
+        0.052477275663060485
+      ],
+      "actor_direction_errors": [
+        -0.029004501178860664,
+        0.10242920368909836
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0223360061645508,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.0000000000000007,
+      "base_xyz": [
+        1.5267830461393088,
+        0.006895082524418918,
+        0.580453232712796
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5934849824837578,
+        -0.16220868863681076,
+        0.06120953216438399
+      ],
+      "actor_direction_errors": [
+        -0.029004501178860664,
+        0.10242920368909836
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0223360061645508,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.0200000000000002,
+      "base_xyz": [
+        1.5385417330602742,
+        0.005359956255240926,
+        0.5811888414026533
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5742638572500584,
+        -0.15089320171395154,
+        0.0566412485220652
+      ],
+      "actor_direction_errors": [
+        -0.0440225712954998,
+        0.08496880531311035
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.034550666809082,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.0399999999999998,
+      "base_xyz": [
+        1.5502251835100425,
+        0.004154865906982615,
+        0.5818016102640415
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.572355953662933,
+        -0.1341529133380666,
+        0.050622146462991964
+      ],
+      "actor_direction_errors": [
+        -0.0440225712954998,
+        0.08496880531311035
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.034550666809082,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.0599999999999994,
+      "base_xyz": [
+        1.5618718568666117,
+        0.0032562297867976104,
+        0.582421282192656
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5743812947569444,
+        -0.12136481349750165,
+        0.051192475225959155
+      ],
+      "actor_direction_errors": [
+        -0.0440225712954998,
+        0.08496880531311035
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.034550666809082,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.079999999999999,
+      "base_xyz": [
+        1.573382030170587,
+        0.0025789089742911373,
+        0.5829111445617262
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5677618698629741,
+        -0.11061337310871792,
+        0.046941675994547884
+      ],
+      "actor_direction_errors": [
+        -0.0440225712954998,
+        0.08496880531311035
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.034550666809082,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.0999999999999985,
+      "base_xyz": [
+        1.584804894429255,
+        0.0020230798770065235,
+        0.5831710310113288
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5634072087236524,
+        -0.10303395649555827,
+        0.03544578555299081
+      ],
+      "actor_direction_errors": [
+        -0.0440225712954998,
+        0.08496880531311035
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.034550666809082,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.119999999999998,
+      "base_xyz": [
+        1.5961837867588948,
+        0.001533712622891107,
+        0.5831222980376343
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5611127027173335,
+        -0.09885023204412241,
+        0.02139765385660506
+      ],
+      "actor_direction_errors": [
+        -0.030813520774245262,
+        0.09502538293600082
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0156241655349731,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.1399999999999977,
+      "base_xyz": [
+        1.607584516352145,
+        0.0011079029137246602,
+        0.5826365747592789
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5622468192138297,
+        -0.09545444163649922,
+        0.0030785397472936193
+      ],
+      "actor_direction_errors": [
+        -0.030813520774245262,
+        0.09502538293600082
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0156241655349731,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.1599999999999973,
+      "base_xyz": [
+        1.6190745725802695,
+        0.0007329889545926518,
+        0.5815489186534155
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5684169842480244,
+        -0.09160682973000493,
+        -0.021454187620936555
+      ],
+      "actor_direction_errors": [
+        -0.030813520774245262,
+        0.09502538293600082
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0156241655349731,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.1799999999999968,
+      "base_xyz": [
+        1.6307068536565694,
+        0.00034567810490885594,
+        0.57971934530137
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5768861787870015,
+        -0.08952567953074021,
+        -0.053717363343941324
+      ],
+      "actor_direction_errors": [
+        -0.030813520774245262,
+        0.09502538293600082
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0156241655349731,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.1999999999999964,
+      "base_xyz": [
+        1.642522597559428,
+        -0.0001031830912503845,
+        0.5772483759901021
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5885305032997795,
+        -0.09081759663719127,
+        -0.0883650609594661
+      ],
+      "actor_direction_errors": [
+        -0.030813520774245262,
+        0.09502538293600082
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0156241655349731,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.219999999999996,
+      "base_xyz": [
+        1.6544399509751144,
+        -0.0005459227137469663,
+        0.5748669477100197
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5966471979184502,
+        -0.08902192991144672,
+        -0.09690567469373369
+      ],
+      "actor_direction_errors": [
+        -0.010748906061053276,
+        0.11218210309743881
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9895516633987427,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.2399999999999956,
+      "base_xyz": [
+        1.6663494786650288,
+        -0.0008503760967460485,
+        0.5728882906977794
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5945159085799341,
+        -0.08080325057766162,
+        -0.07736616524983364
+      ],
+      "actor_direction_errors": [
+        -0.010748906061053276,
+        0.11218210309743881
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9895516633987427,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.2599999999999951,
+      "base_xyz": [
+        1.6782482639966139,
+        -0.0008760968299781136,
+        0.5712089698993564
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5901910339529662,
+        -0.0663523468515362,
+        -0.06759545728366557
+      ],
+      "actor_direction_errors": [
+        -0.010748906061053276,
+        0.11218210309743881
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9895516633987427,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.2799999999999947,
+      "base_xyz": [
+        1.6900138896582504,
+        -0.0006041153040424747,
+        0.570259409866753
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5889382736799716,
+        -0.05651256711990679,
+        -0.04042005133475604
+      ],
+      "actor_direction_errors": [
+        -0.010748906061053276,
+        0.11218210309743881
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9895516633987427,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.2999999999999943,
+      "base_xyz": [
+        1.7015370861683659,
+        -0.00014808610760277605,
+        0.5698264352817166
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5786753316074861,
+        -0.0479604988258228,
+        -0.004939193657220134
+      ],
+      "actor_direction_errors": [
+        -0.010748906061053276,
+        0.11218210309743881
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.9895516633987427,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.3199999999999938,
+      "base_xyz": [
+        1.7131199868343447,
+        0.000303789151880954,
+        0.5696837242209811
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5757923492370064,
+        -0.04753008697391213,
+        0.01813335876039636
+      ],
+      "actor_direction_errors": [
+        0.013622204773128033,
+        0.13386501371860504
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0048704147338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.3399999999999934,
+      "base_xyz": [
+        1.725197619150361,
+        0.0008160911877550655,
+        0.5697934037721117
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5922668874791731,
+        -0.04733141679263112,
+        0.03228486838669905
+      ],
+      "actor_direction_errors": [
+        0.013622204773128033,
+        0.13386501371860504
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0048704147338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.359999999999993,
+      "base_xyz": [
+        1.737912131716588,
+        0.0015502140233408898,
+        0.5700575701114589
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.625720514661316,
+        -0.04425036211337165,
+        0.04809489645155694
+      ],
+      "actor_direction_errors": [
+        0.013622204773128033,
+        0.13386501371860504
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0048704147338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.3799999999999926,
+      "base_xyz": [
+        1.7510780936967156,
+        0.0025805350117744257,
+        0.5701200087005357
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6519293417432999,
+        -0.035787310696862314,
+        0.043629619458351886
+      ],
+      "actor_direction_errors": [
+        0.013622204773128033,
+        0.13386501371860504
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0048704147338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.3999999999999921,
+      "base_xyz": [
+        1.7646082020662992,
+        0.00385864238721646,
+        0.5697456063906946
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6737961843879201,
+        -0.028817971111391477,
+        0.029423993581603053
+      ],
+      "actor_direction_errors": [
+        0.013622204773128033,
+        0.13386501371860504
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0048704147338867,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.4199999999999917,
+      "base_xyz": [
+        1.7785168787831371,
+        0.005323747367053841,
+        0.5687932493102608
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.696556434196081,
+        -0.025516689636370257,
+        0.0076320289380098424
+      ],
+      "actor_direction_errors": [
+        0.0011143009178340435,
+        0.12190170586109161
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.9435281753540039,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.4399999999999913,
+      "base_xyz": [
+        1.7926690975983761,
+        0.006861437970029748,
+        0.5680486878793705
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7160233269522277,
+        -0.026592882581456475,
+        0.0007979193515333868
+      ],
+      "actor_direction_errors": [
+        0.0011143009178340435,
+        0.12190170586109161
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9435281753540039,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.4599999999999909,
+      "base_xyz": [
+        1.8069079625754398,
+        0.00825282017500683,
+        0.5680165910388353
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7155458043818931,
+        -0.0403304865540284,
+        0.040889445402544175
+      ],
+      "actor_direction_errors": [
+        0.0011143009178340435,
+        0.12190170586109161
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9435281753540039,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.4799999999999904,
+      "base_xyz": [
+        1.8210800479796871,
+        0.009328671678038036,
+        0.5686063083364434
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7098117720737626,
+        -0.060289640553709535,
+        0.0653697974509546
+      ],
+      "actor_direction_errors": [
+        0.0011143009178340435,
+        0.12190170586109161
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9435281753540039,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.49999999999999,
+      "base_xyz": [
+        1.8349505106338757,
+        0.010037065441102703,
+        0.5696956886501549
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6891478130457698,
+        -0.08383842991293333,
+        0.08911702987233819
+      ],
+      "actor_direction_errors": [
+        0.0011143009178340435,
+        0.12190170586109161
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9435281753540039,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.5199999999999896,
+      "base_xyz": [
+        1.8484435934274006,
+        0.010297253841224839,
+        0.5707025410647554
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6654622572972654,
+        -0.11017234910594678,
+        0.09212395757110388
+      ],
+      "actor_direction_errors": [
+        -0.023001324385404587,
+        0.09734779596328735
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9380547404289246,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.5399999999999892,
+      "base_xyz": [
+        1.8615672537767625,
+        0.009929061860447567,
+        0.5709285705614086
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6430692336655657,
+        -0.14357461712185243,
+        0.05598590331246109
+      ],
+      "actor_direction_errors": [
+        -0.023001324385404587,
+        0.09734779596328735
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9380547404289246,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.5599999999999887,
+      "base_xyz": [
+        1.8740956160910303,
+        0.009063806589222002,
+        0.5710150646547258
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6151327260608294,
+        -0.1729432364174187,
+        0.021158907450603892
+      ],
+      "actor_direction_errors": [
+        -0.023001324385404587,
+        0.09734779596328735
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9380547404289246,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.5799999999999883,
+      "base_xyz": [
+        1.8860881989726472,
+        0.008136775399505356,
+        0.5714707833228743
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5818574782660066,
+        -0.17602855590908,
+        0.040500401966982444
+      ],
+      "actor_direction_errors": [
+        -0.023001324385404587,
+        0.09734779596328735
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9380547404289246,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.5999999999999879,
+      "base_xyz": [
+        1.8978258738723384,
+        0.007475622407030268,
+        0.5721793550622846
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5674632476637228,
+        -0.16285116553716217,
+        0.05728491266457422
+      ],
+      "actor_direction_errors": [
+        -0.023001324385404587,
+        0.09734779596328735
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9380547404289246,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.6199999999999875,
+      "base_xyz": [
+        1.9095605216818035,
+        0.007047183168313701,
+        0.5730179851534251
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.56818107990451,
+        -0.15375135259940576,
+        0.07627524801905222
+      ],
+      "actor_direction_errors": [
+        -0.0045552002266049385,
+        0.0793364942073822
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9340600967407227,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.639999999999987,
+      "base_xyz": [
+        1.921367135168662,
+        0.006702817189556894,
+        0.5737081678034041
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5703548490860252,
+        -0.1510862468266193,
+        0.07324957350357314
+      ],
+      "actor_direction_errors": [
+        -0.0045552002266049385,
+        0.0793364942073822
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9340600967407227,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.6599999999999866,
+      "base_xyz": [
+        1.9333321835564607,
+        0.006369406268667088,
+        0.5741585549018277
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5754979606488,
+        -0.15345034817527645,
+        0.06421332603489043
+      ],
+      "actor_direction_errors": [
+        -0.0045552002266049385,
+        0.0793364942073822
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9340600967407227,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.6799999999999862,
+      "base_xyz": [
+        1.9454424836583026,
+        0.0061046567905602995,
+        0.5741861828913887
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5852226398555684,
+        -0.1546497968250108,
+        0.047737797011913566
+      ],
+      "actor_direction_errors": [
+        -0.0045552002266049385,
+        0.0793364942073822
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9340600967407227,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.6999999999999857,
+      "base_xyz": [
+        1.9576217762556736,
+        0.005922988865081582,
+        0.5734381144761246
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5916048314300242,
+        -0.15216884205552034,
+        0.01970703704056074
+      ],
+      "actor_direction_errors": [
+        -0.0045552002266049385,
+        0.0793364942073822
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9340600967407227,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.7199999999999853,
+      "base_xyz": [
+        1.9699654866198153,
+        0.005759235676289182,
+        0.5715338723868195
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6015612740021484,
+        -0.1511567499755549,
+        -0.028735208298857014
+      ],
+      "actor_direction_errors": [
+        0.07837267220020294,
+        0.09062071889638901
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9255101680755615,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.739999999999985,
+      "base_xyz": [
+        1.9825758472106298,
+        0.005636690463642161,
+        0.5682737898014015
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6211796518028234,
+        -0.15479936002121453,
+        -0.08518011802002917
+      ],
+      "actor_direction_errors": [
+        0.07837267220020294,
+        0.09062071889638901
+      ],
+      "goals_reached": 0,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9255101680755615,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.7599999999999845,
+      "base_xyz": [
+        1.9954734678001584,
+        0.005693452944231153,
+        0.5634002376981562
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6431945859587539,
+        -0.15265194365584253,
+        -0.15136055166488238
+      ],
+      "actor_direction_errors": [
+        0.07837267220020294,
+        0.09062071889638901
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.9255101680755615,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.779999999999984,
+      "base_xyz": [
+        2.0086932297466804,
+        0.00604620120798745,
+        0.5574045956782041
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.673938466560182,
+        -0.15151549550723986,
+        -0.2264899771831672
+      ],
+      "actor_direction_errors": [
+        0.07837267220020294,
+        0.09062071889638901
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9255101680755615,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.7999999999999836,
+      "base_xyz": [
+        2.0218986806195867,
+        0.006851813863589639,
+        0.5510889156820856
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6889786689434853,
+        -0.12722957530532006,
+        -0.2231529319372435
+      ],
+      "actor_direction_errors": [
+        0.07837267220020294,
+        0.09062071889638901
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9255101680755615,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.8199999999999832,
+      "base_xyz": [
+        2.0347240630323262,
+        0.008335404120935471,
+        0.5448519565272523
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6763591756653463,
+        -0.09122212505381389,
+        -0.25069860950212297
+      ],
+      "actor_direction_errors": [
+        0.11102240532636642,
+        -0.3482249081134796
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.8287534117698669,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.8399999999999828,
+      "base_xyz": [
+        2.046968160467556,
+        0.010701649313104546,
+        0.5401996422939007
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6486889441065641,
+        -0.044468395029565906,
+        -0.21638525837349862
+      ],
+      "actor_direction_errors": [
+        0.11102240532636642,
+        -0.3482249081134796
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8287534117698669,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.8599999999999823,
+      "base_xyz": [
+        2.058865058428135,
+        0.013687882939412435,
+        0.5372442041024278
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6258540201604456,
+        -0.018117483599496338,
+        -0.1300470735937595
+      ],
+      "actor_direction_errors": [
+        0.11102240532636642,
+        -0.3482249081134796
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8287534117698669,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.879999999999982,
+      "base_xyz": [
+        2.0705557849012326,
+        0.01692289259782502,
+        0.5356241242079722
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6215342880267613,
+        0.008326095842424167,
+        -0.019708950889555682
+      ],
+      "actor_direction_errors": [
+        0.11102240532636642,
+        -0.3482249081134796
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8287534117698669,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.8999999999999815,
+      "base_xyz": [
+        2.0817494942327013,
+        0.02022123008815258,
+        0.5345175481223845
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5925958307270615,
+        0.011057257783487161,
+        -0.03422783275131402
+      ],
+      "actor_direction_errors": [
+        0.11102240532636642,
+        -0.3482249081134796
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8287534117698669,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.919999999999981,
+      "base_xyz": [
+        2.0928562202118344,
+        0.0242304415087114,
+        0.5350627924435487
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.577756720867479,
+        0.04546546696678426,
+        0.045195971644906546
+      ],
+      "actor_direction_errors": [
+        0.10588867217302322,
+        -0.3794795274734497
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8398352265357971,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.9399999999999806,
+      "base_xyz": [
+        2.104121980107832,
+        0.029111342901704612,
+        0.5366337518913763
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5912847122499368,
+        0.08273172405761692,
+        0.12381273630490092
+      ],
+      "actor_direction_errors": [
+        0.10588867217302322,
+        -0.3794795274734497
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8398352265357971,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.9599999999999802,
+      "base_xyz": [
+        2.1154724135011,
+        0.03458446921645629,
+        0.5379125177940309
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6078184448249174,
+        0.10969641347215474,
+        0.13190998275053142
+      ],
+      "actor_direction_errors": [
+        0.10588867217302322,
+        -0.3794795274734497
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8398352265357971,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.9799999999999798,
+      "base_xyz": [
+        2.1268471709950303,
+        0.040297506686631415,
+        0.5383154600724632
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6211819949406849,
+        0.12277171342002483,
+        0.09049582852577383
+      ],
+      "actor_direction_errors": [
+        0.10588867217302322,
+        -0.3794795274734497
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8398352265357971,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 1.9999999999999793,
+      "base_xyz": [
+        2.1380073732171865,
+        0.04587144666418685,
+        0.5384703740094932
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6197280554952307,
+        0.12282119938456786,
+        0.06537106106521252
+      ],
+      "actor_direction_errors": [
+        0.10588867217302322,
+        -0.3794795274734497
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.8398352265357971,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.019999999999979,
+      "base_xyz": [
+        2.148924300881937,
+        0.051098049985641596,
+        0.5384375858287979
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5959619782711063,
+        0.11576876815909368,
+        0.06776263999463716
+      ],
+      "actor_direction_errors": [
+        0.08368931710720062,
+        -0.41950535774230957
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0674092769622803,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.0399999999999787,
+      "base_xyz": [
+        2.159831995883276,
+        0.05567897414490078,
+        0.537679688223347
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5876675184485467,
+        0.09364297736410351,
+        0.031575429452211895
+      ],
+      "actor_direction_errors": [
+        0.08368931710720062,
+        -0.41950535774230957
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0674092769622803,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.0599999999999783,
+      "base_xyz": [
+        2.1706194716670093,
+        0.059333437608675675,
+        0.5370978225419283
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5714591409870892,
+        0.05395051572359374,
+        0.0003987753885839329
+      ],
+      "actor_direction_errors": [
+        0.08368931710720062,
+        -0.41950535774230957
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0674092769622803,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.079999999999978,
+      "base_xyz": [
+        2.1811787260379334,
+        0.062300123122480046,
+        0.5375732295260797
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5486312234478312,
+        0.02484051179963017,
+        0.045055080472986515
+      ],
+      "actor_direction_errors": [
+        0.08368931710720062,
+        -0.41950535774230957
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0674092769622803,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.0999999999999774,
+      "base_xyz": [
+        2.1913664935630885,
+        0.06517008140491239,
+        0.5390922585598438
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.52689483668002,
+        0.016796227320087648,
+        0.09972073040116439
+      ],
+      "actor_direction_errors": [
+        0.08368931710720062,
+        -0.41950535774230957
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0674092769622803,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.119999999999977,
+      "base_xyz": [
+        2.2013042912447394,
+        0.06825739050910186,
+        0.5415103305282046
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5100493201954351,
+        0.022483901625880227,
+        0.1473435749383502
+      ],
+      "actor_direction_errors": [
+        0.09729772806167603,
+        -0.4286579191684723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1459038257598877,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.1399999999999766,
+      "base_xyz": [
+        2.211216375258552,
+        0.07144108840754843,
+        0.5443038158035713
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5041323236034521,
+        0.025643509434098363,
+        0.17283302069847556
+      ],
+      "actor_direction_errors": [
+        0.09729772806167603,
+        -0.4286579191684723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1459038257598877,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.159999999999976,
+      "base_xyz": [
+        2.2213710637817288,
+        0.07470063059766029,
+        0.5472029519469265
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5114388918798216,
+        0.027759488420915968,
+        0.17783891485669678
+      ],
+      "actor_direction_errors": [
+        0.09729772806167603,
+        -0.4286579191684723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1459038257598877,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.1799999999999757,
+      "base_xyz": [
+        2.2319332835923267,
+        0.07811837097680474,
+        0.5499656393739644
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5319607426371896,
+        0.0343836413716977,
+        0.17542067905849643
+      ],
+      "actor_direction_errors": [
+        0.09729772806167603,
+        -0.4286579191684723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1459038257598877,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.1999999999999753,
+      "base_xyz": [
+        2.242982460797599,
+        0.08175695474005863,
+        0.5523268031535694
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5588728905924677,
+        0.0429140547306925,
+        0.1555412227340312
+      ],
+      "actor_direction_errors": [
+        0.09729772806167603,
+        -0.4286579191684723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1459038257598877,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.219999999999975,
+      "base_xyz": [
+        2.2545683604502518,
+        0.0856871729775163,
+        0.5542037060992798
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.590173354999687,
+        0.05320940061201188,
+        0.13208291302267966
+      ],
+      "actor_direction_errors": [
+        0.11325441300868988,
+        -0.43863022327423096
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1674516201019287,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.2399999999999745,
+      "base_xyz": [
+        2.266718887496095,
+        0.08996347321323747,
+        0.5555307078494699
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.62285602785715,
+        0.06577946526447268,
+        0.10510431812350757
+      ],
+      "actor_direction_errors": [
+        0.11325441300868988,
+        -0.43863022327423096
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1674516201019287,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.259999999999974,
+      "base_xyz": [
+        2.2794478214124476,
+        0.09460431794393964,
+        0.5562546872872813
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6582728469361151,
+        0.07925045633401459,
+        0.0785998912307197
+      ],
+      "actor_direction_errors": [
+        0.11325441300868988,
+        -0.43863022327423096
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1674516201019287,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.2799999999999736,
+      "base_xyz": [
+        2.292631757266764,
+        0.09949270913753,
+        0.5558993152970051
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6899377839271428,
+        0.09147942898301012,
+        0.04249790267485313
+      ],
+      "actor_direction_errors": [
+        0.11325441300868988,
+        -0.43863022327423096
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.1674516201019287,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.299999999999973,
+      "base_xyz": [
+        2.3059875919522588,
+        0.10437169573602824,
+        0.5545825819725074
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7056657442524777,
+        0.09278297374018793,
+        -0.028145052750344426
+      ],
+      "actor_direction_errors": [
+        0.11325441300868988,
+        -0.43863022327423096
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.1674516201019287,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.3199999999999728,
+      "base_xyz": [
+        2.3192367254886115,
+        0.10910795781158288,
+        0.5532065692281539
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7012019508004572,
+        0.09524869260172525,
+        -0.05688140378322677
+      ],
+      "actor_direction_errors": [
+        0.14082902669906616,
+        -0.44344544410705566
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.188952922821045,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.3399999999999723,
+      "base_xyz": [
+        2.3321241583090075,
+        0.11373631463631759,
+        0.5521811192390219
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6817794432132536,
+        0.10278880392719336,
+        -0.05098523562157667
+      ],
+      "actor_direction_errors": [
+        0.14082902669906616,
+        -0.44344544410705566
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.188952922821045,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.359999999999972,
+      "base_xyz": [
+        2.3443739493024425,
+        0.1184111143749278,
+        0.5508614304528776
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6507926573381233,
+        0.116701955139383,
+        -0.052246279945573695
+      ],
+      "actor_direction_errors": [
+        0.14082902669906616,
+        -0.44344544410705566
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.188952922821045,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.3799999999999715,
+      "base_xyz": [
+        2.3557966686789262,
+        0.1230762084923404,
+        0.5484331576349418
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6210972148127992,
+        0.1398603734822348,
+        -0.10444296333638933
+      ],
+      "actor_direction_errors": [
+        0.14082902669906616,
+        -0.44344544410705566
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.188952922821045,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.399999999999971,
+      "base_xyz": [
+        2.3662773070207734,
+        0.12734290490325148,
+        0.5453843606240301
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.567832739675954,
+        0.1314536011284469,
+        -0.13855000696294306
+      ],
+      "actor_direction_errors": [
+        0.14082902669906616,
+        -0.44344544410705566
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.188952922821045,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.4199999999999706,
+      "base_xyz": [
+        2.3764231846775483,
+        0.13114047361282627,
+        0.5419395946363869
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5424592293943209,
+        0.10253201151734105,
+        -0.15946147307649375
+      ],
+      "actor_direction_errors": [
+        0.1854206770658493,
+        -0.43028590083122253
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        1.2656759023666382,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.43999999999997,
+      "base_xyz": [
+        2.3868555882528,
+        0.13491139715577335,
+        0.5395411466907233
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5535045605279467,
+        0.09562686201760655,
+        -0.12097002815300233
+      ],
+      "actor_direction_errors": [
+        0.1854206770658493,
+        -0.43028590083122253
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.2656759023666382,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.4599999999999698,
+      "base_xyz": [
+        2.3976116325192596,
+        0.13889295256346323,
+        0.5388118732481062
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5672416355636029,
+        0.11490187562003876,
+        -0.040988195853305105
+      ],
+      "actor_direction_errors": [
+        0.1854206770658493,
+        -0.43028590083122253
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.2656759023666382,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.4799999999999693,
+      "base_xyz": [
+        2.40881099440902,
+        0.14313644144460513,
+        0.5393483798692195
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5753389969256891,
+        0.1268084487126263,
+        0.04078330125197565
+      ],
+      "actor_direction_errors": [
+        0.1854206770658493,
+        -0.43028590083122253
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.2656759023666382,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.499999999999969,
+      "base_xyz": [
+        2.420362262917473,
+        0.14738469713865196,
+        0.5404702769291484
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.5982055672858912,
+        0.13525371433117467,
+        0.07775709995308029
+      ],
+      "actor_direction_errors": [
+        0.1854206770658493,
+        -0.43028590083122253
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.2656759023666382,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.5199999999999685,
+      "base_xyz": [
+        2.432067792255013,
+        0.15131887076381975,
+        0.541801239542763
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.599788010055383,
+        0.1147902418883964,
+        0.0950730446325185
+      ],
+      "actor_direction_errors": [
+        0.2100110948085785,
+        -0.4384215474128723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.1141563653945923,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.539999999999968,
+      "base_xyz": [
+        2.443960917216658,
+        0.15514496626921523,
+        0.5430780984344443
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.607377084012248,
+        0.11681359037799122,
+        0.09127851979448819
+      ],
+      "actor_direction_errors": [
+        0.2100110948085785,
+        -0.4384215474128723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.1141563653945923,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.5599999999999676,
+      "base_xyz": [
+        2.456053318179302,
+        0.15888456555733926,
+        0.544257884419991
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6142313325710671,
+        0.1214637425560672,
+        0.08704542165580265
+      ],
+      "actor_direction_errors": [
+        0.2100110948085785,
+        -0.4384215474128723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.1141563653945923,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.579999999999967,
+      "base_xyz": [
+        2.468385371636849,
+        0.16251313856757307,
+        0.5450781083321412
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6256873458793509,
+        0.12773055675756378,
+        0.07242643730020853
+      ],
+      "actor_direction_errors": [
+        0.2100110948085785,
+        -0.4384215474128723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.1141563653945923,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.599999999999967,
+      "base_xyz": [
+        2.481018406138692,
+        0.16561689770519455,
+        0.5453854439217277
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6346727835803188,
+        0.11785678046318229,
+        0.05314561246060792
+      ],
+      "actor_direction_errors": [
+        0.2100110948085785,
+        -0.4384215474128723
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.1141563653945923,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.6199999999999664,
+      "base_xyz": [
+        2.4941884956334017,
+        0.16765846909502988,
+        0.5450210534882066
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6518978871056069,
+        0.07431981196504281,
+        0.023647170704247007
+      ],
+      "actor_direction_errors": [
+        0.27997857332229614,
+        -0.42281240224838257
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.088889479637146,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.639999999999966,
+      "base_xyz": [
+        2.5077336481158934,
+        0.16848113129024164,
+        0.5440095847496512
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6723368348533273,
+        0.02029176820882135,
+        -0.0258302411611571
+      ],
+      "actor_direction_errors": [
+        0.27997857332229614,
+        -0.42281240224838257
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.088889479637146,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.6599999999999655,
+      "base_xyz": [
+        2.5211466263384392,
+        0.168321404240122,
+        0.5432446458335389
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6664613939692462,
+        -0.022449246326012508,
+        -0.03791881442745548
+      ],
+      "actor_direction_errors": [
+        0.27997857332229614,
+        -0.42281240224838257
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.088889479637146,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.679999999999965,
+      "base_xyz": [
+        2.5342897791009174,
+        0.1678929646882657,
+        0.5432939750819632
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6527363926590858,
+        -0.026715002705350134,
+        -0.01352460277720082
+      ],
+      "actor_direction_errors": [
+        0.27997857332229614,
+        -0.42281240224838257
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.088889479637146,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.6999999999999647,
+      "base_xyz": [
+        2.5473536727710564,
+        0.16748310793018248,
+        0.5442398260576999
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6469912710690552,
+        -0.015062241404120132,
+        0.036887679611001895
+      ],
+      "actor_direction_errors": [
+        0.27997857332229614,
+        -0.42281240224838257
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.088889479637146,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.7199999999999642,
+      "base_xyz": [
+        2.5606061746025346,
+        0.16701875071551628,
+        0.545775948012848
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6543032588978204,
+        0.00010691659751864598,
+        0.07003346649120008
+      ],
+      "actor_direction_errors": [
+        0.5147466659545898,
+        -0.3480733335018158
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.111054539680481,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.739999999999964,
+      "base_xyz": [
+        2.5742298401917667,
+        0.16636634748889773,
+        0.5476158624400184
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.674050882667332,
+        0.008263824558890825,
+        0.08703909145237841
+      ],
+      "actor_direction_errors": [
+        0.5147466659545898,
+        -0.3480733335018158
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.111054539680481,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.7599999999999634,
+      "base_xyz": [
+        2.58825871846361,
+        0.16565078703786887,
+        0.54932872746452
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6954571912065964,
+        0.019557688319448936,
+        0.09496988990679754
+      ],
+      "actor_direction_errors": [
+        0.5147466659545898,
+        -0.3480733335018158
+      ],
+      "goals_reached": 1,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.111054539680481,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.779999999999963,
+      "base_xyz": [
+        2.602755954082567,
+        0.16501191056715478,
+        0.5504221465846881
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7179045881593206,
+        0.03645719346355542,
+        0.06640767852741038
+      ],
+      "actor_direction_errors": [
+        0.5147466659545898,
+        -0.3480733335018158
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.111054539680481,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.7999999999999625,
+      "base_xyz": [
+        2.6177147287675995,
+        0.16454037147632783,
+        0.5515981183879081
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.74137176766682,
+        0.06565762690118401,
+        0.05847362302564355
+      ],
+      "actor_direction_errors": [
+        0.5147466659545898,
+        -0.3480733335018158
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.111054539680481,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.819999999999962,
+      "base_xyz": [
+        2.6329224754556884,
+        0.16435256793274067,
+        0.5523259054322971
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7516937530235421,
+        0.09854473317090398,
+        0.05848733574837281
+      ],
+      "actor_direction_errors": [
+        -0.26503798365592957,
+        0.16977310180664062
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0618963241577148,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.8399999999999617,
+      "base_xyz": [
+        2.6481671389835255,
+        0.16447916768114365,
+        0.5516568656074576
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7475501061374362,
+        0.12511300848997073,
+        -0.024114122303588444
+      ],
+      "actor_direction_errors": [
+        -0.26503798365592957,
+        0.16977310180664062
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0618963241577148,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.8599999999999612,
+      "base_xyz": [
+        2.6631907834595676,
+        0.1646059887086289,
+        0.5496995754595944
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7375039220350981,
+        0.14897731396706254,
+        -0.11263043344840074
+      ],
+      "actor_direction_errors": [
+        -0.26503798365592957,
+        0.16977310180664062
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0618963241577148,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.879999999999961,
+      "base_xyz": [
+        2.6776245528098657,
+        0.16420067946603936,
+        0.5474112068031541
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7145903003759878,
+        0.13934650645324145,
+        -0.1524227560306273
+      ],
+      "actor_direction_errors": [
+        -0.26503798365592957,
+        0.16977310180664062
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.0618963241577148,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.8999999999999604,
+      "base_xyz": [
+        2.691367267961833,
+        0.1629082083322725,
+        0.5460687775424469
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6935357836670522,
+        0.0988237172005335,
+        -0.12294607683894201
+      ],
+      "actor_direction_errors": [
+        -0.26503798365592957,
+        0.16977310180664062
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.0618963241577148,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.91999999999996,
+      "base_xyz": [
+        2.7044938071345848,
+        0.16072019858750475,
+        0.5463585347167785
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6721881710801869,
+        0.05628008472946489,
+        -0.030359764319889952
+      ],
+      "actor_direction_errors": [
+        -0.20450431108474731,
+        0.26699501276016235
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.3001759052276611,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.9399999999999595,
+      "base_xyz": [
+        2.7172297719314957,
+        0.15757511906860597,
+        0.5482754092394652
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6627230841885963,
+        0.01698685771816788,
+        0.05203220270836735
+      ],
+      "actor_direction_errors": [
+        -0.20450431108474731,
+        0.26699501276016235
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.3001759052276611,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.959999999999959,
+      "base_xyz": [
+        2.72963417614639,
+        0.15344244648347607,
+        0.5516367350013371
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6552377662091426,
+        -0.021114244358459367,
+        0.13865062339413847
+      ],
+      "actor_direction_errors": [
+        -0.20450431108474731,
+        0.26699501276016235
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.3001759052276611,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.9799999999999587,
+      "base_xyz": [
+        2.741745854497525,
+        0.14824743699902632,
+        0.5553073776129424
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6500230533327367,
+        -0.06582941877882699,
+        0.1826815807780716
+      ],
+      "actor_direction_errors": [
+        -0.20450431108474731,
+        0.26699501276016235
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.3001759052276611,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 2.9999999999999583,
+      "base_xyz": [
+        2.7535293440912483,
+        0.14193092187456863,
+        0.558108310892277
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6507341194702853,
+        -0.12233804311152521,
+        0.15232283391565868
+      ],
+      "actor_direction_errors": [
+        -0.20450431108474731,
+        0.26699501276016235
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.3001759052276611,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.019999999999958,
+      "base_xyz": [
+        2.7647683575783226,
+        0.13477750638810776,
+        0.5600178107058357
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.643160919672988,
+        -0.17312422434028818,
+        0.08376155680295316
+      ],
+      "actor_direction_errors": [
+        -0.15948209166526794,
+        0.33513790369033813
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.4037082195281982,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.0399999999999574,
+      "base_xyz": [
+        2.7756000192791013,
+        0.12714269995676616,
+        0.5618701603773424
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.625626311871636,
+        -0.20311075855824998,
+        0.08008240731761088
+      ],
+      "actor_direction_errors": [
+        -0.15948209166526794,
+        0.33513790369033813
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.4037082195281982,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.059999999999957,
+      "base_xyz": [
+        2.7863922996376087,
+        0.11922451374593265,
+        0.5635303768801121
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6304966175330454,
+        -0.21050430417220073,
+        0.07491521896492723
+      ],
+      "actor_direction_errors": [
+        -0.15948209166526794,
+        0.33513790369033813
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.4037082195281982,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.0799999999999566,
+      "base_xyz": [
+        2.797249116127579,
+        0.11087774833120048,
+        0.5648920236383549
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6387032645338968,
+        -0.22323517732923898,
+        0.0569996949468892
+      ],
+      "actor_direction_errors": [
+        -0.15948209166526794,
+        0.33513790369033813
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.4037082195281982,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.099999999999956,
+      "base_xyz": [
+        2.8083491037944093,
+        0.10193049302217748,
+        0.5660921800894221
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.655711811233181,
+        -0.2397818063852671,
+        0.04535008920327363
+      ],
+      "actor_direction_errors": [
+        -0.15948209166526794,
+        0.33513790369033813
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.4037082195281982,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.1199999999999557,
+      "base_xyz": [
+        2.819868910431538,
+        0.09224337626477098,
+        0.5671960999795
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.685329224003235,
+        -0.26098850384137057,
+        0.03621833030565236
+      ],
+      "actor_direction_errors": [
+        -0.08810025453567505,
+        0.4135083556175232
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.5044318437576294,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.1399999999999553,
+      "base_xyz": [
+        2.831892388645221,
+        0.0818754945963127,
+        0.5681233099622466
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7220306806529657,
+        -0.2826004433658548,
+        0.024987099039308815
+      ],
+      "actor_direction_errors": [
+        -0.08810025453567505,
+        0.4135083556175232
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.5044318437576294,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.159999999999955,
+      "base_xyz": [
+        2.84443418396562,
+        0.07115644089892086,
+        0.5683099282501356
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.758495705987313,
+        -0.28942123833035116,
+        0.004093929942812255
+      ],
+      "actor_direction_errors": [
+        -0.08810025453567505,
+        0.4135083556175232
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.5044318437576294,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.1799999999999544,
+      "base_xyz": [
+        2.8572918794067195,
+        0.06065931447059439,
+        0.5673645278782893
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.788413322577187,
+        -0.2761918045604836,
+        -0.059912300009256375
+      ],
+      "actor_direction_errors": [
+        -0.08810025453567505,
+        0.4135083556175232
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.5044318437576294,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.199999999999954,
+      "base_xyz": [
+        2.8700683937284572,
+        0.05100647755532685,
+        0.5660535636920521
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7778971582547928,
+        -0.2279609726869048,
+        -0.07997086934789512
+      ],
+      "actor_direction_errors": [
+        -0.08810025453567505,
+        0.4135083556175232
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5044318437576294,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.2199999999999536,
+      "base_xyz": [
+        2.882154688125316,
+        0.04252173451787624,
+        0.5653445353052655
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7374758559491013,
+        -0.17561166898285815,
+        -0.09707464145678131
+      ],
+      "actor_direction_errors": [
+        0.013742410577833652,
+        0.5146380066871643
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5596263408660889,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.239999999999953,
+      "base_xyz": [
+        2.8933957770112815,
+        0.03490357660370632,
+        0.566535737181794
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6674330058655877,
+        -0.1366927657422772,
+        -0.022985774681524226
+      ],
+      "actor_direction_errors": [
+        0.013742410577833652,
+        0.5146380066871643
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5596263408660889,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.2599999999999527,
+      "base_xyz": [
+        2.904283362503656,
+        0.027415866779247153,
+        0.5697012153879232
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6466115207961701,
+        -0.1326990743767398,
+        0.07836422943400939
+      ],
+      "actor_direction_errors": [
+        0.013742410577833652,
+        0.5146380066871643
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5596263408660889,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.2799999999999523,
+      "base_xyz": [
+        2.9150496524779665,
+        0.019880303664255177,
+        0.5738210270794671
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.651387119876047,
+        -0.1477783401603963,
+        0.14754567989681489
+      ],
+      "actor_direction_errors": [
+        0.013742410577833652,
+        0.5146380066871643
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5596263408660889,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.299999999999952,
+      "base_xyz": [
+        2.925726321232194,
+        0.012287360509561843,
+        0.5776069480341458
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6492265363172012,
+        -0.1602716687936785,
+        0.14958746181945282
+      ],
+      "actor_direction_errors": [
+        0.013742410577833652,
+        0.5146380066871643
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5596263408660889,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.3199999999999514,
+      "base_xyz": [
+        2.9364120443638444,
+        0.004490551290300037,
+        0.5802902133223722
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6468696228583988,
+        -0.17445499139980164,
+        0.10471465554052219
+      ],
+      "actor_direction_errors": [
+        0.046839747577905655,
+        0.5475751757621765
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5551567077636719,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.339999999999951,
+      "base_xyz": [
+        2.9472845318202205,
+        -0.003554720413219146,
+        0.5815809550271986
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6496652838411616,
+        -0.18782317274186988,
+        0.03684512726880673
+      ],
+      "actor_direction_errors": [
+        0.046839747577905655,
+        0.5475751757621765
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5551567077636719,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.3599999999999506,
+      "base_xyz": [
+        2.9584558643208174,
+        -0.011755623252462514,
+        0.581486254195598
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6589497848120346,
+        -0.19684727296978158,
+        -0.03758634585169886
+      ],
+      "actor_direction_errors": [
+        0.046839747577905655,
+        0.5475751757621765
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5551567077636719,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.37999999999995,
+      "base_xyz": [
+        2.9698665216518916,
+        -0.01993573238416612,
+        0.580603124480576
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6636749653904387,
+        -0.20418493704060636,
+        -0.10867635974176341
+      ],
+      "actor_direction_errors": [
+        0.046839747577905655,
+        0.5475751757621765
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5551567077636719,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.3999999999999497,
+      "base_xyz": [
+        2.9814631265365437,
+        -0.027763345542643966,
+        0.5800518697127681
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6710998638132853,
+        -0.19242179328924358,
+        -0.10032110236043884
+      ],
+      "actor_direction_errors": [
+        0.046839747577905655,
+        0.5475751757621765
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5551567077636719,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.4199999999999493,
+      "base_xyz": [
+        2.9933760597963985,
+        -0.03496226761334962,
+        0.579928835208337
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6781986305091462,
+        -0.16055043215182696,
+        -0.06214022734884998
+      ],
+      "actor_direction_errors": [
+        0.050992269068956375,
+        0.5423446893692017
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5028830766677856,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.439999999999949,
+      "base_xyz": [
+        3.0057727863124497,
+        -0.0415217987319468,
+        0.5795626271939035
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6900193772915918,
+        -0.1261057057013682,
+        -0.05081591094658333
+      ],
+      "actor_direction_errors": [
+        0.050992269068956375,
+        0.5423446893692017
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5028830766677856,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.4599999999999485,
+      "base_xyz": [
+        3.0185696512630806,
+        -0.04759172163912074,
+        0.5783298252901306
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6981897713690639,
+        -0.09995612041105247,
+        -0.08938556452437427
+      ],
+      "actor_direction_errors": [
+        0.050992269068956375,
+        0.5423446893692017
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5028830766677856,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.479999999999948,
+      "base_xyz": [
+        3.03152587904279,
+        -0.05336730669409122,
+        0.57629388290629
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6993540966656658,
+        -0.08559169265260602,
+        -0.13639219122232624
+      ],
+      "actor_direction_errors": [
+        0.050992269068956375,
+        0.5423446893692017
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5028830766677856,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.4999999999999476,
+      "base_xyz": [
+        3.0444454877965055,
+        -0.058958003955516855,
+        0.5738666914864988
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6952662903761707,
+        -0.08010679077709451,
+        -0.16316484101295753
+      ],
+      "actor_direction_errors": [
+        0.050992269068956375,
+        0.5423446893692017
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.5028830766677856,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.519999999999947,
+      "base_xyz": [
+        3.057275297610852,
+        -0.0643872803161806,
+        0.571261956348762
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6855408539802479,
+        -0.07763300622493842,
+        -0.16987249093236748
+      ],
+      "actor_direction_errors": [
+        0.04488038271665573,
+        0.5370022654533386
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.4280978441238403,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.5399999999999467,
+      "base_xyz": [
+        3.0702085170403333,
+        -0.06972469957309732,
+        0.5685125970909117
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6840682918484011,
+        -0.07476105929849669,
+        -0.17391653740891067
+      ],
+      "actor_direction_errors": [
+        0.04488038271665573,
+        0.5370022654533386
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.4280978441238403,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.5599999999999463,
+      "base_xyz": [
+        3.083458998383169,
+        -0.0749655819592029,
+        0.5657914118833203
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.6936499684921517,
+        -0.07237149364618477,
+        -0.18224729972552592
+      ],
+      "actor_direction_errors": [
+        0.04488038271665573,
+        0.5370022654533386
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.4280978441238403,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.579999999999946,
+      "base_xyz": [
+        3.0971917295217786,
+        -0.08004534060224242,
+        0.5635578495696457
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7123504585292207,
+        -0.0687390056523216,
+        -0.17076801551641674
+      ],
+      "actor_direction_errors": [
+        0.04488038271665573,
+        0.5370022654533386
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.4280978441238403,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.5999999999999455,
+      "base_xyz": [
+        3.111498193454844,
+        -0.0850246007086514,
+        0.5623080859129985
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7375391349077064,
+        -0.06680046496988865,
+        -0.1344928247820268
+      ],
+      "actor_direction_errors": [
+        0.04488038271665573,
+        0.5370022654533386
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.4280978441238403,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.619999999999945,
+      "base_xyz": [
+        3.1264897489929413,
+        -0.09009320363018161,
+        0.5624183670026885
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7706103846820975,
+        -0.0759504429405648,
+        -0.07473514704067073
+      ],
+      "actor_direction_errors": [
+        0.014747582376003265,
+        0.5113999247550964
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.352868676185608,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.6399999999999446,
+      "base_xyz": [
+        3.1422695195148993,
+        -0.0953662541495835,
+        0.5636969783395741
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8148914893060334,
+        -0.09749826414682225,
+        -0.004072235702671741
+      ],
+      "actor_direction_errors": [
+        0.014747582376003265,
+        0.5113999247550964
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.352868676185608,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.659999999999944,
+      "base_xyz": [
+        3.158807590096274,
+        -0.1007807508324,
+        0.5653690393833826
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8553621888170939,
+        -0.12372718582010464,
+        0.026558306310943927
+      ],
+      "actor_direction_errors": [
+        0.014747582376003265,
+        0.5113999247550964
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.352868676185608,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.6799999999999438,
+      "base_xyz": [
+        3.175980689469564,
+        -0.10618656799677598,
+        0.5664591772332187
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8900063111564762,
+        -0.14882790234880064,
+        0.028475617999365238
+      ],
+      "actor_direction_errors": [
+        0.014747582376003265,
+        0.5113999247550964
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.352868676185608,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.6999999999999433,
+      "base_xyz": [
+        3.193482882702391,
+        -0.11145914309402635,
+        0.565236964969592
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.906602921666931,
+        -0.16576325314536314,
+        -0.03763642337153776
+      ],
+      "actor_direction_errors": [
+        0.014747582376003265,
+        0.5113999247550964
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        1.352868676185608,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.719999999999943,
+      "base_xyz": [
+        3.211345431804233,
+        -0.11666283506626131,
+        0.56095822688655
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.905788019359306,
+        -0.1750725790711843,
+        -0.19341995038516796
+      ],
+      "actor_direction_errors": [
+        -0.08010410517454147,
+        0.42007580399513245
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        1.2591087818145752,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.7399999999999425,
+      "base_xyz": [
+        3.2289336205520986,
+        -0.12163406221246277,
+        0.5552169345148412
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.9121869556947668,
+        -0.18639428812542408,
+        -0.28591182555321315
+      ],
+      "actor_direction_errors": [
+        -0.08010410517454147,
+        0.42007580399513245
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.2591087818145752,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.759999999999942,
+      "base_xyz": [
+        3.245684286961917,
+        -0.12604832155576437,
+        0.5499455468528145
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8713941525542962,
+        -0.1819979568686525,
+        -0.29499986484428387
+      ],
+      "actor_direction_errors": [
+        -0.08010410517454147,
+        0.42007580399513245
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.2591087818145752,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.7799999999999416,
+      "base_xyz": [
+        3.261480088064168,
+        -0.12937332724883482,
+        0.5464236393338013
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8229531938386392,
+        -0.15822957559057332,
+        -0.21213741017722626
+      ],
+      "actor_direction_errors": [
+        -0.08010410517454147,
+        0.42007580399513245
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.2591087818145752,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.799999999999941,
+      "base_xyz": [
+        3.276470491026936,
+        -0.13144318364656818,
+        0.5451897522620703
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7709041788285049,
+        -0.13096720135719922,
+        -0.07815457192038204
+      ],
+      "actor_direction_errors": [
+        -0.08010410517454147,
+        0.42007580399513245
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.2591087818145752,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.8199999999999408,
+      "base_xyz": [
+        3.291094691208985,
+        -0.13247704678087555,
+        0.5454226694999027
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7386810374040307,
+        -0.10357144781450978,
+        0.027790943232427326
+      ],
+      "actor_direction_errors": [
+        -0.1722699999809265,
+        0.3367547392845154
+      ],
+      "goals_reached": 2,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0059552192687988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.8399999999999403,
+      "base_xyz": [
+        3.3055684109617767,
+        -0.13277333902684102,
+        0.5461154127156432
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7280671727864101,
+        -0.08018060099254098,
+        0.07521582074511071
+      ],
+      "actor_direction_errors": [
+        -0.1722699999809265,
+        0.3367547392845154
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0059552192687988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.85999999999994,
+      "base_xyz": [
+        3.319885719446367,
+        -0.1325406217876182,
+        0.5465783228192467
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7178880476937022,
+        -0.06551587304115425,
+        0.07906983154022389
+      ],
+      "actor_direction_errors": [
+        -0.1722699999809265,
+        0.3367547392845154
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0059552192687988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.8799999999999395,
+      "base_xyz": [
+        3.3341742218142003,
+        -0.13191560051578088,
+        0.546461513803783
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7151272935919195,
+        -0.05602860024533261,
+        0.06129257468166947
+      ],
+      "actor_direction_errors": [
+        -0.1722699999809265,
+        0.3367547392845154
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0059552192687988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.899999999999939,
+      "base_xyz": [
+        3.348584126431907,
+        -0.13095682213792778,
+        0.5456918125926655
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7215284164345165,
+        -0.05029163727082858,
+        0.031962220783514045
+      ],
+      "actor_direction_errors": [
+        -0.1722699999809265,
+        0.3367547392845154
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        1.0059552192687988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.9199999999999386,
+      "base_xyz": [
+        3.363159323817221,
+        -0.1295575093024205,
+        0.5447067358838356
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7316480780150468,
+        -0.041962492296829836,
+        0.01635346314980187
+      ],
+      "actor_direction_errors": [
+        0.2581864893436432,
+        -0.13478794693946838
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9074002504348755,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.939999999999938,
+      "base_xyz": [
+        3.3779219612849554,
+        -0.12746140773590278,
+        0.5439415026945394
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.740778368111688,
+        -0.027415391078793004,
+        0.019212342446205753
+      ],
+      "actor_direction_errors": [
+        0.2581864893436432,
+        -0.13478794693946838
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9074002504348755,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.959999999999938,
+      "base_xyz": [
+        3.392878676399666,
+        -0.12443986340427976,
+        0.5434420792363046
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7518038637618377,
+        -0.003915653576596378,
+        0.042213159261782096
+      ],
+      "actor_direction_errors": [
+        0.2581864893436432,
+        -0.13478794693946838
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9074002504348755,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.9799999999999374,
+      "base_xyz": [
+        3.4078643109518865,
+        -0.12057182014136837,
+        0.5423466043452992
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7637694072400779,
+        0.025421025803567497,
+        0.029324577219559396
+      ],
+      "actor_direction_errors": [
+        0.2581864893436432,
+        -0.13478794693946838
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.9074002504348755,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 3.999999999999937,
+      "base_xyz": [
+        3.422470087594468,
+        -0.11598343880188304,
+        0.5401394454591284
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7671391555544012,
+        0.06298695302545863,
+        -0.04833496107247691
+      ],
+      "actor_direction_errors": [
+        0.2581864893436432,
+        -0.13478794693946838
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.9074002504348755,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.0199999999999365,
+      "base_xyz": [
+        3.436523142259569,
+        -0.11060401861667742,
+        0.5379207215489223
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7521983816137497,
+        0.09120203291451418,
+        -0.058849597527228896
+      ],
+      "actor_direction_errors": [
+        0.17747162282466888,
+        -0.2389349639415741
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.9219808578491211,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.039999999999936,
+      "base_xyz": [
+        3.4502997852522785,
+        -0.10459182283406551,
+        0.5361945532328051
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7467596222788317,
+        0.10751360288929068,
+        -0.037439694705365956
+      ],
+      "actor_direction_errors": [
+        0.17747162282466888,
+        -0.2389349639415741
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.9219808578491211,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.059999999999936,
+      "base_xyz": [
+        3.4642934196521002,
+        -0.09800915221886984,
+        0.535253499295651
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.7562024069373832,
+        0.11542111005982131,
+        0.020888739650130717
+      ],
+      "actor_direction_errors": [
+        0.17747162282466888,
+        -0.2389349639415741
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.9219808578491211,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.079999999999935,
+      "base_xyz": [
+        3.4787850892811427,
+        -0.09072442299065875,
+        0.5346530143185652
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.789162907825363,
+        0.12456277043946622,
+        0.05354570013618658
+      ],
+      "actor_direction_errors": [
+        0.17747162282466888,
+        -0.2389349639415741
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.9219808578491211,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.099999999999935,
+      "base_xyz": [
+        3.493618292951258,
+        -0.08264145901464798,
+        0.5340484773879807
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8215632304111374,
+        0.1478252494529964,
+        0.06133136534106405
+      ],
+      "actor_direction_errors": [
+        0.17747162282466888,
+        -0.2389349639415741
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.9219808578491211,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.119999999999934,
+      "base_xyz": [
+        3.508618250417791,
+        -0.07390205899002501,
+        0.5331472792134
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8442260042810329,
+        0.16791574719420335,
+        0.06482115401968669
+      ],
+      "actor_direction_errors": [
+        0.08149970322847366,
+        -0.3524520993232727
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8149707913398743,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.139999999999934,
+      "base_xyz": [
+        3.523864854315643,
+        -0.06478873923152761,
+        0.5312244120213637
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8659562117930562,
+        0.17696898560896732,
+        0.04094276881313971
+      ],
+      "actor_direction_errors": [
+        0.08149970322847366,
+        -0.3524520993232727
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.8149707913398743,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.1599999999999335,
+      "base_xyz": [
+        3.539669771294943,
+        -0.05562709511480356,
+        0.5279618097146365
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.9036711413476683,
+        0.16870911181307385,
+        -0.0205408748314279
+      ],
+      "actor_direction_errors": [
+        0.08149970322847366,
+        -0.3524520993232727
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.8149707913398743,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.179999999999933,
+      "base_xyz": [
+        3.5560413187381625,
+        -0.04657154617576272,
+        0.5229491503458303
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.9454475708181118,
+        0.14018351434887732,
+        -0.05692971629480234
+      ],
+      "actor_direction_errors": [
+        0.08149970322847366,
+        -0.3524520993232727
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.8149707913398743,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.199999999999933,
+      "base_xyz": [
+        3.572659846785402,
+        -0.037565354467703344,
+        0.5148085023375194
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.9808016407064762,
+        0.13614216893295814,
+        -0.19987888963894787
+      ],
+      "actor_direction_errors": [
+        0.08149970322847366,
+        -0.3524520993232727
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.8149707913398743,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.219999999999932,
+      "base_xyz": [
+        3.589202849005238,
+        -0.028607799195068243,
+        0.503657797951121
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.0163486434798237,
+        0.1351970261768569,
+        -0.3375318379506697
+      ],
+      "actor_direction_errors": [
+        -0.011859798803925514,
+        -0.46280497312545776
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.6762582659721375,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.239999999999932,
+      "base_xyz": [
+        3.6051792987631255,
+        -0.01986961152378711,
+        0.48948601249853924
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.0251702816930626,
+        0.14034793058456269,
+        -0.47119491837685673
+      ],
+      "actor_direction_errors": [
+        -0.011859798803925514,
+        -0.46280497312545776
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.6762582659721375,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.259999999999931,
+      "base_xyz": [
+        3.6206580992335873,
+        -0.011155010959320179,
+        0.4729826349402804
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.0236833027090197,
+        0.1554836121711008,
+        -0.5800695108885247
+      ],
+      "actor_direction_errors": [
+        -0.011859798803925514,
+        -0.46280497312545776
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.6762582659721375,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.279999999999931,
+      "base_xyz": [
+        3.636501453403402,
+        -0.0018649309989638777,
+        0.45450246674037864
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.0600063985394543,
+        0.1792180501377466,
+        -0.6498619948732838
+      ],
+      "actor_direction_errors": [
+        -0.011859798803925514,
+        -0.46280497312545776
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.6762582659721375,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.2999999999999305,
+      "base_xyz": [
+        3.6526558949074404,
+        0.008021113914916316,
+        0.43471296504128093
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.1401439475264665,
+        0.20093217198648364,
+        -0.7138978175216453
+      ],
+      "actor_direction_errors": [
+        -0.011859798803925514,
+        -0.46280497312545776
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.6762582659721375,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.31999999999993,
+      "base_xyz": [
+        3.6686778483103097,
+        0.018464555732467282,
+        0.4144273913942414
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.1338488540895395,
+        0.24952412076583824,
+        -0.7566283591500809
+      ],
+      "actor_direction_errors": [
+        -0.07236713916063309,
+        -0.5394337177276611
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.45173171162605286,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.33999999999993,
+      "base_xyz": [
+        3.6859734158317288,
+        0.02986325242239124,
+        0.3972771767473805
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.1392137271536458,
+        0.29158826514834213,
+        -0.6912860689634635
+      ],
+      "actor_direction_errors": [
+        -0.07236713916063309,
+        -0.5394337177276611
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.45173171162605286,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.359999999999929,
+      "base_xyz": [
+        3.705626309839637,
+        0.04200921984140078,
+        0.38543963718616736
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.199265945511308,
+        0.26561726872342517,
+        -0.4384496706554635
+      ],
+      "actor_direction_errors": [
+        -0.07236713916063309,
+        -0.5394337177276611
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.45173171162605286,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.379999999999929,
+      "base_xyz": [
+        3.7269961549432904,
+        0.05487862106662874,
+        0.3792260607404151
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.2429818697571258,
+        0.23860368328106568,
+        -0.18954596034273424
+      ],
+      "actor_direction_errors": [
+        -0.07236713916063309,
+        -0.5394337177276611
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.45173171162605286,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.399999999999928,
+      "base_xyz": [
+        3.7492657449950118,
+        0.06959008050818394,
+        0.37720466537911523
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.2957561988530233,
+        0.23128228848741236,
+        0.039216443533464096
+      ],
+      "actor_direction_errors": [
+        -0.07236713916063309,
+        -0.5394337177276611
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.45173171162605286,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.419999999999928,
+      "base_xyz": [
+        3.7722353821804115,
+        0.08611333843348463,
+        0.3783840527953427
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.341120236472238,
+        0.27428739287779375,
+        0.2723780559492721
+      ],
+      "actor_direction_errors": [
+        -0.05286593735218048,
+        -0.5305676460266113
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.4868552088737488,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.439999999999928,
+      "base_xyz": [
+        3.797830511996107,
+        0.10269145757321899,
+        0.38196603792574874
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.395917390742253,
+        0.31639744169428385,
+        0.3508140322402472
+      ],
+      "actor_direction_errors": [
+        -0.05286593735218048,
+        -0.5305676460266113
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.4868552088737488,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.459999999999927,
+      "base_xyz": [
+        3.823730121185768,
+        0.11722458375018552,
+        0.3841731632286619
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.4564668697271737,
+        0.2612382418861677,
+        0.3774035367682285
+      ],
+      "actor_direction_errors": [
+        -0.05286593735218048,
+        -0.5305676460266113
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.4868552088737488,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.479999999999927,
+      "base_xyz": [
+        3.8480625769142693,
+        0.13276578481199136,
+        0.3790288085046364
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.3696268920274164,
+        0.30416421807362404,
+        0.04597056314098491
+      ],
+      "actor_direction_errors": [
+        -0.05286593735218048,
+        -0.5305676460266113
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.4868552088737488,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.499999999999926,
+      "base_xyz": [
+        3.8711927129865473,
+        0.1508380606034117,
+        0.36518362703140217
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.4309709441640959,
+        0.4790200585032598,
+        -0.5244560715055891
+      ],
+      "actor_direction_errors": [
+        -0.05286593735218048,
+        -0.5305676460266113
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.4868552088737488,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.519999999999926,
+      "base_xyz": [
+        3.893171544362063,
+        0.16825310865168472,
+        0.3502522809720804
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.4293938143812346,
+        0.454386638005771,
+        -0.6646021682742065
+      ],
+      "actor_direction_errors": [
+        -0.0771501362323761,
+        -0.5419102311134338
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.5304230451583862,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.539999999999925,
+      "base_xyz": [
+        3.913334928629285,
+        0.18294355419844816,
+        0.33671937597378276
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.3102761962773497,
+        0.3812631871412644,
+        -0.588077082335392
+      ],
+      "actor_direction_errors": [
+        -0.0771501362323761,
+        -0.5419102311134338
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.5304230451583862,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.559999999999925,
+      "base_xyz": [
+        3.9322804055266944,
+        0.19370744622294547,
+        0.3239761147943087
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.1985001207966335,
+        0.26781459581157524,
+        -0.4697002143352951
+      ],
+      "actor_direction_errors": [
+        -0.0771501362323761,
+        -0.5419102311134338
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.5304230451583862,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.579999999999925,
+      "base_xyz": [
+        3.9504773713534487,
+        0.202396239171775,
+        0.31100900691230354
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.1205574653392105,
+        0.20467562424356717,
+        -0.43970807896754227
+      ],
+      "actor_direction_errors": [
+        -0.0771501362323761,
+        -0.5419102311134338
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.5304230451583862,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.599999999999924,
+      "base_xyz": [
+        3.9681832862753414,
+        0.21100524768355985,
+        0.2982075552766296
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.1244850587932247,
+        0.22373103745673517,
+        -0.3809880242546127
+      ],
+      "actor_direction_errors": [
+        -0.0771501362323761,
+        -0.5419102311134338
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.5304230451583862,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.619999999999924,
+      "base_xyz": [
+        3.9838712019860036,
+        0.21909302322153124,
+        0.28529185509218774
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        1.056823082505228,
+        0.22718390211897493,
+        -0.38303982986616447
+      ],
+      "actor_direction_errors": [
+        -0.08144380897283554,
+        -0.504976749420166
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.2507436275482178,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.639999999999923,
+      "base_xyz": [
+        3.9977060170884284,
+        0.22442036857820588,
+        0.27393400080134367
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.9191071471680546,
+        0.1681395892666168,
+        -0.3828668458856639
+      ],
+      "actor_direction_errors": [
+        -0.08144380897283554,
+        -0.504976749420166
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.2507436275482178,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.659999999999923,
+      "base_xyz": [
+        4.012097926182407,
+        0.2245956619143767,
+        0.26589050477265813
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8242379608197097,
+        -0.02595968349845104,
+        -0.19829527904185
+      ],
+      "actor_direction_errors": [
+        -0.08144380897283554,
+        -0.504976749420166
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.2507436275482178,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.6799999999999224,
+      "base_xyz": [
+        4.028905351804596,
+        0.22119221148547896,
+        0.2607588639130544
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8311581247838236,
+        -0.1871860850689,
+        0.041535696242024855
+      ],
+      "actor_direction_errors": [
+        -0.08144380897283554,
+        -0.504976749420166
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.2507436275482178,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.699999999999922,
+      "base_xyz": [
+        4.048002270932012,
+        0.21598341765480572,
+        0.2561899557041431
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.9341768147638879,
+        -0.2318556704177251,
+        0.21189275958493925
+      ],
+      "actor_direction_errors": [
+        -0.08144380897283554,
+        -0.504976749420166
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.2507436275482178,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.719999999999922,
+      "base_xyz": [
+        4.0641237665619965,
+        0.21072602251283284,
+        0.2459725314071475
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.978590461735366,
+        -0.2695202739210425,
+        0.14240202117586281
+      ],
+      "actor_direction_errors": [
+        0.18708297610282898,
+        -0.29046881198883057
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.16752727329730988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.739999999999921,
+      "base_xyz": [
+        4.073005161901525,
+        0.21037238383691786,
+        0.2323963216182562
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.8657034990160338,
+        -0.4417261324814259,
+        -0.5354911890493866
+      ],
+      "actor_direction_errors": [
+        0.18708297610282898,
+        -0.29046881198883057
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.16752727329730988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.759999999999921,
+      "base_xyz": [
+        4.078936938952189,
+        0.22084836834127955,
+        0.2302399079980182
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.2868556435187283,
+        0.3391180816523366,
+        -0.22159502208914839
+      ],
+      "actor_direction_errors": [
+        0.18708297610282898,
+        -0.29046881198883057
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "depth_range_m": [
+        0.16752727329730988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.77999999999992,
+      "base_xyz": [
+        4.082931202327855,
+        0.2367618897314777,
+        0.22655643944363568
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.026843549254968145,
+        0.6329370464100404,
+        -0.5059348759781072
+      ],
+      "actor_direction_errors": [
+        0.18708297610282898,
+        -0.29046881198883057
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.16752727329730988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.79999999999992,
+      "base_xyz": [
+        4.087983041978778,
+        0.25130171387245426,
+        0.2219470526846306
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.045940794423851516,
+        0.8064750266057249,
+        -0.5450551507198045
+      ],
+      "actor_direction_errors": [
+        0.18708297610282898,
+        -0.29046881198883057
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.16752727329730988,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.8199999999999195,
+      "base_xyz": [
+        4.092043747322218,
+        0.26074778161745,
+        0.21425419002116275
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.16219874917584254,
+        0.42441465592215355,
+        -0.5627080011162618
+      ],
+      "actor_direction_errors": [
+        0.32262688875198364,
+        -0.03877636417746544
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "depth_range_m": [
+        0.13495196402072906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.839999999999919,
+      "base_xyz": [
+        4.0928711527714094,
+        0.2662476770052549,
+        0.20364227367678966
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.10476852318465897,
+        0.1524080720986154,
+        -0.5591272653720398
+      ],
+      "actor_direction_errors": [
+        0.32262688875198364,
+        -0.03877636417746544
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.13495196402072906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.859999999999919,
+      "base_xyz": [
+        4.091042932816991,
+        0.2673381550943185,
+        0.18889383575304866
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.037584422425251035,
+        -0.05422556904786441,
+        -0.692539256044482
+      ],
+      "actor_direction_errors": [
+        0.32262688875198364,
+        -0.03877636417746544
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.13495196402072906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.879999999999918,
+      "base_xyz": [
+        4.086951018130454,
+        0.26776363676379494,
+        0.1704202885924399
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        0.21615722592486256,
+        -0.13727037985598295,
+        -0.8196480356346465
+      ],
+      "actor_direction_errors": [
+        0.32262688875198364,
+        -0.03877636417746544
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "depth_range_m": [
+        0.13495196402072906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.899999999999918,
+      "base_xyz": [
+        4.07449989689517,
+        0.27158075551324545,
+        0.15585690518092282
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        -0.216839194613872,
+        -0.047246461649495905,
+        -0.8817890968989872
+      ],
+      "actor_direction_errors": [
+        0.32262688875198364,
+        -0.03877636417746544
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.13495196402072906,
+        2.0
+      ]
+    },
+    {
+      "episode": 0,
+      "time": 4.919999999999917,
+      "base_xyz": [
+        4.049203194677932,
+        0.27402261399555045,
+        0.1365253003582185
+      ],
+      "reference_vx": 0.4,
+      "reference_yaw_rate": 0.0,
+      "measured_velocity_body_m_s": [
+        -0.8128537407444936,
+        -0.7744573066512848,
+        -0.9856709874379316
+      ],
+      "actor_direction_errors": [
+        0.4801185727119446,
+        0.18717384338378906
+      ],
+      "goals_reached": 3,
+      "foot_contacts": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "depth_range_m": [
+        0.18687550723552704,
+        2.0
+      ]
+    }
+  ]
+}

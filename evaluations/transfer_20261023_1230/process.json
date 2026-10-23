@@ -1,0 +1,13 @@
+{
+  "pid": 654010,
+  "command": [
+    ".venv-sim2sim/bin/python",
+    "tools/monitor_student_transfer.py",
+    "--job-file",
+    "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/phase4/job_20261023_123031_630135.json",
+    "--baseline",
+    "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour/2026-10-23_11-52-10_phase4_student_s1_20261023_115204_886937/model_999.pt",
+    "--output",
+    "/home/user/Desktop/coop_ws/rbq10_vision_parkour/evaluations/transfer_20261023_1230"
+  ]
+}

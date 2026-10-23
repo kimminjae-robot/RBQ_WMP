@@ -1,0 +1,5342 @@
+[
+  {
+    "t": 0.04,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.544074296951294,
+    "goals": 0
+  },
+  {
+    "t": 0.08,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5438444018363953,
+    "goals": 0
+  },
+  {
+    "t": 0.12,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5537763237953186,
+    "goals": 0
+  },
+  {
+    "t": 0.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5672611594200134,
+    "goals": 0
+  },
+  {
+    "t": 0.2,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5769585371017456,
+    "goals": 0
+  },
+  {
+    "t": 0.24,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5817020535469055,
+    "goals": 0
+  },
+  {
+    "t": 0.28,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5836876034736633,
+    "goals": 0
+  },
+  {
+    "t": 0.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5841667056083679,
+    "goals": 0
+  },
+  {
+    "t": 0.36,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5836648344993591,
+    "goals": 0
+  },
+  {
+    "t": 0.4,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.580534815788269,
+    "goals": 0
+  },
+  {
+    "t": 0.44,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5809206962585449,
+    "goals": 0
+  },
+  {
+    "t": 0.48,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5829431414604187,
+    "goals": 0
+  },
+  {
+    "t": 0.52,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5859684944152832,
+    "goals": 0
+  },
+  {
+    "t": 0.56,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.588650107383728,
+    "goals": 0
+  },
+  {
+    "t": 0.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5899221301078796,
+    "goals": 0
+  },
+  {
+    "t": 0.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5890488028526306,
+    "goals": 0
+  },
+  {
+    "t": 0.68,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.587916374206543,
+    "goals": 0
+  },
+  {
+    "t": 0.72,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5877878069877625,
+    "goals": 0
+  },
+  {
+    "t": 0.76,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5883789658546448,
+    "goals": 0
+  },
+  {
+    "t": 0.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5874063372612,
+    "goals": 0
+  },
+  {
+    "t": 0.84,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.584669291973114,
+    "goals": 0
+  },
+  {
+    "t": 0.88,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5817840099334717,
+    "goals": 0
+  },
+  {
+    "t": 0.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5812274813652039,
+    "goals": 0
+  },
+  {
+    "t": 0.96,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5797643661499023,
+    "goals": 0
+  },
+  {
+    "t": 1.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5783171057701111,
+    "goals": 0
+  },
+  {
+    "t": 1.04,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5771360993385315,
+    "goals": 0
+  },
+  {
+    "t": 1.08,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5767801403999329,
+    "goals": 0
+  },
+  {
+    "t": 1.12,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5765031576156616,
+    "goals": 0
+  },
+  {
+    "t": 1.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5745082497596741,
+    "goals": 0
+  },
+  {
+    "t": 1.2,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.570057213306427,
+    "goals": 0
+  },
+  {
+    "t": 1.24,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5676150321960449,
+    "goals": 0
+  },
+  {
+    "t": 1.28,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5691951513290405,
+    "goals": 0
+  },
+  {
+    "t": 1.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.570608913898468,
+    "goals": 0
+  },
+  {
+    "t": 1.36,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5695805549621582,
+    "goals": 0
+  },
+  {
+    "t": 1.4000000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5667529106140137,
+    "goals": 0
+  },
+  {
+    "t": 1.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5641905069351196,
+    "goals": 0
+  },
+  {
+    "t": 1.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5636652708053589,
+    "goals": 0
+  },
+  {
+    "t": 1.52,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5625405311584473,
+    "goals": 0
+  },
+  {
+    "t": 1.56,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.561622679233551,
+    "goals": 0
+  },
+  {
+    "t": 1.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5607426166534424,
+    "goals": 0
+  },
+  {
+    "t": 1.6400000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5599180459976196,
+    "goals": 0
+  },
+  {
+    "t": 1.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5594884753227234,
+    "goals": 0
+  },
+  {
+    "t": 1.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5589953660964966,
+    "goals": 0
+  },
+  {
+    "t": 1.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5570360422134399,
+    "goals": 0
+  },
+  {
+    "t": 1.8,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5567548871040344,
+    "goals": 1
+  },
+  {
+    "t": 1.84,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5602717995643616,
+    "goals": 1
+  },
+  {
+    "t": 1.8800000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5641284584999084,
+    "goals": 1
+  },
+  {
+    "t": 1.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5664251446723938,
+    "goals": 1
+  },
+  {
+    "t": 1.96,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5658900737762451,
+    "goals": 1
+  },
+  {
+    "t": 2.0,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5635890364646912,
+    "goals": 1
+  },
+  {
+    "t": 2.04,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5654364824295044,
+    "goals": 1
+  },
+  {
+    "t": 2.08,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5682251453399658,
+    "goals": 1
+  },
+  {
+    "t": 2.12,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5689052939414978,
+    "goals": 1
+  },
+  {
+    "t": 2.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5687140226364136,
+    "goals": 1
+  },
+  {
+    "t": 2.2,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.569149911403656,
+    "goals": 1
+  },
+  {
+    "t": 2.24,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5700641870498657,
+    "goals": 1
+  },
+  {
+    "t": 2.2800000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5707318782806396,
+    "goals": 1
+  },
+  {
+    "t": 2.32,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5694980025291443,
+    "goals": 1
+  },
+  {
+    "t": 2.36,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.568499743938446,
+    "goals": 1
+  },
+  {
+    "t": 2.4,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5691303610801697,
+    "goals": 1
+  },
+  {
+    "t": 2.44,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5712820887565613,
+    "goals": 1
+  },
+  {
+    "t": 2.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5734215378761292,
+    "goals": 1
+  },
+  {
+    "t": 2.52,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5745808482170105,
+    "goals": 1
+  },
+  {
+    "t": 2.56,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5742223262786865,
+    "goals": 1
+  },
+  {
+    "t": 2.6,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5748093128204346,
+    "goals": 1
+  },
+  {
+    "t": 2.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5768934488296509,
+    "goals": 1
+  },
+  {
+    "t": 2.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5780603289604187,
+    "goals": 1
+  },
+  {
+    "t": 2.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5778880715370178,
+    "goals": 1
+  },
+  {
+    "t": 2.7600000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5768751502037048,
+    "goals": 1
+  },
+  {
+    "t": 2.8000000000000003,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5756011605262756,
+    "goals": 1
+  },
+  {
+    "t": 2.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5739640593528748,
+    "goals": 1
+  },
+  {
+    "t": 2.88,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5710198283195496,
+    "goals": 1
+  },
+  {
+    "t": 2.92,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5670039057731628,
+    "goals": 1
+  },
+  {
+    "t": 2.96,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5653812885284424,
+    "goals": 1
+  },
+  {
+    "t": 3.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5645067095756531,
+    "goals": 1
+  },
+  {
+    "t": 3.04,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5660451650619507,
+    "goals": 1
+  },
+  {
+    "t": 3.08,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5682653784751892,
+    "goals": 1
+  },
+  {
+    "t": 3.12,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5684607028961182,
+    "goals": 1
+  },
+  {
+    "t": 3.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5679272413253784,
+    "goals": 1
+  },
+  {
+    "t": 3.2,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5679752826690674,
+    "goals": 2
+  },
+  {
+    "t": 3.24,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5656774640083313,
+    "goals": 2
+  },
+  {
+    "t": 3.2800000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5628502368927002,
+    "goals": 2
+  },
+  {
+    "t": 3.3200000000000003,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5599820017814636,
+    "goals": 2
+  },
+  {
+    "t": 3.36,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5565042495727539,
+    "goals": 2
+  },
+  {
+    "t": 3.4,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5529352426528931,
+    "goals": 2
+  },
+  {
+    "t": 3.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5515040159225464,
+    "goals": 2
+  },
+  {
+    "t": 3.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5535630583763123,
+    "goals": 2
+  },
+  {
+    "t": 3.52,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5566724538803101,
+    "goals": 2
+  },
+  {
+    "t": 3.56,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5593541264533997,
+    "goals": 2
+  },
+  {
+    "t": 3.6,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5603178143501282,
+    "goals": 2
+  },
+  {
+    "t": 3.64,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5610862374305725,
+    "goals": 2
+  },
+  {
+    "t": 3.68,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5623045563697815,
+    "goals": 2
+  },
+  {
+    "t": 3.72,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5626433491706848,
+    "goals": 2
+  },
+  {
+    "t": 3.7600000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5601445436477661,
+    "goals": 2
+  },
+  {
+    "t": 3.8000000000000003,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5547798275947571,
+    "goals": 2
+  },
+  {
+    "t": 3.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.550048291683197,
+    "goals": 2
+  },
+  {
+    "t": 3.88,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.547092616558075,
+    "goals": 2
+  },
+  {
+    "t": 3.92,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5454068779945374,
+    "goals": 2
+  },
+  {
+    "t": 3.96,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5425876379013062,
+    "goals": 2
+  },
+  {
+    "t": 4.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.538777232170105,
+    "goals": 2
+  },
+  {
+    "t": 4.04,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5349698662757874,
+    "goals": 2
+  },
+  {
+    "t": 4.08,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5318095684051514,
+    "goals": 2
+  },
+  {
+    "t": 4.12,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.524062991142273,
+    "goals": 2
+  },
+  {
+    "t": 4.16,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.5019558668136597,
+    "goals": 2
+  },
+  {
+    "t": 4.2,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.4748353362083435,
+    "goals": 2
+  },
+  {
+    "t": 4.24,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.46223607659339905,
+    "goals": 2
+  },
+  {
+    "t": 4.28,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.4665319323539734,
+    "goals": 2
+  },
+  {
+    "t": 4.32,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.4795185625553131,
+    "goals": 2
+  },
+  {
+    "t": 4.36,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.49489825963974,
+    "goals": 2
+  },
+  {
+    "t": 4.4,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5099314451217651,
+    "goals": 2
+  },
+  {
+    "t": 4.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5227670669555664,
+    "goals": 2
+  },
+  {
+    "t": 4.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5315030217170715,
+    "goals": 2
+  },
+  {
+    "t": 4.5200000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5353823900222778,
+    "goals": 2
+  },
+  {
+    "t": 4.5600000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5345482230186462,
+    "goals": 2
+  },
+  {
+    "t": 4.6000000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5254178047180176,
+    "goals": 2
+  },
+  {
+    "t": 4.64,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5044593214988708,
+    "goals": 2
+  },
+  {
+    "t": 4.68,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.47923335433006287,
+    "goals": 2
+  },
+  {
+    "t": 4.72,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.4645002782344818,
+    "goals": 2
+  },
+  {
+    "t": 4.76,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.45615991950035095,
+    "goals": 2
+  },
+  {
+    "t": 4.8,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.45539581775665283,
+    "goals": 2
+  },
+  {
+    "t": 4.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.45210474729537964,
+    "goals": 2
+  },
+  {
+    "t": 4.88,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.44940391182899475,
+    "goals": 2
+  },
+  {
+    "t": 4.92,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.44890183210372925,
+    "goals": 2
+  },
+  {
+    "t": 4.96,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.4500115215778351,
+    "goals": 2
+  },
+  {
+    "t": 5.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.4516531527042389,
+    "goals": 2
+  },
+  {
+    "t": 5.04,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.45550957322120667,
+    "goals": 2
+  },
+  {
+    "t": 5.08,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.4609034061431885,
+    "goals": 2
+  },
+  {
+    "t": 5.12,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.46433478593826294,
+    "goals": 3
+  },
+  {
+    "t": 5.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.4676353633403778,
+    "goals": 3
+  },
+  {
+    "t": 5.2,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.476100355386734,
+    "goals": 3
+  },
+  {
+    "t": 5.24,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.4885503649711609,
+    "goals": 3
+  },
+  {
+    "t": 5.28,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5011155605316162,
+    "goals": 3
+  },
+  {
+    "t": 5.32,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5109300017356873,
+    "goals": 3
+  },
+  {
+    "t": 5.36,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5194088220596313,
+    "goals": 3
+  },
+  {
+    "t": 5.4,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5307899713516235,
+    "goals": 3
+  },
+  {
+    "t": 5.44,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5436486601829529,
+    "goals": 3
+  },
+  {
+    "t": 5.48,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5552032589912415,
+    "goals": 3
+  },
+  {
+    "t": 5.5200000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5624366998672485,
+    "goals": 3
+  },
+  {
+    "t": 5.5600000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5647034049034119,
+    "goals": 3
+  },
+  {
+    "t": 5.6000000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.563580334186554,
+    "goals": 3
+  },
+  {
+    "t": 5.64,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5633032917976379,
+    "goals": 3
+  },
+  {
+    "t": 5.68,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5635155439376831,
+    "goals": 3
+  },
+  {
+    "t": 5.72,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5579943656921387,
+    "goals": 3
+  },
+  {
+    "t": 5.76,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.5425054430961609,
+    "goals": 3
+  },
+  {
+    "t": 5.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.512587308883667,
+    "goals": 3
+  },
+  {
+    "t": 5.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.4705275297164917,
+    "goals": 3
+  },
+  {
+    "t": 5.88,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.4424428939819336,
+    "goals": 3
+  },
+  {
+    "t": 5.92,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.42474669218063354,
+    "goals": 3
+  },
+  {
+    "t": 5.96,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.41128894686698914,
+    "goals": 3
+  },
+  {
+    "t": 6.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.4060874879360199,
+    "goals": 3
+  },
+  {
+    "t": 6.04,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.4001682996749878,
+    "goals": 3
+  },
+  {
+    "t": 6.08,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.39175280928611755,
+    "goals": 3
+  },
+  {
+    "t": 6.12,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.3752899169921875,
+    "goals": 3
+  },
+  {
+    "t": 6.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.3597964346408844,
+    "goals": 3
+  },
+  {
+    "t": 6.2,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.3515917658805847,
+    "goals": 3
+  },
+  {
+    "t": 6.24,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.35817816853523254,
+    "goals": 3
+  },
+  {
+    "t": 6.28,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.36629417538642883,
+    "goals": 3
+  },
+  {
+    "t": 6.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.3601364493370056,
+    "goals": 3
+  },
+  {
+    "t": 6.36,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.3487050533294678,
+    "goals": 3
+  },
+  {
+    "t": 6.4,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.3411468267440796,
+    "goals": 3
+  },
+  {
+    "t": 6.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.33414968848228455,
+    "goals": 3
+  },
+  {
+    "t": 6.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.3191101551055908,
+    "goals": 3
+  },
+  {
+    "t": 6.5200000000000005,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.2939598262310028,
+    "goals": 3
+  },
+  {
+    "t": 6.5600000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.25108104944229126,
+    "goals": 3
+  },
+  {
+    "t": 6.6000000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.21888671815395355,
+    "goals": 3
+  },
+  {
+    "t": 6.640000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.18838343024253845,
+    "goals": 3
+  },
+  {
+    "t": 6.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.1791842132806778,
+    "goals": 3
+  },
+  {
+    "t": 6.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.18820370733737946,
+    "goals": 3
+  },
+  {
+    "t": 6.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.19495639204978943,
+    "goals": 3
+  },
+  {
+    "t": 6.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.20076493918895721,
+    "goals": 3
+  },
+  {
+    "t": 6.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.21024517714977264,
+    "goals": 3
+  },
+  {
+    "t": 6.88,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.23066285252571106,
+    "goals": 3
+  },
+  {
+    "t": 6.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.25756973028182983,
+    "goals": 3
+  },
+  {
+    "t": 6.96,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.2823842465877533,
+    "goals": 3
+  },
+  {
+    "t": 7.0,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.3235263228416443,
+    "goals": 3
+  },
+  {
+    "t": 7.04,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.375205397605896,
+    "goals": 3
+  },
+  {
+    "t": 7.08,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.4257725477218628,
+    "goals": 3
+  },
+  {
+    "t": 7.12,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.4641520380973816,
+    "goals": 3
+  },
+  {
+    "t": 7.16,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.49261176586151123,
+    "goals": 3
+  },
+  {
+    "t": 7.2,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5183919072151184,
+    "goals": 3
+  },
+  {
+    "t": 7.24,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5371258854866028,
+    "goals": 3
+  },
+  {
+    "t": 7.28,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5437406301498413,
+    "goals": 3
+  },
+  {
+    "t": 7.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5422578454017639,
+    "goals": 3
+  },
+  {
+    "t": 7.36,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.544904351234436,
+    "goals": 3
+  },
+  {
+    "t": 7.4,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5512986779212952,
+    "goals": 3
+  },
+  {
+    "t": 7.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5568487644195557,
+    "goals": 3
+  },
+  {
+    "t": 7.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5594158172607422,
+    "goals": 3
+  },
+  {
+    "t": 7.5200000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5557857155799866,
+    "goals": 3
+  },
+  {
+    "t": 7.5600000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5490670800209045,
+    "goals": 3
+  },
+  {
+    "t": 7.6000000000000005,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5416703820228577,
+    "goals": 3
+  },
+  {
+    "t": 7.640000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5298375487327576,
+    "goals": 3
+  },
+  {
+    "t": 7.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5184380412101746,
+    "goals": 3
+  },
+  {
+    "t": 7.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5124595165252686,
+    "goals": 3
+  },
+  {
+    "t": 7.76,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5101004242897034,
+    "goals": 3
+  },
+  {
+    "t": 7.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5112701654434204,
+    "goals": 3
+  },
+  {
+    "t": 7.84,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5226660966873169,
+    "goals": 3
+  },
+  {
+    "t": 7.88,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5285570621490479,
+    "goals": 3
+  },
+  {
+    "t": 7.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.522942304611206,
+    "goals": 3
+  },
+  {
+    "t": 7.96,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5201187133789062,
+    "goals": 3
+  },
+  {
+    "t": 8.0,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.516845166683197,
+    "goals": 3
+  },
+  {
+    "t": 8.040000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5119530558586121,
+    "goals": 3
+  },
+  {
+    "t": 8.08,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5000473260879517,
+    "goals": 3
+  },
+  {
+    "t": 8.120000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.48232707381248474,
+    "goals": 3
+  },
+  {
+    "t": 8.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.47021329402923584,
+    "goals": 3
+  },
+  {
+    "t": 8.2,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.4722021818161011,
+    "goals": 3
+  },
+  {
+    "t": 8.24,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.4927142262458801,
+    "goals": 3
+  },
+  {
+    "t": 8.28,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5227843523025513,
+    "goals": 3
+  },
+  {
+    "t": 8.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5495675206184387,
+    "goals": 3
+  },
+  {
+    "t": 8.36,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.5658400058746338,
+    "goals": 3
+  },
+  {
+    "t": 8.4,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.5593194365501404,
+    "goals": 3
+  },
+  {
+    "t": 8.44,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.5361416935920715,
+    "goals": 3
+  },
+  {
+    "t": 8.48,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.4995626211166382,
+    "goals": 3
+  },
+  {
+    "t": 8.52,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.44716307520866394,
+    "goals": 3
+  },
+  {
+    "t": 8.56,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.38511398434638977,
+    "goals": 3
+  },
+  {
+    "t": 8.6,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.31761202216148376,
+    "goals": 3
+  },
+  {
+    "t": 8.64,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.2447645515203476,
+    "goals": 3
+  },
+  {
+    "t": 8.68,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.1808212697505951,
+    "goals": 3
+  },
+  {
+    "t": 8.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.15183663368225098,
+    "goals": 3
+  },
+  {
+    "t": 8.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.15968096256256104,
+    "goals": 3
+  },
+  {
+    "t": 8.8,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.18149319291114807,
+    "goals": 3
+  },
+  {
+    "t": 8.84,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.21477088332176208,
+    "goals": 3
+  },
+  {
+    "t": 8.88,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.2550874352455139,
+    "goals": 3
+  },
+  {
+    "t": 8.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.291527658700943,
+    "goals": 3
+  },
+  {
+    "t": 8.96,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.31448259949684143,
+    "goals": 3
+  },
+  {
+    "t": 9.0,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.32237139344215393,
+    "goals": 3
+  },
+  {
+    "t": 9.040000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.32698386907577515,
+    "goals": 3
+  },
+  {
+    "t": 9.08,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.32809337973594666,
+    "goals": 3
+  },
+  {
+    "t": 9.120000000000001,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.3270122706890106,
+    "goals": 3
+  },
+  {
+    "t": 9.16,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.3197661340236664,
+    "goals": 3
+  },
+  {
+    "t": 9.200000000000001,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.3055477738380432,
+    "goals": 3
+  },
+  {
+    "t": 9.24,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.2896546721458435,
+    "goals": 3
+  },
+  {
+    "t": 9.28,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.2737559676170349,
+    "goals": 3
+  },
+  {
+    "t": 9.32,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.2682137191295624,
+    "goals": 3
+  },
+  {
+    "t": 9.36,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.2463880181312561,
+    "goals": 3
+  },
+  {
+    "t": 9.4,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.22205564379692078,
+    "goals": 3
+  },
+  {
+    "t": 9.44,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.20504188537597656,
+    "goals": 3
+  },
+  {
+    "t": 9.48,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.21073803305625916,
+    "goals": 3
+  },
+  {
+    "t": 9.52,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.22140128910541534,
+    "goals": 3
+  },
+  {
+    "t": 9.56,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.23292620480060577,
+    "goals": 3
+  },
+  {
+    "t": 9.6,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.24493065476417542,
+    "goals": 3
+  },
+  {
+    "t": 9.64,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.2664082944393158,
+    "goals": 3
+  },
+  {
+    "t": 9.68,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.28532567620277405,
+    "goals": 3
+  },
+  {
+    "t": 9.72,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.281149297952652,
+    "goals": 3
+  },
+  {
+    "t": 9.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.25946924090385437,
+    "goals": 3
+  },
+  {
+    "t": 9.8,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.23472285270690918,
+    "goals": 3
+  },
+  {
+    "t": 9.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.2148977369070053,
+    "goals": 3
+  },
+  {
+    "t": 9.88,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.20652782917022705,
+    "goals": 3
+  },
+  {
+    "t": 9.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.21301217377185822,
+    "goals": 3
+  },
+  {
+    "t": 9.96,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.2279106080532074,
+    "goals": 3
+  },
+  {
+    "t": 10.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.238581120967865,
+    "goals": 3
+  },
+  {
+    "t": 10.040000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.24437162280082703,
+    "goals": 3
+  },
+  {
+    "t": 10.08,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.24268920719623566,
+    "goals": 3
+  },
+  {
+    "t": 10.120000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.24705155193805695,
+    "goals": 3
+  },
+  {
+    "t": 10.16,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.25248369574546814,
+    "goals": 3
+  },
+  {
+    "t": 10.200000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.2595388889312744,
+    "goals": 3
+  },
+  {
+    "t": 10.24,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.26147788763046265,
+    "goals": 3
+  },
+  {
+    "t": 10.28,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.275665283203125,
+    "goals": 3
+  },
+  {
+    "t": 10.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.2842939496040344,
+    "goals": 3
+  },
+  {
+    "t": 10.36,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.31466057896614075,
+    "goals": 3
+  },
+  {
+    "t": 10.4,
+    "airborne": true,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.35347986221313477,
+    "goals": 3
+  },
+  {
+    "t": 10.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.5475316047668457,
+    "goals": 0
+  },
+  {
+    "t": 10.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.539013683795929,
+    "goals": 0
+  },
+  {
+    "t": 10.52,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5368922352790833,
+    "goals": 0
+  },
+  {
+    "t": 10.56,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5433066487312317,
+    "goals": 0
+  },
+  {
+    "t": 10.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5563884973526001,
+    "goals": 0
+  },
+  {
+    "t": 10.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.5722199082374573,
+    "goals": 0
+  },
+  {
+    "t": 10.68,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.58416748046875,
+    "goals": 0
+  },
+  {
+    "t": 10.72,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5925188660621643,
+    "goals": 0
+  },
+  {
+    "t": 10.76,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5984141230583191,
+    "goals": 0
+  },
+  {
+    "t": 10.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.6018524765968323,
+    "goals": 0
+  },
+  {
+    "t": 10.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.6012792587280273,
+    "goals": 0
+  },
+  {
+    "t": 10.88,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5996581315994263,
+    "goals": 0
+  },
+  {
+    "t": 10.92,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.597951352596283,
+    "goals": 0
+  },
+  {
+    "t": 10.96,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5966228246688843,
+    "goals": 0
+  },
+  {
+    "t": 11.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.595197856426239,
+    "goals": 0
+  },
+  {
+    "t": 11.040000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5931758284568787,
+    "goals": 0
+  },
+  {
+    "t": 11.08,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.590754508972168,
+    "goals": 0
+  },
+  {
+    "t": 11.120000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5872731804847717,
+    "goals": 0
+  },
+  {
+    "t": 11.16,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.584792971611023,
+    "goals": 0
+  },
+  {
+    "t": 11.200000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5823673009872437,
+    "goals": 0
+  },
+  {
+    "t": 11.24,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5808747410774231,
+    "goals": 0
+  },
+  {
+    "t": 11.28,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5792698860168457,
+    "goals": 0
+  },
+  {
+    "t": 11.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5752605199813843,
+    "goals": 0
+  },
+  {
+    "t": 11.36,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5705100297927856,
+    "goals": 0
+  },
+  {
+    "t": 11.4,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5672183036804199,
+    "goals": 0
+  },
+  {
+    "t": 11.44,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5633718967437744,
+    "goals": 0
+  },
+  {
+    "t": 11.48,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5613627433776855,
+    "goals": 0
+  },
+  {
+    "t": 11.52,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5599086880683899,
+    "goals": 0
+  },
+  {
+    "t": 11.56,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5586073994636536,
+    "goals": 0
+  },
+  {
+    "t": 11.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5581953525543213,
+    "goals": 0
+  },
+  {
+    "t": 11.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5587108135223389,
+    "goals": 0
+  },
+  {
+    "t": 11.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5596617460250854,
+    "goals": 0
+  },
+  {
+    "t": 11.72,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5609148144721985,
+    "goals": 0
+  },
+  {
+    "t": 11.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5622523427009583,
+    "goals": 0
+  },
+  {
+    "t": 11.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5655108094215393,
+    "goals": 0
+  },
+  {
+    "t": 11.84,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5696784257888794,
+    "goals": 0
+  },
+  {
+    "t": 11.88,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5720268487930298,
+    "goals": 0
+  },
+  {
+    "t": 11.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5710541605949402,
+    "goals": 0
+  },
+  {
+    "t": 11.96,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5709540843963623,
+    "goals": 0
+  },
+  {
+    "t": 12.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5717388987541199,
+    "goals": 0
+  },
+  {
+    "t": 12.040000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5713807940483093,
+    "goals": 0
+  },
+  {
+    "t": 12.08,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5703796744346619,
+    "goals": 0
+  },
+  {
+    "t": 12.120000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5689716339111328,
+    "goals": 0
+  },
+  {
+    "t": 12.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5672702789306641,
+    "goals": 0
+  },
+  {
+    "t": 12.200000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5661802291870117,
+    "goals": 0
+  },
+  {
+    "t": 12.24,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5646320581436157,
+    "goals": 0
+  },
+  {
+    "t": 12.280000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5623860359191895,
+    "goals": 0
+  },
+  {
+    "t": 12.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5640819072723389,
+    "goals": 0
+  },
+  {
+    "t": 12.36,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5670388340950012,
+    "goals": 0
+  },
+  {
+    "t": 12.4,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5690869688987732,
+    "goals": 1
+  },
+  {
+    "t": 12.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5689437985420227,
+    "goals": 1
+  },
+  {
+    "t": 12.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5668497681617737,
+    "goals": 1
+  },
+  {
+    "t": 12.52,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5677704811096191,
+    "goals": 1
+  },
+  {
+    "t": 12.56,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5697246789932251,
+    "goals": 1
+  },
+  {
+    "t": 12.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5708655118942261,
+    "goals": 1
+  },
+  {
+    "t": 12.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5711455345153809,
+    "goals": 1
+  },
+  {
+    "t": 12.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5718161463737488,
+    "goals": 1
+  },
+  {
+    "t": 12.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5728528499603271,
+    "goals": 1
+  },
+  {
+    "t": 12.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5733450651168823,
+    "goals": 1
+  },
+  {
+    "t": 12.8,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5719736218452454,
+    "goals": 1
+  },
+  {
+    "t": 12.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5703961849212646,
+    "goals": 1
+  },
+  {
+    "t": 12.88,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5694075226783752,
+    "goals": 1
+  },
+  {
+    "t": 12.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5704971551895142,
+    "goals": 1
+  },
+  {
+    "t": 12.96,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5711919069290161,
+    "goals": 1
+  },
+  {
+    "t": 13.0,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5702257752418518,
+    "goals": 1
+  },
+  {
+    "t": 13.040000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5700284838676453,
+    "goals": 1
+  },
+  {
+    "t": 13.08,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.572180986404419,
+    "goals": 1
+  },
+  {
+    "t": 13.120000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5744445323944092,
+    "goals": 1
+  },
+  {
+    "t": 13.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5755770206451416,
+    "goals": 1
+  },
+  {
+    "t": 13.200000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5756938457489014,
+    "goals": 1
+  },
+  {
+    "t": 13.24,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5752375721931458,
+    "goals": 1
+  },
+  {
+    "t": 13.280000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5741746425628662,
+    "goals": 1
+  },
+  {
+    "t": 13.32,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5725072026252747,
+    "goals": 1
+  },
+  {
+    "t": 13.36,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5696589350700378,
+    "goals": 1
+  },
+  {
+    "t": 13.4,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5670390725135803,
+    "goals": 1
+  },
+  {
+    "t": 13.44,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.565563976764679,
+    "goals": 1
+  },
+  {
+    "t": 13.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5674909353256226,
+    "goals": 1
+  },
+  {
+    "t": 13.52,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5705430507659912,
+    "goals": 1
+  },
+  {
+    "t": 13.56,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5706813931465149,
+    "goals": 1
+  },
+  {
+    "t": 13.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5708011984825134,
+    "goals": 1
+  },
+  {
+    "t": 13.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5728407502174377,
+    "goals": 1
+  },
+  {
+    "t": 13.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5743335485458374,
+    "goals": 1
+  },
+  {
+    "t": 13.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5748695731163025,
+    "goals": 2
+  },
+  {
+    "t": 13.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5748279690742493,
+    "goals": 2
+  },
+  {
+    "t": 13.8,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5741627216339111,
+    "goals": 2
+  },
+  {
+    "t": 13.84,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5723913908004761,
+    "goals": 2
+  },
+  {
+    "t": 13.88,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5690916180610657,
+    "goals": 2
+  },
+  {
+    "t": 13.92,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5671171545982361,
+    "goals": 2
+  },
+  {
+    "t": 13.96,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5677030086517334,
+    "goals": 2
+  },
+  {
+    "t": 14.0,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5705899000167847,
+    "goals": 2
+  },
+  {
+    "t": 14.040000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5728727579116821,
+    "goals": 2
+  },
+  {
+    "t": 14.08,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5730406641960144,
+    "goals": 2
+  },
+  {
+    "t": 14.120000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5718545317649841,
+    "goals": 2
+  },
+  {
+    "t": 14.16,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5713189244270325,
+    "goals": 2
+  },
+  {
+    "t": 14.200000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.56876140832901,
+    "goals": 2
+  },
+  {
+    "t": 14.24,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.560858964920044,
+    "goals": 2
+  },
+  {
+    "t": 14.280000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5535559058189392,
+    "goals": 2
+  },
+  {
+    "t": 14.32,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5489252805709839,
+    "goals": 2
+  },
+  {
+    "t": 14.36,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5465552806854248,
+    "goals": 2
+  },
+  {
+    "t": 14.4,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5458968281745911,
+    "goals": 2
+  },
+  {
+    "t": 14.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5462731122970581,
+    "goals": 2
+  },
+  {
+    "t": 14.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5467158555984497,
+    "goals": 2
+  },
+  {
+    "t": 14.52,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.5411458015441895,
+    "goals": 2
+  },
+  {
+    "t": 14.56,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      false
+    ],
+    "base_z": 0.5200053453445435,
+    "goals": 2
+  },
+  {
+    "t": 14.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.48463165760040283,
+    "goals": 2
+  },
+  {
+    "t": 14.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.4519291818141937,
+    "goals": 2
+  },
+  {
+    "t": 14.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.43607214093208313,
+    "goals": 2
+  },
+  {
+    "t": 14.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.42718011140823364,
+    "goals": 2
+  },
+  {
+    "t": 14.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.4302109181880951,
+    "goals": 2
+  },
+  {
+    "t": 14.8,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.44967272877693176,
+    "goals": 2
+  },
+  {
+    "t": 14.84,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.47891709208488464,
+    "goals": 2
+  },
+  {
+    "t": 14.88,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5077223777770996,
+    "goals": 2
+  },
+  {
+    "t": 14.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5302774906158447,
+    "goals": 2
+  },
+  {
+    "t": 14.96,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.546491801738739,
+    "goals": 2
+  },
+  {
+    "t": 15.0,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5549209713935852,
+    "goals": 2
+  },
+  {
+    "t": 15.040000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5562176704406738,
+    "goals": 2
+  },
+  {
+    "t": 15.08,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5545154213905334,
+    "goals": 2
+  },
+  {
+    "t": 15.120000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5533893704414368,
+    "goals": 2
+  },
+  {
+    "t": 15.16,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.551912784576416,
+    "goals": 2
+  },
+  {
+    "t": 15.200000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5502055287361145,
+    "goals": 2
+  },
+  {
+    "t": 15.24,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5509433746337891,
+    "goals": 2
+  },
+  {
+    "t": 15.280000000000001,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5496208667755127,
+    "goals": 2
+  },
+  {
+    "t": 15.32,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5460455417633057,
+    "goals": 2
+  },
+  {
+    "t": 15.36,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.541004478931427,
+    "goals": 2
+  },
+  {
+    "t": 15.4,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5403352379798889,
+    "goals": 2
+  },
+  {
+    "t": 15.44,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.54348224401474,
+    "goals": 2
+  },
+  {
+    "t": 15.48,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5477579236030579,
+    "goals": 2
+  },
+  {
+    "t": 15.52,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5512151718139648,
+    "goals": 2
+  },
+  {
+    "t": 15.56,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.5554476380348206,
+    "goals": 2
+  },
+  {
+    "t": 15.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5624908208847046,
+    "goals": 3
+  },
+  {
+    "t": 15.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5701301693916321,
+    "goals": 3
+  },
+  {
+    "t": 15.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5761733651161194,
+    "goals": 3
+  },
+  {
+    "t": 15.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5803570747375488,
+    "goals": 3
+  },
+  {
+    "t": 15.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5822440981864929,
+    "goals": 3
+  },
+  {
+    "t": 15.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5821503400802612,
+    "goals": 3
+  },
+  {
+    "t": 15.84,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5808601379394531,
+    "goals": 3
+  },
+  {
+    "t": 15.88,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5798744559288025,
+    "goals": 3
+  },
+  {
+    "t": 15.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5799010992050171,
+    "goals": 3
+  },
+  {
+    "t": 15.96,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5794553756713867,
+    "goals": 3
+  },
+  {
+    "t": 16.0,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5739712715148926,
+    "goals": 3
+  },
+  {
+    "t": 16.04,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.5607792735099792,
+    "goals": 3
+  },
+  {
+    "t": 16.080000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.541711151599884,
+    "goals": 3
+  },
+  {
+    "t": 16.12,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "base_z": 0.5131666660308838,
+    "goals": 3
+  },
+  {
+    "t": 16.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.47095444798469543,
+    "goals": 3
+  },
+  {
+    "t": 16.2,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.4385607838630676,
+    "goals": 3
+  },
+  {
+    "t": 16.240000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.4249943792819977,
+    "goals": 3
+  },
+  {
+    "t": 16.28,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.4181208908557892,
+    "goals": 3
+  },
+  {
+    "t": 16.32,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.42065301537513733,
+    "goals": 3
+  },
+  {
+    "t": 16.36,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.4392007887363434,
+    "goals": 3
+  },
+  {
+    "t": 16.4,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.46625128388404846,
+    "goals": 3
+  },
+  {
+    "t": 16.44,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.49376776814460754,
+    "goals": 3
+  },
+  {
+    "t": 16.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5177637338638306,
+    "goals": 3
+  },
+  {
+    "t": 16.52,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5358367562294006,
+    "goals": 3
+  },
+  {
+    "t": 16.56,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5494588613510132,
+    "goals": 3
+  },
+  {
+    "t": 16.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5557403564453125,
+    "goals": 3
+  },
+  {
+    "t": 16.64,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5564285516738892,
+    "goals": 3
+  },
+  {
+    "t": 16.68,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5564133524894714,
+    "goals": 3
+  },
+  {
+    "t": 16.72,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5557515621185303,
+    "goals": 3
+  },
+  {
+    "t": 16.76,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5531429052352905,
+    "goals": 3
+  },
+  {
+    "t": 16.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5506412982940674,
+    "goals": 3
+  },
+  {
+    "t": 16.84,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5515113472938538,
+    "goals": 3
+  },
+  {
+    "t": 16.88,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5527008771896362,
+    "goals": 3
+  },
+  {
+    "t": 16.92,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5487050414085388,
+    "goals": 3
+  },
+  {
+    "t": 16.96,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5418232083320618,
+    "goals": 3
+  },
+  {
+    "t": 17.0,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5395374298095703,
+    "goals": 3
+  },
+  {
+    "t": 17.04,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5423929691314697,
+    "goals": 3
+  },
+  {
+    "t": 17.080000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5485860705375671,
+    "goals": 3
+  },
+  {
+    "t": 17.12,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5556974411010742,
+    "goals": 3
+  },
+  {
+    "t": 17.16,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.559932291507721,
+    "goals": 3
+  },
+  {
+    "t": 17.2,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "base_z": 0.56458979845047,
+    "goals": 3
+  },
+  {
+    "t": 17.240000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5698671340942383,
+    "goals": 3
+  },
+  {
+    "t": 17.28,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5765862464904785,
+    "goals": 3
+  },
+  {
+    "t": 17.32,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5815492272377014,
+    "goals": 3
+  },
+  {
+    "t": 17.36,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5850511193275452,
+    "goals": 3
+  },
+  {
+    "t": 17.400000000000002,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5868959426879883,
+    "goals": 3
+  },
+  {
+    "t": 17.44,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5866620540618896,
+    "goals": 3
+  },
+  {
+    "t": 17.48,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.5836983919143677,
+    "goals": 4
+  },
+  {
+    "t": 17.52,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "base_z": 0.581908643245697,
+    "goals": 4
+  },
+  {
+    "t": 17.56,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5814973711967468,
+    "goals": 4
+  },
+  {
+    "t": 17.6,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "base_z": 0.5794521570205688,
+    "goals": 4
+  },
+  {
+    "t": 17.64,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5761844515800476,
+    "goals": 4
+  },
+  {
+    "t": 17.68,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "base_z": 0.5720840692520142,
+    "goals": 4
+  },
+  {
+    "t": 17.72,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5679820775985718,
+    "goals": 4
+  },
+  {
+    "t": 17.76,
+    "airborne": false,
+    "foot_contacts": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "base_z": 0.5646805167198181,
+    "goals": 4
+  },
+  {
+    "t": 17.8,
+    "airborne": false,
+    "foot_contacts": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "base_z": 0.5631556510925293,
+    "goals": 4
+  }
+]

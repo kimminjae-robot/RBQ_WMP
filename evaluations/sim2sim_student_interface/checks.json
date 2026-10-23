@@ -7,7 +7,7 @@
   "manufacturer_front_depth_TF_verified": true,
   "teacher_resume_contract_preserved": true,
   "depth_resize_vs_original_max_abs_error": 0.0,
-  "policy_execution_status": "No trained RBQ10 Student available; no RBQ10 Student rollout performed",
+  "policy_execution_status": "Interface-only check; actual trained RBQ10 rollouts are reported separately under evaluations/autonomous",
   "offline_serialization_fixture": "Actual public Go2 Student weights; NOT an RBQ10 policy, never used for MuJoCo control",
   "offline_network_sequence_steps": 8,
   "offline_network_max_abs_error": 0.0

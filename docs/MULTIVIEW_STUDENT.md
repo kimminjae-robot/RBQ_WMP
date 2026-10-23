@@ -108,9 +108,11 @@ python tools/restore_student_checkpoint.py
 - TensorBoard: `http://localhost:6006/#scalars`, `student_multiview`.
 - 저장 contract: `rbq10_extreme_parkour_student_depth5_v1`.
 
-전방 전용 태스크·checkpoint·manager는 별도로 보존했다. 기존 MuJoCo front-only runner와
-exporter는 5뷰 checkpoint를 거부한다. 새 5뷰 모델의 MuJoCo 카메라/입력 추가와 동일 조건
-성능 평가는 이후 작업이다. 카메라가 늘었다는 이유만으로 성능 향상을 주장하지 않는다.
+전방 전용 태스크·checkpoint·manager는 별도로 보존했다. 전방 전용 exporter는 5뷰
+checkpoint를 거부하며, 별도 `./run.sh export-multiview`와 5뷰 MuJoCo 입력 경로를 추가했다.
+model400의 실제 20조건 전이 검사, 카메라 입력 대조, 수정 내용과 남은 차이는
+[5뷰 MuJoCo 검증](MULTIVIEW_SIM2SIM.md)에 기록했다. 카메라가 늘었다는 이유만으로
+성능 향상을 주장하지 않는다.
 
 검증: CPU 실제 2회 증류, 현 contract의 GPU checkpoint를 CPU에서 실제 재개해
 counter/Adam step 1→2 복원, 현 contract의 GPU 실제 update와
@@ -118,3 +120,10 @@ counter/Adam step 1→2 복원, 현 contract의 GPU 실제 update와
 네트워크 초기 출력 동등성·TorchScript 검사.
 [실제 GPU 학습 검증](../evaluations/multiview_start_20261023/gpu_training_validation.json).
 [GPU→CPU 재개 검증](../evaluations/multiview_start_20261023/resume_validation.json).
+
+추가 배포: 새 5뷰 **model700 / 701 update 전체 재개본**을
+`checkpoints/rbq10_student_multiview/`의 gzip 조각으로 보관한다.
+`python tools/restore_student_checkpoint.py --directory checkpoints/rbq10_student_multiview`로
+복원하며 다음 1,299 update로 새 분기 목표 2,000회에 도달한다.
+평가한 model400의 TorchScript Export와 실행 명령은
+[5뷰 빠른 시작](DEPTH5_QUICKSTART.md)에 있다. 모델별 학습량과 평가 점수를 섞지 않는다.

@@ -1,0 +1,28 @@
+{
+  "checkpoint": "/home/user/Desktop/coop_ws/rbq10_vision_parkour/logs/rsl_rl/rbq10_extreme_parkour/2026-10-23_10-23-30_phase4_student_s1_20261023_102324_394207/model_400.pt",
+  "policy_dir": "outputs/sim2sim/model_400_visual",
+  "checkpoint_name": "model_400.pt",
+  "command": [
+    "./run.sh",
+    "sim2sim",
+    "--policy-dir",
+    "outputs/sim2sim/model_400_visual",
+    "--course",
+    "isaac_flat",
+    "--difficulty",
+    "0",
+    "--terrain-label",
+    "flat",
+    "--speed",
+    "0.3",
+    "--seconds",
+    "12",
+    "--video",
+    "artifacts/student_model_400_mujoco_flat.mp4",
+    "--screenshot",
+    "artifacts/student_model_400_mujoco_flat.png",
+    "--output",
+    "evaluations/student_visual/model_400_flat.json"
+  ],
+  "pid": 598317
+}

@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import time
+import copy
 
 import mujoco
 import numpy as np
@@ -15,13 +16,15 @@ from goal_follower import TerrainGoalFollower
 from run_teacher import ObservationBridge, body_velocity
 from student_inputs import CommandInput, DepthInput, student_observation
 from keyboard import KeyboardInput
+from viewer_style import GOAL_PENDING, GOAL_CURRENT, GOAL_REACHED
+from multiview_depth import FORMAT as MULTIVIEW_FORMAT, configuration as multiview_configuration, validate_configuration, add_cameras, MultiViewDepthInput
 
 
 def validate_export(directory):
     meta = json.loads((directory/'manifest.json').read_text())
-    if meta.get('format')!='rbq10_mujoco_student_v1' or meta.get('role')!='student':
+    if meta.get('format') not in ('rbq10_mujoco_student_v1', MULTIVIEW_FORMAT) or meta.get('role')!='student':
         raise ValueError('Student Sim2Sim requires a real RBQ10 Student export; Teacher exports are rejected')
-    for name in ['student.pt','depth.pt']:
+    for name in meta['files']:
         if hashlib.sha256((directory/name).read_bytes()).hexdigest()!=meta['files'][name]:
             raise ValueError(f'Export hash mismatch: {name}')
     contract=meta['contract']
@@ -31,13 +34,17 @@ def validate_export(directory):
         raise ValueError('URDF does not match the Student checkpoint')
     if contract['policy_dt']!=.02 or contract['physics_dt']!=.005:
         raise ValueError('Unsupported timing contract')
+    if meta['format']==MULTIVIEW_FORMAT:
+        validate_configuration(meta['configuration'],contract)
+        if hashlib.sha256((ASSETS/'multiview_depth_cameras.json').read_bytes()).hexdigest()!=contract['depth_calibration_sha256']:
+            raise ValueError('Five-view calibration asset differs from the trained contract')
     return meta
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--policy-dir',type=Path,default=ROOT/'outputs/sim2sim/student')
-    p.add_argument('--config',type=Path,default=ROOT/'sim2sim/student_config.json')
+    p.add_argument('--config',type=Path,help='Defaults to the export camera configuration; front-only uses student_config.json')
     p.add_argument('--course',choices=['flat','hurdle','step',*COURSES],default='isaac_flat')
     p.add_argument('--difficulty',type=float,default=.5)
     p.add_argument('--terrain-seed',type=int,default=42)
@@ -74,10 +81,14 @@ def main():
     if not (args.policy_dir/'manifest.json').is_file():
         p.error('No RBQ10 Student export. Train/distill a real Student, then run export-sim2sim --checkpoint STUDENT.pt. No Teacher fallback.')
     meta=validate_export(args.policy_dir)
-    cfg=json.loads(args.config.read_text())
-    for config_key, contract_key in [('position_m','camera_position_m'),('quaternion_wxyz_ros','camera_quaternion_wxyz_ros')]:
-        if contract_key not in meta['contract'] or not np.allclose(cfg['camera'][config_key],meta['contract'][contract_key],atol=1e-7):
-            p.error('Camera pose differs from the trained Student contract; use the matching camera configuration')
+    multi=meta['format']==MULTIVIEW_FORMAT
+    cfg=json.loads(args.config.read_text()) if args.config else copy.deepcopy(meta['configuration']) if multi else json.loads((ROOT/'sim2sim/student_config.json').read_text())
+    if multi:
+        validate_configuration(cfg,meta['contract'])
+    else:
+        for config_key, contract_key in [('position_m','camera_position_m'),('quaternion_wxyz_ros','camera_quaternion_wxyz_ros')]:
+            if contract_key not in meta['contract'] or not np.allclose(cfg['camera'][config_key],meta['contract'][contract_key],atol=1e-7):
+                p.error('Camera pose differs from the trained Student contract; use the matching camera configuration')
     for key in ['terrain_label','velocity_source','direction_source']:
         value=getattr(args,key)
         if value is not None:
@@ -101,7 +112,9 @@ def main():
         if cfg['velocity_source']=='external' and initial[2] is None:
             raise ValueError('External measured_velocity_body_m_s is required; reference vx cannot substitute for it')
         c=meta['contract']
-        model=mujoco.MjModel.from_xml_string(build_scene(c,args.course,args.height,args.difficulty,args.terrain_seed,args.terrain_edges,args.contact_profile,args.autonomous))
+        xml=build_scene(c,args.course,args.height,args.difficulty,args.terrain_seed,args.terrain_edges,args.contact_profile,args.autonomous)
+        if multi:xml=add_cameras(xml,cfg['cameras'])
+        model=mujoco.MjModel.from_xml_string(xml)
         data=mujoco.MjData(model)
         follower=TerrainGoalFollower(generate(args.course,args.difficulty,args.terrain_seed)) if args.autonomous else None
         hd=json.loads((ASSETS/'official/info.json').read_text())['config_info']['init_state']['default_joint_angles']
@@ -110,7 +123,8 @@ def main():
         bridge.terrain_scan_enabled=False  # Student has no Teacher height scan; optional goal commands are supplied separately.
         data.qpos[bridge.qids]=home
         mujoco.mj_forward(model,data)
-        camera=DepthInput(model,data,cfg['camera'])
+        camera_factory=(lambda: MultiViewDepthInput(model,data,cfg)) if multi else (lambda: DepthInput(model,data,cfg['camera']))
+        camera=camera_factory()
         policy=torch.jit.load(str(args.policy_dir/'student.pt'),map_location='cpu').eval()
         depth=torch.jit.load(str(args.policy_dir/'depth.pt'),map_location='cpu').eval()
         keyboard=KeyboardInput(args.speed,args.yaw_rate) if args.keyboard else None
@@ -126,6 +140,7 @@ def main():
         if keyboard:print('KEYBOARD: W/S speed +/-0.1; A/D turn +/-0.2; SPACE zero; R reset; Q/ESC close. Click the viewer first.',flush=True)
         records=[]; action=np.zeros(12,dtype=np.float32)
         termination='duration'; max_torque=0.; max_speed=0.
+        max_raw_action=0.;clipped_action_components=0
         start=data.xpos[bridge.base].copy()
         initial_qpos=data.qpos.copy()
         paused_on_fall=False;episode=0;policy_step=0;fall_count=0
@@ -142,7 +157,7 @@ def main():
                         mujoco.mj_forward(model,data)
                         bridge=ObservationBridge(model,data,c,home,cfg['terrain_label']=='flat',vx)
                         bridge.terrain_scan_enabled=False
-                        camera=DepthInput(model,data,cfg['camera'])
+                        camera=camera_factory()
                         depth.hidden_states=torch.zeros(1,0,512)
                         action=np.zeros(12,dtype=np.float32)
                         paused_on_fall=False;episode+=1;policy_step=0
@@ -166,7 +181,7 @@ def main():
                     obs[6:8]=follower.update(data.xpos[bridge.base,:2],yaw)
                     if follower.index!=previous_goal:print(f'AUTONOMOUS t={data.time:.2f}s goal {follower.index}/{len(follower.goals)}',flush=True)
                     for marker in range(len(follower.goals)):
-                        model.site_rgba[model.site(f'goal_{marker}').id]=([.2,.8,.2,.7] if marker<follower.index else [.1,1.,1.,.9] if marker==follower.index else [.9,.5,.1,.7])
+                        model.site_rgba[model.site(f'goal_{marker}').id]=(GOAL_REACHED if marker<follower.index else GOAL_CURRENT if marker==follower.index else GOAL_PENDING)
                     if follower.complete:
                         termination='success'
                         if capture:capture.frame(data,bridge.base,meta['checkpoint'],args.course,vx,yaw_rate,f'SUCCESS {follower.index}/{len(follower.goals)}',autonomous=True)
@@ -185,7 +200,11 @@ def main():
                 if not np.isfinite(new_action).all():
                     raise FloatingPointError('Non-finite Student action')
                 # Original Student one-policy-step actuation delay.
-                data.ctrl[:]=home+.25*action
+                # Original DelayedJointPositionAction clips the delayed raw action
+                # to +/-4.8, while its history retains the unclipped network output.
+                max_raw_action=max(max_raw_action,float(np.max(np.abs(new_action))))
+                clipped_action_components+=int(np.count_nonzero(np.abs(action)>4.8))
+                data.ctrl[:]=home+.25*np.clip(action,-4.8,4.8)
                 action=new_action.copy()
                 for _ in range(4):
                     mujoco.mj_step(model,data)
@@ -197,7 +216,8 @@ def main():
                 records.append({'episode':episode,'time':float(data.time),'base_xyz':data.xpos[bridge.base].tolist(),
                     'reference_vx':vx,'reference_yaw_rate':yaw_rate,'measured_velocity_body_m_s':np.asarray(measured_velocity).tolist(),
                     'actor_direction_errors':obs[6:8].tolist(),'goals_reached':follower.index if follower else None,'foot_contacts':bridge.current_contacts.tolist(),
-                    'depth_range_m':[float(camera.latest_raw.min()),float(camera.latest_raw.max())]})
+                    'depth_range_m':[float(camera.latest_raw.min()),float(camera.latest_raw.max())],
+                    **({'depth_per_view_range_m':[[float(v.min()),float(v.max())] for v in camera.latest_raw]} if multi else {})})
                 rotation=data.xmat[bridge.base].reshape(3,3)
                 post_angles=(np.arctan2(rotation[2,1],rotation[2,2]),np.arcsin(np.clip(-rotation[2,0],-1,1)))
                 fallen=max(map(abs,post_angles))>1.5 or data.xpos[bridge.base,2]<.15
@@ -225,10 +245,14 @@ def main():
             if capture:capture.finish(hold_last=(termination in ['fall','success']))
             if viewer:viewer.close()
         result={'role':'student','checkpoint':meta['checkpoint'],'checkpoint_sha256':meta['checkpoint_sha256'],
+            'export_format':meta['format'],'depth_view_order':cfg.get('view_order',['front']),
+            'camera_ray_backend':'mj_ray_scalar',
             'terrain_profile':'upstream_wrapper_v2', 'terrain_edges':args.terrain_edges,'contact_profile':args.contact_profile,'configuration':cfg,'course':args.course,'height':args.height,'difficulty':args.difficulty,'terrain_seed':args.terrain_seed,'engine':mujoco.__version__,
             'simulated_seconds':float(data.time),'termination':termination,'fall_count':fall_count,'episodes_started':episode+1,'keyboard':args.keyboard,'autonomous':args.autonomous,'goals_reached':follower.index if follower else None,'total_goals':len(follower.goals) if follower else None,'video':str(args.video) if args.video else None,
             'displacement_xyz':(data.xpos[bridge.base]-start).tolist(),
             'max_abs_torque_nm':max_torque,'max_abs_joint_speed_rad_s':max_speed,
+            'raw_action_clip':[-4.8,4.8],'max_abs_raw_action':max_raw_action,'clipped_action_components':clipped_action_components,
+            'fall_criteria':{'max_roll_pitch_rad':1.5,'minimum_base_world_z_m':.15},
             'limitation':'Terrain-goal mode uses known map waypoints; motor velocity cap and complete contact/depth parity remain pending. Single-rollout success is not a transfer success rate.',
             'records':records}
         args.output.parent.mkdir(parents=True,exist_ok=True)

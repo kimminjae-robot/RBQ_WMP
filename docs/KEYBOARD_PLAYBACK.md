@@ -57,3 +57,16 @@ MUJOCO_GL=egl ./run.sh sim2sim-latest --no-keyboard --course isaac_flat --diffic
 ```
 
 원본 `parkour` 징검 플랫폼을 MuJoCo 높이장으로 변환한 `isaac_platforms`, difficulty0.5, seed42를 사용한다. 최신 저장 Student를 자동 선택하며 키보드 입력 대기로 시작한다. W를 3번 누르면 전진속도 명령 0.3m/s다. A/D로 좌우 방향을 맞추고 Space로 명령 0, R로 리셋한다. 실제 로봇/Isaac 대비 MuJoCo 전이는 아직 검증 중이므로 안정적인 코스 완주를 보장하는 명령은 아니다.
+
+## 2026-10-23 좌표계 수정
+
+각속도/선속도를 MuJoCo 주관성축에서 읽던 오류를 수정했다.
+model764 동일 평지 조건에서 수정 전2.56초 낙상 → 수정 후15초 무낙상을 확인했다.
+중간 징검돌 직진 시험은 여전히5.04초에 낙상했다.
+자세한 차이와 실제 Isaac 영상은 [진단 보고서](SIM2SIM_DIAGNOSIS.md)를 참고한다.
+
+## 자동 시연으로 기본 징검돌 실행 변경
+
+현재 `play_stones_medium.sh`는 키보드 대기 대신 `demo_autonomous.sh`를 실행한다.
+조작 없는 지형 목표점 추종이며, 검증한 model941/seed42를 사용한다.
+기존 수동 명령과 상세 검증 범위는 [자동 시연 문서](AUTONOMOUS_DEMO.md)를 참고한다.

@@ -17,8 +17,8 @@ core
 core.*
 *.tmp
 evaluations/**/run.log
-
-# Complete archived Student is restored from verified compressed parts.
 checkpoints/rbq10_student_front/model_*.pt
 checkpoints/rbq10_student_front/model_*.pt.gz
-
+checkpoints/rbq10_student_multiview/model_*.pt
+checkpoints/rbq10_student_multiview/model_*.pt.gz
+checkpoints/*/restore-*/

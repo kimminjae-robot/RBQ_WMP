@@ -1,128 +1,112 @@
-> **2026-10-23 최신 상태:** 전방 Student는 **1,550 update에서 저장·중단**했고, 현재 **전방+하향4개 5뷰 Student만 2,000 update 목표로 학습 중**입니다. [새 실험·공식 카메라 검증](docs/MULTIVIEW_STUDENT.md) · [기존 학습 보관](docs/FRONT_STUDENT_ARCHIVE.md).
+# RBQ_WMP — RBQ10 Vision Parkour
 
-# RBQ_WMP — RBQ10 Isaac Lab Vision Parkour
+[Isaaclab_Parkour](https://github.com/CAI23sbP/Isaaclab_Parkour)의 PPO·Reward·Curriculum·Teacher/Student 증류를 재사용하고, [Rainbow Robotics 공식 RBQ10 모델](https://github.com/RainbowRobotics/RBQ)을 이식한 프로젝트입니다.
 
-공개 [Isaaclab_Parkour](https://github.com/CAI23sbP/Isaaclab_Parkour)의 PPO·Reward·Curriculum·Teacher/Student 구조를 재사용한 RBQ10 파쿠르 프로젝트입니다. 모델은 [Rainbow Robotics 공식 RBQ](https://github.com/RainbowRobotics/RBQ)를 사용합니다.
+**2026-10-23 최신 검증: 5뷰 Student `model800` / 새 분기 801 update.** 전방 Depth 1개와 하향 D430 4개를 사용합니다. 현재 5뷰 학습만 2,000 update 목표로 계속 실행 중이며, 전방 전용 Student는 1,550 update에서 저장·중단했습니다.
 
-**초기 Teacher 배포 당시 기록:** Phase 1·2 완료. Phase 3 Teacher는 **3,675 업데이트**에서 디스크 부족으로 안전 중단한 뒤, 공간 확보 후 **2026-10-23 09:14 KST에 학습을 재개했습니다. 배포 snapshot은 3,675 업데이트 시점입니다.** 재개 가능한 실제 `model_3674.pt`를 포함합니다. Vision Student·실물 적용은 아직 완료하지 않았습니다. [진행 상황과 남은 단계](docs/STATUS.md).
+## 최신 실제 시연
 
-## 5뷰 Student 실행
+**Isaac Sim — 0.45m Step 오르내리기:** model800, level9, seed42, 속도 명령0.6m/s. 해당 episode는 **8.68초에 목표 8/8을 완주**했습니다. GIF는 자동 reset 직전까지의 구간이며 전체 영상·접촉/상태 기록도 제공합니다.
 
-공식 D430 Camera0~3 장착 TF와 명목 FOV를 적용한 별도 태스크입니다. 기존 전방 모델과 분리된 checkpoint contract·로그·manager를 사용합니다. 성능 향상은 학습 후 동일 조건 평가로 확인합니다.
+![5뷰 Student model800: Isaac Sim 0.45m Step 완주 episode](artifacts/student_depth5_model800_isaac_step_l9.gif)
+
+[전체 MP4](artifacts/student_depth5_model800_isaac_step_l9.mp4) · [프레임별 상태와 종료 판정](artifacts/student_depth5_model800_isaac_step_l9.json)
+
+**MuJoCo — 중간 난이도 스테핑 스톤:** 같은 model800, difficulty0.5, seed42, 속도0.6m/s. 키보드 입력·낙상 후 reset 없이 **9.52초에 목표 8/8을 완주**했습니다. 높이별 지형 색과 노란 경계 표시를 적용한 실제 렌더입니다.
+
+![5뷰 Student model800: MuJoCo 스테핑 스톤 8/8 완주](artifacts/student_depth5_model800_mujoco_platforms.gif)
+
+[전체 MP4](artifacts/student_depth5_model800_mujoco_platforms.mp4) · [주행 상태·결과](evaluations/multiview_sim2sim_model800/video_platforms.json)
+
+두 영상은 동일 모델의 서로 다른 맵 시연입니다. 동일 지형에서 두 엔진의 물리를 짝 비교한 결과나 모든 조건의 성공률을 뜻하지 않습니다.
+
+## 최신 MuJoCo 성능
+
+model800을 고정해 **6종 × 중간 난이도 seed42/43/44 = 18회**, 추가 최고 난이도 Step·Gap 각1회를 실행했습니다. 모두 실제 Student의 CNN/fusion/GRU/actor로 추론하며 Teacher action으로 대체하지 않습니다.
+
+| 지형 | 중간 난이도0.5 완주 / 실행 | 최고 난이도1.0 완주 / 실행 |
+|---|---:|---:|
+| 평지 | 3 / 3 | — |
+| Hurdle | 3 / 3 | — |
+| Step | 3 / 3 | 0 / 1 |
+| Gap | 3 / 3 | 0 / 1 |
+| Platforms / stepping stones | 3 / 3 | — |
+| Mixed | 3 / 3 | — |
+| **합계** | **18 / 18** | **0 / 2** |
+
+이전 model400의 같은 중간 조건은15/18, Step0/3이었습니다. model800은 중간 조건에서 개선됐지만 최고 Step은 이전1/1에서 이번0/1이므로, 모든 난이도의 성능 향상이나 수렴으로 판단하지 않습니다. 작은 고정 개발 집합이며 held-out 평가·실물 검증은 남아 있습니다.
+
+[최신 평가 조건·원시 결과·남은 차이](docs/MULTIVIEW_MODEL800_EVALUATION.md) · [이전 model400 카메라/전이 검사](docs/MULTIVIEW_SIM2SIM.md) · [현재 단계와 다음 작업](docs/STATUS.md)
+
+## 내 PC에서 맵 실행
+
+배포한 model800 TorchScript Export를 사용하므로 **MuJoCo 재생에는 Isaac Sim이 필요 없습니다.** Python3.11 환경과 고정된 원본 지형 소스를 준비하는 전체 명령은 [5뷰 빠른 시작](docs/DEPTH5_QUICKSTART.md)에 있습니다.
 
 ```bash
-python tools/restore_student_checkpoint.py
-# docs/PORTABILITY.md에 따라 기존 Isaac Lab/프로젝트 venv를 준비한 뒤:
-./run.sh multiview-student-job start --checkpoint checkpoints/rbq10_student_front/model_1549.pt --iterations 2000 --num_envs 192 --seed 1
+./run.sh sim2sim \
+  --policy-dir evaluations/multiview_sim2sim_model800/export \
+  --course isaac_platforms --difficulty .5 --terrain-seed 42 \
+  --speed .6 --seconds 30 --autonomous --viewer --hold-seconds 60
+```
+
+| `--course` | 지형 |
+|---|---|
+| `isaac_flat` | 평지 |
+| `isaac_hurdle` | 연속 장애물 |
+| `isaac_step` | 턱·계단식 플랫폼 |
+| `isaac_gap` | 틈새 |
+| `isaac_platforms` | 스테핑 스톤 |
+| `isaac_mixed` | 혼합 코스 |
+
+- 난이도는 `--difficulty 0~1`, 배치는 `--terrain-seed`로 선택합니다.
+- 자동 모드는 알려진 지도 목표점을 따라갑니다. 미지 환경의 비전 경로 계획 검증은 아닙니다.
+- 수동 조작은 `--autonomous --viewer`를 `--keyboard`로 바꿉니다. GUI 클릭 후 W/S 속도, A/D 회전, Space 명령0, R reset, Q 종료입니다.
+- 영상 저장은 `--video artifacts/my_run.mp4`, 결과 저장은 `--output outputs/my_run.json`입니다.
+- `sim2sim-latest`, `demo_autonomous.sh`, `play_stones_medium.sh`는 이전 **전방 전용** 모델용입니다. 5뷰에는 위 `--policy-dir`을 사용합니다.
+
+## 학습 상태 보관과 재개
+
+| 보관본 | 용도 |
+|---|---|
+| `checkpoints/rbq10_teacher/model_3674.pt` | frozen Teacher/증류 기준 |
+| `checkpoints/rbq10_student_front/` | 전방 Student 1,550 update 전체 보관본 |
+| `checkpoints/rbq10_student_multiview/` | **5뷰 model700 / 701 update 전체 재개본**, 가중치·Adam·counter 보존 |
+| `evaluations/multiview_sim2sim_model800/export/` | **최신 검증 model800의 MuJoCo 실행 모델** |
+| `evaluations/multiview_sim2sim_model400/export/` | 이전 검증 model400 실행 모델 |
+
+전체 재개본은 GitHub 파일 크기 제한을 피하도록 압축 조각으로 보관합니다. 조각·압축본·복원본 SHA-256을 확인해 무손실 복원하며, 다른 기존 파일을 덮어쓰지 않습니다.
+
+```bash
+python3 tools/restore_student_checkpoint.py --directory checkpoints/rbq10_student_multiview
+
+# Isaac Lab/프로젝트 venv를 준비한 후: 701 + 1299 = 새 분기 2000 update
+./run.sh multiview-student-job start \
+  --checkpoint checkpoints/rbq10_student_multiview/model_700.pt \
+  --iterations 1299 --num_envs 192 --seed 1
 ./run.sh multiview-student-job status
 ```
 
-[전방 보관 브랜치](https://github.com/kimminjae-robot/RBQ_WMP/tree/archive/front-depth-1550-20261023) · [5뷰 실험 브랜치](https://github.com/kimminjae-robot/RBQ_WMP/tree/experiment/depth5-student-20261023).
+재개본 model700과 평가 모델800은 서로 다른 snapshot입니다. 재개 시 물리 episode·curriculum/RNG 분포는 재초기화됩니다. 원래 PC의 학습은 이번 배포 중에도 계속 실행합니다.
 
-## 성능 개선 후속 과제
-
-전방 Student 1,550 update 완료는 수렴 또는 모든 지형의 안정적인 완주를 의미하지 않습니다.
-우선 최종 Student와 Teacher를 동일 조건에서 재평가하고, Depth·접촉·구동기의 Sim2Sim 차이를
-검증한 뒤 Gap·플랫폼 중심으로 원본 Student 증류를 추가하는 순서입니다.
-Teacher 보강은 같은 조건에서 Teacher도 실패하는 구간에 한해 검토합니다.
-
-[상세 로드맵과 완료 기준](docs/PERFORMANCE_ROADMAP.md) ·
-[GitHub 작업 목록 #1](https://github.com/kimminjae-robot/RBQ_WMP/issues/1) ·
-[평가 근거 JSON](evaluations/performance_baseline_20261023.json).
-
-## 기존 Teacher 마지막 단계 평가
-
-Curriculum은 0~9의 10단계입니다. `model_3674.pt`를 **level 9 / difficulty 1.0에 고정**하여 20개 환경 × 3회 = 60개 episode를 평가했습니다. 성공·실패 후에도 9단계를 유지하는 평가 옵션을 추가했고, 학습 기본값은 원본 curriculum입니다.
-
-| 지형 | 완주 / 시험 | 낙상 | 시간 초과 |
-| --- | --- | --- | --- |
-| 평지 | 12 / 12 | 0 | 0 |
-| Hurdle | 12 / 12 | 0 | 0 |
-| Step·턱 | 10 / 12 | 1 | 1 |
-| Gap·틈새 | 12 / 12 | 0 | 0 |
-| 발판 코스 | 12 / 12 | 0 | 0 |
-
-**[50초 전체 영상](artifacts/rbq10_teacher_3674_level9.mp4)** · [원시 JSON](evaluations/level9_model3674/results.json) · [CSV](evaluations/level9_model3674/results.csv) · [조건과 한계](docs/LEVEL9_EVALUATION.md)
-
-![9단계 Step 실제 재생, 실패·재시도 포함](artifacts/rbq10_teacher_3674_level9.gif)
-
-명목 마찰·고정 seed·0.6 m/s 명령의 작은 시뮬레이션 시험입니다. 학습 중 완주율, 검증된 공중 점프 성공률, Vision Student 또는 실물 성능을 뜻하지 않습니다. 원본 roughness와 초기 관절 ±5% 변화는 유지합니다.
-
-## 다른 PC에서 실행
-
-검증 환경: Ubuntu 24.04, Python 3.11, **Isaac Sim 5.1 / Isaac Lab v2.3.2 / Torch 2.7.0+cu128 / torchvision 0.22**, RTX 5080 Laptop 16GB. RSL-RL 2.3.3은 프로젝트 전용 venv에 설치합니다. 먼저 호환되는 Isaac Lab 런타임을 준비하세요. Isaac Sim 설치물은 이 저장소에 포함하지 않습니다. 6,144환경 학습 시 GPU 약 10GB를 사용했으며 디스크 여유는 20GB 이상을 권장합니다.
+학습 환경은 Ubuntu24.04 / Python3.11 / Isaac Sim5.1 / Isaac Labv2.3.2(package0.54.2) / Torch2.7+cu128 / RSL-RL2.3.3 조합으로 검증했습니다. 기존 환경을 수정하지 않고 프로젝트 venv를 구성합니다.
 
 ```bash
 git clone https://github.com/kimminjae-robot/RBQ_WMP.git
 cd RBQ_WMP
-
-# 실제 Isaac Lab용 Python 경로로 바꾸세요. 기존 환경은 수정하지 않습니다.
 python3 tools/setup_env.py --isaac-python /path/to/isaaclab/venv/bin/python
 ```
 
-설치 도구는 원본 commit `d6766d8883cffe427f2d4c087717d4eca1f23d8c`를 프로젝트 `upstream/Isaaclab_Parkour`에 받고 `patches/current_upstream.patch`를 적용합니다. 다른 revision/수정이나 기존 venv는 덮어쓰지 않습니다. 생성된 `.venv`는 지정한 Isaac 런타임에 의존합니다. [다른 PC 사용 안내](docs/PORTABILITY.md).
+[다른 PC 학습 환경 설치](docs/PORTABILITY.md) · [공식 카메라/5뷰 구조](docs/MULTIVIEW_STUDENT.md) · [전방 모델 보관](docs/FRONT_STUDENT_ARCHIVE.md)
 
-평가만 실행:
+## 남은 작업
 
-```bash
-./run.sh evaluate-teacher \
-  --checkpoint checkpoints/rbq10_teacher/model_3674.pt \
-  --level 9 --num_envs 20 --episodes 3 --seed 42 --headless \
-  --output evaluations/local_level9/results.json
+- 5뷰 목표2,000 update 완료 후 held-out 지형과 동일 조건 Teacher/Student 평가.
+- 최고 난이도 Step·Gap 전이 안정화. 관절 속도 제한, 접촉 응답과 지형 모서리 차이 검증.
+- 실제 전방 CameraInfo/FOV, 하향 센서별 intrinsics·동기화·노이즈·가림 검증.
+- 조이스틱·측정 속도·contact 추정 연결, 연속 코스·낮은 천장 Crawl 및 실물 시험.
 
-# 영상을 저장하려면 위 명령에 추가:
-# --video artifacts/local_level9.mp4
-```
+Phase1 원본 Go2 재현과 Phase2 RBQ10 이식은 완료했고, Teacher 학습은 저장·종료했습니다. 현재 Phase4의 5뷰 Student 학습과 Phase5의 시뮬레이션 검증을 진행 중입니다. 수직 벽 부착 등반은 범위에서 제외합니다.
 
-중단한 Teacher를 **총 5,000회까지** 이어 학습:
+[진행 단계](docs/STATUS.md) · [개선 로드맵](docs/PERFORMANCE_ROADMAP.md) · [후속 과제 #1](https://github.com/kimminjae-robot/RBQ_WMP/issues/1) · [과거 Teacher 평가](docs/LEVEL9_EVALUATION.md)
 
-```bash
-# 모델 hash와 RBQ10 계약 확인 후 원본 runner의 resume 경로로 복사
-./run.sh import-teacher
-
-# 3,675 + 1,325 = 5,000회. --iterations는 추가 업데이트 수입니다.
-./run.sh teacher-job start --num_envs 6144 --iterations 1325 --seed 1 \
-  --resume "$PWD/logs/rsl_rl/rbq10_extreme_parkour/imported_teacher_3674/model_3674.pt"
-
-./run.sh teacher-job status
-# 필요할 때: 현재 PPO update 완료 후 저장·중단
-./run.sh teacher-job stop
-```
-
-총 50,000회까지 이어가려면 `--iterations 46325`를 사용하세요. 작은 GPU에서는 `--num_envs 1024` 또는 `2048`로 줄일 수 있지만 rollout batch 크기가 달라집니다. 같은 학습 설정을 유지하려면 6,144환경을 사용하세요. Parameter·optimizer·RMA counter를 복원하며 simulator episode와 terrain curriculum 분포는 재초기화됩니다.
-
-```bash
-.venv/bin/python -m tensorboard.main \
-  --logdir logs/rsl_rl/rbq10_extreme_parkour --host 127.0.0.1 --port 6006
-```
-
-`Train/mean_reward`, `Train/mean_episode_length`, `Parkour/<지형>/course_success_rate`, `fall_rate`, `terrain_level`을 확인합니다. 지형별 최근 최대 1,000개 완전한 episode의 학습 통계이며 별도 고정 단계 평가와 구분하세요.
-
-## 구성
-
-- `rbq10_parkour/`: 공식 RBQ10 모델·관절/센서 계약, 원본 환경·runner 상속, 측정·평가 도구.
-- `assets/rbq10/manifest.json`: 공식 모델 고정 commit, 출처·hash. 생성 USD는 각 PC에서 변환합니다.
-- `checkpoints/rbq10_teacher/`: 실제 Teacher와 auxiliary optimizer/RMA counter, hash·원래 설정 snapshot.
-- `patches/current_upstream.patch`: 원본 대비 전체 변경. PPO 손실·network·reward·terrain 생성식은 재작성하지 않았습니다.
-- `tools/setup_env.py`: 기존 Isaac 런타임을 읽는 별도 venv 설치.
-- `tools/teacher_job.py`: 중복 실행 방지, 안전 중단·재개, 디스크 2GiB 미만 자동 중단.
-
-Go2/RBQ10 환경과 모델 계약은 분리돼 있습니다. 중간 검증은 headless, GUI는 각 Phase 마지막에만 사용합니다. 16GB GPU에서 대규모 학습과 RTX 녹화를 동시에 실행하지 마세요.
-
-Phase 1 Go2 가중치는 새 설치 시 `--download-go2`로 별도 받을 수 있습니다. 출처와 hash는 `checkpoints/manifest.json`, 기존 venv에서의 다운로드 방법은 [PORTABILITY.md](docs/PORTABILITY.md)에 있습니다.
-
-원본 고지: [LICENSE](LICENSE), [THIRD_PARTY.md](THIRD_PARTY.md). `docs/history/`는 과거 PC의 검증 기록이며 현재 상태는 [docs/STATUS.md](docs/STATUS.md)가 기준입니다.
-
-MuJoCo 사전 준비: [실행 방법과 실제 초기 실패 결과](docs/SIM2SIM.md), [실물 적용 전 관측값·센서·제어 차이](docs/DEPLOYMENT_GAPS.md).
-
-MuJoCo 기본 경로는 이제 **Vision Student**다. `export-sim2sim --checkpoint STUDENT.pt`와 `sim2sim`을 사용한다. reference/측정 선속도 분리, 조이스틱 방향, 수동 terrain label, MuJoCo contact를 반영했다. RBQ10 Student 학습 전에는 실제 rollout을 수행할 수 없다. [현재 계약과 명령](docs/SIM2SIM.md).
-
-카메라 장착 TF는 [제조사 공식 좌표](https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide)의 전방 OAK-D Pro Wide **Depth** 프레임으로 보정했다. Isaac Student/MuJoCo 모두 `(0.388031,-0.037500,0.037764)m`, ROS quaternion `(0.5,-0.5,0.5,-0.5)`를 사용한다.
-
-MuJoCo 지형: 원본 Isaac 생성 함수를 재사용한 6종×3난이도와 [전체 조감도](docs/MUJOCO_TERRAINS.md)를 추가했다. `./run.sh mujoco-map`으로 재생성한다.
-
-키보드 GUI 실행: `./run.sh sim2sim-latest --course isaac_flat --difficulty 0 --terrain-label flat`. [조작법과 실제 최신 snapshot 테스트](docs/KEYBOARD_PLAYBACK.md).
-
-중간 징검돌 키보드 실행: `./play_stones_medium.sh` — 최신 저장 Student, `isaac_platforms`, difficulty0.5.
-
-
+원본 commit은 `d6766d8883cffe427f2d4c087717d4eca1f23d8c`로 고정합니다. 원본 CNN을 5개 view에 공유하고 학습된 fusion을 추가해 원본 GRU/actor/증류를 재사용하며 PPO·Reward·Curriculum을 재작성하지 않았습니다. 원본 고지는 [LICENSE](LICENSE), [THIRD_PARTY.md](THIRD_PARTY.md)를 확인하세요.

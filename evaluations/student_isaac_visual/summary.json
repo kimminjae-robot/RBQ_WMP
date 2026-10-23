@@ -1,0 +1,404 @@
+{
+  "results.json": {
+    "teacher": "model_3674.pt",
+    "student": "model_764.pt",
+    "teacher_sha256": "073bf99cb7f4b4afdcef9c0c338c4bc426fcab57d497af6a5fc2be9c6304b7af",
+    "student_sha256": "503740d55cce8681538832b14848b64e469f7b5dd047a4c8d5bd87acd6e44834",
+    "conditions": {
+      "seed": 42,
+      "num_envs": 10,
+      "episodes_per_env": 1,
+      "terrain_profile": "Student horizontal_scale=0.1/simplified, original five types equally represented",
+      "velocity_input": "Both measured body velocity (matches distillation input contract)",
+      "direction_input": "Both commanded goal heading; no vision direction replacement",
+      "action_delay_policy_steps": 1,
+      "vx_command_m_s": 0.6,
+      "random_push_mass_com_camera": false,
+      "scope": "Nominal single-seed Isaac comparison; not MuJoCo/hardware or confidence interval"
+    },
+    "results": [
+      {
+        "role": "student",
+        "level": 4,
+        "episodes": 10,
+        "successes": 10,
+        "success_rate": 1.0,
+        "summary": {
+          "parkour": {
+            "episodes": 2,
+            "success": 2,
+            "fall": 0,
+            "timeout": 0
+          },
+          "parkour_flat": {
+            "episodes": 2,
+            "success": 2,
+            "fall": 0,
+            "timeout": 0
+          },
+          "parkour_gap": {
+            "episodes": 2,
+            "success": 2,
+            "fall": 0,
+            "timeout": 0
+          },
+          "parkour_hurdle": {
+            "episodes": 2,
+            "success": 2,
+            "fall": 0,
+            "timeout": 0
+          },
+          "parkour_step": {
+            "episodes": 2,
+            "success": 2,
+            "fall": 0,
+            "timeout": 0
+          }
+        },
+        "records": [
+          {
+            "env_id": 6,
+            "episode": 0,
+            "terrain": "parkour_step",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 7,
+            "episode": 0,
+            "terrain": "parkour_step",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 8,
+            "episode": 0,
+            "terrain": "parkour",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 9,
+            "episode": 0,
+            "terrain": "parkour",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 0,
+            "episode": 0,
+            "terrain": "parkour_gap",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 2,
+            "episode": 0,
+            "terrain": "parkour_hurdle",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 3,
+            "episode": 0,
+            "terrain": "parkour_hurdle",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 1,
+            "episode": 0,
+            "terrain": "parkour_gap",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 5,
+            "episode": 0,
+            "terrain": "parkour_flat",
+            "outcome": "success",
+            "goals": 8
+          },
+          {
+            "env_id": 4,
+            "episode": 0,
+            "terrain": "parkour_flat",
+            "outcome": "success",
+            "goals": 8
+          }
+        ]
+      }
+    ]
+  },
+  "state_parity.json": {
+    "samples": 200,
+    "body_position_max_error_m": 3.850820520555342e-06,
+    "old_angular_velocity_max_error_rad_s": 1.9681086371893193,
+    "old_linear_velocity_max_error_m_s": 1.4150420860795387,
+    "fixed_angular_velocity_max_error_rad_s": 5.551115123125783e-16,
+    "fixed_linear_velocity_max_error_m_s": 2.7755575615628914e-16,
+    "isaac_joint_limits": [
+      [
+        -0.7329999208450317,
+        0.541100025177002
+      ],
+      [
+        -0.541100025177002,
+        0.7329999208450317
+      ],
+      [
+        -0.7329999208450317,
+        0.541100025177002
+      ],
+      [
+        -0.541100025177002,
+        0.7329999208450317
+      ],
+      [
+        -6.283199787139893,
+        6.283199787139893
+      ],
+      [
+        -6.283199787139893,
+        6.283199787139893
+      ],
+      [
+        -6.283199787139893,
+        6.283199787139893
+      ],
+      [
+        -6.283199787139893,
+        6.283199787139893
+      ],
+      [
+        -2.827399730682373,
+        -0.4188999831676483
+      ],
+      [
+        -2.827399730682373,
+        -0.4188999831676483
+      ],
+      [
+        -2.827399730682373,
+        -0.4188999831676483
+      ],
+      [
+        -2.827399730682373,
+        -0.4188999831676483
+      ]
+    ],
+    "mujoco_joint_limits": [
+      [
+        -0.733,
+        0.5411
+      ],
+      [
+        -0.5411,
+        0.733
+      ],
+      [
+        -0.733,
+        0.5411
+      ],
+      [
+        -0.5411,
+        0.733
+      ],
+      [
+        -6.2832,
+        6.2832
+      ],
+      [
+        -6.2832,
+        6.2832
+      ],
+      [
+        -6.2832,
+        6.2832
+      ],
+      [
+        -6.2832,
+        6.2832
+      ],
+      [
+        -2.8274,
+        -0.4189
+      ],
+      [
+        -2.8274,
+        -0.4189
+      ],
+      [
+        -2.8274,
+        -0.4189
+      ],
+      [
+        -2.8274,
+        -0.4189
+      ]
+    ],
+    "scope": "Identical recorded states; tests frames/kinematics, not contact/dynamics equivalence"
+  },
+  "mujoco764.json": {
+    "role": "student",
+    "checkpoint": "model_764.pt",
+    "checkpoint_sha256": "503740d55cce8681538832b14848b64e469f7b5dd047a4c8d5bd87acd6e44834",
+    "configuration": {
+      "camera": {
+        "parent": "trunk",
+        "position_m": [
+          0.388031,
+          -0.0375,
+          0.037764
+        ],
+        "quaternion_wxyz_ros": [
+          0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "mount_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+        "width": 106,
+        "height": 60,
+        "focal_length": 11.041,
+        "horizontal_aperture": 20.955,
+        "vertical_aperture": 12.24,
+        "max_distance_m": 2.0,
+        "sensor": "front_depth_OAK-D_Pro_Wide"
+      },
+      "direction_source": "joystick",
+      "yaw_rate_to_error_seconds": 0.5,
+      "terrain_label": "flat",
+      "velocity_source": "mujoco",
+      "depth_update_policy_steps": 5,
+      "action_delay_policy_steps": 1
+    },
+    "course": "isaac_flat",
+    "height": 0.1,
+    "difficulty": 0.5,
+    "terrain_seed": 42,
+    "engine": "3.3.0",
+    "simulated_seconds": 2.5599999999999676,
+    "termination": "fall",
+    "fall_count": 1,
+    "episodes_started": 1,
+    "keyboard": false,
+    "video": null,
+    "displacement_xyz": [
+      2.915771209084346,
+      -1.6210877541564812,
+      -0.06794561818433453
+    ],
+    "max_abs_torque_nm": 150.0,
+    "max_abs_joint_speed_rad_s": 56.8908283246645,
+    "limitation": "Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending."
+  },
+  "mujoco764_fixed.json": {
+    "role": "student",
+    "checkpoint": "model_764.pt",
+    "checkpoint_sha256": "503740d55cce8681538832b14848b64e469f7b5dd047a4c8d5bd87acd6e44834",
+    "configuration": {
+      "camera": {
+        "parent": "trunk",
+        "position_m": [
+          0.388031,
+          -0.0375,
+          0.037764
+        ],
+        "quaternion_wxyz_ros": [
+          0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "mount_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+        "width": 106,
+        "height": 60,
+        "focal_length": 11.041,
+        "horizontal_aperture": 20.955,
+        "vertical_aperture": 12.24,
+        "max_distance_m": 2.0,
+        "sensor": "front_depth_OAK-D_Pro_Wide"
+      },
+      "direction_source": "joystick",
+      "yaw_rate_to_error_seconds": 0.5,
+      "terrain_label": "flat",
+      "velocity_source": "mujoco",
+      "depth_update_policy_steps": 5,
+      "action_delay_policy_steps": 1
+    },
+    "course": "isaac_flat",
+    "height": 0.1,
+    "difficulty": 0.5,
+    "terrain_seed": 42,
+    "engine": "3.3.0",
+    "simulated_seconds": 15.000000000000945,
+    "termination": "duration",
+    "fall_count": 0,
+    "episodes_started": 1,
+    "keyboard": false,
+    "video": null,
+    "displacement_xyz": [
+      11.822511817092785,
+      0.013983383768527919,
+      -0.006528117997502303
+    ],
+    "max_abs_torque_nm": 86.89275902171484,
+    "max_abs_joint_speed_rad_s": 12.751268710588844,
+    "limitation": "Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending."
+  },
+  "mujoco764_stones_fixed.json": {
+    "role": "student",
+    "checkpoint": "model_764.pt",
+    "checkpoint_sha256": "503740d55cce8681538832b14848b64e469f7b5dd047a4c8d5bd87acd6e44834",
+    "configuration": {
+      "camera": {
+        "parent": "trunk",
+        "position_m": [
+          0.388031,
+          -0.0375,
+          0.037764
+        ],
+        "quaternion_wxyz_ros": [
+          0.5,
+          -0.5,
+          0.5,
+          -0.5
+        ],
+        "mount_source": "https://rainbowrobotics.github.io/RBQ/manual/hardware/coordinate-frames.html#front-and-rear-cameras-oak-d-pro-wide",
+        "width": 106,
+        "height": 60,
+        "focal_length": 11.041,
+        "horizontal_aperture": 20.955,
+        "vertical_aperture": 12.24,
+        "max_distance_m": 2.0,
+        "sensor": "front_depth_OAK-D_Pro_Wide"
+      },
+      "direction_source": "joystick",
+      "yaw_rate_to_error_seconds": 0.5,
+      "terrain_label": "parkour",
+      "velocity_source": "mujoco",
+      "depth_update_policy_steps": 5,
+      "action_delay_policy_steps": 1
+    },
+    "course": "isaac_platforms",
+    "height": 0.1,
+    "difficulty": 0.5,
+    "terrain_seed": 42,
+    "engine": "3.3.0",
+    "simulated_seconds": 5.039999999999915,
+    "termination": "fall",
+    "fall_count": 1,
+    "episodes_started": 1,
+    "keyboard": false,
+    "video": null,
+    "displacement_xyz": [
+      3.0950473960049676,
+      0.8438635806526997,
+      -0.42601289907902484
+    ],
+    "max_abs_torque_nm": 150.0,
+    "max_abs_joint_speed_rad_s": 39.108693305151796,
+    "limitation": "Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending."
+  }
+}

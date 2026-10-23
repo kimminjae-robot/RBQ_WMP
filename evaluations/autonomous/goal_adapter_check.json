@@ -1,0 +1,7 @@
+{
+  "upstream_source": "upstream/Isaaclab_Parkour/parkour_isaaclab/envs/mdp/parkours/parkour_event.py",
+  "steps": 602,
+  "goals_completed": 8,
+  "max_heading_error_rad": 1.1102230246251565e-16,
+  "timer_and_goal_indices_match": true
+}
