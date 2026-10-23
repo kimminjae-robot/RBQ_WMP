@@ -1,0 +1,12 @@
+{
+  "teacher_checkpoint_rejected": true,
+  "measured_velocity_separate_from_reference": true,
+  "joystick_yaw_rate_and_manual_label_checked": true,
+  "mujoco_standing_contacts_all_four": true,
+  "camera_sees_ground": true,
+  "depth_resize_vs_original_max_abs_error": 0.0,
+  "policy_execution_status": "No trained RBQ10 Student available; no RBQ10 Student rollout performed",
+  "offline_serialization_fixture": "Actual public Go2 Student weights; NOT an RBQ10 policy, never used for MuJoCo control",
+  "offline_network_sequence_steps": 8,
+  "offline_network_max_abs_error": 0.0
+}

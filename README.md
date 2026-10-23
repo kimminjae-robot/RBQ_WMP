@@ -88,3 +88,5 @@ Phase 1 Go2 가중치는 새 설치 시 `--download-go2`로 별도 받을 수 �
 원본 고지: [LICENSE](LICENSE), [THIRD_PARTY.md](THIRD_PARTY.md). `docs/history/`는 과거 PC의 검증 기록이며 현재 상태는 [docs/STATUS.md](docs/STATUS.md)가 기준입니다.
 
 MuJoCo 사전 준비: [실행 방법과 실제 초기 실패 결과](docs/SIM2SIM.md), [실물 적용 전 관측값·센서·제어 차이](docs/DEPLOYMENT_GAPS.md).
+
+MuJoCo 기본 경로는 이제 **Vision Student**다. `export-sim2sim --checkpoint STUDENT.pt`와 `sim2sim`을 사용한다. reference/측정 선속도 분리, 조이스틱 방향, 수동 terrain label, MuJoCo contact를 반영했다. RBQ10 Student 학습 전에는 실제 rollout을 수행할 수 없다. [현재 계약과 명령](docs/SIM2SIM.md).

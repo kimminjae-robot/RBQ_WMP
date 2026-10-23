@@ -1,0 +1,157 @@
+"""RBQ10 Vision Student Sim2Sim: real depth weights, joystick and measured velocity."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import time
+
+import mujoco
+import numpy as np
+import torch
+
+from build_scene import ROOT, ASSETS, build_scene
+from run_teacher import ObservationBridge
+from student_inputs import CommandInput, DepthInput, student_observation
+
+
+def validate_export(directory):
+    meta = json.loads((directory/'manifest.json').read_text())
+    if meta.get('format')!='rbq10_mujoco_student_v1' or meta.get('role')!='student':
+        raise ValueError('Student Sim2Sim requires a real RBQ10 Student export; Teacher exports are rejected')
+    for name in ['student.pt','depth.pt']:
+        if hashlib.sha256((directory/name).read_bytes()).hexdigest()!=meta['files'][name]:
+            raise ValueError(f'Export hash mismatch: {name}')
+    contract=meta['contract']
+    if contract.get('robot')!='Rainbow_RBQ10_without_arm':
+        raise ValueError('Go2 exports cannot be deployed on RBQ10')
+    if hashlib.sha256((ASSETS/'resources/urdf/rbq10.urdf').read_bytes()).hexdigest()!=contract['urdf_sha256']:
+        raise ValueError('URDF does not match the Student checkpoint')
+    if contract['policy_dt']!=.02 or contract['physics_dt']!=.005:
+        raise ValueError('Unsupported timing contract')
+    return meta
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--policy-dir',type=Path,default=ROOT/'outputs/sim2sim/student')
+    p.add_argument('--config',type=Path,default=ROOT/'sim2sim/student_config.json')
+    p.add_argument('--course',choices=['flat','hurdle','step'],default='flat')
+    p.add_argument('--height',type=float,default=.10)
+    p.add_argument('--seconds',type=float,default=10.)
+    p.add_argument('--speed',type=float,default=.6,help='Reference vx m/s; original training is forward walking')
+    p.add_argument('--yaw-rate',type=float,default=0.,help='Reference body yaw rate rad/s')
+    p.add_argument('--joystick',help='Linux joystick device, e.g. /dev/input/js0; axis1 forward, axis0 turn')
+    p.add_argument('--input-json',type=Path,help='Live reference command and optional measured body velocity')
+    p.add_argument('--terrain-label',choices=['flat','parkour'],help='Manual label for known experiment layout, not automatic terrain truth')
+    p.add_argument('--velocity-source',choices=['mujoco','external'])
+    p.add_argument('--direction-source',choices=['joystick','vision'])
+    p.add_argument('--viewer',action='store_true')
+    p.add_argument('--output',type=Path,default=ROOT/'outputs/sim2sim/student_rollout.json')
+    args=p.parse_args()
+    if args.seconds<=0 or args.height<=0:
+        p.error('seconds and height must be positive')
+    if not (args.policy_dir/'manifest.json').is_file():
+        p.error('No RBQ10 Student export. Train/distill a real Student, then run export-sim2sim --checkpoint STUDENT.pt. No Teacher fallback.')
+    meta=validate_export(args.policy_dir)
+    cfg=json.loads(args.config.read_text())
+    for key in ['terrain_label','velocity_source','direction_source']:
+        value=getattr(args,key)
+        if value is not None:
+            cfg[key]=value
+    if cfg['terrain_label'] not in ['flat','parkour'] or cfg['velocity_source'] not in ['mujoco','external'] or cfg['direction_source'] not in ['joystick','vision']:
+        p.error('Invalid Student input configuration')
+    if cfg['depth_update_policy_steps']!=5 or cfg['action_delay_policy_steps']!=1:
+        p.error('This runner retains original Student timing: depth 5 steps, action delay 1 step')
+    if cfg['yaw_rate_to_error_seconds']<=0:
+        p.error('yaw_rate_to_error_seconds must be positive')
+    if cfg['velocity_source']=='external' and not args.input_json:
+        p.error('External measured velocity requires --input-json')
+    torch.set_num_threads(1)
+    command=CommandInput(args.speed,args.yaw_rate,args.input_json,args.joystick)
+    # Validate command/measurement before opening a simulator or viewer.
+    try:
+        initial=command.read()
+        if cfg['velocity_source']=='external' and initial[2] is None:
+            raise ValueError('External measured_velocity_body_m_s is required; reference vx cannot substitute for it')
+        c=meta['contract']
+        model=mujoco.MjModel.from_xml_string(build_scene(c,args.course,args.height))
+        data=mujoco.MjData(model)
+        hd=json.loads((ASSETS/'official/info.json').read_text())['config_info']['init_state']['default_joint_angles']
+        home=np.array([hd[n] for n in c['joint_order']])
+        bridge=ObservationBridge(model,data,c,home,cfg['terrain_label']=='flat',args.speed)
+        bridge.terrain_scan_enabled=False  # Student never receives Teacher height rays or oracle waypoints.
+        data.qpos[bridge.qids]=home
+        mujoco.mj_forward(model,data)
+        camera=DepthInput(model,data,cfg['camera'])
+        policy=torch.jit.load(str(args.policy_dir/'student.pt'),map_location='cpu').eval()
+        depth=torch.jit.load(str(args.policy_dir/'depth.pt'),map_location='cpu').eval()
+        viewer=None
+        if args.viewer:
+            from mujoco import viewer as mj_viewer
+            viewer=mj_viewer.launch_passive(model,data)
+        records=[]; action=np.zeros(12,dtype=np.float32)
+        termination='duration'; max_torque=0.; max_speed=0.
+        start=data.xpos[bridge.base].copy()
+        try:
+            for step in range(int(args.seconds/.02)):
+                wall=time.monotonic()
+                vx,yaw_rate,external=command.read()
+                measured=np.zeros(6)
+                mujoco.mj_objectVelocity(model,data,mujoco.mjtObj.mjOBJ_BODY,bridge.base,measured,1)
+                measured_velocity=measured[3:] if cfg['velocity_source']=='mujoco' else external
+                if measured_velocity is None:
+                    raise ValueError('External measured velocity missing; no fallback to reference command')
+                bridge.speed=vx
+                obs,angles=bridge.sample(action)
+                obs=student_observation(obs,vx,yaw_rate,measured_velocity,cfg)
+                with torch.inference_mode():
+                    if step%5==0:
+                        image=camera.sample()
+                        prop=torch.from_numpy(obs[None,:53].copy())
+                        prop[:,6:8]=0
+                        features=depth(image,prop)
+                        latent=features[:,:32]
+                        predicted_yaw=1.5*features[:,32:]
+                    if cfg['direction_source']=='vision':
+                        obs[6:8]=predicted_yaw.numpy()[0]
+                    new_action=policy(torch.from_numpy(obs[None]),latent).numpy()[0]
+                if not np.isfinite(new_action).all():
+                    raise FloatingPointError('Non-finite Student action')
+                # Original Student one-policy-step actuation delay.
+                data.ctrl[:]=home+.25*action
+                action=new_action.copy()
+                for _ in range(4):
+                    mujoco.mj_step(model,data)
+                    max_torque=max(max_torque,float(np.max(np.abs(data.actuator_force))))
+                    max_speed=max(max_speed,float(np.max(np.abs(data.qvel[bridge.vids]))))
+                if not np.isfinite(data.qpos).all() or not np.isfinite(data.qvel).all():
+                    raise FloatingPointError('Non-finite simulation state')
+                records.append({'time':float(data.time),'base_xyz':data.xpos[bridge.base].tolist(),
+                    'reference_vx':vx,'reference_yaw_rate':yaw_rate,'measured_velocity_body_m_s':np.asarray(measured_velocity).tolist(),
+                    'actor_direction_errors':obs[6:8].tolist(),'foot_contacts':bridge.current_contacts.tolist(),
+                    'depth_range_m':[float(camera.latest_raw.min()),float(camera.latest_raw.max())]})
+                if max(map(abs,angles))>1.5 or data.xpos[bridge.base,2]<.15:
+                    termination='fall';break
+                if viewer:
+                    if not viewer.is_running():
+                        termination='viewer_closed';break
+                    viewer.sync()
+                    time.sleep(max(0,.02-(time.monotonic()-wall)))
+        finally:
+            if viewer:viewer.close()
+        result={'role':'student','checkpoint':meta['checkpoint'],'checkpoint_sha256':meta['checkpoint_sha256'],
+            'configuration':cfg,'course':args.course,'height':args.height,'engine':mujoco.__version__,
+            'simulated_seconds':float(data.time),'termination':termination,
+            'displacement_xyz':(data.xpos[bridge.base]-start).tolist(),
+            'max_abs_torque_nm':max_torque,'max_abs_joint_speed_rad_s':max_speed,
+            'limitation':'Joystick mapping requires trained-Student validation; motor velocity cap and engine contact parity remain pending.',
+            'records':records}
+        args.output.parent.mkdir(parents=True,exist_ok=True)
+        args.output.write_text(json.dumps(result,indent=2)+'\n')
+        print(json.dumps({k:v for k,v in result.items() if k!='records'},indent=2))
+    finally:
+        command.close()
+
+
+if __name__=='__main__':
+    main()

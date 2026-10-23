@@ -32,7 +32,7 @@ case "$mode" in
   export-sim2sim)
     exec "$python_bin" "$project_root/tools/export_sim2sim.py" "$@" ;;
   sim2sim)
-    exec "${RBQ10_MUJOCO_PYTHON:-$project_root/.venv-sim2sim/bin/python}" "$project_root/sim2sim/run_teacher.py" "$@" ;;
+    exec "${RBQ10_MUJOCO_PYTHON:-$project_root/.venv-sim2sim/bin/python}" "$project_root/sim2sim/run_student.py" "$@" ;;
   import-teacher)
     exec "$python_bin" "$project_root/tools/import_teacher_checkpoint.py" "$@" ;;
   teacher-job)

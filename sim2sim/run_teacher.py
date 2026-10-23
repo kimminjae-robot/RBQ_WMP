@@ -30,6 +30,7 @@ class ObservationBridge:
         self.scan = np.zeros(132, dtype=np.float32)
         self.yaws = np.zeros(2)
         self.step = 0
+        self.terrain_scan_enabled = True
         self.goal_idx = 0
         self.goals = np.column_stack((np.arange(1, 25, 1.5), np.zeros(16)))
         x, y = np.meshgrid(np.arange(12)*.15-.825, np.arange(11)*.15-.75, indexing='xy')
@@ -48,7 +49,7 @@ class ObservationBridge:
         mujoco.mj_objectVelocity(m, d, mujoco.mjtObj.mjOBJ_BODY, self.base, velocity, 1)
         if np.linalg.norm(pos[:2] - self.goals[self.goal_idx]) < .3:
             self.goal_idx = min(self.goal_idx+1, len(self.goals)-2)
-        if self.step % 5 == 0:
+        if self.step % 5 == 0 and self.terrain_scan_enabled:
             delta = self.goals[self.goal_idx:self.goal_idx+2] - pos[:2]
             # Match the source: target heading is wrapped, difference itself is not wrapped.
             self.yaws = np.arctan2(delta[:, 1], delta[:, 0]) - yaw

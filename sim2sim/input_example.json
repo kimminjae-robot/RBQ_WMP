@@ -1,0 +1,4 @@
+{
+  "command": {"vx": 0.6, "vy": 0.0, "yaw_rate": 0.0},
+  "measured_velocity_body_m_s": [0.0, 0.0, 0.0]
+}

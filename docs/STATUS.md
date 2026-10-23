@@ -46,3 +46,7 @@ Phase 1·2를 완료했고 Phase 3 RBQ10 Teacher 학습을 진행 중이다. 배
 ## MuJoCo 초기 bridge (2026-10-23)
 
 Teacher TorchScript export, 공식 URDF 변환, 관측값 bridge, headless 실행을 구현했다. 관측값 fixture와 10초 정지 PD는 통과했으나 학습 정책은 짧은 실행에서 넘어져 안정적인 Sim2Sim 전이는 미완료다. Student 및 기존 Isaac 학습 설정은 바꾸지 않았다. [실행/한계](SIM2SIM.md), [추가 발견된 관측값 문제와 실물 적용 차이](DEPLOYMENT_GAPS.md).
+
+## Student Sim2Sim 입력 계약 적용
+
+MuJoCo 기본 실행/export를 Student로 변경했다. measured/reference velocity 분리, joystick yaw-rate 변환, 수동 terrain label, MuJoCo contact, 학습 카메라 위치/자세/전처리를 적용했다. 시간/GRU 동작은 유지한다. RBQ10 Student checkpoint가 없어 실제 Student rollout 성능은 미검증이며 Teacher를 대신 사용하지 않는다. [입력 계약과 검증](SIM2SIM.md).
