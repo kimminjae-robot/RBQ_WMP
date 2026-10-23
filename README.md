@@ -1,12 +1,26 @@
-> **2026-10-23 현재:** Teacher 추가 학습의 이득을 평가한 뒤 `model_3674.pt`를 선택해 Student 학습을 시작했다. [실행 상태와 판단 근거](PHASE4_STATUS.md).
+> **2026-10-23 최신 상태:** Student 1,000 update 완료. 성능 개선은 후속 과제로 등록했습니다. [개선 로드맵](docs/PERFORMANCE_ROADMAP.md) · [추적 이슈 #1](https://github.com/kimminjae-robot/RBQ_WMP/issues/1).
 
 # RBQ_WMP — RBQ10 Isaac Lab Vision Parkour
 
 공개 [Isaaclab_Parkour](https://github.com/CAI23sbP/Isaaclab_Parkour)의 PPO·Reward·Curriculum·Teacher/Student 구조를 재사용한 RBQ10 파쿠르 프로젝트입니다. 모델은 [Rainbow Robotics 공식 RBQ](https://github.com/RainbowRobotics/RBQ)를 사용합니다.
 
-**2026-10-23:** Phase 1·2 완료. Phase 3 Teacher는 **3,675 업데이트**에서 디스크 부족으로 안전 중단한 뒤, 공간 확보 후 **2026-10-23 09:14 KST에 학습을 재개했습니다. 배포 snapshot은 3,675 업데이트 시점입니다.** 재개 가능한 실제 `model_3674.pt`를 포함합니다. Vision Student·실물 적용은 아직 완료하지 않았습니다. [진행 상황과 남은 단계](docs/STATUS.md).
+**초기 Teacher 배포 당시 기록:** Phase 1·2 완료. Phase 3 Teacher는 **3,675 업데이트**에서 디스크 부족으로 안전 중단한 뒤, 공간 확보 후 **2026-10-23 09:14 KST에 학습을 재개했습니다. 배포 snapshot은 3,675 업데이트 시점입니다.** 재개 가능한 실제 `model_3674.pt`를 포함합니다. Vision Student·실물 적용은 아직 완료하지 않았습니다. [진행 상황과 남은 단계](docs/STATUS.md).
 
-## 마지막 단계 실제 평가
+## 성능 개선 후속 과제
+
+현재 1,000 update 완료는 수렴 또는 모든 지형의 안정적인 완주를 의미하지 않습니다.
+우선 최종 Student와 Teacher를 동일 조건에서 재평가하고, Depth·접촉·구동기의 Sim2Sim 차이를
+검증한 뒤 Gap·플랫폼 중심으로 원본 Student 증류를 추가하는 순서입니다.
+Teacher 보강은 같은 조건에서 Teacher도 실패하는 구간에 한해 검토합니다.
+
+[상세 로드맵과 완료 기준](docs/PERFORMANCE_ROADMAP.md) ·
+[GitHub 작업 목록 #1](https://github.com/kimminjae-robot/RBQ_WMP/issues/1) ·
+[평가 근거 JSON](evaluations/performance_baseline_20261023.json).
+
+이 업데이트는 문서·후속 과제·평가 요약입니다. 최신 로컬 model941/999와 일부 자동 시연 수정이
+모두 이 저장소에 배포된 것은 아닙니다. 이를 재현 가능한 코드/가중치로 정리하는 작업도 P0에 포함합니다.
+
+## 기존 Teacher 마지막 단계 평가
 
 Curriculum은 0~9의 10단계입니다. `model_3674.pt`를 **level 9 / difficulty 1.0에 고정**하여 20개 환경 × 3회 = 60개 episode를 평가했습니다. 성공·실패 후에도 9단계를 유지하는 평가 옵션을 추가했고, 학습 기본값은 원본 curriculum입니다.
 
@@ -100,3 +114,4 @@ MuJoCo 지형: 원본 Isaac 생성 함수를 재사용한 6종×3난이도와 [�
 키보드 GUI 실행: `./run.sh sim2sim-latest --course isaac_flat --difficulty 0 --terrain-label flat`. [조작법과 실제 최신 snapshot 테스트](docs/KEYBOARD_PLAYBACK.md).
 
 중간 징검돌 키보드 실행: `./play_stones_medium.sh` — 최신 저장 Student, `isaac_platforms`, difficulty0.5.
+
