@@ -6,3 +6,4 @@
 - `checkpoints/rbq10_teacher/model_3674.pt` is the actual RBQ10 Teacher trained in this project with the upstream PPO pipeline. It is not the Go2 model or the manufacturer's locomotion policy.
 
 Isaac Sim / Isaac Lab / PyTorch installations are not distributed here. The setup script reuses the user's existing compatible runtime and installs additional dependencies into a separate project virtual environment.
+- bytedance/WMP: https://github.com/bytedance/WMP (Apache-2.0). `rbq10_wmp/` ports its world model (from dreamerv3-torch, MIT), AMP-PPO / actor-critic (rsl_rl, BSD-3-Clause) and legged_gym environment logic (BSD-3-Clause); `datasets/a1_mocap/` are its A1 reference motions (from AMP_for_hardware) and `datasets/rbq10_mocap/` are their RBQ10 retargets. Licenses and notices are in `licenses/wmp/`; per-file notices are kept and RBQ10 changes are marked "RBQ10 port". See `docs/WMP.md`.

@@ -51,6 +51,12 @@ case "$mode" in
     exec "$python_bin" "$project_root/tools/multiview_student_job.py" "$@" ;;
   teacher-job)
     exec "$python_bin" "$project_root/tools/teacher_job.py" "$@" ;;
+  train-rbq10-wmp)
+    exec "$python_bin" "$project_root/tools/train_wmp.py" --headless "$@" ;;
+  play-rbq10-wmp)
+    exec "$python_bin" "$project_root/tools/play_wmp.py" "$@" ;;
+  wmp-mock)
+    exec "$python_bin" "$project_root/tools/train_wmp_mock.py" "$@" ;;
   list-rbq10)
     exec "$python_bin" "$project_root/tools/task_entry.py" "$upstream_root/list_envs.py" "$@" ;;
   list)
@@ -60,6 +66,6 @@ case "$mode" in
     if [[ "$mode" == probe-teacher ]]; then kind=Teacher; fi
     exec "$python_bin" "$project_root/tools/probe_go2.py" --kind "$kind" --output "$project_root/logs/$mode.json" "$@" ;;
   *)
-    printf 'Usage: %s {play-student|play-teacher|train-teacher|train-student|list|probe-student|probe-teacher|validate-rbq10|teacher-job|list-rbq10|play-rbq10-teacher|play-rbq10-student|train-rbq10-teacher|train-rbq10-student} [upstream arguments]\n' "$0" >&2
+    printf 'Usage: %s {play-student|play-teacher|train-teacher|train-student|list|probe-student|probe-teacher|validate-rbq10|teacher-job|list-rbq10|play-rbq10-teacher|play-rbq10-student|train-rbq10-teacher|train-rbq10-student|train-rbq10-wmp|play-rbq10-wmp|wmp-mock} [upstream arguments]\n' "$0" >&2
     exit 2 ;;
 esac

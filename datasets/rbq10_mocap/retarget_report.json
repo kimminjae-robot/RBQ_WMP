@@ -1,0 +1,145 @@
+{
+  "ik_roundtrip_max_error_m": 2.220446049250313e-16,
+  "clips": {
+    "hop1": {
+      "source": "hop1.txt",
+      "robot": "Rainbow_RBQ10",
+      "joint_order": [
+        "HRR",
+        "HRP",
+        "HRK",
+        "HLR",
+        "HLP",
+        "HLK",
+        "FRR",
+        "FRP",
+        "FRK",
+        "FLR",
+        "FLP",
+        "FLK"
+      ],
+      "method": "foot-space scaling (Froude similarity) + closed-form RBQ10 leg IK",
+      "scale": 1.65,
+      "time_scale": 1.284523257866513,
+      "frame_duration": 0.02569046515733026,
+      "a1_fk_max_error_m": 7.79414035534387e-08,
+      "a1_fk_mean_error_m": 1.8651914075290422e-08,
+      "num_frames": 501,
+      "joint_limit_violation_rad": {
+        "HRR": 0.0,
+        "HRK": 0.0,
+        "HLR": 0.0,
+        "HLK": 0.0,
+        "FRR": 0.0,
+        "FRK": 0.0,
+        "FLR": 0.0,
+        "FLK": 0.0
+      }
+    },
+    "hop2": {
+      "source": "hop2.txt",
+      "robot": "Rainbow_RBQ10",
+      "joint_order": [
+        "HRR",
+        "HRP",
+        "HRK",
+        "HLR",
+        "HLP",
+        "HLK",
+        "FRR",
+        "FRP",
+        "FRK",
+        "FLR",
+        "FLP",
+        "FLK"
+      ],
+      "method": "foot-space scaling (Froude similarity) + closed-form RBQ10 leg IK",
+      "scale": 1.65,
+      "time_scale": 1.284523257866513,
+      "frame_duration": 0.02569046515733026,
+      "a1_fk_max_error_m": 6.98641416385648e-08,
+      "a1_fk_mean_error_m": 1.941037248193769e-08,
+      "num_frames": 501,
+      "joint_limit_violation_rad": {
+        "HRR": 0.0,
+        "HRK": 0.0,
+        "HLR": 0.0,
+        "HLK": 0.0,
+        "FRR": 0.0,
+        "FRK": 0.0,
+        "FLR": 0.0,
+        "FLK": 0.0
+      }
+    },
+    "trot1": {
+      "source": "trot1.txt",
+      "robot": "Rainbow_RBQ10",
+      "joint_order": [
+        "HRR",
+        "HRP",
+        "HRK",
+        "HLR",
+        "HLP",
+        "HLK",
+        "FRR",
+        "FRP",
+        "FRK",
+        "FLR",
+        "FLP",
+        "FLK"
+      ],
+      "method": "foot-space scaling (Froude similarity) + closed-form RBQ10 leg IK",
+      "scale": 1.65,
+      "time_scale": 1.284523257866513,
+      "frame_duration": 0.02569046515733026,
+      "a1_fk_max_error_m": 6.62783874449957e-08,
+      "a1_fk_mean_error_m": 1.9061278676212677e-08,
+      "num_frames": 501,
+      "joint_limit_violation_rad": {
+        "HRR": 0.0,
+        "HRK": 0.0,
+        "HLR": 0.0,
+        "HLK": 0.0,
+        "FRR": 0.0,
+        "FRK": 0.0,
+        "FLR": 0.0,
+        "FLK": 0.0
+      }
+    },
+    "trot2": {
+      "source": "trot2.txt",
+      "robot": "Rainbow_RBQ10",
+      "joint_order": [
+        "HRR",
+        "HRP",
+        "HRK",
+        "HLR",
+        "HLP",
+        "HLK",
+        "FRR",
+        "FRP",
+        "FRK",
+        "FLR",
+        "FLP",
+        "FLK"
+      ],
+      "method": "foot-space scaling (Froude similarity) + closed-form RBQ10 leg IK",
+      "scale": 1.65,
+      "time_scale": 1.284523257866513,
+      "frame_duration": 0.02569046515733026,
+      "a1_fk_max_error_m": 7.277207519917894e-08,
+      "a1_fk_mean_error_m": 1.869085911597118e-08,
+      "num_frames": 501,
+      "joint_limit_violation_rad": {
+        "HRR": 0.0,
+        "HRK": 0.0,
+        "HLR": 0.0,
+        "HLK": 0.0,
+        "FRR": 0.0,
+        "FRK": 0.0,
+        "FLR": 0.0,
+        "FLK": 0.0
+      }
+    }
+  }
+}

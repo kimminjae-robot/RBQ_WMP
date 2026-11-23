@@ -4,6 +4,10 @@
 
 **2026-10-23 최신 검증: 5뷰 Student `model800` / 새 분기 801 update.** 전방 Depth 1개와 하향 D430 4개를 사용합니다. 현재 5뷰 학습만 2,000 update 목표로 계속 실행 중이며, 전방 전용 Student는 1,550 update에서 저장·중단했습니다.
 
+## WMP (World Model-based Perception) 구현
+
+논문 [arXiv 2409.16784](https://arxiv.org/abs/2409.16784)의 RSSM 월드모델 + AMP-PPO를 [bytedance/WMP](https://github.com/bytedance/WMP) 기준으로 RBQ10에 이식했습니다. 기존 Teacher/Student와 분리된 `rbq10_wmp/` 패키지이며 `./run.sh train-rbq10-wmp`로 학습합니다. 자세한 내용과 RBQ10용 변경 사항은 [docs/WMP.md](docs/WMP.md)를 확인하세요.
+
 ## 최신 실제 시연
 
 **Isaac Sim — 0.45m Step 오르내리기:** model800, level9, seed42, 속도 명령0.6m/s. 해당 episode는 **8.68초에 목표 8/8을 완주**했습니다. GIF는 자동 reset 직전까지의 구간이며 전체 영상·접촉/상태 기록도 제공합니다.
